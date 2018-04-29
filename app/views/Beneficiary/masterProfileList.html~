@@ -1,0 +1,123 @@
+#{extends 'main.html' /}
+
+    <section id="feature2" >
+        <div class="container">	
+				
+<div id="view" class="tab-pane fade active in" aria-labelledby="home-tab" role="tabpanel">
+		<div class="row">
+				 <div class="col-lg-12" >
+				  <div class="panel panel-default">
+				 <div class="panel-heading">
+						List of Master Profile					  </div>
+				<div class="panel-body">
+					<div class="row">
+						<form id="beneficiaryMasterData" method="POST" class="form-horizontal" action="./masterprofilelist" enctype="multipart/form-data"> 					 
+						<div class="filter">
+									<div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'district.id' , type:'select', items:geodistricts,labelProperty:'name'} 
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'upazilla.id' , type:'select', items:geoupazillas,labelProperty:'name' } 
+											#{option}Any#{/option}
+										#{/input}									
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'unionparishad.id' , type:'select', items:geounions,labelProperty:'name'}
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 </div>
+
+ </form>
+									 </div>
+                                <div class="box-body table-responsive">
+                                    <table id="example2" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+											    <th>&{'beneficiaryMasterProfile.beneficiaryId'}</th>
+												<th>&{'beneficiaryMasterProfile.beneficiaryName'}</th>
+												<th>&{'beneficiaryMasterProfile.beneficiaryAge'}</th>
+												<th>&{'beneficiaryMasterProfile.fatherOrHusbandName'}</th>
+												<th>&{'beneficiaryMasterProfile.previousProfession'}</th>
+												<th>&{'beneficiaryMasterProfile.villageName'}</th>
+												<th>&{'beneficiaryMasterProfile.wardCode'}</th>
+												
+												<th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        #{list items:masterProfiles, as:'beneficiaryMasterProfile'}
+											<tr>
+												<td>${beneficiaryMasterProfile.beneficiaryId}</td>
+												<td>${beneficiaryMasterProfile.beneficiaryName}</td>
+												<td>${beneficiaryMasterProfile.beneficiaryAge}</td>						
+												<td>${beneficiaryMasterProfile.fatherOrHusbandName}</td>
+												<td>${beneficiaryMasterProfile.previousProfession}</td>
+												<td>${beneficiaryMasterProfile.villageName}</td>
+												<td>${beneficiaryMasterProfile.wardCode}</td>
+												<td>	
+													#{deadbolt.externalizedRestriction externalRestrictions:['Edit Master Profile']}
+													
+													<a class="btn btn-mini btn-warning" href="@{Beneficiary.editMasterProfile(beneficiaryMasterProfile.id)}"><i class="icon-edit"></i> Edit</a>
+													<a class="btn btn-mini btn-danger delete" data-url="@{Users.delete(beneficiaryMasterProfile.id)}" href="#deleteModal"><i class="icon-remove icon-white"></i> Delete</a>
+													#{/deadbolt.externalizedRestriction}
+												</td>
+											</tr>
+										#{/list}
+                                    </table>
+                                </div>
+								</div>
+								</div><!-- /.box-body -->
+								<!--
+								<div class="row">
+							<div class="col-lg-7">
+							<div id="example1_info" class="dataTables_info">Showing 1 to 10 of 57 entries</div>
+							</div>
+								<div class="col-lg-5">
+									<div class="dataTables_paginate paging_bootstrap">
+										<ul class="pagination">
+										<li class="prev disabled">
+										<a href="#">← Previous</a>										</li>
+										<li class="active">
+										<a href="#">1</a>										</li>
+										<li>
+										<a href="#">2</a>										</li>
+										<li>
+										<a href="#">3</a>										</li>
+										<li>
+										<a href="#">4</a>										</li>
+										<li>
+										<a href="#">5</a>										</li>
+										<li class="next">
+										<a href="#">Next → </a>										</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							-->
+                            </div>
+				 
+				 
+          </div>
+		</div>
+
+			</div><!--/tab-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+#{cascade/}	
+
+<script type="text/javascript">
+	$('#unionparishad\\.id').on('change', function(){
+	var sel = $(this).find(':selected');
+	$('#beneficiaryMasterData').submit();	
+});
+
+</script>

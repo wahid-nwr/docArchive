@@ -1,0 +1,99 @@
+#{extends 'main.html' /}
+<!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Tables <small>Some examples to get you started</small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+            
+			<div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Customers<small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+			#{if flash.success}
+						#{alert flash.success/}
+					#{/if}
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Customer Name</th>
+                          <th>Customer ID</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+						  %{
+							  int index = 0;
+							String location = "";
+
+						 %}
+						  #{list items:customerList, as:'customer'}
+							%{
+								index++;
+							%}
+							<tr>
+								<th scope="row">${index}</th>
+								<td>${customer.customerName}</td>
+								<td>${customer.customerId}</td>
+								<td>	
+									#{deadbolt.externalizedRestriction externalRestrictions:['Customer Management']}									
+									<a class="btn btn-mini btn-warning" href="@{CustomerManagementController.edit(customer.id)}"><i class="icon-edit"></i> Edit</a>
+									<a class="btn btn-mini btn-danger delete" data-url="@{CustomerManagementController.delete(customer.id)}" href="#deleteModal"><i class="icon-remove icon-white"></i> Delete</a>
+									#{/deadbolt.externalizedRestriction}
+									
+								</td>
+							</tr>
+						#{/list}                        
+						</tbody>
+                      </table>
+                      <form id = "submitForEdit" action="@{DocumentArchiveController.documenteditor()}" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+						<input type="hidden" name="location" id="location" value=""/>
+					</form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<script type="text/javascript">
+	function submitForEdit(location)
+	{
+		document.getElementById('location').value = location;
+		document.getElementById('submitForEdit').submit();
+	}
+</script>

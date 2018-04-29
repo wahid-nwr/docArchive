@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+   <meta charset="utf-8" />
+   <title>LEADTOOLS JS Scan Demo</title>
+   <link rel="shortcut icon" type="image/x-icon" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Images/favicon.ico" />
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+   <link rel="Stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Styles/ScanningDemo.css" type="text/css" />
+   <link rel="stylesheet" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Styles/Toolbar.css" type="text/css" />
+   <link rel="stylesheet" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Styles/Sidebar.css" type="text/css" />
+   <link rel="stylesheet" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Styles/dialogs.css" type="text/css" />
+   <link rel="stylesheet" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Styles/Icons.css" type="text/css" />
+   <link rel="stylesheet" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Styles/spectrum/spectrum.css" type="text/css" />
+
+   <script type="text/javascript">
+      // check if HTML5 canvas is supported
+      if (!("HTMLCanvasElement" in window)) {
+         alert("HTML 5 Canvas not supported, redirecting ...");
+         location.href = "../Resources/NoHTML5Support.html";
+      }
+   </script>
+
+   <!-- External .js files -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.js"></script>
+   <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Libs/spectrum/spectrum.js"></script>
+
+   <!-- Leadtools .js files -->
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Libs/Leadtools.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Libs/Leadtools.Scanning.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Libs/Leadtools.Controls.js"></script>
+
+   <!-- BarcodeDemo .js fies -->
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Utils.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Common.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/App/Main.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Dialogs/OpenFileDlg.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Dialogs/SelectSourceDlg.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Dialogs/ImageProcessingDlg.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Dialogs/ErrorDlg.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Dialogs/AboutDlg.js"></script>
+   <script type="text/javascript" src="http://demo.leadtools.com/javascript/ScanningDemo/Common/Dialogs/LoadingDlg.js"></script>
+</head>
+<body>
+   <div id="scanningServiceContainer" style="width: 0px; height: 0px">
+   </div>
+   <!-- Create a header toolbar -->
+   <div class="toolbar headerToolbarDiv">
+      <!-- Start scanning -->
+      <button id="scan" class="btn btn-default" title="Start Scanning">
+         <span class="icon scan"></span>
+      </button>
+      <!-- Select Source -->
+      <button id="selectSource" class="btn btn-default" title="Select Source">
+         <span class="icon  scanSelect"></span>
+      </button>
+      <!-- Print -->
+      <button id="print" class="btn btn-default" title="Print" disabled>
+         <span class="icon  print"></span>
+      </button>
+      <span class="verticalDivider"></span>
+      <!-- Interactive mode : Pan/Zoom -->
+      <button id="panZoom" class="btn btn-default interactiveModesBtns" title="Pan/Zoom" value="0">
+         <span class="icon  panZoomIcon"></span>
+      </button>
+      <!-- Interactive mode : magnify glass -->
+      <button class="btn btn-default interactiveModesBtns" title="Magnify Glass" value="1">
+         <span class="icon  magnifyGlassIcon"></span>
+      </button>
+      <span class="verticalDivider"></span>
+      <!-- Size mode : fit -->
+      <button id="fit" class="btn btn-default" title="Fit">
+         <span class="icon  fitIcon"></span>
+      </button>
+      <!-- Size mode : actual size -->
+      <button id="actualSize" class="btn btn-default" title="Actual Size">
+         <span class="icon  actualSizeIcon"></span>
+      </button>
+      <!-- Zoom in -->
+      <button id="zoomIn" class="btn btn-default" title="zoom In">
+         <span class="icon  zoomInIcon"></span>
+      </button>
+      <!-- Zoom out -->
+      <button id="zoomOut" class="btn btn-default" title="Zoom Out">
+         <span class="icon  zoomOutIcon"></span>
+      </button>
+      <!-- Edit image -->
+      <button id="editImage" class="btn btn-default" title="Edit Image" disabled>
+         <span class="icon  freehandIcon"></span>
+      </button>
+      <!-- Show about dialog -->
+      <button id="about" class="btn btn-default" title="About">
+         <span class="icon  helpIcon"></span>
+      </button>
+   </div>
+
+   <div class="sidebar-left" style="bottom:31px;width:210px;">
+      <div class="sidebarContainer">
+         <div class="sidebarContentDiv-left" style="padding-bottom:0px;">
+            <div id="thumbnailsDiv">
+
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="imageViewerContainer">
+      <!-- The viewer will be dynamically created inside imageViewerDiv -->
+      <div id="imageViewerDiv">
+      </div>
+   </div>
+
+   <!--Create a footer toolbar -->
+   <div class="toolbar footerToolbarDiv">
+      <div class="btn-group">
+         <!-- Previous page -->
+         <button id="previousPage" class="btn btn-default btn-sm" title="Previous Page" disabled>
+            <span class="icon icon-sm previousPage-sm-Icon"></span>
+         </button>
+         <!-- Next page -->
+         <button id="nextPage" class="btn btn-default btn-sm" title="Next Page" disabled>
+            <span class="icon icon-sm nextPage-Small-sm-Icon"></span>
+         </button>
+      </div>
+   </div>
+   <!--                                          -->
+   <!--                 Dialogs                  -->
+   <!--                                          -->
+   <!-- Select source dialog -->
+<applet alt="jnlp file embedded in applet tag">
+    <param name="jnlp_href" value="ltwebscanning.jnlp">
+    <!--<param name="jnlp_embedded" value="PCEtLSANCi8qDQogKiBDb3B5cmlnaHQgKGMpIDIwMTEsIE9yYWNsZSBhbmQvb3IgaXRzIGFmZmlsaWF0ZXMuIEFsbCByaWdodHMgcmVzZXJ2ZWQuDQogKg0KICogUmVkaXN0cmlidXRpb24gYW5kIHVzZSBpbiBzb3VyY2UgYW5kIGJpbmFyeSBmb3Jtcywgd2l0aCBvciB3aXRob3V0DQogKiBtb2RpZmljYXRpb24sIGFyZSBwZXJtaXR0ZWQgcHJvdmlkZWQgdGhhdCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnMNCiAqIGFyZSBtZXQ6DQogKg0KICogICAtIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0DQogKiAgICAgbm90aWNlLCB0aGlzIGxpc3Qgb2YgY29uZGl0aW9ucyBhbmQgdGhlIGZvbGxvd2luZyBkaXNjbGFpbWVyLg0KICoNCiAqICAgLSBSZWRpc3RyaWJ1dGlvbnMgaW4gYmluYXJ5IGZvcm0gbXVzdCByZXByb2R1Y2UgdGhlIGFib3ZlIGNvcHlyaWdodA0KICogICAgIG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lciBpbiB0aGUNCiAqICAgICBkb2N1bWVudGF0aW9uIGFuZC9vciBvdGhlciBtYXRlcmlhbHMgcHJvdmlkZWQgd2l0aCB0aGUgZGlzdHJpYnV0aW9uLg0KICoNCiAqICAgLSBOZWl0aGVyIHRoZSBuYW1lIG9mIE9yYWNsZSBvciB0aGUgbmFtZXMgb2YgaXRzDQogKiAgICAgY29udHJpYnV0b3JzIG1heSBiZSB1c2VkIHRvIGVuZG9yc2Ugb3IgcHJvbW90ZSBwcm9kdWN0cyBkZXJpdmVkDQogKiAgICAgZnJvbSB0aGlzIHNvZnR3YXJlIHdpdGhvdXQgc3BlY2lmaWMgcHJpb3Igd3JpdHRlbiBwZXJtaXNzaW9uLg0KICoNCiAqIFRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTDQogKiBJUyIgQU5EIEFOWSBFWFBSRVNTIE9SIElNUExJRUQgV0FSUkFOVElFUywgSU5DTFVESU5HLCBCVVQgTk9UIExJTUlURUQgVE8sDQogKiBUSEUgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkQgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSDQogKiBQVVJQT1NFIEFSRSBESVNDTEFJTUVELiAgSU4gTk8gRVZFTlQgU0hBTEwgVEhFIENPUFlSSUdIVCBPV05FUiBPUg0KICogQ09OVFJJQlVUT1JTIEJFIExJQUJMRSBGT1IgQU5ZIERJUkVDVCwgSU5ESVJFQ1QsIElOQ0lERU5UQUwsIFNQRUNJQUwsDQogKiBFWEVNUExBUlksIE9SIENPTlNFUVVFTlRJQUwgREFNQUdFUyAoSU5DTFVESU5HLCBCVVQgTk9UIExJTUlURUQgVE8sDQogKiBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOyBMT1NTIE9GIFVTRSwgREFUQSwgT1INCiAqIFBST0ZJVFM7IE9SIEJVU0lORVNTIElOVEVSUlVQVElPTikgSE9XRVZFUiBDQVVTRUQgQU5EIE9OIEFOWSBUSEVPUlkgT0YNCiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBDT05UUkFDVCwgU1RSSUNUIExJQUJJTElUWSwgT1IgVE9SVCAoSU5DTFVESU5HDQogKiBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GIFRISVMNCiAqIFNPRlRXQVJFLCBFVkVOIElGIEFEVklTRUQgT0YgVEhFIFBPU1NJQklMSVRZIE9GIFNVQ0ggREFNQUdFLg0KICovIA0KLS0+DQoNCjw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+DQo8IS0tIGhyZWYgYXR0cmlidXRlIGNvbnRhaW5zIHJlbGF0aXZlIHBhdGg7DQogICAgIGNvZGViYXNlIGF0dHJpYnV0ZSBub3Qgc3BlY2lmaWVkIC0tPg0KPGpubHAgaHJlZj0iZHluYW1pY3RyZWUtYXBwbGV0LmpubHAiPg0KICAgIDxpbmZvcm1hdGlvbj4NCiAgICAgICAgPHRpdGxlPkR5bmFtaWMgVHJlZSBEZW1vPC90aXRsZT4NCiAgICAgICAgPHZlbmRvcj5EeW5hbWljIFRlYW08L3ZlbmRvcj4NCiAgICA8L2luZm9ybWF0aW9uPg0KICAgIDxyZXNvdXJjZXM+DQogICAgICAgIDwhLS0gQXBwbGljYXRpb24gUmVzb3VyY2VzIC0tPg0KICAgICAgICA8ajJzZSB2ZXJzaW9uPSIxLjcrIiAvPg0KICAgICAgICA8amFyIGhyZWY9Imh0dHBzOi8vZG9jcy5vcmFjbGUuY29tL2phdmFzZS90dXRvcmlhbC9kZXBsb3ltZW50L2FwcGxldC9leGFtcGxlcy9kaXN0L2FwcGxldF9Db21wb25lbnRBcmNoX0R5bmFtaWNUcmVlRGVtby9EeW5hbWljVHJlZURlbW8uamFyIg0KICAgICAgICAgICAgIG1haW49InRydWUiIC8+DQogICAgPC9yZXNvdXJjZXM+DQogICAgPGFwcGxldC1kZXNjIA0KICAgICAgICAgbmFtZT0iRHluYW1pYyBUcmVlIERlbW8gQXBwbGV0Ig0KICAgICAgICAgbWFpbi1jbGFzcz0iYXBwbGV0Q29tcG9uZW50QXJjaC5EeW5hbWljVHJlZUFwcGxldCINCiAgICAgICAgIHdpZHRoPSIzMDAiDQogICAgICAgICBoZWlnaHQ9IjMwMCI+DQogICAgIDwvYXBwbGV0LWRlc2M+DQogICAgIDx1cGRhdGUgY2hlY2s9ImJhY2tncm91bmQiLz4NCjwvam5scD4=">
+-->
+</applet>
+   <div id="selectSourceDialog" class="modal fade" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+               Scan Sources
+            </div>
+            <div class="modal-body">
+               <div class="groupBox">
+                  Please select scan source.
+                  <br />
+                  <br />
+                  <select id="sources" class="form-control"></select>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button id="selectSourceDialog_Ok" class="btn btn-default">OK</button>
+               <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Edit image dialog -->
+   <div id="imageProcessingDialog" class="modal fade" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+               Image Processing
+            </div>
+            <div class="modal-body">
+               <ul class="nav nav-tabs">
+                  <li class="active"><a id="flipTabBtn" href="index.html#flipTab" data-toggle="tab">Flip</a></li>
+                  <li><a id="rotateTabBtn" href="index.html#rotateTab" data-toggle="tab">Rotate</a></li>
+                  <li><a id="borderRemoveTabBtn" href="index.html#borderRemoveTab" data-toggle="tab">Border Remove</a></li>
+                  <li><a id="deskewTabBtn" href="index.html#deskewTab" data-toggle="tab">Deskew</a></li>
+                  <li><a id="holePunchRemoveTabBtn" href="index.html#holePunchRemoveTab" data-toggle="tab">Hole Punch Remove</a></li>
+               </ul>
+               <div class="tab-content" style="height:450px;border:1px solid lightgray;border-top:none;">
+                  <!-- Flip -->
+                  <div class="tab-pane active" id="flipTab">
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <br />
+                           <div>
+                              <span>Flip Direction:</span>
+                              <select id="flip" class="form-control input-sm">
+                                 <option value="horizontal">Horizontal</option>
+                                 <option value="vertical">Vertical</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6" style="text-align:center;">
+                           <img id="flipPreview" class="preview" />
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Rotate -->
+                  <div class="tab-pane" id="rotateTab">
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <br />
+                           <div>
+                              <span>Rotate Angle:</span>
+                              <select id="rotateAngle" class="form-control input-sm">
+                                 <option value="90">90&deg;</option>
+                                 <option value="180">180&deg;</option>
+                                 <option value="270">270&deg;</option>
+                                 <option value="-90">-90&deg;</option>
+                                 <option value="-180">-180&deg;</option>
+                                 <option value="-270">-270&deg;</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6" style="text-align:center;">
+                           <img id="rotatePreview" class="preview" />
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Border remove -->
+                  <div class="tab-pane" id="borderRemoveTab">
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <br />
+                           <div>
+                              <span>Border To Remove:</span>
+                              <form role="form">
+                                 <input id="leftBorder" type="checkbox" class="borderRemoveParam" value="left" checked />
+                                 <label for="leftBorder">Left</label>
+                                 <input id="rightBorder" type="checkbox" class="borderRemoveParam" value="Right" checked />
+                                 <label for="rightBorder">Right</label>
+                                 <input id="topBorder" type="checkbox" class="borderRemoveParam" value="top" checked />
+                                 <label for="topBorder">Top</label>
+                                 <input id="bottomBorder" type="checkbox" class="borderRemoveParam" value="bottom" checked />
+                                 <label for="bottomBorder">Bottom</label>
+                              </form>
+                           </div>
+                           <br />
+                           <div>
+                              <span>Flags:</span>
+                              <form role="form">
+                                 <input id="useVariance" type="checkbox" class="borderRemoveParam" value="useVariance" checked />
+                                 <label for="useVariance">Use Variance</label>
+                              </form>
+                           </div>
+                           <br />
+                           <div>
+                              <form role="form">
+                                 <span>Border Percent (0 - 100):</span>
+                                 <input id="borderPercent" name="Border Percent" class="form-control input-sm borderRemoveParam numeric" value="20" min="0" max="100" />
+                                 <br />
+                                 <span>White Noise Length (0 - 10):</span>
+                                 <input id="whiteNoiseLength" name="White Noise Length" class="form-control input-sm borderRemoveParam numeric" value="9" min="0" max="10" />
+                                 <br />
+                                 <span>Variance (0 - 10):</span>
+                                 <input id="variance" name="Variance" class="form-control input-sm borderRemoveParam numeric" value="3" min="0" max="10" />
+                              </form>
+                           </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6" style="text-align:center;">
+                           <img id="borderRemovePreview" class="preview" />
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Deskew -->
+                  <div class="tab-pane" id="deskewTab">
+                     <div class="col-xs-12 col-md-6">
+                        <br />
+                        <div>
+                           <span>Fill:</span>
+                           <form role="form">
+                              <input id="fill" type="checkbox" class="deskewParam" checked />
+                              <label for="fill">Fill Exposed Area</label>
+                              <br />
+                              <input type='text' id="fillColor" class="deskewParam" />
+                           </form>
+                        </div>
+                        <br />
+                        <div>
+                           <span>Threshold:</span>
+                           <form role="form">
+                              <input id="threshold" type="checkbox" class="deskewParam" checked />
+                              <label for="threshold" style="display:inline;font-weight:normal;">Do not deskew the image if the deskew angle is very small (less than 0.5 degrees)</label>
+                           </form>
+                        </div>
+                        <br />
+                        <div>
+                           <span>Quality:</span>
+                           <form role="form">
+                              <input type="radio" name="quality" value="0" class="deskewParam" checked="checked" />Low
+                              <input type="radio" name="quality" value="4096" class="deskewParam" />Medium
+                              <input type="radio" name="quality" value="8192" class="deskewParam" />High
+                           </form>
+                        </div>
+                        <br />
+                        <div>
+                           <span>Type:</span>
+                           <form role="form">
+                              <input type="radio" name="type" value="0" class="deskewParam" checked="checked" />Text Only
+                              <br />
+                              <input type="radio" name="type" value="65536" class="deskewParam" />Text and Images
+                           </form>
+                        </div>
+                        <br />
+                        <div>
+                           <span>Speed:</span>
+                           <form role="form">
+                              <input type="radio" name="speed" value="0" class="deskewParam" checked="checked" />Normal (Best Quality)
+                              <br />
+                              <input type="radio" name="speed" value="1048576" class="deskewParam" />Fast (Intended for 1 bits per pixel)
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-xs-12 col-md-6" style="text-align:center;">
+                        <img id="deskewPreview" class="preview" />
+                     </div>
+                  </div>
+                  <!-- HolePunchRemove -->
+                  <div class="tab-pane" id="holePunchRemoveTab">
+                     <div class="col-xs-12 col-md-6">
+                        <br />
+                        <div>
+                           <span>Flags:</span>
+                           <form role="form">
+                              <input id="useCount" type="checkbox" class="holePunchRemoveParam" value="useCount" checked />
+                              <label for="useCount">Use Count</label>
+                              <br />
+                              <input id="useLocation" type="checkbox" class="holePunchRemoveParam" value="useLocation" checked />
+                              <label for="useLocation">Use Location</label>
+                              <br />
+                              <input id="useDPI" type="checkbox" class="holePunchRemoveParam" value="useDPI" checked />
+                              <label for="useDPI">Use DPI</label>
+                              <br />
+                              <input id="useSize" type="checkbox" class="holePunchRemoveParam" value="useSize" />
+                              <label for="useSize">Use Size</label>
+                           </form>
+                        </div>
+                        <br />
+                        <div>
+                           <span>Location: </span>
+                           <form role="form">
+                              <input name="location" type="radio" class="holePunchRemoveParam" value="1" checked />Left
+                              <input name="location" type="radio" class="holePunchRemoveParam" value="2" />Right
+                              <input name="location" type="radio" class="holePunchRemoveParam" value="3" />Top
+                              <input name="location" type="radio" class="holePunchRemoveParam" value="4" />Bottom
+                           </form>
+                        </div>
+                        <br />
+                        <div>
+                           <span>Options: </span>
+                           <form role="form">
+                              Count (2 - 10):
+                              <div class="input-group">
+                                 <input id="count-min" name="Count(Min)" class="form-control input-sm holePunchRemoveParam numeric" placeholder="Min" value="2" min="2" max="10" />
+                                 <span class="input-group-addon">-</span>
+                                 <input id="count-max" name="Count(Max)" class="form-control input-sm holePunchRemoveParam numeric" placeholder="Max" value="4" min="2" max="10" />
+                              </div>
+                              <br />
+                              Width (0 - 10000):
+                              <div class="input-group">
+                                 <input id="width-min" name="Width(Min)" class="form-control input-sm holePunchRemoveParam numeric" placeholder="Min" value="0" min="0" max="10000" disabled />
+                                 <span class="input-group-addon">-</span>
+                                 <input id="width-max" name="Width(Max)" class="form-control input-sm holePunchRemoveParam numeric" placeholder="Max" value="50" min="0" max="10000" disabled />
+                              </div>
+                              <br />
+                              Height (0 - 10000):
+                              <div class="input-group">
+                                 <input id="height-min" name="Height(Min)" class="form-control input-sm holePunchRemoveParam numeric" placeholder="Min" value="0" min="0" max="10000" disabled />
+                                 <span class="input-group-addon">-</span>
+                                 <input id="height-max" name="Height(Max)" class="form-control input-sm holePunchRemoveParam numeric" placeholder="Max" value="50" min="0" max="10000" disabled />
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-xs-12 col-md-6" style="text-align:center;">
+                        <img id="holePunchRemovePreview" class="preview" />
+                     </div>
+                  </div>
+                  <span id="imageProcessingDialog_Loading">Processing...</span>
+               </div>
+               <div id="argumentsErrorDiv" style="display:none;">
+                  <div class="panel-heading" style="height:30px;">
+                     <a data-toggle="collapse" href="index.html#details">Details »</a>
+                  </div>
+                  <div id="details" class="panel-collapse collapse" aria-hidden="true">
+                     <div class="panel-body">
+                        <textarea id="errorDetailsText" readonly="readonly" rows="7"></textarea>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button id="reset" class="btn btn-default">Reset</button>
+               <button id="apply" class="btn btn-default">Apply</button>
+               <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Error dialog -->
+   <div id="errorDialog" class="modal fade" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+               Error !
+            </div>
+            <div class="modal-body">
+               <div class="groupBox">
+                  <p style="color:darkred;">
+                     <span class="glyphicon glyphicon-warning-sign" style="float: left; margin: 0 7px 50px 0;font-size:15px;"></span>
+                     <span id="errorDetails"></span>
+                  </p>
+                  <a id="downloadApplication" style="color:#0000FF;">Download Scan Application</a>
+                  <br />
+                  <br />
+                  <p>
+                     <span class="glyphicon glyphicon-asterisk" style="float: left; margin: 0 7px 50px 0;"></span>
+                     Refresh the page after installing the scanning application.
+                  </p>
+                  <a id="troubleshootingGuide" href="http://demo.leadtools.com/javascript/ScanningDemo/Resources/TroubleshootingGuide.pdf" style="display:none;color:#0000FF;" target="_blank">Troubleshooting Guide</a>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Ok</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- About dialog -->
+   <div id="aboutDialog" class="modal fade" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog about-dialog">
+         <div class="modal-content">
+            <div class="modal-body">
+               <br />
+               <label id="demoName"></label>
+               <label>Copyright © 1991-2016 All Rights Reserved.</label>
+               <label>LEAD Technologies, Inc.</label>
+               <br />
+               <img src="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Images/LEAD.png" alt="LEADTOOLS" />
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Loading dialog -->
+   <div id="loadingDialog" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog loading-dialog">
+         <div class="modal-content">
+            <div class="modal-body">
+               <br />
+               <img src="http://demo.leadtools.com/javascript/ScanningDemo/Resources/Images/Loading.gif" />
+               <br />
+               <br />
+               <label id="processText"></label>
+            </div>
+         </div>
+      </div>
+   </div>
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','_gaTracker');
+
+  _gaTracker('create', 'UA-378747-4', 'auto');
+  _gaTracker('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+<!-- SrcOrigin and UUID Cookies-->
+<script type="text/javascript" src="http://demo.leadtools.com/includes/querystring.js"></script>
+<!--End SrcOrigin and UUID Cookies-->
+
+
+<!-- ClickDimensions -->
+<script type="text/javascript"> 
+   var cdJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+   document.write(unescape("%3Cscript src='" + cdJsHost + "analytics.clickdimensions.com/ts.js' type='text/javascript'%3E%3C/script%3E")); 
+ </script> 
+
+ <script type="text/javascript"> 
+   var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com'); 
+   cdAnalytics.setAccountKey('aOm9sTD3b0aL4gX6hek0xQ'); 
+   cdAnalytics.setDomain('leadtools.com'); 
+   cdAnalytics.trackPage(); 
+ </script> 
+
+<!-- End ClickDimensions -->
+
+
+<!-- Manual Analytics and ClickDimensions click code for non-HTML clicks -->
+<script type="text/javascript" src="http://demo.leadtools.com/includes/manual-analytics-click.js"></script>
+<!-- End Manual Analytics and ClickDimensions click code for non-HTML clicks -->
+
+</body>
+</html>

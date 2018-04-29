@@ -1,0 +1,193 @@
+#{extends 'main.html' /}
+<script type="text/javascript">
+
+function pagination(index)
+{
+	console.log('index::'+index);
+	//submitSearchQueary(index,$('#filter-button'));
+	if(parseInt(index)>0)
+	{
+		$('#page').val(index);
+		$('#scanlistform').submit();
+	}	  
+}
+
+</script>
+
+<!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Download Files<small></small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+            
+			<div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Downloads<small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <table class="table table-striped">
+										
+						  <form class="form-horizontal form-label-left" id="scanlistform" method="POST">
+							  <input type="hidden" name="page" id="page" value="1"/>
+							  <div class="col-md-4">
+								<div class="form-group">
+								  <label>Customer Id:</label>							
+									<input type="text" name="customerId" value="${customerId}" class="form-control"/>
+								</div>
+								<div class="form-group">
+								  <label>Group Id:</label>
+									<input type="text" name="accountId" value="${accountId}"  class="form-control"/>
+								</div>
+							</div>
+							
+							<div class="col-md-4">
+								<div class="form-group">
+								  <label>Account No:</label>
+									<input type="text" name="agreementId" value="${agreementId}"  class="form-control"/>
+								</div>
+								<div class="form-group">
+								  <label>Document Category:</label>
+									<input type="text" name="docCategory" value="" class="form-control"/>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<span></span><br/><br/><br/><br/><br/>
+								  <button type="submit" class="btn btn-success">Submit</button>
+								</div>
+							  </div>
+							</div>
+						  </form>
+						
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Scan Set Name</th>
+                          <th>Scan Set Description</th>
+                          <th>Customer Id</th>
+                          <th>Group Id</th>
+                          <th>AccountNo</th>
+                          <th>Document Type</th>
+                          <th>&nbsp;</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+						  %{
+							  int index = 0;
+							  index = (page?(page-1):1)*10;
+						 %}
+						  #{list items:scanUploadList, as:'downloadFile'}
+							%{
+								index++;
+							%}
+							<tr>
+								<th scope="row">${index}</th>
+								<td>${downloadFile.name}</td>
+								<td>${downloadFile.description}</td>
+								<td>${downloadFile.customerId}</td>
+								<td>${downloadFile.accountId}</td>
+								<td>${downloadFile.agreementId}</td>
+								<td>${downloadFile.listOfDocDescType.size()>0?downloadFile.listOfDocDescType.get(downloadFile.listOfDocDescType.size()-1)?.name:""}</td>
+								
+								<td>	
+									#{deadbolt.externalizedRestriction externalRestrictions:['File Archiving']}									
+									<a class="btn btn-mini btn-warning" href="@{DocumentArchiveController.viewscan(downloadFile.id)}"><i class="icon-edit"></i> Download</a>
+									#{/deadbolt.externalizedRestriction}
+								</td>
+							</tr>
+						#{/list}                        
+						</tbody>
+                      </table>
+                      <div class="row">
+						  <div class="col-sm-5">
+							  <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing ${(page?(page-1):0)*10+1} to ${((page?(page-1):0)*10+10)>=total?total:((page-1)*10+10)} of ${total} entries</div>
+						</div>
+						<div class="col-sm-7">
+							<div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+								<ul class="pagination">
+									<li class="paginate_button previous ${(page?(page-1):1)>1?"":"disabled"}" id="datatable_previous">
+										<a href="#" onclick="pagination(#{if (page?(page-1):1)>1}'${(page?(page-1):1)}'#{/if}#{else}-1#{/else});return false;" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a>
+									</li>
+									%{
+									if((page-1)<=total/10)
+									{
+									%}
+									#{list items:(page-2)..(page)+2,as:'i'}
+									#{if page == i}
+										<li class="paginate_button active">
+											<a href="#" onclick="pagination('-1');" aria-controls="datatable" data-dt-idx="1" tabindex="0">${i}</a>
+										</li>									
+									  #{/if}
+									 
+									  #{else}
+									  #{if (i < (total/10) || (((total%10)>0) && i == java.lang.Math.ceil(total/10))) && i>0}
+										<li class="paginate_button">
+											<a href="#" onclick="pagination('${i}');" aria-controls="datatable" data-dt-idx="1" tabindex="0">${i}</a>
+										</li>									
+									   #{/if}
+									   #{/else}
+									#{/list}
+									%{
+										for(int i=(page?(page-1):0);((i)*10+10)<total && i<((page?(page-1):0)+3);i++)
+										{
+										%}
+										<!--
+										<li class="paginate_button active">
+											<a href="@{DocumentArchiveController.scanlist}?page=${i}" aria-controls="datatable" data-dt-idx="1" tabindex="0">${i}</a>
+										</li>									
+										-->
+										%{
+										}
+									}
+									%}
+									<li class="paginate_button next ${total>((page?(page-1):1)*10+10)?"":"disabled"}"" id="datatable_next">
+										<a href="#" onclick="pagination('#{if total>((page?(page-1):1)*10+10)}${(page?(page):1)+1}#{/if}#{else}-1#{/else}');" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        

@@ -1,0 +1,66 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: yt7XHnkYcgOXSIZCTgD0g3/lhU81U
+ dPSlfInrRay3fE=
+SHA-256-Digest-Manifest: +0fgeS+APL8NIICrR5cPM3kXaaNEkvdVo4FyDxEXRng=
+Created-By: 1.8.0_20 (Oracle Corporation)
+
+Name: leadtools/sane/server/SaneUtils.class
+SHA-256-Digest: trQYuAQmXPBkNCbIVBv8qVsPpsMlMGTfmymlE+wkSQs=
+
+Name: leadtools/sane/server/SaneScanningService.class
+SHA-256-Digest: SzsceLwE0Oig0uaX5pIVESh4cOh6qv7ePUskyvLCdPw=
+
+Name: leadtools/sane/server/ClientConnectionEvent.class
+SHA-256-Digest: qphUW5V33b7x6AuG1eBW9m/qUjQvhPwvgxUI/hBx7No=
+
+Name: leadtools/sane/server/CommandEvent.class
+SHA-256-Digest: BpAN5x90x7iSeF370a33cRXy1wk8VUsDe3kmZwO40vc=
+
+Name: leadtools/sane/server/PageImageProcessingEvent.class
+SHA-256-Digest: 1088ulDtPsm5NODTYtXeWpUXfSajVX8NVdyXTPgVxgA=
+
+Name: leadtools/sane/server/HttpResponse.class
+SHA-256-Digest: cUd4df0/f5PdVedID1d2GO9VAkoG8XFPRFmGoPj3Jzw=
+
+Name: leadtools/sane/server/ThreadSocket.class
+SHA-256-Digest: BAJNeE73eC/d1zpQfsELZwIdlbsagQk8QZxylhtECfM=
+
+Name: leadtools/sane/server/SaveData.class
+SHA-256-Digest: iNd6tU5/JLdO7I4TnIrGyJNvRR4HkK26lo3Wwz2WMHE=
+
+Name: leadtools/sane/server/ClientListener.class
+SHA-256-Digest: J98prYz7otFC7BMBzjZIGgZSCKRk6g306pPKZK2nX+0=
+
+Name: leadtools/sane/server/ImageProcessingListener.class
+SHA-256-Digest: T64mPoS5vNIdwpaPe/Ss/7rLY7QSO+vn2ZwSIvm7P9M=
+
+Name: leadtools/sane/server/ICommandService.class
+SHA-256-Digest: 2i+oFhK+YV64c830rWUz8sAkNnY92tmnP7tHRFvUvI4=
+
+Name: leadtools/sane/server/ISaneService.class
+SHA-256-Digest: 81vHIV6DECbKvdFlUfbWIyq82pEinmjCt5XDwyCjCHo=
+
+Name: leadtools/sane/server/SaneServer.class
+SHA-256-Digest: jmea4Jw7rD6UfGkhPkKEUEWXNtQKr2H+wSKguD3LrwU=
+
+Name: leadtools/sane/server/SaneError.class
+SHA-256-Digest: golyy/umG2+8N63S/+w0rcI9kdulw1L3ZPYvbFKRSx0=
+
+Name: leadtools/sane/server/ImageProcessingEvent.class
+SHA-256-Digest: yqCYT+c6d1oZCGevWOaP6CITrrXk27kbnY3QBW5hXFk=
+
+Name: leadtools/sane/server/SessionData.class
+SHA-256-Digest: BovgBw4MlXkqLzz0L/mKAWjOx7Dxnmk3l3jprlhS+qM=
+
+Name: leadtools/sane/server/ICommandCallBack.class
+SHA-256-Digest: C0/ZQ9CTt31XWyhyCmDeZsQlguAoU+dDkLtasimgvEM=
+
+Name: leadtools/sane/server/IImageProcessingService.class
+SHA-256-Digest: iz+v5INEx2ec+ox4zYGpQOOHQ0QdcXFqcn0OjnXfgho=
+
+Name: leadtools/sane/server/SaneStatus.class
+SHA-256-Digest: He+c/jcbERo3lig2lEZS9O66sqqXP+RWq2MKv1QZ1E0=
+
+Name: leadtools/sane/server/ISaneScanningService.class
+SHA-256-Digest: Tm8bx0mHZg3Pcafa1lNYMd/79UqsOcZYzvaWcB1fNFg=
+

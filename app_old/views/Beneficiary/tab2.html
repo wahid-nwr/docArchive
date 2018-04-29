@@ -1,0 +1,233 @@
+#{extends 'main.html' /}
+<section id="feature2" >
+	<div class="container">		
+		<div id="rootwizard">
+			<div class="navbar2">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul id="tabbar">
+							<li style="visibility:hidden"><a href="#">Form 1</a></li>	
+							<li><a href="@{Beneficiary.basicprofile()}">Form 1</a></li>
+							<li><a href="#tab2" data-toggle="tab">Form 2</a></li>
+							<li><a href="@{Beneficiary.tab3()}">Form 3</a></li>
+							<li><a href="@{Beneficiary.tab4()}">Form 4</a></li>
+							<li><a href="@{Beneficiary.tab5()}">Form 5</a></li>
+							<li><a href="@{Beneficiary.tab6()}">Form 6</a></li>
+							<li><a href="@{Beneficiary.tab7()}">Form 7</a></li>
+							<li><a href="@{Beneficiary.tab8()}">Form 8</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="bar" class="progress progress-striped active">
+			  <div class="bar"></div>
+			</div>
+			
+			<div class="tab-content">				
+				<div class="tab-pane" id="tab2"> <!--tab2-->					
+				  <div class="col-lg-12">
+		            <div class="panel panel-default">
+						 <div class="panel-heading">
+								Woman Beneficiary Profile				  
+						 </div>
+						 <form method="POST" class="form-horizontal" action="./addmaritalstatus">
+							<input type="hidden" name="beneficiaryProfile" value="${beneficiaryProfile?.id}"/>
+							<input  type="hidden" name="maritalStatus.id" value="${maritalStatus?.id}"/>
+							<div class="panel-body">
+							  <p>1. MARITAL STATUS: :</p>
+				                 <div class="line"></div>
+								 <div class="row">
+								 
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 
+										 #{input 'maritalStatus.maritalStatus' , type:'select', labelProperty:'name', required:'true'} 
+											
+												<option value="Unmarried" #{if maritalStatus?.maritalStatus.equals("Unmarried")} selected#{/if}>Unmarried</option>
+												<option value="Married-Husband" #{if maritalStatus?.maritalStatus.equals("Married-Husband")} selected#{/if}>Married-Husband</option>
+												<option value="Disabled" #{if maritalStatus?.maritalStatus.equals("Disabled")} selected#{/if}>Disabled</option>
+												<option value="Married-runaway" #{if maritalStatus?.maritalStatus.equals("Married-runaway")} selected#{/if}>Married-runaway</option>
+												<option value="Husband" #{if maritalStatus?.maritalStatus.equals("Husband")} selected#{/if}>Husband</option>
+												<option value="Divorced" #{if maritalStatus?.maritalStatus.equals("Divorced")} selected#{/if}>Divorced</option>
+												<option value="Widowed" #{if maritalStatus?.maritalStatus.equals("Widowed")} selected#{/if}>Widowed</option>
+											#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-6">
+								    <div class="form-group">
+							        	<label>Description :</label>
+										 <textarea class="form-control" rows="3"></textarea>
+								    </div>
+				                 </div>
+								 </div>
+
+								  <p>2. AGE:</p>
+								   <div class="line"></div>
+								   	<div class="row">
+								  <div class="col-lg-3">
+								   <div class="form-group">                                      
+                                        <div class="controls">  
+                                        #{input 'maritalStatus.age', required:'true'/}
+                                        </div>  
+                                    </div>
+									</div>
+								 </div>
+								  <p>3. LITERACY :</p>
+								   <div class="line"></div>
+								    <div class="row">
+								   <div class="col-lg-3">
+								    <div class="form-group">							        	
+										#{input 'maritalStatus.isLiterate' , type:'select', labelProperty:'name',required:'true'} 
+											<option value="Yes" #{if maritalStatus?.isLiterate.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if maritalStatus?.isLiterate.equals("No")} selected#{/if}>No</option>
+										#{/input}										
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{
+											boolean disabled = false;
+											String isDisabled = "";
+											if(maritalStatus?.isLiterate.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+											System.out.println("disabled:::"+disabled);
+										%}
+							        	#{input 'maritalStatus.classLevel' ,disabled:''+isDisabled, type:'select', labelProperty:'name' ,class:'form-control depends-on-maritalStatus.isLiterate'}
+											%{												
+												for(int i=0;i<11;i++)
+												{
+													%}
+													<option value="${i+1}" #{if maritalStatus?.classLevel==(i+1)} selected#{/if}>${i+1}</option>
+													%{
+												}
+											%}
+										#{/input}
+								    </div>
+				                 </div>
+								 </div>
+								 <p>4. INCOME STATUS :</p>
+								   <div class="line"></div>
+								   <div class="row">
+									<div class="col-lg-3">
+								    <div class="form-group">
+							        	#{input 'maritalStatus.isMainEarner' , type:'select', labelProperty:'name'} 
+											<option value="Yes" #{if maritalStatus?.isMainEarner.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if maritalStatus?.isMainEarner.equals("No")} selected#{/if}>No</option>
+										#{/input}										
+								    </div>
+				                 </div>
+								   </div>
+								   </div>
+								   </div>
+						     </div>
+						     </form>
+				</div><!--/tab2-->
+				
+					<ul class="pager wizard">
+						<li class="previous first" style="display:none;"><a href="#">First</a></li>
+						<li class="previous" style="display:none;"><a href="#">Previous</a></li>
+						<li class="next last" style="display:none;"><a href="#">Last</a></li>
+						<li class="next"><button type="submit" class="sub">Next</button>				</li>
+					</ul>
+				</div>
+			</div>	
+		</div>	
+	</div><!--/.container-->
+</section><!--/#feature-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#maritalStatus\\.classLevel').dependsOn('#maritalStatus\\.isLiterate', ['Yes']);
+		
+		$('#tab a[href="#tab2"]').tab('show');
+		var i=1;		
+		$("#input-24").fileinput({
+			initialPreview: [
+				'<img src="../../../public/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+				'<img src="../../../public/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+			],
+			overwriteInitial: false,
+			maxFileSize: 100,
+			initialCaption: "The Moon and the Earth"
+		});
+		
+		$("#add_row").click(function(){
+			$('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+
+			$('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+			i++; 
+		});
+		$("#delete_row").click(function(){
+			if(i>1){
+				$("#addr"+(i-1)).html('');
+				i--;
+			}
+		});
+	    /*
+		$('#rootwizard').bootstrapWizard({onNext: function(tab, navigation, index) {
+				if(index==2) {
+					// Make sure we entered the name
+					if(!$('#name').val()) {
+						alert('You must enter your name');
+						$('#name').focus();
+						return false;
+					}
+				}
+				
+				// Set the name for the next tab
+				$('#tab9').html('Hello, ' + $('#name').val());
+				
+			}, onTabShow: function(tab, navigation, index) {
+				//alert("tab::"+tab);
+				//alert("navigation::"+navigation);
+				//alert("index::"+index);
+				index = 1;
+				var $total = navigation.find('li').length;
+				var $current = index+1;
+				var $percent = ($current/$total) * 100;
+				$('#rootwizard').find('.bar').css({width:$percent+'%'});
+			},onInit:function(tab,navigation,index){
+			}
+		});
+		*/
+		$('#rootwizard').bootstrapWizard({
+			onNext: function(tab, navigation, index) {
+				if(index==2) {
+					// Make sure we entered the name
+					if(!$('#name').val()) {
+						alert('You must enter your name');
+						$('#name').focus();
+						return false;
+					}
+				}
+				$('.form-horizontal').submit();
+				// Set the name for the next tab
+				$('#tab9').html('Hello, ' + $('#name').val());
+				
+			}
+		});
+		
+		$('#rootwizard').bootstrapWizard('show', 0);
+		var navigation = $('.navbar2');
+		var $total = navigation.find('li').length-1;
+		var $current = 2;
+		var $percent = ($current/$total) * 100;
+		$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		//$( ".previous" ).removeClass( "disabled" );
+		$( ".next" ).removeClass( "disabled" );
+
+		$('ul#tabbar li a').click(function(event){
+			//$(this).next('div').slideToggle(200);
+			//alert('eee');
+			event.preventDefault();
+		});
+
+	});
+</script>

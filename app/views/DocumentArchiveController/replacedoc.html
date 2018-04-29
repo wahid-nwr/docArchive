@@ -1,0 +1,260 @@
+#{extends 'main.html' /}
+<!-- page content -->
+<!-- prettify -->
+    <link href="../../../public/style/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../../../public/style/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../../../public/style/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../../../public/style/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    
+    <!-- bootstrap-progressbar -->
+    <link href="../../../public/style/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- jVectorMap -->
+    <link href="../../../public/style/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Form Elements</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Replace Document Set <small>Replace Text in predefined set of documents</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form action="@{DocumentArchiveController.submitreplacetext()}" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+					#{if docreplaceconfig?.id}
+					<input type="hidden" name="docreplaceconfig.id" value="${docreplaceconfig.id}" />
+					<!--
+					<div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Document Set</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="documentSet.id" class="select2_single form-control" tabindex="-1">
+                            <option></option>
+                            #{list items:documentSetList, as:'documentSet'}
+                            <option value="${documentSet.id}">${documentSet.name}</option>
+                            #{/list}
+                          </select>
+                        </div>
+                      </div>
+					-->
+					<div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Files</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+						%{
+							String documents = "";
+							
+						%}
+                          <select name="documentSet.documents" class="select2_multiple form-control" multiple="multiple">
+									<option value="">Choose option</option>
+							%{
+								models.UploadFile uploadFile = null;
+								for(int i=0;uploadFileList!=null && i<uploadFileList.size();i++)
+								{
+									uploadFile = uploadFileList.get(i);
+							%}									
+									<option value="${uploadFile.id}" #{if documentSet?.documents?.contains(uploadFile)} selected#{/if}>${uploadFile.filename}</option>
+                            %{
+								}
+							%}
+                          </select>
+                        </div>
+                      </div>		
+					%{
+						int index = 0;
+						String divToAppend = "copy";
+					%}
+					#{list items:docreplaceconfig?.replaceList, as:'replaceText'}	
+					%{
+						System.out.println("replaceText:::"+replaceText);
+						System.out.println("index:::"+index);
+						if(index>0)
+						{
+							%}
+							<div id="repeat">                      
+								<div class="form-group" id="add_index${index}">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Text To Replace<span class="required">*</span>
+									</label>
+									<div class="col-md-3 col-sm-3 col-xs-12">
+									  <input type="text" name="replaceText" value="${replaceText}" id="replaceText" required="required" class="form-control col-md-7 col-xs-12">                          
+									</div>
+									<div class="col-md-3 col-sm-3 col-xs-12">
+									  <input type="text" name="toBeReplaceWith" value="" id="toBeReplaceWith" required="required" class="form-control col-md-7 col-xs-12">                          
+									</div>
+									<ul class="nav navbar-right panel_toolbox">
+									<li><a onclick="closeInputField(${index});"><i class="fa fa-close"></i></a>
+									</ul>
+								  </div>
+						  </div>
+							%{
+						}
+						else
+						{
+						%}
+						<div id="copy">
+						  <div class="form-group" id="add_index${index}">
+							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Text To Replace<span class="required">*</span>
+							</label>
+							<div class="col-md-3 col-sm-3 col-xs-12">
+							  <input type="text" name="replaceText" value="${replaceText}" id="replaceText" required="required" class="form-control col-md-7 col-xs-12">                          
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-12">
+							  <input type="text" name="toBeReplaceWith" value="" id="toBeReplaceWith" required="required" class="form-control col-md-7 col-xs-12">                          
+							</div>
+							<ul class="nav navbar-right panel_toolbox">
+							<li><a onclick="closeInputField(${index});"><i class="fa fa-close"></i></a>
+							</ul>
+						  </div>
+						  </div>					  
+						%{
+						}
+						index++;
+					%}
+					#{/list}		
+					#{/if}
+					#{else}
+					<div id="copy">
+                      <div class="form-group" id="add_index0">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Text To Replace<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="replaceText" value="" id="replaceText" required="required" class="form-control col-md-7 col-xs-12">                          
+                        </div>
+                        <ul class="nav navbar-right panel_toolbox">
+						<li><a onclick="closeInputField(0);"><i class="fa fa-close"></i></a>
+						</ul>
+                      </div>
+                      </div>
+                      <div id="repeat">                      
+                      </div>
+					#{/else}		  
+                      
+                      <a id="add_row" class="btn btn-default pull-right">Add Row</a>
+                      <div class="clearfix"></div>
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<!-- FastClick -->
+    <script src="../../../public/style/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../../public/style/vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../../../public/style/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../../../public/style/vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../../public/script/moment/moment.min.js"></script>
+    <script src="../../../public/script/datepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="../../../public/style/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../../../public/style/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../../../public/style/vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="../../../public/style/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="../../../public/style/vendors/switchery/dist/switchery.min.js"></script>
+    
+    <script src="../../../public/style/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="../../../public/style/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="../../../public/style/vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="../../../public/style/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="../../../public/style/vendors/starrr/dist/starrr.js"></script>
+<script type="text/javascript">
+	function closeInputField(i)
+	{
+		if(i>0)
+		{
+			document.getElementById('add_index'+i).outerHTML = '';
+		}
+	}
+	$(document).ready(function() {
+		$(".select2_multiple").select2({
+			maximumSelectionLength: 40,
+			placeholder: "With Max Selection limit 40",
+			allowClear: true
+		});
+		var i = 0;  
+		$("#add_row").click(function(){
+			i++; 
+			var copy = document.getElementById('copy').innerHTML;
+			copy = copy.replace('add_index0','add_index'+i);
+			copy = copy.replace('closeInputField(0)','closeInputField('+i+')');
+			//alert('copy::'+copy);
+		//$('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+
+		$('#repeat').append(copy);
+		
+		});
+		
+		/*
+		$("#delete_row").click(function(){
+		if(i>1){
+			$("#addr"+(i-1)).html('');
+			i--;
+		}
+		});
+		*/
+	});
+    
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".select2_single").select2({
+			placeholder: "Select a Document Set",
+			allowClear: true
+		});
+	});
+
+</script>

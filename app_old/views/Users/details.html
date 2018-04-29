@@ -1,0 +1,165 @@
+#{extends 'main.html' /}
+#{set title:'User Details' /}
+
+
+<ul class="breadcrumb">
+	<li>
+		<a href="@{Application.index()}">Home</a> <span class="divider">/</span>
+	</li>
+	<li>
+		<a href="@{Users.list()}">Users</a> <span class="divider">/</span>
+	</li>
+	<li class="active">${user.displayName} (${user.name})</li>
+</ul>
+
+<div class="page-header">
+	<h1>${title}</h1>
+</div>
+#{if flash.success}
+    #{alert flash.success/}
+#{/if}
+<table class="table table-striped table-details">
+    <tbody>
+	    <tr>
+	        <td>ID</td>
+	        <td>${user.id}</td>
+	    </tr>
+	    <tr>
+	        <td>Name</td>
+	        <td>${user.name}</td>
+	    </tr>
+	    <tr>
+	        <td>Display Name</td>
+	        <td>${user.displayName}</td>
+	    </tr>
+	    <tr>
+	        <td>Email</td>
+	        <td>${user.email}</td>
+	    </tr>
+	    <tr>
+	        <td>Role</td>
+	        <td>${user.role.name}</td>
+	    </tr>
+    </tbody>
+</table>
+
+#{if sessUser!=null && (sessUser.role.name).equals("Admin")}
+<form id="assignFirm">
+	<fieldset>
+		<legend>Farm Facility</legend>
+		<div class="row firmfacility">
+		#{if user?.id}
+		<input type="hidden" name="user.id" value="${user.id}" />
+		#{/if}
+		#{if user.firmFacility==null}
+		#{input 'user.firmFacility', type:'select', items:firmFacilitys, labelProperty:'name' /}
+		<a class="btn btn-success">Assign Farm Facility</a><br>
+		#{/if}
+		</div>
+	</fieldset>
+</form>
+
+#{/if}
+
+#{if user.role.name == 'Veterinarian' }
+<form>
+	<fieldset>
+		<legend>Enumerator's</legend>
+		<div class="row enums">
+			#{deadbolt.externalizedRestriction externalRestrictions:['Assign Enumerator']}
+			<div class="span">
+				#{input 'listEnumerator.user.displayName', type:'select', items:listEnumerator, multiple:'multiple' /}
+			</div>
+			<div class="span2">
+				<a class="btn btn-success">&gt;</a><br>
+				<a class="btn btn-danger">&lt;</a>
+			</div>
+			#{/deadbolt.externalizedRestriction}
+			<div class="span">
+				#{input 'user.enumerator', type:'select', items:user.enumerator, multiple:'mutiple' /}
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+#{/if}
+
+#{if user.role.name == 'Supervisor' }
+<form>
+	<fieldset>
+		<legend>Veterinarian's</legend>
+		<div class="row enums">
+			#{deadbolt.externalizedRestriction externalRestrictions:['Assign Enumerator']}
+			<div class="span">
+				#{input 'listVeterinarian.user.displayName', type:'select', items:listVeterinarian, multiple:'multiple' /}
+			</div>
+			<div class="span2">
+				<a class="btn btn-success">&gt;</a><br>
+				<a class="btn btn-danger">&lt;</a>
+			</div>
+			#{/deadbolt.externalizedRestriction}
+			<div class="span">
+				#{input 'user.enumerator', type:'select', items:user.enumerator, multiple:'mutiple' /}
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+
+#{/if}
+
+
+
+
+
+#{deadbolt.externalizedRestriction externalRestrictions:['Assign Enumerator']}
+<script>
+	$('.firmfacility .btn-success').click(function(e){
+		$('#assignFirm').submit();
+		$.ajax('@@{Users.assignFarmFacility()}', {
+        	type: 'POST',
+        	data: {
+        		userId: '${user.id}',
+        		farmId: $('.firmfacility select:first').val()
+        	}
+        }).done(function() {
+    		$('.enums select:last').append($('.enums select:first :selected'));
+			$('.enums select:first :selected').remove();
+    	}).error(function(){
+    		alert('Error Occured');
+    	});
+	});
+	
+	$('.enums .btn-success').click(function(e){
+		$.ajax('@@{Users.assignEnumerators()}', {
+        	type: 'POST',
+        	data: {
+        		userId: '${user.id}',
+        		enums: $('.enums select:first').val(),
+        		remove: false
+        	}
+        }).done(function() {
+    		$('.enums select:last').append($('.enums select:first :selected'));
+			$('.enums select:first :selected').remove();
+    	}).error(function(){
+    		alert('Error Occured');
+    	});
+	});
+
+	$('.enums .btn-danger').click(function(e){
+		$.ajax('@@{Users.assignEnumerators()}', {
+        	type: 'POST',
+        	data: {
+        		userId: '${user.id}',
+        		enums: $('.enums select:last').val(),
+        		remove: true
+        	}
+        }).done(function() {
+    		$('.enums select:first').append($('.enums select:last :selected'));
+			$('.enums select:last :selected').remove();
+    	}).error(function(){
+    		alert('Error Occured');
+    	});
+	});
+</script>
+#{/deadbolt.externalizedRestriction}

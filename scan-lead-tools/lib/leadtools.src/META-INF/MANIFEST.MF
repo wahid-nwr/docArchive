@@ -1,0 +1,529 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Copyright: 1991-2016 LEAD Technologies, Inc.
+File-Description: Kernel
+Product-Version: 19.0.0.0
+Trademark: LEADTOOLS is a trademark of LEAD Technologies, Inc.
+Product-Name: LEADTOOLS for Java
+File-Version: 19.0.0.0
+Created-By: 1.7.0_67-b01 (Oracle Corporation)
+
+Name: leadtools/RasterGetSetOverlayAttributesFlags.class
+SHA-256-Digest: YTKa6BTsz20Zs0caa0jfVC9xcRG6twE9wpS2iNI2Spo=
+
+Name: leadtools/RasterRegionCombineMode.class
+SHA-256-Digest: CYvYIJNHM/FNlnaLN8gczox3CkMKTAfJJ/YpTNQvrjI=
+
+Name: leadtools/RasterTagMetadata.class
+SHA-256-Digest: TShLFsamfufDxTfK/ghYdiLNBRD2I/e+UahoUODRSq0=
+
+Name: leadtools/LeadMatrix.class
+SHA-256-Digest: Mhl8JjtvvypWj4k2ZvrmlxOPpD6OPvp3tu3+vRfCrUc=
+
+Name: leadtools/LeadRectD.class
+SHA-256-Digest: tz7M1rKnGNtUgP2RSJNtft8xnqaUltxhU8hXmHyWANM=
+
+Name: leadtools/RasterNativeBuffer.class
+SHA-256-Digest: xsw/u3wGppj/CkSsK0JpD5LdlA6X+UPQGyrRFVn6w4Q=
+
+Name: leadtools/imageprocessing/ShearCommand.class
+SHA-256-Digest: 1ab9cH5e+SMm9PGoIJHM/hSPC5I7aHpMDtDYZn8fyF4=
+
+Name: leadtools/internal/JavaPlatform$JavaTaskWorker.class
+SHA-256-Digest: HYQXXtMW/a/2npIR5M1criqriVUIZYEtnutdm9Au6aY=
+
+Name: leadtools/LeadFileStream.class
+SHA-256-Digest: /p+/ob71xtube+jGmaYLtUar7d/YJJnewHzyL+qlv+0=
+
+Name: leadtools/internal/DateTools.class
+SHA-256-Digest: 32VZD2Jwbj2gfjAQ5qTVjVKTMPPRK4FHWgc+uYQMytI=
+
+Name: leadtools/RasterImageAnimationDisposalMethod.class
+SHA-256-Digest: J34wq0MSBXzCDs2ztR8IRiB2SMJnj4x9IdRQuZd27aw=
+
+Name: leadtools/imageprocessing/CopyRectangleCommand.class
+SHA-256-Digest: ozO2997U0LwUpS+eGZhighJaaZWFmXLZqcFkLsV0CSY=
+
+Name: leadtools/Platform.class
+SHA-256-Digest: Z4IsyenlQhW6M4tYVlTiQRapAFba3zK9dNHx6V1YOqg=
+
+Name: leadtools/internal/ILeadPlatformImplementation.class
+SHA-256-Digest: xg8V9am/CHtkFq9Ppoik4fX++gH/St3OD5X6eJoOvFg=
+
+Name: leadtools/RasterColor16.class
+SHA-256-Digest: 58xypXP/dVftfo8qYsBq2xsXUwhMNLyPyB9PyhGHibc=
+
+Name: leadtools/RasterCommentMetadataType.class
+SHA-256-Digest: TaLkZiKcgJ7F80ozkDWNlvPQGaWuPsF3fdQ90db4lko=
+
+Name: leadtools/RasterImageChangedEvent.class
+SHA-256-Digest: 32oajsVIEhHfl7C/28pOoAvDkkQlXaBoOwMCdJxhrIA=
+
+Name: ltkrn/L_SIZE.class
+SHA-256-Digest: quDgyUV0i58tJ5FdY7Mficm8Pn7eUxg6MEpbkGGO3fY=
+
+Name: leadtools/LeadSize.class
+SHA-256-Digest: Lf7QVFYOyh/sWUMZ9Hbpi34COmREo+BVMtN+SsGAnLM=
+
+Name: leadtools/imageprocessing/CombineFastCommand.class
+SHA-256-Digest: rtEBd7AcjILEfjpHDn0w08GFo/PQBz28Z8u0CtY2vew=
+
+Name: leadtools/RasterCommandProgressEvent.class
+SHA-256-Digest: Aaum4smX3GDrTlLvvPIMxpHJJroMZ9tkrhDZeqvUwYU=
+
+Name: leadtools/LeadFillMode.class
+SHA-256-Digest: yEMkaQFQ+s5cClHT1mwXzP+AGdqDA+mfV1X84seR/tg=
+
+Name: leadtools/RasterCommentMetadataDataType.class
+SHA-256-Digest: lD9GOxhTLQC1lwjRJVujrrJg1Z6bIVTcl3f2KHVGrzA=
+
+Name: leadtools/RasterMetadataURational.class
+SHA-256-Digest: 6tSLvwkaPgmHofxeYn/+gs8Zk0DHWwEr8/i51dN+gPo=
+
+Name: leadtools/ltkrn.class
+SHA-256-Digest: rdGV2/OhwBBr1IyxyTIE12mFOKdOS1dJkl4NafiDhDs=
+
+Name: leadtools/RasterException.class
+SHA-256-Digest: Usxhk6xhcETWQ45Cu52ERFjorEIkXrB+AzQIi+2wxIs=
+
+Name: leadtools/RasterImage$3.class
+SHA-256-Digest: hMv9fX9Q2ei2vkEFnvbzGn7l4flOSI5l4DSr4EHsYM0=
+
+Name: leadtools/RasterMetadata.class
+SHA-256-Digest: z1h5zqdbEzpKtBKBCSuC8QeG2GBFUA9Jdn2x7+EqS3w=
+
+Name: ltkrn/L_RECTD.class
+SHA-256-Digest: 4WFAzCfNHrXYvd8nVb7JgXdfPC2mQ2maSYMvaYssWco=
+
+Name: leadtools/DefineConstants.class
+SHA-256-Digest: Xxk5RhtBGrtWu+DODg+UOxW/kz/Q4fREtEzuj+aGIeY=
+
+Name: leadtools/internal/IsInternal.class
+SHA-256-Digest: v4Bpe3NQRjSQIyXW1KJgDoztTRjW+ywBw9ijy5DiKqY=
+
+Name: leadtools/LeadPoint.class
+SHA-256-Digest: Gkyuqy3+Gj1LR6wB1SQQok2PseyQpmTeBNqQ0QmLFCE=
+
+Name: leadtools/RasterDitheringMethod.class
+SHA-256-Digest: vF/L3K0d4eEmwEVf0XRjKb12DG2+OhKSMGWtVFgvh7k=
+
+Name: leadtools/RasterImageUnderlayFlags.class
+SHA-256-Digest: 38NxwEdceAaBPrMzUsdN6TDiDKZ5sABgPDYIcPSRCgI=
+
+Name: leadtools/RasterRegion.class
+SHA-256-Digest: YeFHOHjQSTZP5tzzOJbmuIReqOYqb2NE1TOYnyxge2A=
+
+Name: leadtools/imageprocessing/RasterColorChannel.class
+SHA-256-Digest: u0OLo/75LTM/wCvsgu48EzO/P0H9/TvTTREqKl/dhsI=
+
+Name: leadtools/RasterMemoryFlags.class
+SHA-256-Digest: y/ScvI7+i/66hVgK0sjyMZ05btXiLXb19H1vs4iEJeg=
+
+Name: leadtools/internal/ILeadTaskWorker$Worker.class
+SHA-256-Digest: IrcxkeenSth2Obwe2F/g5l4C77T608nC63hFBWI+YCE=
+
+Name: leadtools/LeadStreamFactory.class
+SHA-256-Digest: QZpzj9RlKvGaqe/kucvLkpwp5FNGgzZKr3RluLDJGsw=
+
+Name: leadtools/imageprocessing/CombineFastCommandFlags.class
+SHA-256-Digest: aq2AL0yh3eewUUwkC3ptqaztidzVf/j6xLUx3Ai8HV4=
+
+Name: ltkrn/L_RGBQUAD16.class
+SHA-256-Digest: hlbtEaTFUc1lJ1uyuvArejy0RtqpMZuh6rcSjxBCd4k=
+
+Name: leadtools/RasterImagePagesChangedAction.class
+SHA-256-Digest: 6QBYL/H+BPMMQD1pQYow38ZtIiGLvRKCG4JZURVP8aU=
+
+Name: leadtools/LeadURIStream.class
+SHA-256-Digest: HI9hNVj7PclUuZdcmdDwPCM8og5j0ewXj+ThUrU0l9k=
+
+Name: leadtools/imageprocessing/ScrambleCommand.class
+SHA-256-Digest: +D0jhe8kwiWF9ZeyaKc8jjMaUrBNB7+dxVw3Kl/tVk4=
+
+Name: leadtools/imageprocessing/ColorResolutionCommandDataListener.cla
+ ss
+SHA-256-Digest: N4Udd5HC8hZfVSVXgvCj1QelBDPDcs5XH7QmkcpCjQ4=
+
+Name: ltkrn/L_POINTD.class
+SHA-256-Digest: +aMJC4kC3K6gQg/Vo+m6+P+/UHmTygNgCtheAybbVAY=
+
+Name: leadtools/imageprocessing/FillCommand.class
+SHA-256-Digest: oQCsk/W1+a6mWwRJP6aOVvfOrt81dl3tQSZRwE6TLUI=
+
+Name: leadtools/RasterCurveClose.class
+SHA-256-Digest: c3yk4OKpA0/ssyad13Z57XC1BNqbMN0uvYJDrp4lNhI=
+
+Name: leadtools/RasterTagMetadataDataType.class
+SHA-256-Digest: Ya8JojR+DXtwwbGdYVE6Ok/ENEfsEGd6i8uT7N2O6AU=
+
+Name: leadtools/internal/LeadPlatform.class
+SHA-256-Digest: lQNBauLge9XfUAnkb+0ts6NU9ao5b5uBx+qY7+0s/tM=
+
+Name: leadtools/LIB_ID.class
+SHA-256-Digest: J6fzDwtYsr6EnjXF7yY892WiAMecwDBbJK7Wr2RJijg=
+
+Name: leadtools/imageprocessing/ScrambleCommandFlags.class
+SHA-256-Digest: n4e/1HKcc8z5c9CjLD/tinThSJdEz8dOvIv695Y4JLY=
+
+Name: leadtools/RasterOverlayAttributes.class
+SHA-256-Digest: +qikf2D5swU+iOypwq0/uS52KnLFvl6scnIJWjfCt8w=
+
+Name: leadtools/RasterImage$4.class
+SHA-256-Digest: EvvLtjQnvfO8OF+YReHe0GiZWRFoMuvc5hK2pcMcncA=
+
+Name: ltkrn/L_MATRIX.class
+SHA-256-Digest: Q9rNcio51Xa/TorQAZFiKadk0lFEDLavuOsVD2xo0+w=
+
+Name: leadtools/RasterCollection.class
+SHA-256-Digest: AjUEO/Z5wYAlHefsApxtlwwxS7GjTcpus5H8UXyAw60=
+
+Name: leadtools/RasterImagePagesChangedEvent.class
+SHA-256-Digest: Ge5pUnma8M2kHZW2b+saxzMgNRSEX5w7EuqscAHH7KU=
+
+Name: leadtools/internal/KnownColors.class
+SHA-256-Digest: v9I4zly6hNkS/D5k0qhZYi0I4z8DseMfKahJH/fNB0g=
+
+Name: leadtools/LeadtoolsException.class
+SHA-256-Digest: AAhdIyp+ytF2VGPhUdd2vS5ipPW5d/ojxSY2uvuEVlY=
+
+Name: leadtools/RasterDefaults.class
+SHA-256-Digest: +dhcJ06jeKqyktyAKgG3hlHjH+aVOGsORkCqhHO3r00=
+
+Name: leadtools/LeadRect.class
+SHA-256-Digest: L741QSWMpMeYBCZ8RfjFRvoIBcJ0qaqd7dNGqXZzpBM=
+
+Name: leadtools/ArgumentNullException.class
+SHA-256-Digest: sNXAAL4EVs381LZCY63chKwKy+82Xju7jY3pitnMoQ0=
+
+Name: leadtools/RefObject.class
+SHA-256-Digest: pMH4naFH/zD4XdiRdsLTfrRJ5hrxew34lXAzWCgSAAo=
+
+Name: leadtools/RasterCollectionEventListener.class
+SHA-256-Digest: hkq6bjCw/i7vDsjizaNRn/UmbjjL9lYQMHxwiwwoYMc=
+
+Name: leadtools/internal/JavaPlatform$JavaTaskWorker$JavaTask.class
+SHA-256-Digest: kucvr84ssby9Nnm+3++Y/NJOCOeqc5AT9hPhSukHvP0=
+
+Name: leadtools/RasterExceptionMessages.class
+SHA-256-Digest: KZoSRyIr0D62YiwDqyPJq5gpNxoXEexdas43wltD1PI=
+
+Name: leadtools/RasterImageChangedListener.class
+SHA-256-Digest: kpSiyKYW31VcpGCsxpL3EqUmVtbrTr8WWPVrFCz76BY=
+
+Name: leadtools/imageprocessing/ColorResolutionCommandDataEvent.class
+SHA-256-Digest: 9q86UsWL5RCrXkQlzu7mew9aqARtz9/sDBgIqFAF89E=
+
+Name: leadtools/LeadStreamMode.class
+SHA-256-Digest: vOYr8VLsh4HBxx/2Pw0O/jiKCPqp92dmLAinrJvahkA=
+
+Name: leadtools/RasterCurveType.class
+SHA-256-Digest: lkYRMKl+/isBUQXlgqekBH6QsRZJyXkLwbAZlbvAPdo=
+
+Name: leadtools/AsyncCompletedEvent.class
+SHA-256-Digest: Bldmv/+kddMTjS7kopBc8hc11idSAiYYr/tIO4KFaMU=
+
+Name: leadtools/RasterImageMemoryInformation.class
+SHA-256-Digest: xejZOv8RuuQkCXOpjdko1eGx9NS8DZ9VrhU7rAZf4us=
+
+Name: leadtools/imageprocessing/ColorResolutionCommand$1.class
+SHA-256-Digest: 8AfuqB1ky+fO18fXI8fqYRXoisw7zZlIOdE6zHnWoI8=
+
+Name: leadtools/RasterSupport.class
+SHA-256-Digest: wFpfpwintKOWazBcZ21Wv8kE1dtZd516Y5ptkpzxPRU=
+
+Name: leadtools/RasterMetadataRational.class
+SHA-256-Digest: DNZ91tZwM/IHEVZLs+2+uokG7SqdrcqPdtTRKaDcZ7U=
+
+Name: leadtools/RasterRegion$1.class
+SHA-256-Digest: IJp2vAtdL2OoEPCny3StEcnFU6cr1iL+sKrzMo+2fQc=
+
+Name: leadtools/LeadPointD.class
+SHA-256-Digest: PAX/xx0yNN595F5y+C9F8bqOkazUQY+yHgUk/Cx/Kvk=
+
+Name: leadtools/RasterGrayscaleMode.class
+SHA-256-Digest: FIOS+tBgfWm5HLiPmHheaIrzh4lsyQ0GfY+W85soCgI=
+
+Name: leadtools/RasterCommentMetadata$1.class
+SHA-256-Digest: hvNKIS1woMw7S/XEELcocg6s2KTR10AD01u22B4X214=
+
+Name: ltkrn/L_LENGTHD.class
+SHA-256-Digest: qGUi0lKB6+eHHnK3iNgFTGqRGOaTqj9/zzctmqyUWjQ=
+
+Name: leadtools/RasterKernelType.class
+SHA-256-Digest: 33iOi1t6Nsh4D8K9wUHL+gQvJ38fnfp+G6E1XlIJ+Ys=
+
+Name: leadtools/ILeadStream.class
+SHA-256-Digest: 6wEUtueoz9jC2Uc2WX0jdMoaG/g6ZK3E7M7ceDSMOqw=
+
+Name: leadtools/RasterWindowLevelMode.class
+SHA-256-Digest: q3HBFSp3/y1zFXfpkRQxshbtIn3X9kOemDPeHbK5Noc=
+
+Name: leadtools/internal/Version.class
+SHA-256-Digest: 5zNra9Hz8i0PR1t1uLU/JJB6etTJINyaPamYb69BTq4=
+
+Name: leadtools/RasterTagMetadata$1.class
+SHA-256-Digest: CNiz+CLSt9jRMYd/RavW4OeQgaeGl9nr5Crn2+iHx3Q=
+
+Name: leadtools/imageprocessing/CropCommand.class
+SHA-256-Digest: jGMk4C/GA3S5+3ApbEQ+/OyxfsgYL7+ffilzARcdwGQ=
+
+Name: leadtools/imageprocessing/CreateGrayscaleImageCommand.class
+SHA-256-Digest: thoUU6Cr8FfHALTeh/xAQq9aSBWhEhpohdyjN+uosGg=
+
+Name: leadtools/IRenderingEngine.class
+SHA-256-Digest: YAkmns9KUqdkwFfdOoqUGUplsaKA8l1rm9G8phc7LSg=
+
+Name: leadtools/L_ERROR.class
+SHA-256-Digest: AHujwZJGqedmE6ClXGZC+Hyfz/pLDFtrQXgOpbU/MJc=
+
+Name: leadtools/RasterImage$5.class
+SHA-256-Digest: mv4mZwuDkIS8bB5XQ5fSWCjfxXQvoLg5hfZJMSpl3qo=
+
+Name: leadtools/RasterImageInformationFlags.class
+SHA-256-Digest: w355+hzqj+FbrHyV/WTEP7lYRZzT1b4jo8RLyDoM8lU=
+
+Name: leadtools/RasterUpdateOverlayBitsFlags.class
+SHA-256-Digest: BYMGDX95TsqDBWN7+tO1mZRb76rrIUEVp6fan4nctDo=
+
+Name: leadtools/RasterPaintAlignMode.class
+SHA-256-Digest: gLrb6dpGGTFyFWhM+ALt48JpgQGFVy6ut2JTbN+MO6I=
+
+Name: leadtools/LeadBufferStream.class
+SHA-256-Digest: 3kEyfzxvvXsltl64Wrf4F6LsnvcED6GksiFTMnkPGOQ=
+
+Name: leadtools/LEADResourceDirectory.class
+SHA-256-Digest: OUYX2rhV4tCe+cKvQrvZrj8ymN39LmlIvS0zID7WQK4=
+
+Name: leadtools/imageprocessing/ClearCommand.class
+SHA-256-Digest: vY4muRbGGw9gIXCQQSjafuAjlaJdLfbPWNU8a8hpi00=
+
+Name: leadtools/imageprocessing/CopyDataCommand.class
+SHA-256-Digest: m1zH7jW9uK0qZNsVwp7fq8Z+0jgfvnznhyRzz4SZmeI=
+
+Name: leadtools/RasterMarkerMetadata.class
+SHA-256-Digest: NQ2Fn3qthBZDeEUMxIxg2yyn4/N/1UAl9RyARtIlnPs=
+
+Name: leadtools/imageprocessing/SizeCommand.class
+SHA-256-Digest: sUIecUytdtfc5A1c0aeZs0TpfMfaoZs9lstSlELDon8=
+
+Name: leadtools/ISvgDocument.class
+SHA-256-Digest: t2Z/30ehNWu4VNbhEjDjRzdIaIgXaCG0QFcjBZCq9no=
+
+Name: leadtools/imageprocessing/FlipCommand.class
+SHA-256-Digest: hOLMM/FiCf71zpu+XJQ8weFecq4vV76tldC1vsDZi1c=
+
+Name: leadtools/internal/StringHelper.class
+SHA-256-Digest: ARchEZHryKzykGdB7i65f1qFBr5JPm5TfX+6PYKIvrk=
+
+Name: leadtools/RasterImage$2.class
+SHA-256-Digest: fT1vsx3PKxGI9B7IgdTSwDrREbgcGb/uN8Bb6Pi37rg=
+
+Name: leadtools/internal/AndroidPlatform.class
+SHA-256-Digest: W9UUuvHVouM8IprsOfSExRhM0NAgV2BUEL8pq5l+GN0=
+
+Name: leadtools/imageprocessing/RasterCommandProgressEvent.class
+SHA-256-Digest: PX0xHbM+k/DKM5yRQ0fljq1GATJF1UBs1cB7PQB/ZnA=
+
+Name: leadtools/LeadEvent.class
+SHA-256-Digest: uCe0z77d50FITdcVUym9p5vx3aJH5ADka9uC1LaIQFQ=
+
+Name: leadtools/RasterImageFormat.class
+SHA-256-Digest: E0iYc1g0cSzDJB5xnThSgjbRyN0hWtaDECPJHg3jkzk=
+
+Name: leadtools/LeadDoubleTools.class
+SHA-256-Digest: 5LwK99hBSBDJkmVcFoEV+HL1HWRoWPGycH9QJKj+o70=
+
+Name: leadtools/LeadStreamShare.class
+SHA-256-Digest: CI2XxOuU927oGpVjsAdOL/oaFa+Voumg42YJOixn2Mo=
+
+Name: leadtools/imageprocessing/SetAlphaValuesCommand.class
+SHA-256-Digest: zRO/xkazEZda+h/Crb9fRZ+BnZt0XHC8mXq35+fWEvs=
+
+Name: leadtools/internal/JavaPlatform.class
+SHA-256-Digest: drZT7aj9hXRAJlkZ1h4ikgeTpfxVNHAYF+eG4/9FI2M=
+
+Name: leadtools/RasterCurve.class
+SHA-256-Digest: DM8Fn34egspV8nv8/SxFDJ/OrdzNROMcIM2REQGiPG4=
+
+Name: ltkrn/ltkrn.class
+SHA-256-Digest: zhGw0k/AxF8si4COuqE3mRpvwQT2sy1LzjijT8hb/YM=
+
+Name: leadtools/ArgumentOutOfRangeException.class
+SHA-256-Digest: x9TNFvcqBLpffBehm7W+Nkju6WFB0rhmWjElmklptfQ=
+
+Name: leadtools/internal/AndroidPlatform$AndroidTaskWorker$AndroidTask
+ .class
+SHA-256-Digest: 3i5E/aNnoUz47ET1w2Bg7AMjrlz/7xCXJSHP+g/ptok=
+
+Name: leadtools/RasterSupportType.class
+SHA-256-Digest: huQdNQEH3KLrix+1GDVfWAL8ModItcqcGSJHk87rTck=
+
+Name: leadtools/RasterImageChangedFlags.class
+SHA-256-Digest: jaeHeBwWRT3R5TcC/GaWzWF+s/OWgy/PpnFL0UVeXCA=
+
+Name: leadtools/imageprocessing/ColorResolutionCommandMode.class
+SHA-256-Digest: vjy1sST6z14n+XdHj7wGbRCkPTBwlhC7gFTxtjEega4=
+
+Name: leadtools/BitmapHandleSerializer.class
+SHA-256-Digest: KH1BeKsAtTumk5T7z6sCXWllOHoTZz/z7hPeWpTj6bg=
+
+Name: leadtools/RasterPaintSizeMode.class
+SHA-256-Digest: IFztCk/BZQ6W/XngOcPk5x2DmRkdwEwavUuKgI4dDzA=
+
+Name: leadtools/RasterExceptionCode.class
+SHA-256-Digest: 3R/Mx7hFfGPEzYaTSkftCZPhif2LyAY5PI3T8LnQeAo=
+
+Name: leadtools/LeadSizeD.class
+SHA-256-Digest: NqrJvP+PaYsGBBme7Y+YSsbYVngelr0R70C8SJouevE=
+
+Name: leadtools/RasterByteOrder.class
+SHA-256-Digest: bCeSi5x6/Wz2LqUbbjrGrtfp+qFggNOrHcaElvD/B98=
+
+Name: leadtools/imageprocessing/ResizeCommand.class
+SHA-256-Digest: o4BkBMoisPRvhFxlK6M1v0HtLH63K2ScILTbgX/cDVU=
+
+Name: leadtools/internal/ILeadTaskWorker.class
+SHA-256-Digest: gsycAOc+WH2QCIuF7pSld04OyG9ikF3FQfYLje3M0vA=
+
+Name: leadtools/InvalidOperationException.class
+SHA-256-Digest: KAQwyHpLht1MtQXW124QJcjlqNgYG9tZt4gzTbE1AW4=
+
+Name: leadtools/imageprocessing/RasterCommand.class
+SHA-256-Digest: ioQYenf/fioKY8h4et/FjiBwD9QfwaWTX2VBy5VbaWU=
+
+Name: leadtools/RasterImageProgressEvent.class
+SHA-256-Digest: T55zzzhJrs74RED0jXgBbNwNuMV3jmvH8FCUHUsy/XM=
+
+Name: leadtools/RasterImageProgressListener.class
+SHA-256-Digest: O8WAFXj1KJIW9YZzWjoCE1S/s0WgkzBKkY5kEs7nrMc=
+
+Name: leadtools/internal/AutoResetEvent.class
+SHA-256-Digest: 2unvtXmcZLcfiEY3UIgyy6zPHLLMw173dV0QbY1RPJQ=
+
+Name: leadtools/imageprocessing/ChangeViewPerspectiveCommand.class
+SHA-256-Digest: S/S1r9WkdKYEc2BC7NcLWRK3BUdJKwoaVin1NotIHIU=
+
+Name: leadtools/RasterMetadataFlags.class
+SHA-256-Digest: 0YXrPA+jCuKS3Vv5q3rWg2QzLxXO+TZn1Xqw3A2cLFU=
+
+Name: leadtools/RasterGetSetOverlayImageMode.class
+SHA-256-Digest: jyBkTYwaFXoUtyAG/DVS6qLOXqY5OjgnBwnhkJdsCcE=
+
+Name: ltkrn/L_RECT.class
+SHA-256-Digest: hzGCVkOp/k+trxhwte+HvpJ0W/27r8N00cPDGT8qIRw=
+
+Name: leadtools/LeadStream.class
+SHA-256-Digest: JeyIEq6qrmCzPmAkGo/4jfUKnYZPqTAvNuTeE5ILw9E=
+
+Name: ltkrn/ltkrnJNI.class
+SHA-256-Digest: PBJrcQcsiK+SwlSr2KW6uwt8Wh1CJ/Sqd9DmkvOI66U=
+
+Name: leadtools/LTLibrary.class
+SHA-256-Digest: 5fSzgrghBgi4zFz4LxLJW86xe8iwu3SVJVqH7Irs7d4=
+
+Name: leadtools/imageprocessing/ClearNegativePixelsCommand.class
+SHA-256-Digest: 9//VuCJgo5SjaNEkiZvimTf9azT7tTtukhR2FVy4du0=
+
+Name: leadtools/LeadMatrix$LeadMatrixUtil.class
+SHA-256-Digest: ux5A9YGJtNSoBq5XbFE0ZbQGdMV7arNy1uJoN5/SMGs=
+
+Name: leadtools/LeadSeekOrigin.class
+SHA-256-Digest: f+S1NgPsWY/7m9Ipw0b9MoYTtZGYWffhhiqNZXOy6qQ=
+
+Name: leadtools/imageprocessing/RotateCommand.class
+SHA-256-Digest: 4cIl0GLVvjLxO2mcopwbkocof4Ho1K8nYg9Hwc995uA=
+
+Name: leadtools/LeadStream$1.class
+SHA-256-Digest: /ak8Ech+jg5Vi66HzaLTUTa+ThHcNp7+GiZmgmUS6kE=
+
+Name: leadtools/RasterCollectionEvent.class
+SHA-256-Digest: gmvmYqZshcQEb2nhguEdOZbF45ZVCMZTAKd97Qxojjk=
+
+Name: leadtools/imageprocessing/ColorResolutionCommand.class
+SHA-256-Digest: ry1nkawNMtauoqph8uh3fVo7ypIbvyaxZ2QPlLFvlNU=
+
+Name: leadtools/internal/AndroidPlatform$AndroidTaskWorker.class
+SHA-256-Digest: 3ZYbFgwsaukLAKKYgl/qt2ySmrjYnz6dPYYClcwV2cY=
+
+Name: leadtools/RasterImage$1.class
+SHA-256-Digest: HOyf7UFWAL/BXVzFDxDsAfz39u8RRlfSTKpCWWuN/dE=
+
+Name: leadtools/RasterHsvColor.class
+SHA-256-Digest: 2YW5WiMGvbVnlsXEMrnc0iQS0T374tq+l046YY8kZMc=
+
+Name: leadtools/imageprocessing/ColorResolutionCommandPaletteFlags.cla
+ ss
+SHA-256-Digest: nVIqRnf9ThufGh8GmTSAI11fqwvKm2Ong32uQgCgV1U=
+
+Name: ltkrn/L_POINT.class
+SHA-256-Digest: D2SyOMNk64LqAe6PN+Y1QMCIMtOArTfGewUxfIbtLkk=
+
+Name: leadtools/RasterColor.class
+SHA-256-Digest: OO1Kvu1ezCBCcOHayWqgfMRnXGfu39ldL02zNa4lD8Y=
+
+Name: leadtools/imageprocessing/CloneCommand.class
+SHA-256-Digest: jO/sQo2gxm/RAiBWbUSrvEvPnQJdZWmdpcIVfznbsAA=
+
+Name: leadtools/RasterViewPerspective.class
+SHA-256-Digest: ZpAU9rV/Bn2t08Oev7nO6aBLerk2DIarDfJzIP/fHWA=
+
+Name: leadtools/imageprocessing/IRasterCommand.class
+SHA-256-Digest: VpwYWYetdeuE2DtCIAwc5VCTe/GgAwHl1oup1+fx5mc=
+
+Name: leadtools/imageprocessing/RotateCommandFlags.class
+SHA-256-Digest: pk5B84h3FuMzGQSoH+xgJGLPzkm35Vfb8CCE423sFKY=
+
+Name: leadtools/LeadStreamAccess.class
+SHA-256-Digest: 7fRwqXV0Y4zjS1YzzYbVY6PL3ZPGHJfD3jCMpAGS2d4=
+
+Name: leadtools/RasterRegionXForm.class
+SHA-256-Digest: S2Zqb5g51jViNtofXnF4F6u4qM9Jcbu1vrT9+apG1XM=
+
+Name: leadtools/LeadLengthD.class
+SHA-256-Digest: KNmMT96QwLd3O5nibxzQaIKUL3ZgBYpG0NQlQ9kRADU=
+
+Name: leadtools/RasterCommentMetadata.class
+SHA-256-Digest: L/LKokLMwQQ2R0z1gL3RvIMfCoMP868DN9kU9EF8LrE=
+
+Name: leadtools/imageprocessing/DetectAlphaCommand.class
+SHA-256-Digest: rolhMD2r8b+pdkvBANuIgOqTVK8OUIhtGrJ/ROdXjlk=
+
+Name: ltkrn/L_SIZED.class
+SHA-256-Digest: UK3WSgSGJjzlv3yiH9axsyiGnnDkYGofw9PQCHSflhQ=
+
+Name: leadtools/internal/ColorParser.class
+SHA-256-Digest: mghdRVK7RyBqplZKBgP02QcIqxfpNTMmlHyqrls1H+8=
+
+Name: leadtools/internal/KnownColors$MatchColorResult.class
+SHA-256-Digest: 1+mNg0ZbK6yIyb/iEXGnSeqDuLT78zvOAHIteDzeNhY=
+
+Name: leadtools/RasterSizeFlags.class
+SHA-256-Digest: cTzEbf0tz7dilLHdah+kEeE2eYRDDJqooWJdPewWl8k=
+
+Name: leadtools/AsyncLoadCompletedListener.class
+SHA-256-Digest: 3vLsoFytE+WqjekNbL95W01KnxST8BJ5Rb7sJ+f9qIQ=
+
+Name: leadtools/RasterCompression.class
+SHA-256-Digest: YGWCvK33fCUAGJU0i8TFikXodUdwC/6tD87o/oSFgbg=
+
+Name: ltkrn/L_RGBQUAD.class
+SHA-256-Digest: VahqPIvR1my98JXv3ONaiBS+3Bqb3oi9xeIYp67zxok=
+
+Name: leadtools/RasterExceptionMessage.class
+SHA-256-Digest: hbgMMQTM7qWKKXyyCteQaZNn1MzExAJJkR3+GN/ECQQ=
+
+Name: leadtools/RasterImage.class
+SHA-256-Digest: v7eQaHkoBEMyQYC+p2LACMJOusvyGPnu9CpZMEjMjA8=
+
+Name: leadtools/imageprocessing/GrayscaleCommand.class
+SHA-256-Digest: 5FEf6qxQ9A76HmsQtBpw8+U0EWai6L8puDTWobzWKyE=
+
+Name: leadtools/RasterKnownColor.class
+SHA-256-Digest: B7/pL6eauTNJuXqjNUGcWfJT4LhHbr3BLJdt9qHyrVU=
+
+Name: leadtools/internal/PrimitivesConverter.class
+SHA-256-Digest: O1fwOGlCCf5u97I61gKItAh35VG7pDu4uy2NC1CpvDc=
+
+Name: leadtools/RasterImagePagesChangedListener.class
+SHA-256-Digest: H/S0hqzzEDU98H7xc83gFcfrO7lXYWOYHctUseI1e6I=
+

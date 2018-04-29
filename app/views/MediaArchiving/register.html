@@ -1,0 +1,86 @@
+#{extends 'main.html' /}
+
+<!-- Work Register: Register Form -->
+
+<section id="feature2" >
+    
+	<div class="container">
+		<div id="rootwizard">
+			<div class="navbar2">
+				<div class="navbar-inner">
+					<div class="container">
+						<h3>Media Archiving</h3>
+					</div>
+				</div>
+			</div>
+	<!-- If In Edit Mode  -->
+	<form id="media" method="POST" class="form-horizontal" action="@{MediaArchiving.submit()}" enctype="multipart/form-data">
+   		<!-- 
+   		<div class="form-group">
+			<div class="col-md-3">	
+				<label>Date of Upload</label>
+				<input class='datepick form-control' value="${media?.dateOfUpload}" required name='media.dateOfUpload' type='text'>
+			</div>
+		</div>
+		 -->
+		<div class="form-group">
+			<div class="col-md-3">
+				<label>Description </label>
+				<input class=' form-control' value="${media?.description}" required name='media.description' type='text'>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="col-md-3">
+				<label>Type of Media</label>
+				<select class="form-control" required name='media.typeOfMedia'>
+					<option>Select</option>
+					<option> Audio</option>
+					<option>Video</option>
+					<option>Word file</option>
+					<option>Text</option>
+					<option>PowerPoint</option>
+					<option>XML file</option>
+					<option>Images</option>
+					<option>Others</option>
+				</select>
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<div class="col-md-3">
+				<label>Search Keyward</label>
+				<input class=' form-control' value="${media?.searchKeyward}" required name='media.searchKeyward' type='text'>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-md-3">
+				<label>Uploaded File</label>
+				<input class='file form-control'  name='media.uploadedFile' type='file'>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-md-3">
+				<label>Provide Link to Access File</label>
+				<input class=' form-control' value="${media?.accessLink}"  name='media.accessLink' type='text'>
+			</div>
+		</div>
+		
+       <input class="btn btn-primary" type="submit" id="addRow" value="ADD++">
+       </form>
+	</div>
+	
+    </div><!--/.container-->
+</section><!--/#feature-->
+
+
+
+
+<script type="text/javascript">
+
+</script>
+#{cascade/}	

@@ -1,0 +1,506 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Copyright: 1991-2016 LEAD Technologies, Inc.
+File-Description: ImageProcessing.Core
+Product-Version: 19.0.0.0
+Trademark: LEADTOOLS is a trademark of LEAD Technologies, Inc.
+Product-Name: LEADTOOLS for Java
+File-Version: 19.0.0.0
+Created-By: 1.7.0_67-b01 (Oracle Corporation)
+
+Name: leadtools/imageprocessing/core/TADAnisotropicDiffusionFlags.clas
+ s
+SHA-256-Digest: vpGkeWy2gWhnTWR2slO/F2rLti4KGY6ZE2G1o7EVWI0=
+
+Name: leadtools/imageprocessing/core/InvertedTextCommandEvent.class
+SHA-256-Digest: Ml0Tsv1+AKcIt7lrW8YhuXiXXuHJU/eawoJgXLGJ2kk=
+
+Name: leadtools/imageprocessing/core/ManualPerspectiveDeskewCommand.cl
+ ass
+SHA-256-Digest: xYR3TByiI7rC+UdA6sAMH8GDtwaqBaAVuKX0VJ4YjS4=
+
+Name: leadtools/imageprocessing/core/LineRemoveCommandEvent.class
+SHA-256-Digest: whWqtpGGPFbz810XU9Q67R0q70FR/UaTZG1cZ9WNESA=
+
+Name: leadtools/imageprocessing/core/ImageColorTypeCommandFlags.class
+SHA-256-Digest: 4GIY649f/au/QFU0Tvsfvkx5XGBO0xmqkS8Ypvqpelk=
+
+Name: leadtools/imageprocessing/core/AutoZoneData.class
+SHA-256-Digest: 5F33AhWgVWSbR2k29BS3B/vIIxjorx4A5yQpWar21Mg=
+
+Name: leadtools/imageprocessing/core/GetLinearVoiLookupTableCommand.cl
+ ass
+SHA-256-Digest: sTNpSFhlDskGZezDSgqXMX5PB0QtJaW9baSWrcdiXCc=
+
+Name: leadtools/imageprocessing/core/SmoothStruct.class
+SHA-256-Digest: vaZlF2E0N+oU03yJx1Cuvbfe804qDE75NrVKaeKxe8g=
+
+Name: leadtools/imageprocessing/core/InvertedTextCommand.class
+SHA-256-Digest: chf4bjrYHFyyPWfJBnEokNuqGReoeswZJLb1HV/0Ifg=
+
+Name: leadtools/imageprocessing/core/MedianCommand.class
+SHA-256-Digest: YUA8vF/VR6q92Wf6KQKjj0r3oTO+eyZEpDEkzyjdqyE=
+
+Name: leadtools/imageprocessing/core/HighQualityRotateCommandFlags.cla
+ ss
+SHA-256-Digest: hW83MwRsjd1ZRRTSWoB5pB4Kiyp1M2WfueUXD0Hwhu0=
+
+Name: leadtools/imageprocessing/core/SmoothCommandEvent.class
+SHA-256-Digest: GgKEhcLS0Calm4PgepJ0gr1qTA110fKZLYTiX2FpJqk=
+
+Name: leadtools/imageprocessing/core/WindowLevelExtCommand.class
+SHA-256-Digest: mHZ+JW4a40N0reugqZlK6/Y6Z+0CChPscKfnfdiZD8Q=
+
+Name: leadtools/imageprocessing/core/BlankPageDetectorCommand.class
+SHA-256-Digest: fbBfrxghP/OmWXvPQU8Ah8xgpFrHLWPzHNlzRdiAD78=
+
+Name: leadtools/imageprocessing/core/BorderRemoveBorderFlags.class
+SHA-256-Digest: fV0bhs083R2BSvrszowFx4zXYKNo69NfygtV8ntm+I0=
+
+Name: leadtools/imageprocessing/core/SmoothCommandListener.class
+SHA-256-Digest: isJtioquHxlFBT/lw87mUJizUJ44nYDgwBn66CDqByQ=
+
+Name: leadtools/imageprocessing/core/HalfToneCommandType.class
+SHA-256-Digest: xWZt7G7ycCQEKiJl+GnLXGeyoNeSwA34PU5oUxlf3vs=
+
+Name: leadtools/imageprocessing/core/LeadZoneTextData.class
+SHA-256-Digest: ylTAYc4HhtuLsERas99yEDfuEXArzuSY9Zkw8pRvcVA=
+
+Name: leadtools/imageprocessing/core/SEARCHMARKS.class
+SHA-256-Digest: +vu5wqMpD6xfLC83M+RIGEP3rRCRGOaDPAmpAGp7xoo=
+
+Name: leadtools/imageprocessing/core/BorderRemoveCommandListener.class
+SHA-256-Digest: JwlMFbWmFzKY6Dc5NIUP2glD8erdkC9kBnAW5WYivXc=
+
+Name: leadtools/imageprocessing/core/ApplyTransformationParametersComm
+ and.class
+SHA-256-Digest: 2gwvuSgU84HnvP9NozhjNZRL8bm8lbE3fI+iCMk7T4o=
+
+Name: leadtools/imageprocessing/core/SRADAnisotropicDiffusionCommand.c
+ lass
+SHA-256-Digest: NAa87Mi5TRr3ShxUR8tayt0je3KTCnwg50fN15gc7+4=
+
+Name: leadtools/imageprocessing/core/BorderRemoveCommandEvent.class
+SHA-256-Digest: hxsAQcQ9rK/tiV7lbTCNq80vD+rfFTNsCr4sCU7/YtQ=
+
+Name: leadtools/imageprocessing/core/FTARRAY.class
+SHA-256-Digest: xcCKd548OdglJk8kCaDC3uid/tuXjaSeRLg4AxSkRQE=
+
+Name: leadtools/imageprocessing/core/MinimumCommand.class
+SHA-256-Digest: 79wRx2ZIhMAzz41JeF8yJxW7z+WTf/+Iwi1Og3sOvCE=
+
+Name: leadtools/imageprocessing/core/ApplyLinearVoiLookupTableCommand.
+ class
+SHA-256-Digest: xKBR45nxndGTfVCweniGhFrj4hzU/cSDhHpnCRGTfhY=
+
+Name: leadtools/imageprocessing/core/LeadZone.class
+SHA-256-Digest: tncIK7uqQaNwx64aDRuJwelwk2knDZ5VsCs66deQTnE=
+
+Name: leadtools/imageprocessing/core/MinMaxBitsCommand.class
+SHA-256-Digest: HrQ2d6feU3Jm+JrFMnH/xX1etxpL+eNGJoFSA4TW3xc=
+
+Name: leadtools/imageprocessing/core/BarCodeReadPreprocessCommand.clas
+ s
+SHA-256-Digest: By3kHatTNShrVUfzayPGUk4aAE7N81QiUec2A4kpuTg=
+
+Name: leadtools/imageprocessing/core/ImageColorType.class
+SHA-256-Digest: qzvcPKuyXn5XLwLoly0GIJv4Nv/GHwuL3qBI/lVOVus=
+
+Name: leadtools/imageprocessing/core/LeadZoneType.class
+SHA-256-Digest: MuM5ZYSjS7sYl9hlO7k6iI0cSAwcU5dGS7w0Mrv+FYM=
+
+Name: leadtools/imageprocessing/core/SubtractBackgroundCommandFlags.cl
+ ass
+SHA-256-Digest: XpZGAUQM/oXo6WwHMk0UtGz774g6ve+GbiiB7niT6eE=
+
+Name: leadtools/imageprocessing/core/PageMarginsStruct.class
+SHA-256-Digest: /KFNfOm+GE2w1iwCk1777rqOi0j6MtiaGCPJcyjWYp8=
+
+Name: leadtools/imageprocessing/core/WatershedCommand.class
+SHA-256-Digest: TSMVyJYJfs80WJDI7EN7DRonPKJQXSDauKr9Eud5QP4=
+
+Name: leadtools/imageprocessing/core/SearchRegistrationMarksCommandDat
+ a.class
+SHA-256-Digest: z/hq3h5B+LsuXYGNQiqHQURVNkUGBlD0uMz87K6IR04=
+
+Name: leadtools/imageprocessing/core/ApplyLinearModalityLookupTableCom
+ mand.class
+SHA-256-Digest: KbdVGQ8rzPX21KplHhaa/JptD0OJ61iLqTg+TUvjtAM=
+
+Name: leadtools/imageprocessing/core/DigitalSubtractCommandFlags.class
+SHA-256-Digest: zYq6/BVKJWLy4OioltO5A9DNRZiBMlmN2v9l+8HYwIY=
+
+Name: leadtools/imageprocessing/core/KMeansCommandFlags.class
+SHA-256-Digest: GPaNeT3Xyc3A3Pmk7jRhOpCxf2wqpE6fyJQt063uBUk=
+
+Name: leadtools/imageprocessing/core/TissueEqualizeCommandFlags.class
+SHA-256-Digest: n8F9s1bp9YxkzFDQmuRUgDZjxCGP3Bf38p6cPsm0rrg=
+
+Name: leadtools/imageprocessing/core/LEADZONEDATA.class
+SHA-256-Digest: LXswRA2X/cv+N9lOM3EiGKTTIl1ZXcNIX6hAABsIAuE=
+
+Name: leadtools/imageprocessing/core/ApplyTransformationParametersComm
+ andFlags.class
+SHA-256-Digest: hXQtQzjedADUWB32Ab8AvO1Yz2FslXTsG2Na+y6Q77A=
+
+Name: leadtools/imageprocessing/core/SubtractBackgroundCommand.class
+SHA-256-Digest: 6fnIHJULIVfWNLvCGC2X91eLAgjIrsIU83B2BjNzAAA=
+
+Name: leadtools/imageprocessing/core/AutoCropCommand.class
+SHA-256-Digest: EBZMM2eTbMtc0F4O73ZA6D6zyzXifJ87ZYzXmhVmx9Y=
+
+Name: leadtools/imageprocessing/core/WindowLevelCommand.class
+SHA-256-Digest: OhOzdehChRKqjfx/oWxYBqiBqoaOMeCB6YJclFDyXBI=
+
+Name: leadtools/imageprocessing/core/RegistrationMarkCommandType.class
+SHA-256-Digest: wgo6OztiiZcqeIVd5K07pEgGtpaXPGMrQSgqIcrFC0o=
+
+Name: leadtools/imageprocessing/core/OmrZone.class
+SHA-256-Digest: ebGWwr6MX/bcZ629ZGYiiKK5uUhbUuiKWYFyPvOKwdk=
+
+Name: leadtools/imageprocessing/core/AutoBinarizeCommand.class
+SHA-256-Digest: G04kRO2DphbV6940FgzzrjX5X6edIdAZeRMHK0SCUTY=
+
+Name: leadtools/imageprocessing/core/LineRemoveCommandType.class
+SHA-256-Digest: WBeYkOIHZAEpoTe7BaKtPLGMOnnDB0a8LTu/QZRhIGw=
+
+Name: leadtools/imageprocessing/core/TissueEqualizeCommand.class
+SHA-256-Digest: s7RMIxkLQ+cSm6gg8Br3Bd8gAzI+UGbXhtQO77Gd1jo=
+
+Name: leadtools/imageprocessing/core/TADAnisotropicDiffusionCommand.cl
+ ass
+SHA-256-Digest: mJT8rF1hmifcEo0KPldf+V6eac8KMPQkbFinw0HTGrk=
+
+Name: leadtools/imageprocessing/core/FastFourierTransformCommandFlags.
+ class
+SHA-256-Digest: 03P5NnMNfVFp4bw7itPoc3qvOnvZwXpeozco00I5ltE=
+
+Name: leadtools/imageprocessing/core/FastFourierTransformCommand.class
+SHA-256-Digest: PVJAiEqKspAqhRz468Bvhk9XDTcgUXk5Oxq3HhAHnTQ=
+
+Name: leadtools/imageprocessing/core/DefineConstants.class
+SHA-256-Digest: h7mW3Dpqasvp+maXV11jCBSOvcga3jO4W6OU3xTQigE=
+
+Name: leadtools/imageprocessing/core/SearchRegistrationMarksCommand.cl
+ ass
+SHA-256-Digest: itIyFu4JhISQAj3qKMda/fuMtOlqh7jmdwsrZcZcm34=
+
+Name: leadtools/imageprocessing/core/OmrZoneState.class
+SHA-256-Digest: dfMTxF2kPwMB5nfPq1vaAQ4CzDp6IVhyZE94f9vqid8=
+
+Name: leadtools/imageprocessing/core/Complex.class
+SHA-256-Digest: lnwZ9jbNdwEVVl+OZbW9Cf85YKEGbFveNiXZt69nkvQ=
+
+Name: leadtools/imageprocessing/core/DicomLookupTableDescriptor.class
+SHA-256-Digest: K6CngXX8nMgiHVjSgganBskVY0AoOFdy2ixx2zRu6kw=
+
+Name: leadtools/imageprocessing/core/InvertedPageCommandFlags.class
+SHA-256-Digest: t7inS1riWQ3iyYKtZ89qEy5MVju2d8RVplDJolx23Q4=
+
+Name: leadtools/imageprocessing/core/InvertedTextCommandListener.class
+SHA-256-Digest: RH77aUD348oACI3FsB238VzPzrpyF0/zId1rv0MNjqE=
+
+Name: leadtools/imageprocessing/core/BlankPageDetectorCommandFlags.cla
+ ss
+SHA-256-Digest: EhVywhtuiafMIt5IzqSYNTjpU70ALMkHCbeZmy3XH7g=
+
+Name: leadtools/imageprocessing/core/DicomLutDescriptor.class
+SHA-256-Digest: fED28Z8/ETQZ88TSVCAytmHLFhthWw+JO3eht3cZwnM=
+
+Name: leadtools/imageprocessing/core/AutoZoningCommand.class
+SHA-256-Digest: R/CJrIU8O/21tqbnSEDP9yu3vJsj9iTlt1ECHqhPTlE=
+
+Name: leadtools/imageprocessing/core/RegistrationOptions.class
+SHA-256-Digest: lrO7bWDiIGDzk5iEA+5qtyeheBhcQxyjhErpWuQGWdI=
+
+Name: leadtools/imageprocessing/core/FourierTransformInformation.class
+SHA-256-Digest: nIUg3CkkFuZmRprmBaD068CIkMitCwtXT+UQoFsA2Bw=
+
+Name: leadtools/imageprocessing/core/BorderRemoveCommand.class
+SHA-256-Digest: L3oDtXjyeuTW0KT69lN6H9zfGl1BUpOQMxmdExIufSw=
+
+Name: leadtools/imageprocessing/core/ApplyVoiLookupTableCommand.class
+SHA-256-Digest: 21uCseIfB7O3Yv9ivU2UvSlHPcbQ6T84XKXBUpOWWB4=
+
+Name: leadtools/imageprocessing/core/MinimumToZeroCommand.class
+SHA-256-Digest: UZa4FX0JGSmyq3KPhJujN3tW/U/RZvRBjGl8zLoQ444=
+
+Name: leadtools/imageprocessing/core/OmrSensitivity.class
+SHA-256-Digest: 5wyEbLiIGJf4Re94zJWMp5/eBKDiGTb9PvTB1hr/XEA=
+
+Name: leadtools/imageprocessing/core/DotRemoveCommand.class
+SHA-256-Digest: irL+tK9rZPymZDjAfIafQGzV54PD5WvmKswWM//N8e8=
+
+Name: leadtools/imageprocessing/core/CLAHECommand.class
+SHA-256-Digest: m0jK99sSKp1Yf1ybXBHDsfeQ55g+KNZbt68Ms+EbtiA=
+
+Name: leadtools/imageprocessing/core/MultiscaleEnhancementCommand.clas
+ s
+SHA-256-Digest: qFgeAjosRKLOkdtv/WBjjQEspgV4rHjb8RA+79s2mTU=
+
+Name: leadtools/imageprocessing/core/TextBlurDetectorResults.class
+SHA-256-Digest: WnhlwsVe2wv08B2ybZfrT8IX1dNwusLvAKla8LnWmx8=
+
+Name: leadtools/imageprocessing/core/DespeckleCommand.class
+SHA-256-Digest: akPKWyjWkIyiztKiTGABOQ03nQpDRDlhVbwYiUynq80=
+
+Name: leadtools/imageprocessing/core/KMeansCommand.class
+SHA-256-Digest: s//WPYQSaFVy/y2SUe/Xs74xkoZiJYPB4IfL1g5q3HE=
+
+Name: leadtools/imageprocessing/core/VoiLookupTableCommandFlags.class
+SHA-256-Digest: ojFPnaCGmG4RgsKtIrct2rvxByEsDUa0gzmH2yMq8ys=
+
+Name: leadtools/imageprocessing/core/SmoothCommandDirectionType.class
+SHA-256-Digest: 54s6YgiwK9fQXdhvLDdi/DZ8V0TbPeRoSoYQ/Mg4q/s=
+
+Name: leadtools/imageprocessing/core/GetBackgroundColorCommand.class
+SHA-256-Digest: KzIlA/ety8T9p478dEId+KGxafpRPHgBJmymsDIZ7Pg=
+
+Name: leadtools/imageprocessing/core/OmrFrameDetectionMethod.class
+SHA-256-Digest: nEIZ/tX6XSnvlgje0eTVI/aFriB2DS7GNj6hJfLy/gM=
+
+Name: leadtools/imageprocessing/core/BorderRemoveStruct.class
+SHA-256-Digest: brVVHf1HaNINpdd/ijGh+IY5dhgZgV1RozdpVIWcyiw=
+
+Name: leadtools/imageprocessing/core/LineRemoveCommandListener.class
+SHA-256-Digest: 95VU3gkgMO0Hq385hC4SKyXZdGeGbLOHEd2URQdoidU=
+
+Name: leadtools/imageprocessing/core/MultiscaleEnhancementCommandType.
+ class
+SHA-256-Digest: b+kR/z0T7N9+C6M64/k140QUWvNjsL+FMQXHAlB7GxY=
+
+Name: leadtools/imageprocessing/core/OMRZONEDATA.class
+SHA-256-Digest: j7BvAIDL0XbdrDIIeySawRwAlciJDyLTCbNq81s97tg=
+
+Name: leadtools/imageprocessing/core/TEXTZONEDATA.class
+SHA-256-Digest: z3LFzVDN5AxN/Q1AMMQVfB16Q8HKaezg5sUxKHVXtgQ=
+
+Name: leadtools/imageprocessing/core/DotRemoveCommandFlags.class
+SHA-256-Digest: JG05jM/fYKWgZgL783Yad4SFu7oklmnHDxU9XfX/6ho=
+
+Name: leadtools/imageprocessing/core/GetLinearVoiLookupTableCommandFla
+ gs.class
+SHA-256-Digest: LfDS+4riPR96jZHgqFINLPnm/vZYHabl5sVBV4L+SUM=
+
+Name: leadtools/imageprocessing/core/HighQualityRotateCommand.class
+SHA-256-Digest: x/QMj6uhEgCpozy/x2Zb88k5AXIH9/P75m04i2EjuLk=
+
+Name: leadtools/imageprocessing/core/SmoothCommandBumpNickType.class
+SHA-256-Digest: C6V+Hoec5lUci1enu2xwRsGLmrFwhLbROcE+Dn1o6Ao=
+
+Name: leadtools/imageprocessing/core/CountLookupTableColorsType.class
+SHA-256-Digest: kks1wp5oiinEhIeA/vrrh6crpCYpKsFz/hUqa45Zzp4=
+
+Name: leadtools/imageprocessing/core/BarcodeTypes.class
+SHA-256-Digest: NI2Yk0Klb0SYkw5MgQklsvydABEthrylUtQHMsZDwkU=
+
+Name: leadtools/imageprocessing/core/TABLEZONEDATA.class
+SHA-256-Digest: 1LdUemZm8AEdNbhQq09Fdu4X8bO4y8zEJ3/C8ZW/qo4=
+
+Name: leadtools/imageprocessing/core/DigitalSubtractCommand.class
+SHA-256-Digest: vGBdDqfVl6fzfxf/1CF01dEKIqjN5jETFjTAZ3HHHuw=
+
+Name: leadtools/imageprocessing/core/PerspectiveDeskewCommand.class
+SHA-256-Digest: VJ/4oVoQwJU5+W1iQY2mou5bEsEoLu8pXWDjqYBCcFM=
+
+Name: leadtools/imageprocessing/core/DotMatrixType.class
+SHA-256-Digest: bh+CWYFV+VCNaKEhm75GK3+JAYLrEMwZeH0fF2Zwpc8=
+
+Name: leadtools/imageprocessing/core/ltimgcor.class
+SHA-256-Digest: jSNhICPu/tpoPtlHm5NHc2IrB5JSLUQckQghyrDnlc8=
+
+Name: leadtools/imageprocessing/core/AlignImagesCommand.class
+SHA-256-Digest: pVdH1jliTM9u3/TjCGb8vKSk8xmzJG6xUwFtYwEwMuQ=
+
+Name: leadtools/imageprocessing/core/BorderRemoveCommandFlags.class
+SHA-256-Digest: fvKYPM+xOu3SEyZzPRIFEv8sLj9nOmEPptc1SKyUjKM=
+
+Name: leadtools/imageprocessing/core/AutoCropRectangleCommand.class
+SHA-256-Digest: NgLy8rN8MwUQ7OQPIFS8RgG2QmHJi2hXds+/eTqxQpI=
+
+Name: leadtools/imageprocessing/core/CLAHECommandFlags.class
+SHA-256-Digest: YsQwfwbDNeEUhp/9qNOALHFUCpYHjogVelzrBhkR0nU=
+
+Name: leadtools/imageprocessing/core/HalfToneCommand.class
+SHA-256-Digest: XRrh4gP1wXvHrNkJwOt7Dc4NemBuwpNt0c0dzy3Tlhk=
+
+Name: leadtools/imageprocessing/core/MICRCodeDetectionCommand.class
+SHA-256-Digest: MlqjCsN0+mKqs1CrRNB3JXjA82ilEe/pyvv7XQXz9tE=
+
+Name: leadtools/imageprocessing/core/ConvertSignedToUnsignedCommand.cl
+ ass
+SHA-256-Digest: gOZUJ/UzvVcF4xXjDyyofeHz/AzA20YDKvgNU5YIGdw=
+
+Name: leadtools/imageprocessing/core/KeyStoneCommand.class
+SHA-256-Digest: Vs5w+twJX5bI8Bp6k8ay/CZhu143ACHPZGaOsiX9+II=
+
+Name: leadtools/imageprocessing/core/DotRemoveStruct.class
+SHA-256-Digest: eGiKg9GwrYh4CDg6VDrXl1zQF30YJZxgYqOP0GMOfpE=
+
+Name: leadtools/imageprocessing/core/LTGrayColorStruct.class
+SHA-256-Digest: YH/Pzj3VCOVH1eI3XUF1IjKefMpbXxwlqDx9y4HeYa0=
+
+Name: leadtools/imageprocessing/core/ResizeInterpolateCommandType.clas
+ s
+SHA-256-Digest: XuPquAGl5aa1H3ygNs/mVRYtZJZeREZ2J2UksJjOEx4=
+
+Name: leadtools/imageprocessing/core/LevelsetCommand.class
+SHA-256-Digest: 6QBvo0w+Kx3xRSU0fBwpchT6jR4LHLi+JU4l7SCBUyQ=
+
+Name: leadtools/imageprocessing/core/ApplyModalityLookupTableCommand.c
+ lass
+SHA-256-Digest: GOodQL2/bwM/++MLshs4z0mamU3cACnkgNwy0jHJvdM=
+
+Name: leadtools/imageprocessing/core/InvertedPageCommand.class
+SHA-256-Digest: YTpJY09/InZOW2VJE/CZMmeroxeK+Wa/4FgXMxL5/Sk=
+
+Name: leadtools/imageprocessing/core/TransformationParameters.class
+SHA-256-Digest: 27Pif1/vAVA73Dxo8q7SLyIKTfI9DLnFWPSyCDhKD/U=
+
+Name: leadtools/imageprocessing/core/MinMaxValuesCommand.class
+SHA-256-Digest: H5B9nexIdTKtm/2RS/6hUbJYtBCTbs8xebQcxHiWoxQ=
+
+Name: leadtools/imageprocessing/core/ConvertSignedToUnsignedCommandTyp
+ e.class
+SHA-256-Digest: AEmtu5NGZ2qTCrR4OVACs1XJlDsRrOh9GfibqMkFI10=
+
+Name: leadtools/imageprocessing/core/ShrinkWrapFlags.class
+SHA-256-Digest: b16rglTccF7B+fwi8zaSSkxqByzVsZpd4ZftRPCeI58=
+
+Name: leadtools/imageprocessing/core/InvertedTextCommandFlags.class
+SHA-256-Digest: EiHhII9QBXVLe9f5vUpFPhhHFS1eOTPcX7Lkxhehx9U=
+
+Name: leadtools/imageprocessing/core/MaximumCommand.class
+SHA-256-Digest: CnXrvFttGhf4DkyGfwUTnL4tx9chOZMEfDsn1pnhvSc=
+
+Name: leadtools/imageprocessing/core/LineRemoveCommand.class
+SHA-256-Digest: 0eKApN1T/Zyky5HH56+0FKAGePAGqDIY7yKEQU0MXUg=
+
+Name: leadtools/imageprocessing/core/ShrinkWrapCommand.class
+SHA-256-Digest: way7ljknEpvzumlQTYp7e9gGBSu9SHytsD68sJP0ce4=
+
+Name: leadtools/imageprocessing/core/DeskewCommand.class
+SHA-256-Digest: 8OZ9XHQF3Rbh/A9qfI01JVyhL11dAa2rRvXvfPVaDVo=
+
+Name: leadtools/imageprocessing/core/AutoBinarizeCommandFlags.class
+SHA-256-Digest: ycMMvxlBuhSk45lPAWGr4UbZib+lt7x/WaoKyUrIBzc=
+
+Name: leadtools/imageprocessing/core/LineRemoveCommandFlags.class
+SHA-256-Digest: biMaK4CiNBKd7SUy11xeifypNAGJgll7VTTquN0aGRk=
+
+Name: leadtools/imageprocessing/core/RemoveStatus.class
+SHA-256-Digest: sLKJYxdEJ/TNLXxk/2vHWDVQ1W/gX1QmGBDfm7L0bqs=
+
+Name: leadtools/imageprocessing/core/ColorizeGrayCommand.class
+SHA-256-Digest: JEalrfpKNsEgx+pA1L5wMokc5TR1DyZLkxlxrUni33o=
+
+Name: leadtools/imageprocessing/core/TextBlurDetectorCommand.class
+SHA-256-Digest: 1bN1UhM+y9DxNR6q2+42I5gE8QKYZ5Zfr+5l6GWXeJs=
+
+Name: leadtools/imageprocessing/core/CorrelationCommand.class
+SHA-256-Digest: eX5R+ODsvO7XWXcyi4tfVC1gRx7UVG4NSo0DkSYxV3k=
+
+Name: leadtools/imageprocessing/core/DitheringType.class
+SHA-256-Digest: noGGVB1sewdnL9iXvQ+bI5OQIAlDmStLk53P6RV4Pqg=
+
+Name: leadtools/imageprocessing/core/SmoothCommandFlags.class
+SHA-256-Digest: Xr5xiOfNNiGxKsGWdp6OKzCyaUAfRJrveHckEJeFq2k=
+
+Name: leadtools/imageprocessing/core/AutoDocumentBinarizationCommand.c
+ lass
+SHA-256-Digest: WrT7Q7ck5UilRYm3AA6gDFN1qizwSkwG2krdIBL8HTM=
+
+Name: leadtools/imageprocessing/core/BlurDetectionCommand.class
+SHA-256-Digest: 67ieQwqj6mPGr8F2iqs9oFl1OjppuO+4prAjyspuT8w=
+
+Name: leadtools/imageprocessing/core/ConvertUnsignedToSignedCommandTyp
+ e.class
+SHA-256-Digest: TSaAM6VFks9P7SzoxD91CHszEfnIbL8LkVaCf6jCziU=
+
+Name: leadtools/imageprocessing/core/AutoZoningOptions.class
+SHA-256-Digest: b8XF2HmYqyqt9303cVZ84CpJPeocmIFjOZPObX1r5po=
+
+Name: leadtools/imageprocessing/core/ColorizeGrayCommandData.class
+SHA-256-Digest: 8s4dbr0SHeAFqfF14ttbpC9yttluwfbSHBfA8EL19U8=
+
+Name: leadtools/imageprocessing/core/DeskewCommandFlags.class
+SHA-256-Digest: EWq3H9htjCKA4BW2PXV6yCeGOG5por8IlplKlm5z7Fw=
+
+Name: leadtools/imageprocessing/core/ModalityLookupTableCommandFlags.c
+ lass
+SHA-256-Digest: Hx7c2OKPqNPP+jq8Fo8mSyQvxwhdIF6E+8zOpwbZ6io=
+
+Name: leadtools/imageprocessing/core/OmrCommand.class
+SHA-256-Digest: +cfQldO7Hm28FAkrhH2tKCKUiGsfTqQfBR9bkeTBYfc=
+
+Name: leadtools/imageprocessing/core/DotRemoveCommandListener.class
+SHA-256-Digest: aHVnOfwHy7QGzJW4IdI3ZYpcmKiOTFP9AjfJU96TKtI=
+
+Name: leadtools/imageprocessing/core/InvertedTextStruct.class
+SHA-256-Digest: n5CtoK6It6agh9higoGWpBvZT2wOVQ1AGEfBaGxtNMw=
+
+Name: leadtools/imageprocessing/core/CountLookupTableColorsResult.clas
+ s
+SHA-256-Digest: 3JrT2A8ey1nrqUdO+QFothm7g2m20iNMPct0qCHtk5o=
+
+Name: leadtools/imageprocessing/core/LCOMPLEX.class
+SHA-256-Digest: VSMeezpiCdo6AQW1huJ3Z8HxOIJCIwA9+/PvcT9Rk3k=
+
+Name: leadtools/imageprocessing/core/WatershedPoints.class
+SHA-256-Digest: Wz5O1TVo4Mz3EAwe3Y9z18e8ZXVqVeKUgtxnzdcHDj8=
+
+Name: leadtools/imageprocessing/core/LineRemoveStruct.class
+SHA-256-Digest: cRUBRx6myvdDUEMB7dOt1dOQGcDL+Yoxy9f7EI20jYs=
+
+Name: leadtools/imageprocessing/core/LeadZoneTableData.class
+SHA-256-Digest: gmoXlVSg6kgkymbGGqTKJyCWkx2tJc/QBeZ8LwvOgMc=
+
+Name: leadtools/imageprocessing/core/LambdaConnectednessCommand.class
+SHA-256-Digest: wm5b6NsuQ3e1fpQM4neOi5thQgaEGOzdxnhO5OyIrbk=
+
+Name: leadtools/imageprocessing/core/ImageColorTypeCommand.class
+SHA-256-Digest: rq6w8WlmrnCMHJK+T95IC53Uxvi5Y0M4XqHeqSso+LM=
+
+Name: leadtools/imageprocessing/core/BarCodeReadPreprocessOptions.clas
+ s
+SHA-256-Digest: KkdegY7SeouAFRgTJcKUuTbvUvJXNhUjk/mLM5EiwaA=
+
+Name: leadtools/imageprocessing/core/CoreUtilities.class
+SHA-256-Digest: oPJ65AIQ22q2ac6sSwXfaNs5m21FMScjDUKvXeWQYTs=
+
+Name: leadtools/imageprocessing/core/ShiftDataCommand.class
+SHA-256-Digest: t6EbJfdWjnGpfHmpYooqzVNK9bAheFl5CiqRlZtTpH0=
+
+Name: leadtools/imageprocessing/core/SmoothCommand.class
+SHA-256-Digest: u4cm5qmu5g8GXI7qX7DOi9uxjwnKXw6LtENub4CxbjU=
+
+Name: leadtools/imageprocessing/core/MultiscaleEnhancementCommandFlags
+ .class
+SHA-256-Digest: s0MHN7+yY6zzJdCyriseaHGlUwNuM4VXZLgg0Rwmfi8=
+
+Name: leadtools/imageprocessing/core/ResizeInterpolateCommand.class
+SHA-256-Digest: KFo968W4jYnMJc386z/Loj+AIOsPPvxg/NePYrbfsPk=
+
+Name: leadtools/imageprocessing/core/SubtractBackgroundCommandType.cla
+ ss
+SHA-256-Digest: UAsuasVyRXIM920/1ocYVVawklBhYpe5u1K5lBzJHls=
+
+Name: leadtools/imageprocessing/core/KMeansCommandResults.class
+SHA-256-Digest: CuIt/Hd80XMufPrlsh9Utrjf0lLXJqTYvJ4EExyNJVM=
+
+Name: leadtools/imageprocessing/core/ConvertUnsignedToSignedCommand.cl
+ ass
+SHA-256-Digest: 6IOUGTZ6/ikTCvNcTTeAs1CyelxxVauAA3In2vLwJGI=
+
+Name: leadtools/imageprocessing/core/CorrelationListCommand.class
+SHA-256-Digest: tTAUaGzf6KZi4kxEB1OEDmgh4NZa1WxNSRXshi5pRSw=
+
+Name: leadtools/imageprocessing/core/DotRemoveCommandEvent.class
+SHA-256-Digest: Gzw0xQ081fMBVZ8BnMHNWwDCKsanIvr3cSoJnK9GG0k=
+
+Name: leadtools/imageprocessing/core/OtsuThresholdCommand.class
+SHA-256-Digest: MzHHq8/WQZGrBePHk4lDGMVCNH9Rn2QnBHgWx6wLiiY=
+
+Name: leadtools/imageprocessing/core/ZeroToNegativeCommand.class
+SHA-256-Digest: N/qs0zrwoQwrzDe9SXVhfOeJDiHl6zROo2CSEIneeOE=
+

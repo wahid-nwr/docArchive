@@ -1,0 +1,25 @@
+package models;
+
+import javax.persistence.Entity;
+import net.sf.oval.constraint.Length;
+
+import play.data.validation.Required;
+import play.data.validation.Unique;
+import play.db.jpa.Model;
+import javax.persistence.ManyToOne;
+import play.data.validation.Required;
+import models.IGAnames;
+import models.BeneficiaryMasterProfile;
+
+
+@Entity
+public class ApprenticeProgramDetail extends Model {
+	@Required
+	@ManyToOne
+	public BeneficiaryMasterProfile beneficiaryMasterProfile;
+	public int noOfWorkingDays;
+	public double cash;
+	public double savings;
+	public String status;
+	public String remarks;	
+}

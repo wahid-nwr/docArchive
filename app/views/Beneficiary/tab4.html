@@ -1,0 +1,340 @@
+#{extends 'main.html' /}
+%{
+	boolean disabled = false;
+	String isDisabled = "";
+%}
+<section id="feature2" >
+	<div class="container">		
+		<div id="rootwizard">
+			<div class="navbar2">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul id="tabbar">
+							<li style="visibility:hidden"><a href="">Form 1</a></li>
+							<li><a href="@{Beneficiary.basicprofile()}">Form 1</a></li>
+							<li><a href="@{Beneficiary.tab2()}">Form 2</a></li>
+							<li><a href="@{Beneficiary.tab3()}">Form 3</a></li>
+							<li><a href="#tab4" data-toggle="tab">Form 4</a></li>
+							<li><a href="@{Beneficiary.tab5()}">Form 5</a></li>
+							<li><a href="@{Beneficiary.tab6()}">Form 6</a></li>
+							<li><a href="@{Beneficiary.tab7()}">Form 7</a></li>
+							<li><a href="@{Beneficiary.tab8()}">Form 8</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="bar" class="progress progress-striped active">
+			  <div class="bar"></div>
+			</div>
+
+			<div class="tab-content">	
+				<div class="tab-pane" id="tab4"><!--tab4-->
+				   <div class="col-lg-12">
+		            <div class="panel panel-default">
+						 <div class="panel-heading">
+								Woman Beneficiary Profile	  
+						 </div>
+						 <form method="POST" class="form-horizontal" action="./addhouseholddetails">
+							 <input type="hidden" name="beneficiaryProfile" value="${beneficiaryProfile?.id}"/>
+							 <input  type="hidden" name="homesteadInformation.id" value="${homesteadInformation?.id}"/>
+							 <input type="hidden" name="index" id="index" value="${homesteadInformation?.listOfIncomeGeneratingActivity?homesteadInformation.listOfIncomeGeneratingActivity.size():1}"/>
+							<div class="panel-body">
+							  <p>LAND INFORMATION :</p>
+				                 <div class="line"></div>
+								 <div class="row">
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	#{input 'homesteadInformation.doesHaveHomeLand' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if homesteadInformation?.doesHaveHomeLand.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if homesteadInformation?.doesHaveHomeLand.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(homesteadInformation?.doesHaveHomeLand.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+										#{input 'homesteadInformation.amountOfLand' ,disabled:''+isDisabled, type:'select', labelProperty:'name',class:'form-control depends-on-homesteadInformation.doesHaveHomeLand'} 											
+										%{												
+											for(int i=0;i<99;i++)
+											{
+												%}
+												<option value="${i+1}" #{if homesteadInformation?.amountOfLand == (i+1)} selected#{/if}>${i+1}</option>
+												%{
+											}
+										%}
+										#{/input}
+								    </div>
+				                 </div>
+				                 </div>
+				                 <div class="row">
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	#{input 'homesteadInformation.doesHaveCultivateLand' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if homesteadInformation?.doesHaveCultivateLand.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if homesteadInformation?.doesHaveCultivateLand.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(homesteadInformation?.doesHaveCultivateLand.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+										 #{input 'homesteadInformation.amountOfCultivateLand' ,disabled:''+isDisabled, type:'select', labelProperty:'name',class:'form-control depends-on-homesteadInformation.doesHaveCultivateLand'} 											
+										%{												
+											for(int i=0;i<99;i++)
+											{
+												%}
+												<option value="${i+1}" #{if homesteadInformation?.amountOfCultivateLand == (i+1)} selected#{/if}>${i+1}</option>
+												%{
+											}
+										%}
+										#{/input}
+								    </div>
+				                 </div>
+								 </div>
+
+								  <p>HOUSE DISCRIPTION :</p>
+								   <div class="line"></div>
+								   	<div class="row">
+								  <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'homesteadInformation.doesHaveHomeLand' , type:'select', labelProperty:'name'} 											
+											<option value="Self" #{if homesteadInformation?.doesHaveHomeLand.equals("Yes")} selected#{/if}>Self</option>
+											<option value="Parent" #{if homesteadInformation?.doesHaveHomeLand.equals("Yes")} selected#{/if}>Parent</option>
+											<option value="Husband" #{if homesteadInformation?.doesHaveHomeLand.equals("Yes")} selected#{/if}>Husband</option>
+											<option value="Brother" #{if homesteadInformation?.doesHaveHomeLand.equals("Yes")} selected#{/if}>Brother</option>
+											<option value="Else's house" #{if homesteadInformation?.doesHaveHomeLand.equals("Yes")} selected#{/if}>Else's house</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	#{input 'homesteadInformation.typeOfHomeLand' , type:'select', labelProperty:'name'} 											
+											<option value="Khash Land" #{if homesteadInformation?.typeOfHomeLand.equals("Khash Land")} selected#{/if}>Khash Land</option>
+											<option value="Government Land" #{if homesteadInformation?.typeOfHomeLand.equals("Government Land")} selected#{/if}>Government Land</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">							        	
+										 #{input 'homesteadInformation.typeOfHomeRoof' , type:'select', labelProperty:'name'} 											
+											<option value="Tin" #{if homesteadInformation?.typeOfHomeRoof.equals("Tin")} selected#{/if}>Tin</option>
+											<option value="Mat/Chon" #{if homesteadInformation?.typeOfHomeRoof.equals("Mat/Chon")} selected#{/if}>Mat/Chon</option>
+											<option value="Paka" #{if homesteadInformation?.typeOfHomeRoof.equals("Paka")} selected#{/if}>Paka</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">							        	
+										#{input 'homesteadInformation.typeOfHomeFloor' , type:'select', labelProperty:'name'}
+											<option value="Paka" #{if homesteadInformation?.typeOfHomeFloor.equals("Paka")} selected#{/if}>Paka</option>
+											<option value="Kacha" #{if homesteadInformation?.typeOfHomeFloor.equals("Kacha")} selected#{/if}>Kacha</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">							        	
+										 #{input 'homesteadInformation.typeOfHomeWall' , type:'select', labelProperty:'name'}
+											<option value="Bamboo" #{if homesteadInformation?.typeOfHomeWall.equals("Bamboo")} selected#{/if}>Bamboo</option>
+											<option value="Mat/Chon" #{if homesteadInformation?.typeOfHomeWall.equals("Mat/Chon")} selected#{/if}>Mat/Chon</option>
+											<option value="Tin" #{if homesteadInformation?.typeOfHomeWall.equals("Tin")} selected#{/if}>Tin</option>
+											<option value="Brick" #{if homesteadInformation?.typeOfHomeWall.equals("Brick")} selected#{/if}>Brick</option>
+											<option value="Built/Paka" #{if homesteadInformation?.typeOfHomeWall.equals("Built/Paka")} selected#{/if}>Built/Paka</option>
+											<option value="Kacha" #{if homesteadInformation?.typeOfHomeWall.equals("Kacha")} selected#{/if}>Kacha</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 </div>
+								  
+								 <p>10. SELF INCOME :</p>
+								   <div class="line"></div>
+								   <div class="row">
+								   <div class="col-lg-3">
+								   <div class="form-group">                                      
+                                        #{input 'homesteadInformation.monthlyIncome' /} 
+                                    </div>
+									</div>
+									<div class="col-lg-3">
+								    <div class="form-group">
+										 #{input 'homesteadInformation.incomeSource' , type:'select', labelProperty:'name'}
+											<option value="SWAPNO" #{if homesteadInformation?.incomeSource.equals("SWAPNO")} selected#{/if}>SWAPNO</option>
+											<option value="Others" #{if homesteadInformation?.incomeSource.equals("Others")} selected#{/if}>Others</option>
+										#{/input}
+								    </div>
+				                 </div>
+								   </div>
+								    <p>INOME OF OTHER MEMBERS OF FAMILY :</p>
+								   <div class="line"></div>
+								   <div class="row">
+								   <div class="col-lg-3">
+								   <div class="form-group">  
+									   #{input 'homesteadInformation.avgTotIncome' /} 
+                                    </div>
+									</div>
+									</div>
+									<p>INCOME GENERATING ACTIVITIES :</p>
+								   <div class="line"></div>
+								   <table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr >
+						<th class="text-center">
+							Serial
+						</th>
+						<th class="text-center">
+							Name						
+							</th>
+						<th class="text-center">
+							Capital						
+							</th>
+						<th class="text-center">
+							Average Monthly Income				
+							</th>
+						<th class="text-center">
+							Source						
+							</th>
+					</tr>
+				</thead>
+				<tbody>
+					%{
+					if(homesteadInformation==null || homesteadInformation.listOfIncomeGeneratingActivity==null)
+					{
+					%}
+					<tr id='addr0'>
+						<td>1</td>
+						<td><input type="text" name='name0'  placeholder='Name' class="form-control" required="true"/></td>						
+						<td><input type="text" name='capital0'  placeholder='Capital' class="form-control" required="true"/></td>
+						<td><input type="text" name='avgIncome0'  placeholder='Average Monthly Income' class="form-control" required="true"/></td>
+						<td><input type="text" name='source0'  placeholder='Source' class="form-control" required="true"/></td>						
+					</tr>
+                    <tr id='addr1'></tr>
+					%{
+					}
+					else
+					{
+						int index = 1;
+					%}
+					#{list items:homesteadInformation.listOfIncomeGeneratingActivity, as:'incomeGeneratingActivity'}
+					<tr id='addr${index-1}'>
+						<td>${index}</td>		
+						<td><input type="text" name='name${index-1}'  placeholder='Name' class="form-control" value="${incomeGeneratingActivity.name}" required="true"/></td>						
+						<td><input type="text" name='capital${index-1}'  placeholder='Capital' class="form-control" value="${incomeGeneratingActivity.capital}" required="true"/></td>
+						<td><input type="text" name='avgIncome${index-1}'  placeholder='Average Monthly Income' class="form-control" value="${incomeGeneratingActivity.avgIncome}" required="true"/></td>
+						<td><input type="text" name='source${index-1}'  placeholder='Source' class="form-control" value="${incomeGeneratingActivity.source}" required="true"/></td>						
+					</tr>
+                    
+					%{
+						index++;
+					%}
+					#{/list}
+					<tr id='addr${index-1}'></tr>
+					%{
+					}
+					%}
+				</tbody>
+			</table>
+			<a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
+						   
+								   
+								   </div>
+								   </div>
+							
+							
+						     </div>
+				      </div>		<!--/tab4-->
+<ul class="pager wizard">
+						<li class="previous first" style="display:none;"><a href="#">First</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
+						<li class="next last" style="display:none;"><a href="#">Last</a></li>
+						<li class="next"><a href="#">Next</a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>	
+	</div><!--/.container-->
+</section><!--/#feature-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#homesteadInformation\\.amountOfLand').dependsOn('#homesteadInformation\\.doesHaveHomeLand', ['Yes']);
+		$('#homesteadInformation\\.amountOfCultivateLand').dependsOn('#homesteadInformation\\.doesHaveCultivateLand', ['Yes']);
+		var i=parseInt($('#index').val());		
+		$("#input-24").fileinput({
+			initialPreview: [
+				'<img src="../../../public/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+				'<img src="../../../public/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+			],
+			overwriteInitial: false,
+			maxFileSize: 100,
+			initialCaption: "The Moon and the Earth"
+		});
+		
+		$("#add_row").click(function(){
+			//$('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+			$('#addr'+i).html('<td>'+(i+1)+'</td>'+
+			'<td><input type="text" name=\'name'+(i)+'\'  placeholder=\'Name\' class="form-control" required="true"/></td>'+
+			'<td><input type="text" name=\'capital'+(i)+'\'  placeholder=\'Capital\' class="form-control" required="true"/></td>'+
+			'<td><input type="text" name=\'avgIncome'+(i)+'\'  placeholder=\'Average Monthly Income\' class="form-control" required="true"/></td>'+
+			'<td><input type="text" name=\'source'+(i)+'\'  placeholder=\'Source\' class="form-control" required="true"/></td>');
+			$('#tab_logic').append('<tr id="addr'+(i)+'"></tr>');
+			i++; 
+			$('#index').val(i);
+		});
+		$("#delete_row").click(function(){
+			if(i>1){
+				$("#addr"+(i-1)).html('');
+				i--;
+				$('#index').val(i);
+			}
+		});
+	    $('#rootwizard').bootstrapWizard({
+			onNext: function(tab, navigation, index) {
+				if(index==2) {
+					// Make sure we entered the name
+					if(!$('#name').val()) {
+						alert('You must enter your name');
+						$('#name').focus();
+						return false;
+					}
+				}
+				$('.form-horizontal').submit();
+				// Set the name for the next tab
+				$('#tab9').html('Hello, ' + $('#name').val());
+				
+			}
+		});
+		
+		$('#rootwizard').bootstrapWizard('show', 0);
+		var navigation = $('.navbar2');
+		var $total = navigation.find('li').length-1;
+		var $current = 4;
+		var $percent = ($current/$total) * 100;
+		$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		//$( ".previous" ).removeClass( "disabled" );
+		$( ".next" ).removeClass( "disabled" );
+		
+		$('ul#tabbar li a').click(function(event){
+			//$(this).next('div').slideToggle(200);
+			//alert('eee');
+			event.preventDefault();
+		});
+	});
+</script>

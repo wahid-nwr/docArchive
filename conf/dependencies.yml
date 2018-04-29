@@ -1,0 +1,19 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> secure
+    - play -> chronostamp 0.1
+    - play -> deadbolt 1.5.4
+    - mpower -> html5validation 1.2.2
+    - org.fusesource.mqtt-client -> mqtt-client 1.1
+    - net.sf.opencsv -> opencsv 2.3
+    - net.sourceforge.jtds -> jtds 1.3.1
+
+repositories:
+    - nexus:
+        type: http
+        #artifact: "http://115.127.27.2/nexus/content/repositories/thirdparty/mpower/[module]/[revision]/[module]-[revision].zip"
+        artifact: "http://www.mpower-social.com/[module]-[revision].zip"
+        contains:
+            - mpower -> *

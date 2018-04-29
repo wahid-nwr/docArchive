@@ -1,0 +1,193 @@
+#{extends 'main.html' /}
+
+    <section id="feature2" >
+        <div class="container">	
+				
+<div id="creat" class="tab-pane fade active in" aria-labelledby="home-tab" role="tabpanel">
+		   <div class="row">
+				<div class="col-lg-5">
+					<div class="panel panel-default">
+					<div class="panel-heading"> Create Master Profile </div>
+					<div class="panel-body">
+					
+					<div class="panel-body">
+					<form id="masterprofileform" class="form-horizontal" enctype="application/x-www-form-urlencoded" accept-charset="utf-8" method="post" action="@{Beneficiary.submitMasterProfile()}">
+					
+					#{if beneficiaryMasterProfile?.id}
+					<input type="hidden" name="beneficiaryMasterProfile.id" value="${beneficiaryMasterProfile.id}" />
+					#{/if}
+					<div class="filter">
+									<div class="control-group">
+									 <div class="control">
+										 #{input 'beneficiaryMasterProfile.geodistrict.id' , type:'select', items:geodistricts,labelProperty:'name'} 
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 <div class="control-group">
+									 <div class="control">
+										 #{input 'beneficiaryMasterProfile.geoupazilla.id' , type:'select', items:geoupazillas,labelProperty:'name' } 
+											#{option}Any#{/option}
+										#{/input}									
+									 </div>
+									 </div>
+									 <div class="control-group">
+									 <div class="control">
+										 #{input 'beneficiaryMasterProfile.geounion.id' , type:'select', items:geounions,labelProperty:'name'}
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 </div>
+					<div class="control-group">
+					<!--<label class="control-label" for="user_name">Login ID</label>-->
+					<div class="control">
+					<!--<input id="user_name" class="form-control" type="text" pattern="^\w*$" maxlength="15" required="required" name="user.name">-->
+					#{input 'beneficiaryMasterProfile.wardCode' /}
+					<div class="control-group">
+					<!--<label class="control-label" for="user_name">Login ID</label>-->
+					<div class="control">
+					<!--<input id="user_name" class="form-control" type="text" pattern="^\w*$" maxlength="15" required="required" name="user.name">-->
+					#{input 'beneficiaryMasterProfile.beneficiaryId' /}
+					
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					<div class="control-group">
+					<!--<label class="control-label" for="user_displayName">Display Name</label>-->
+					<div class="control">
+					<!--<input id="user_displayName" class="form-control" type="text" maxlength="100" name="user.displayName">-->
+					#{input 'beneficiaryMasterProfile.beneficiaryName' /}					
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					<div class="control-group">
+					<!--<label class="control-label" for="user_email">Email</label>-->
+					<div class="control">
+					<!--<input id="user_email" class="form-control" type="text" maxlength="120" required="required" name="user.email">-->
+					#{input 'beneficiaryMasterProfile.beneficiaryAge' /}
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					<div class="control-group">
+					<!--<label class="control-label" for="user_password">Password</label>-->
+					<div class="control">
+					<!--<input id="user_password" class="form-control" type="password" pattern="[^=]*" maxlength="15" required="required" name="user.password">-->
+					#{input 'beneficiaryMasterProfile.fatherOrHusbandName' /}
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					<div class="control-group">
+					<!--<label class="control-label" for="user_confirmPassword">Confirm Password</label>-->
+					<div class="control">
+					<!--<input id="user_confirmPassword" class="form-control" type="password" name="user.confirmPassword">-->
+					#{input 'beneficiaryMasterProfile.previousProfession' /}
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					<div class="control-group">
+					<!--<label class="control-label" for="user_role_id">Role</label>-->
+					<div class="control">
+						#{input 'beneficiaryMasterProfile.villageName' /}				
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					
+					<div class="control-group">
+					<!--<label class="control-label" for="user_role_id">Role</label>-->
+					<div class="control">
+						#{input 'beneficiaryMasterProfile.maritalStatus' , type:'select', labelProperty:'name'} 											
+							<option value="Unmarried" #{if beneficiaryMasterProfile?.maritalStatus.equals("Unmarried")} selected#{/if}>Unmarried</option>
+							<option value="Married-Husband" #{if beneficiaryMasterProfile?.maritalStatus.equals("Married-Husband")} selected#{/if}>Married-Husband</option>
+							<option value="Disabled" #{if beneficiaryMasterProfile?.maritalStatus.equals("Disabled")} selected#{/if}>Disabled</option>
+							<option value="Married-runaway" #{if beneficiaryMasterProfile?.maritalStatus.equals("Married-runaway")} selected#{/if}>Married-runaway</option>
+							<option value="Husband" #{if beneficiaryMasterProfile?.maritalStatus.equals("Husband")} selected#{/if}>Husband</option>
+							<option value="Divorced" #{if beneficiaryMasterProfile?.maritalStatus.equals("Divorced")} selected#{/if}>Divorced</option>
+							<option value="Widowed" #{if beneficiaryMasterProfile?.maritalStatus.equals("Widowed")} selected#{/if}>Widowed</option>
+						#{/input}
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					
+					<div class="control-group">
+					<!--<label class="control-label" for="user_role_id">Role</label>-->
+					<div class="control">
+						#{input 'beneficiaryMasterProfile.beneficiaryStatus' , type:'select', labelProperty:'name'} 											
+							<option value="1" #{if beneficiaryMasterProfile?.beneficiaryStatus==1} selected#{/if}>Active</option>
+							<option value="0" #{if beneficiaryMasterProfile?.beneficiaryStatus==0} selected#{/if}>Inactive</option>
+						#{/input}
+					<span class="help-inline error_color"></span>					</div>
+					</div>
+					
+										
+										
+					<!--
+					<div class="bposition">
+					<button class="btn btn-default" type="submit">Save changes</button>
+					<button class="btn btn-default" type="reset">Reset</button>
+					</div>
+					-->
+					<!--</form>-->
+					
+					<div class="form-actions">
+					<button class="btn btn-primary" id="submitform" type="submit">Save changes</button>
+					<!--<button class="btn" type="reset">Reset</button>-->
+					</div>
+					</form>
+					<div> </div>
+					</div>
+					</div>
+				</div>
+          </div>
+		</div>
+
+			</div><!--/tab-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#submitform').on('click',function(e){
+		e.preventDefault();
+		var union = $('.filter select:eq(2)').find(':selected').val();
+		if(!parseInt(union)>0)
+		{
+			alert('Please select District,Upazilla,Union first.');
+			return false;
+		}
+		else
+		{
+			var ward = $('#beneficiaryMasterProfile_wardCode').val();
+			if(ward==null || ward=='undefined' || ward.length==0)
+			{
+				alert('Please enter ward');
+				return false;
+			}
+			else if(ward<1 || ward>9)
+			{
+				alert('Please enter ward no between 1-9');
+				return false;
+			}
+			var beneficiaryId = $('#beneficiaryMasterProfile_beneficiaryId').val();
+			if(beneficiaryId==null || beneficiaryId=='undefined' || beneficiaryId.length==0)
+			{
+				alert('Please enter Beneficiary Id');
+				return false;
+			}
+			var beneficiaryName = $('#beneficiaryMasterProfile_beneficiaryName').val();
+			if(beneficiaryName==null || beneficiaryName=='undefined' || beneficiaryName.length==0)
+			{
+				alert('Please enter Beneficiary Name');
+				return false;
+			}
+			var beneficiaryAge = $('#beneficiaryMasterProfile_beneficiaryAge').val();
+			if(beneficiaryName==null || beneficiaryName=='undefined' || beneficiaryName.length==0)
+			{
+				alert('Please enter Beneficiary Age');
+				return false;
+			}
+			
+			var fatherOrHusbandName = $('#beneficiaryMasterProfile_fatherOrHusbandName').val();
+			if(fatherOrHusbandName==null || fatherOrHusbandName=='undefined' || fatherOrHusbandName.length==0)
+			{
+				alert('Please enter Father Or Husband Name');
+				return false;
+			}
+			$('#masterprofileform').submit();
+		}
+	});
+});
+</script>	
+#{cascade/}	

@@ -1,0 +1,142 @@
+package controllers;
+
+import java.io.File;
+import java.text.DateFormatSymbols;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Random;
+
+import javax.validation.Valid;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import controllers.deadbolt.Deadbolt;
+import controllers.deadbolt.ExternalRestrictions;
+import controllers.deadbolt.JSON;
+
+import models.Role;
+
+import play.Logger;
+import play.data.FileUpload;
+import play.data.validation.Validation;
+import play.mvc.With;
+
+@With(Deadbolt.class)
+public class DocumentArchiveController extends Controller{
+
+@ExternalRestrictions("File Archiving")
+    public static void list(){
+    	List<models.UploadFile> uploadFileList = models.UploadFile.findAll();
+		render(uploadFileList);
+    }
+
+@ExternalRestrictions("File Archiving")
+    public static void create(){
+		render();
+    }
+
+@ExternalRestrictions("File Archiving")
+    public static void replacelist(){
+    	List<models.DocumentSet> documentSetList = models.DocumentSet.findAll();
+		render(documentSetList);
+    }
+
+@ExternalRestrictions("File Archiving")
+    public static void createreplace(){
+		render();
+    }
+@ExternalRestrictions("File Archiving")
+    public static void docsetlist(){
+    	List<models.DocumentSet> documentSetList = models.DocumentSet.findAll();
+		render(documentSetList);
+    }
+
+@ExternalRestrictions("File Archiving")
+    public static void createdocset(){
+		render();
+    }
+
+@ExternalRestrictions("File Archiving")
+    public static void edit(Long id){
+		models.UploadFile uploadFile= models.UploadFile.findById(id);
+		render("@create",uploadFile);
+    }
+	
+	@ExternalRestrictions("File Archiving")
+    public static void submit(@Valid models.UploadFile uploadFile){
+		uploadFile.dateOfUpload=Calendar.getInstance().getTime();
+		if(!params.get("uploadFile.uploadedFile").isEmpty())
+		   {
+
+			   Logger.info("In uploadFile File");
+			   FileUpload uploads = (FileUpload) params.get("asset.uploadedFile", FileUpload.class);
+			   if(uploads!=null)
+			   {
+					
+				   long  n = Calendar.getInstance().getTimeInMillis();
+				   String path="uploadFile"+File.separator;
+				   String uploadFileName =n+ uploads.getFileName();
+				   uploads.asFile(path + uploadFileName);
+				   uploadFile.filename = uploads.getFileName();
+			   }
+		   }
+		if(Validation.hasErrors()) {
+			Logger.info("Error!!  "+ Validation.errors().toString());
+        	render("@create", uploadFile);
+        }
+		
+		
+		uploadFile.save();
+		return;
+    }
+
+	@ExternalRestrictions("File Archiving")
+   	public static void downloadFile(Long id)
+   	{
+    	models.UploadFile uploadFile=models.UploadFile.findById(id);
+		String path = "uploadFile/" +uploadFile.filename;
+       	response.setContentTypeIfNotSet("application/force-download");
+       	        //response.setContentLength(-1);
+       	response.setHeader("Content-Transfer-Encoding", "binary");
+       	response.setHeader("Content-Disposition","attachment; uploadFilename=\"" + uploadFile.filename );
+       	renderBinary(new File(path));
+   	}
+	@ExternalRestrictions("Media Archiving")
+    public static String delete(Long id){
+		Boolean code = false;
+    	String msg ="User can not be deleted";
+    	Logger.info("Deleted start!!!!" +id);
+    	if(request.isAjax()) {
+    		
+	    	notFoundIfNull(id, "id not provided");
+	    	models.UploadFile uploadFile = models.UploadFile.findById(id);
+	    	notFoundIfNull(uploadFile, "user not found");
+	    	try{
+	    		uploadFile.delete();
+	    		code = true;
+	    		msg = "File deleted successfully";
+	    		Logger.info("Deleted!!!!");
+	    	}
+	    	catch(Exception e){
+	    		Logger.info("Not possible" + 1000);
+	    		code=false;
+	    		
+	    	}
+    	}
+    	if(code){
+    		response.status=200;
+    		return msg;
+    		
+    	}
+    	else{
+    		
+    		response.status=303;
+    		return msg;
+    		
+    	}
+    }
+	
+}
+	
+	

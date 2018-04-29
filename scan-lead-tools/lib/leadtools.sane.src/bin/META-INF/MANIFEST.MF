@@ -1,0 +1,108 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Copyright: LEADTOOLS (C) 1991-2016 LEAD Technologies, Inc. ALL RIGHTS 
+ RESERVED. This software is protected by United States and Internation
+ al copyright laws. Any copying, duplication, deployment, redistributi
+ on, modification or other disposition hereof is STRICTLY PROHIBITED w
+ ithout an express written license granted by LEAD Technologies, Inc..
+  This notice may not be removed or otherwise altered under any circum
+ stances. Portions of this product are licensed under US patent 5,327,
+ 254 and foreign counterparts. For more information, contact LEAD Tech
+ nologies, Inc. at 704-332-5532 or visit https://www.leadtools.com
+File-Description: Sane
+Product-Version: 19.0.0.0
+Trademark: LEADTOOLS is a trademark of LEAD Technologies, Inc.
+Product-Name: LEADTOOLS for Java
+File-Version: 19.0.0.0
+Created-By: 1.7.0_67-b01 (Oracle Corporation)
+
+Name: leadtools/sane/SaneConstraint.class
+SHA-256-Digest: MNDOj15drYu2J4ioJYOZHGDwgEk0pv8QSJUY1ZbGpMs=
+
+Name: leadtools/sane/SaneUnit.class
+SHA-256-Digest: NpMEGuxZFaI+LbF8PHkfqLtZNlwfVJagQVBwSTRD3dE=
+
+Name: leadtools/sane/ISaneAuthorizationCallback.class
+SHA-256-Digest: NwF5HXi1U7Z9KRTfBlpS/58u+scbl/0VVPRvhvQ//u0=
+
+Name: leadtools/sane/SaneConstraintType.class
+SHA-256-Digest: 840YanPs0erSrhmkpY0+/SNPWwprt6zjSNQu/Feadyo=
+
+Name: leadtools/sane/NetworkSaneSession.class
+SHA-256-Digest: 3iXykpfD+ipoev7YEZE9nEpIdZQGf0oECv4xqcpFYF8=
+
+Name: leadtools/sane/SaneOptionActions.class
+SHA-256-Digest: rByZJqCzX8+86uwysHxf+kuIlnZ6SsJqhblvaUGqfeA=
+
+Name: leadtools/sane/NetworkSaneDevice$1.class
+SHA-256-Digest: SJE0F25b1d06z6Zj76Salvlv0G1Wtshr+8tejrko0lE=
+
+Name: leadtools/sane/ltsane.class
+SHA-256-Digest: OTHVJPYcfsTKnKlhAsqWeqcGN6NUOQFjkshgaU4vQZ4=
+
+Name: leadtools/sane/NetworkStream$1.class
+SHA-256-Digest: wLSvbUWB/ZhNr94ZvZYycRK9Tzd6g3X3Wr33qQn4+Lg=
+
+Name: leadtools/sane/SaneUtils.class
+SHA-256-Digest: iDXMuGYqysSLVQcFGDeb/v3WOsxyW077xL6bwXs3Qtk=
+
+Name: leadtools/sane/SaneConstants.class
+SHA-256-Digest: 0qLhH7pO14U23DGxgY+Z4KddYJuTiL0c1ZuE2PJMNx8=
+
+Name: leadtools/sane/SaneValueType.class
+SHA-256-Digest: GpRsg4ko16qpPjv+NvemZPsgLse+yk5TBEDwYyktX4Q=
+
+Name: leadtools/sane/SaneRpcCode.class
+SHA-256-Digest: Pegn2B5YHZFUXmHjN9ThfN9JEHJla40IiDGux7Q1giw=
+
+Name: leadtools/sane/NetworkSaneDevice.class
+SHA-256-Digest: xbexjVc1VDJdG2bxDXHi+FY7Mrd+qmiYOPNc8b1VgJ8=
+
+Name: leadtools/sane/SaneRangeConstraint.class
+SHA-256-Digest: FaW/49AmY5YcRqZ0SFjRxFN8GCBfmDcZJfCitVLqhxg=
+
+Name: leadtools/sane/NetworkSaneDevice$ControlOptionDataResponse.class
+SHA-256-Digest: mGHSQymQjqW7KaqD4oN0ZS5s4jrbEQx0ZJOZpii10s4=
+
+Name: leadtools/sane/SaneSession.class
+SHA-256-Digest: xIw8q6a2sXFdb9UyjJDVjgWRRJIivp+mKtzoG02Vfww=
+
+Name: leadtools/sane/SaneStatus.class
+SHA-256-Digest: vsckIvUMEKlwHoSc4CVYB/GMdpREPfY3RRHJM8LqpcU=
+
+Name: leadtools/sane/SaneFrame.class
+SHA-256-Digest: M4n85oieabjRUCyILwNScBLzJfMg/8fH0kk+0tTlF80=
+
+Name: leadtools/sane/AuthorizationInfo.class
+SHA-256-Digest: 1jIGYIVSCAM0BaxjObQdnfHKA9vicxksdqngx4x7PT8=
+
+Name: leadtools/sane/SaneOptionDescriptor.class
+SHA-256-Digest: miDQdw0VSdElk8octXm+Fbynl4VX4TxHtHOoULB0uPI=
+
+Name: leadtools/sane/SaneFactory.class
+SHA-256-Digest: NVSXMgn5RBYPllzQm6Vc9VFTZmlwLSPszfKBCq3onC4=
+
+Name: leadtools/sane/DeviceInfo.class
+SHA-256-Digest: T858E7QONKRuPs/QvOcHRjrDDX5BkIEFmXjGuVQ4tcs=
+
+Name: leadtools/sane/SaneParameters.class
+SHA-256-Digest: FojiJJFVXHxGX1HcUKJXebFJR/JX8uL7zSKVGznsqW4=
+
+Name: leadtools/sane/SaneDevice.class
+SHA-256-Digest: BSIPIHWZv1ruH0Lc8qpfhmWvFpUXGeZJFq8r3GV05N0=
+
+Name: leadtools/sane/NativeSaneDevice.class
+SHA-256-Digest: IouXds2CSt9nyllRRGXkO3HO/HyOQk/+UZ29UPFdu8I=
+
+Name: leadtools/sane/NetworkStream.class
+SHA-256-Digest: zpmBSCxzXZf+ey9mPSoawxM0wDCSRBCGABpEDA+G2sg=
+
+Name: leadtools/sane/SaneStringListConstraint.class
+SHA-256-Digest: fH8YwYHs/zH13AG9ReUQVW5KVRmu7onoFVtsHnat2P4=
+
+Name: leadtools/sane/NativeSaneSession.class
+SHA-256-Digest: Cjzb9zxjHQQO1bSVP5gkYJMNR+nLOMKOxKr6lFQfNuM=
+
+Name: leadtools/sane/SaneWordListConstraint.class
+SHA-256-Digest: mNfaSOKT9OsPkEjXEIO3YXYpu1fFqoLLL//0R3Pc29Y=
+

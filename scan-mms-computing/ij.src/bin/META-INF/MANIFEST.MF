@@ -1,0 +1,1091 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Created-By: 1.6.0_26-b03-384-10M3425 (Apple Inc.)
+Main-Class: ij.ImageJ
+
+Name: ij/plugin/TreePanel.class
+SHA1-Digest: M7g4OcB8QI8mOh8V4Ct4XvQuhJs=
+
+Name: ij/ImageJ.class
+SHA1-Digest: UQFWYN4d58Y8Mzmywhj3KDgttx0=
+
+Name: ij/plugin/PlugInExecuter.class
+SHA1-Digest: wtdGFR4aXc9kOfRz724orr0ERxg=
+
+Name: ij/io/OpenDialog$1.class
+SHA1-Digest: E14a9bvxVv/BRx0YD8pZUmkXfc4=
+
+Name: ij/plugin/Macro_Runner.class
+SHA1-Digest: LXK7EaHvGkiwAMMZv2D6lXXZ3pM=
+
+Name: ij/plugin/StackReverser.class
+SHA1-Digest: D+uqNsj5tYl8khflyhgek09g9h0=
+
+Name: ij/plugin/AVI_Reader.class
+SHA1-Digest: FWkiyYh+GQSzlrNJKweJkOG08II=
+
+Name: ij/plugin/filter/Convolver.class
+SHA1-Digest: RQMMd6n4/+hRE0UCk4vAjaVLiCo=
+
+Name: ij/measure/SplineFitter.class
+SHA1-Digest: HByFT4eP3t+vfujipOMCcNlS2B4=
+
+Name: ij/plugin/filter/LutApplier.class
+SHA1-Digest: WTYeWGfrG5TJzY1IJrcXPCIhPwU=
+
+Name: ij/plugin/ZProjector$MaxIntensity.class
+SHA1-Digest: rkWt7rULiOVIl9RfoVudMqUkPuI=
+
+Name: ij/plugin/PNG_Writer.class
+SHA1-Digest: CQiQEgmB8WO0F3iRR6bZRJ0WQDs=
+
+Name: ij/process/Blitter.class
+SHA1-Digest: 9SQ+zRfdwQcRttA/dPERX8GrNDo=
+
+Name: ij/plugin/Orthogonal_Views$Updater.class
+SHA1-Digest: E2TZhYhEEmYHB7vSlIoxkS/5PLU=
+
+Name: ij/plugin/filter/ImageProperties.class
+SHA1-Digest: 3FqAIYV23B0Pk5asV73fO91zRZg=
+
+Name: ij/plugin/filter/PlugInFilter.class
+SHA1-Digest: flU/Xi6TjXGuBUA+RZZlUKfENpc=
+
+Name: ij/plugin/CommandFinder$CommandAction.class
+SHA1-Digest: WzEcEqIzcvt1BM9dL4B4K17gfiQ=
+
+Name: ij/process/EllipseFitter.class
+SHA1-Digest: 7Ln/CWLLJXkcBZukEvcx3pcOhnw=
+
+Name: ij/plugin/frame/Recorder.class
+SHA1-Digest: cgtrPgVK4TNdDp9O/1YNQb/XJb8=
+
+Name: ij/plugin/ZProjector$MinIntensity.class
+SHA1-Digest: saG8WR4PM3HZc07SPdH//Go+7FY=
+
+Name: ij/gui/FreehandRoi.class
+SHA1-Digest: I6wEM5fYjm/6gElSXf15pc+cwE0=
+
+Name: ij/gui/ImageRoi.class
+SHA1-Digest: 4LYV0pkFfHkMM9iph9fSYWA2WFA=
+
+Name: ij/io/BitBuffer.class
+SHA1-Digest: dqv3e2htE9ElMOnm0F5LluqvzJ8=
+
+Name: ij/macro/MacroConstants.class
+SHA1-Digest: mKl8ow11u64PLqMadL7el6faO4Q=
+
+Name: ij/RecentOpener.class
+SHA1-Digest: Fz+hOetAeeiRFJxcjLUhdw1jTBs=
+
+Name: ij/plugin/Installer.class
+SHA1-Digest: otjTNoszSkQ+G5R1UvuR+idEoSo=
+
+Name: ij/process/ColorBlitter.class
+SHA1-Digest: 1dNiSv2im0xQ/IL/5Sy053ZVRNw=
+
+Name: ij/io/TiffDecoder.class
+SHA1-Digest: MZwhVzdatSsCf8sGjd343ByBB8g=
+
+Name: ij/plugin/ImageCalculator.class
+SHA1-Digest: jMZKM099tHCswZn7MRGqWtGqrzs=
+
+Name: ij/gui/PointRoi.class
+SHA1-Digest: DY8jUPFnjDbwcZv/1NVxRSXXnbQ=
+
+Name: macros/AddParticles.txt
+SHA1-Digest: DNuYjyf1DQckLZ+j2qHHyeSUt3c=
+
+Name: ij/process/ImageStatistics.class
+SHA1-Digest: h3+DMoDm9OGqN/R4EBo2WDEqlBg=
+
+Name: ij/plugin/frame/ContrastAdjuster.class
+SHA1-Digest: rE5JfB7L9YVygtxo/po+uMqMPF0=
+
+Name: ij/gui/ColorPanel.class
+SHA1-Digest: etcob7cfjtCQka901QdyLz7+Ncc=
+
+Name: ij/plugin/SurfacePlotter.class
+SHA1-Digest: Pf8gbmYO1MTjDYhmn9/D0GbZHtU=
+
+Name: ij/gui/WaitForUserDialog.class
+SHA1-Digest: 7Bp3MUOw/DrL5xsTRXIuw73HjDE=
+
+Name: ij/plugin/EventListener.class
+SHA1-Digest: +UFtovHPl9lEzjIwV+4c3W0BQWA=
+
+Name: ij/plugin/ScreenGrabber.class
+SHA1-Digest: h+Dtm/YuoHLPxVf9acmPWnISdCA=
+
+Name: ij/gui/PlotWindow.class
+SHA1-Digest: ZL/VW+aoYR9g5Jl3pc9COYLvkP8=
+
+Name: ij/plugin/Colors.class
+SHA1-Digest: dzLJSvox/VdLY82Mupbmw1lJOqk=
+
+Name: ij/plugin/frame/MemoryMonitor.class
+SHA1-Digest: WSnd/5dNunv9u3T2nQnWlq4iWJY=
+
+Name: ij/plugin/Selection.class
+SHA1-Digest: jThFeJomRlXXhqRVQyrAGENoNWY=
+
+Name: ij/Executer.class
+SHA1-Digest: BWhP6aejRdf7IMQ4c3L6E4jdwcc=
+
+Name: macros/Stack Tools.txt
+SHA1-Digest: viF6mMjlvpaDdInCyae3ars8MXA=
+
+Name: ij/gui/NewImage.class
+SHA1-Digest: 9G2rMcnPJOvMNTL57VXKJJz8vQo=
+
+Name: ij/plugin/CanvasResizer.class
+SHA1-Digest: uztywTFDlwElyxB+7HF1K4UjBFc=
+
+Name: ij/io/TiffEncoder.class
+SHA1-Digest: SmSxyePrA2aVN0A8g11Ayq6D9wI=
+
+Name: ij/plugin/frame/ColorCanvas.class
+SHA1-Digest: q5Fa1a8MXeLxmjTpSCT5DaBisrk=
+
+Name: ij/gui/EllipseRoi.class
+SHA1-Digest: cqwyJkx63aG2XVa5F0HgoIXTIhI=
+
+Name: ij/plugin/filter/RoiWriter.class
+SHA1-Digest: ybH4WaH1WzezREntFGgLhoAoY5U=
+
+Name: ij/plugin/filter/ImageMath.class
+SHA1-Digest: f1rGo1hXSG3WuQsINlI6ONBRBSg=
+
+Name: ij/plugin/ListVirtualStack.class
+SHA1-Digest: CeW/AOppOHE1yFGaFpXrphoFic4=
+
+Name: ij/plugin/LZWEncoder.class
+SHA1-Digest: mkkxVPbYsoy/TLQyZRivLvi6FmA=
+
+Name: ij/gui/ImageCanvas.class
+SHA1-Digest: FkT9gdCjWn5ukffsCBE02SsXDYo=
+
+Name: ij/gui/GenericDialog.class
+SHA1-Digest: 0vG8X4hTEd7ctOv9cGGR31itttQ=
+
+Name: ij/plugin/frame/PasteController.class
+SHA1-Digest: crrA5T2aGrCwrtpMXtZ4JTGMoE8=
+
+Name: ij/gui/Line.class
+SHA1-Digest: s0LItTcB+BJr6KrmQknQuZIH5PQ=
+
+Name: IJ_Props.txt
+SHA1-Digest: MMPMDY5/gsVPaOQ3D3i4f9XR44w=
+
+Name: ij/util/DicomTools.class
+SHA1-Digest: hIbD0w45yb+oqeCRAQZdP6z8Tsg=
+
+Name: ij/gui/DialogListener.class
+SHA1-Digest: coYDVaEYVtujZCAT7pg6w3H8V/o=
+
+Name: ij/plugin/StackInserter.class
+SHA1-Digest: L8pErUZskUdSkXxFWQ8CgkjMlZ8=
+
+Name: ij/measure/Calibration.class
+SHA1-Digest: LhdxaehwhQptDA879xEc4qtNb3I=
+
+Name: ij/plugin/Zoom.class
+SHA1-Digest: fsnkhSd6rjMPFJKOMM+pSCldU6g=
+
+Name: ij/io/ByteVector.class
+SHA1-Digest: N2IWreY0azAc3JK5MF/qTJsRJbo=
+
+Name: ij/gui/OvalRoi.class
+SHA1-Digest: Acv3ehY2SvEGTcHQGez8zz3mC34=
+
+Name: ij/plugin/frame/RoiManager.class
+SHA1-Digest: WVSxfIdMDlf6a3TQ+BWqtviFlEc=
+
+Name: ij/io/Opener.class
+SHA1-Digest: gslIHhcMx8K3HuHaKBzVuq2Yqek=
+
+Name: ij/gui/YesNoCancelDialog.class
+SHA1-Digest: ytS3kHaZ0Gls5l5dI/7rKcwJ64A=
+
+Name: ij/plugin/FFT.class
+SHA1-Digest: kbn5V9P+vZFcjzjxKyLqlGe+RtQ=
+
+Name: ij/plugin/FITS_Reader.class
+SHA1-Digest: iJWuUrRZuzTPNyK4CTwuwh9ukFQ=
+
+Name: ij/plugin/filter/ExtendedPlugInFilter.class
+SHA1-Digest: LAxdWuZeholIAw2iMqXrOZtQGr4=
+
+Name: ij/gui/Arrow.class
+SHA1-Digest: HENmvbijASKufsPo/Sr2l+2LY0o=
+
+Name: ij/process/FloodFiller.class
+SHA1-Digest: 1vPa4HBKJrP3CnPxTaggySRkd8k=
+
+Name: ij/plugin/AboutBox.class
+SHA1-Digest: DizR+CDanXyPD59+K0JViplhxFY=
+
+Name: macros/ConvertStackToBinary.txt
+SHA1-Digest: KGpsMFSCFxNK/5e2aOoCJzXtX7Q=
+
+Name: ij/plugin/AVI_Reader$raInputStream.class
+SHA1-Digest: nNkjuLfrr32kOB00uEEbrguHP0g=
+
+Name: ij/process/ShortStatistics.class
+SHA1-Digest: 1eqB6xJO+T2nMGJgSxDHTghaOk8=
+
+Name: ij/io/TextEncoder.class
+SHA1-Digest: UvohZKd46x5HFAK+0PTS5kKmFd8=
+
+Name: ij/gui/RoiBrush.class
+SHA1-Digest: 1zuyzaCX6vWCOpuiLx4AbUR8a5k=
+
+Name: ij/plugin/ScaleBar$BarDialog.class
+SHA1-Digest: E+9+BjN+CrY+8eDfJNvtNMATCro=
+
+Name: ij/plugin/Duplicator.class
+SHA1-Digest: JDHhbVfKbd8hmy4nex0C1aytUG4=
+
+Name: ij/plugin/URLOpener.class
+SHA1-Digest: hS8ziem3D1m/Uf6ER4M14MnCObs=
+
+Name: ij/plugin/filter/Translator.class
+SHA1-Digest: 9gKgHHTB+hJ33iFAT44mZy0MR3A=
+
+Name: ij/plugin/MeasurementsWriter.class
+SHA1-Digest: Q6sQK18DtqETO1SSeozznryS4zI=
+
+Name: ij/process/AutoThresholder$Method.class
+SHA1-Digest: Rd3EtO8UnGNpFQx17BQ4hN2eQkQ=
+
+Name: ij/plugin/filter/LutWindow.class
+SHA1-Digest: 6PC2jTACWStJUyeGZP7Dtpq5IBw=
+
+Name: ij/plugin/frame/ColorPicker.class
+SHA1-Digest: GyYNMHFMYUwrr17CJ/jo7NvTU0w=
+
+Name: ij/plugin/StackWriter.class
+SHA1-Digest: KoPDbu92Bu0Nh8KVnCcjaKQaItc=
+
+Name: ij/io/FileSaver.class
+SHA1-Digest: Plk4UgvM4eR+QsvnzZm+9noKH74=
+
+Name: ij/plugin/filter/Transformer.class
+SHA1-Digest: heUftd/BNfJpqk5j8hLd8vIIufY=
+
+Name: ij/plugin/ClassChecker.class
+SHA1-Digest: 1BHQu3mfLGfEOUGqvzuu6jSfjPw=
+
+Name: ij/plugin/filter/Writer.class
+SHA1-Digest: OeumA84KIi/uONVlck9Ddve871M=
+
+Name: ij/plugin/filter/Profiler.class
+SHA1-Digest: CjluNMBfS1qnPn7TfqOJXH7fSWQ=
+
+Name: ij/plugin/Slicer.class
+SHA1-Digest: yJjh67N3RGvmQLl9F7N1drXxG1c=
+
+Name: ij/plugin/filter/ParticleAnalyzer.class
+SHA1-Digest: YzzG0Bx19g86JYPqiqwm4rhccH4=
+
+Name: ij/plugin/filter/ZAxisProfiler.class
+SHA1-Digest: kLUNXy3vwk5tC/9x0T50eVtAsc0=
+
+Name: ij/LookUpTable.class
+SHA1-Digest: yDrUyHiQlbLzykf7TIK/mOS6N10=
+
+Name: ij/measure/ResultsTable.class
+SHA1-Digest: y9MR1R5FurE6bvW3uEvWrXqjhaQ=
+
+Name: ij/plugin/filter/Resizer.class
+SHA1-Digest: 6aGtpaVlKbrsTsri8tnKqszzVVo=
+
+Name: ij/gui/Roi.class
+SHA1-Digest: yR7HjAL4oQkcXr6IVCVFlXoyKGw=
+
+Name: ij/plugin/BatchConverter.class
+SHA1-Digest: D4ma4j2uhmULF4cq54XnpdnzwDI=
+
+Name: ij/plugin/filter/FractalBoxCounter.class
+SHA1-Digest: MDUMVEMIeSUpFbO1rjVyD+x3n28=
+
+Name: macros/MoveSelection.txt
+SHA1-Digest: IL3KOT7zgk/jfPyUQ9nk4BpjwGo=
+
+Name: ij/util/Java2.class
+SHA1-Digest: Q8ZH5ocqDe5T3wllEomzx9x1I80=
+
+Name: ij/plugin/TextReader.class
+SHA1-Digest: GP89HVI3rYsJgWtyvDzImpEePtk=
+
+Name: ij/plugin/filter/LutViewer.class
+SHA1-Digest: TY38oAptNcG/Ap2Yw2enrMxgeHI=
+
+Name: ij/plugin/FileInfoVirtualStack.class
+SHA1-Digest: YhRt9/x95CiAqcFiTg6qGiZYNgU=
+
+Name: ij/gui/ScrollbarWithLabel.class
+SHA1-Digest: ZC4MniHAaCgvOj10V31Mi5JGjLA=
+
+Name: ij/ImageStack.class
+SHA1-Digest: Bjk4/ccPJEwi28DNEQIdnwiqoC4=
+
+Name: ij/plugin/filter/RankFilters$1.class
+SHA1-Digest: fG/ZRe+VBS6r11Bs6D7pZfNasZI=
+
+Name: ij/plugin/ContrastEnhancer.class
+SHA1-Digest: tMSWZu6pGDd9FWWp96CYR+H+5xM=
+
+Name: ij/plugin/GifEncoder.class
+SHA1-Digest: HvK01CYiFpTKVUVLSFeWpEItVcA=
+
+Name: ij/plugin/Thresholder.class
+SHA1-Digest: 0ofZDjf3DGtFY/i2DDbijCZjxWo=
+
+Name: ij/plugin/filter/ThresholdToSelection$Outline.class
+SHA1-Digest: vQ8pN4u5uxnPMm8OutguKrlt9O4=
+
+Name: ij/plugin/Options.class
+SHA1-Digest: rY3C55ifYW5NxaxMaLDNc03oljk=
+
+Name: ij/gui/Toolbar.class
+SHA1-Digest: tA4WeDBfXwmM3VQuu46ls7zAKJM=
+
+Name: ij/plugin/StackMaker.class
+SHA1-Digest: r82lL9QXp7q4oO77tCCLB0fL18k=
+
+Name: MacAdapter.class
+SHA1-Digest: 3mQByDTAuZ0CK3OH8dP0MUwxAdg=
+
+Name: ij/process/BinaryProcessor.class
+SHA1-Digest: y7ZyDDM4yYBBML66VK2VKdvhG7U=
+
+Name: ij/plugin/filter/RollingBall.class
+SHA1-Digest: GutFqCpB/sBNSGfBE1Na61JlYDg=
+
+Name: ij/plugin/TreePanel$3.class
+SHA1-Digest: B20JVxxqey9E9QINAn/VZoHrItk=
+
+Name: ij/Undo.class
+SHA1-Digest: r9Nu2slG+gSe9ucx3sDe/ta6/Zg=
+
+Name: ij/util/StringSorter.class
+SHA1-Digest: J1WAn0xgIQwE6uRsHOwi0cOrrqo=
+
+Name: ij/ImageListener.class
+SHA1-Digest: AHDQ3apoerxCPIEJeh39FFjGdIQ=
+
+Name: ij/process/ByteBlitter.class
+SHA1-Digest: 9+FbQ+QUdyYVEjqodixkpQ65oSg=
+
+Name: ij/util/Tools.class
+SHA1-Digest: /KuKo2E4yhfnpaUEWH5gb21AOuo=
+
+Name: ij/plugin/filter/AVI_Writer.class
+SHA1-Digest: zo3n6f4JKHU2B0MvbyfyqQzW6v4=
+
+Name: ij/process/FloatStatistics.class
+SHA1-Digest: an7Z6hQlo/7akhzBONzn657Oa0A=
+
+Name: ij/plugin/Compiler.class
+SHA1-Digest: LuYJ6yeI+wCREi0eV721nY/e22A=
+
+Name: ij/plugin/GifWriter.class
+SHA1-Digest: GMMtgrn4csbJqnC1AVs076vj9Kw=
+
+Name: ij/plugin/filter/CalibrationBar.class
+SHA1-Digest: s3WDda+B82jhsKBRLn6S+jKkakI=
+
+Name: ij/gui/RoiProperties.class
+SHA1-Digest: J3dqT24RyRcVe2rbP8yrbhBtLsQ=
+
+Name: ij/process/AutoThresholder$1.class
+SHA1-Digest: Qk3UL92XtdxHHA95/gnp7Bkc5ZQ=
+
+Name: ij/plugin/filter/GaussianBlur.class
+SHA1-Digest: 1WFVaMy+kWbqjt2pyfUCCzGshmE=
+
+Name: ij/plugin/Timer.class
+SHA1-Digest: rq69XG7kdqNMxHw6QZLSxac7JZ4=
+
+Name: ij/plugin/ImagesToStack.class
+SHA1-Digest: YdIXVypS7vKURqvitHvfLqZ7cR0=
+
+Name: ij/plugin/filter/StackLabeler.class
+SHA1-Digest: IIhWiUPR/Ao9mrTUwuUP6s1CAYM=
+
+Name: ij/plugin/ZProjector$AverageIntensity.class
+SHA1-Digest: hOQbcQSPlHjNHyRBRQIo9xXqRuw=
+
+Name: ij/plugin/filter/Duplicater.class
+SHA1-Digest: 2CY21rQiRjyufbHry7gH18Ii7ao=
+
+Name: ij/Prefs.class
+SHA1-Digest: XrA8Wt0+Khzgl4qBtjy1AI1WRuw=
+
+Name: ij/gui/HistogramWindow.class
+SHA1-Digest: VSGIpltILsjYlpiUIWOwjcBwN8A=
+
+Name: ij/VirtualStack.class
+SHA1-Digest: aDuniBqX8JTnL2x1cWxn+4PUoT0=
+
+Name: ij/plugin/FitsDecoder.class
+SHA1-Digest: Bp3zQSd1vljX7shQR+b1XIw/KoM=
+
+Name: ij/plugin/OverlayLabels.class
+SHA1-Digest: yKRmEP23Em4shKR4EwbN3rs+xQg=
+
+Name: ij/gui/Wand.class
+SHA1-Digest: K3ldDvO4LCb0rCq6WfOrkFC7VF8=
+
+Name: ij/plugin/CommandLister.class
+SHA1-Digest: 4QbydDu05fG6q84FAVYrq+H/qoY=
+
+Name: ij/plugin/PlugIn.class
+SHA1-Digest: PcGriBsjhS+68oavRbU4OkFNQis=
+
+Name: ij/plugin/XYCoordinates.class
+SHA1-Digest: aAqSjOMRiU0bw30z/6L0ZhRehZw=
+
+Name: ij/plugin/filter/EDM.class
+SHA1-Digest: 2EAZwXF2FaFas8WKbzMxTny8a+c=
+
+Name: ij/plugin/filter/UnsharpMask.class
+SHA1-Digest: BhqOum4QngQOMmVe//B7S4W9P28=
+
+Name: ij/plugin/LUT_Editor.class
+SHA1-Digest: fzd/b0XsBLQWqMGCIfHXm5PUObg=
+
+Name: ij/process/FloatPolygon.class
+SHA1-Digest: /+bluhHwzy8cntVUqLQbCwufrco=
+
+Name: ij/plugin/SpecifyROI.class
+SHA1-Digest: a76RyYDhiXhWr0WJ6dDh43X6ysg=
+
+Name: MacClipboard.class
+SHA1-Digest: MQ7kCD8eAarEBobjvx3C1s4Vwzg=
+
+Name: ij/plugin/Memory.class
+SHA1-Digest: GefzXrTPgN0+6VW++sCo5B7kvpY=
+
+Name: microscope.gif
+SHA1-Digest: pkxOks9UjKRhJcEApnzSTa8f2bs=
+
+Name: ij/plugin/filter/FFTFilter.class
+SHA1-Digest: JS4t7WOrfgCLuzVhah00Mr4TyGk=
+
+Name: ij/plugin/filter/ScaleDialog.class
+SHA1-Digest: s7KjchIk0fOtIpYenJ4zuE4fKY8=
+
+Name: ij/plugin/filter/Filters.class
+SHA1-Digest: B486vtFuXQxkoMFKuWqi93T8+rI=
+
+Name: ij/plugin/FolderOpener.class
+SHA1-Digest: tLqI5VgwAJ1shfVAPPocCw9BB6c=
+
+Name: ij/plugin/MacroInstaller.class
+SHA1-Digest: RnH8WhRE0hL5OloKnmRNzcpVmLQ=
+
+Name: ij/plugin/BatchMeasure.class
+SHA1-Digest: WzHLS7z+lNG0X2mkC9naSaOqYro=
+
+Name: ij/text/TextWindow.class
+SHA1-Digest: 89sTPHBJsTm3XeOe70UwTQDlCVU=
+
+Name: ij/process/FloatBlitter.class
+SHA1-Digest: Qoq1SltS9ioGptcxSrSOGWEwTck=
+
+Name: ij/plugin/ZProjector$RayFunction.class
+SHA1-Digest: GtY2KDUzFLVDE4haK6RL3nx5ups=
+
+Name: ij/macro/Program.class
+SHA1-Digest: v/pH4p2tRTTEVpiVgoFpW6p6wc8=
+
+Name: ij/plugin/CommandFinder$PromptDocumentListener.class
+SHA1-Digest: KIwWaC8KU9KFOF0Y6y4R3wKHK3c=
+
+Name: ij/plugin/DicomDecoder.class
+SHA1-Digest: K0Ce4DzdBmd0lXTwq2JYGVys47U=
+
+Name: ij/plugin/frame/Fitter.class
+SHA1-Digest: Op70KuUVe7sKL0T5uOGyraayes0=
+
+Name: ij/plugin/Hotkeys.class
+SHA1-Digest: 3yjrjfubbEHfLqanTUWwKOBXfn0=
+
+Name: ij/io/RoiDecoder.class
+SHA1-Digest: F+ZeyoP8yO3mADkucIfXVKTXjWc=
+
+Name: ij/process/ColorStatistics.class
+SHA1-Digest: ntdQajWbFe/wPLVoFaPEp3TOXGk=
+
+Name: ij/macro/Variable.class
+SHA1-Digest: MFXkOCISBdN1QKtLAz4mA2IbcSI=
+
+Name: ij/IJ.class
+SHA1-Digest: /fjU/OewXpcwcDiGiFOdS+yv9+w=
+
+Name: ij/plugin/DragAndDrop.class
+SHA1-Digest: 7MWQ07L8slshpRocOviYN9JQWBw=
+
+Name: ij/io/SaveDialog$1.class
+SHA1-Digest: rbrGFiRaWJFa2Ia01XPeq3vND14=
+
+Name: ij/plugin/PlotsCanvas.class
+SHA1-Digest: 5BFvj7m5EOE9uPfAkPRDgmr355o=
+
+Name: ij/plugin/filter/XYWriter.class
+SHA1-Digest: aZ/4VahfbMNSV0QIAQK44BlYVWg=
+
+Name: ij/macro/Functions.class
+SHA1-Digest: 4T7DVFEPJJln4e5B2almAh1Okug=
+
+Name: ij/plugin/BMP_Writer.class
+SHA1-Digest: mqJNvevCAI84Rh2YmLh3+sKb5js=
+
+Name: ij/process/LUT.class
+SHA1-Digest: kOvF97xLSDazCNF7PR/wilAxNOo=
+
+Name: ij/macro/Tokenizer.class
+SHA1-Digest: POdZhTATfVeKqd2hV+iJbrUwzE4=
+
+Name: ij/plugin/BMP_Reader.class
+SHA1-Digest: nCnsR114RnsMDlV9uc3kjySP8EA=
+
+Name: ij/plugin/frame/Editor.class
+SHA1-Digest: 9w9BgcdUL9A3S+lBgTU5dazgo+I=
+
+Name: ij/plugin/frame/ColorGenerator.class
+SHA1-Digest: lyfKNhzT/lt3rTh+wyQ8tWZXH4Y=
+
+Name: ij/plugin/filter/SaltAndPepper.class
+SHA1-Digest: vEaLUWsET61bExFXFSgmu7lc10w=
+
+Name: ij/plugin/filter/Printer.class
+SHA1-Digest: mjSiTPnSytQx1+r5Ol130sUjNnI=
+
+Name: JavaScriptEvaluator.class
+SHA1-Digest: 2PU+34faVsiQbKqTTSk6HwFjWXk=
+
+Name: ij/plugin/FolderOpenerDialog.class
+SHA1-Digest: 5jqZK9OCEZjHEb/NreV3Jy7xEno=
+
+Name: ij/process/ColorProcessor.class
+SHA1-Digest: Jb8KBT7CfzviYACqeWNnZBq7Uik=
+
+Name: ij/io/DirectoryChooser$1.class
+SHA1-Digest: jxMoEFFuTBONSKWUgwmt0YP8b+8=
+
+Name: ij/macro/MacroRunner.class
+SHA1-Digest: N70OZEelZWXvXoRTi3WigcmFS0M=
+
+Name: ij/ImagePlus.class
+SHA1-Digest: OMnK0dn48n387/Q8K9z6PBuqE58=
+
+Name: ij/plugin/filter/ThresholdToSelection.class
+SHA1-Digest: LNeisRtVV28vLkWjKooHCgJi/5k=
+
+Name: ij/gui/StackWindow.class
+SHA1-Digest: 8WLMp5fE2xxEStw9e/BlXWpdRAs=
+
+Name: ij/plugin/filter/BackgroundSubtracter.class
+SHA1-Digest: XarXPZCjDDqo1IOJF+4SEFux3S4=
+
+Name: ij/plugin/StackCombiner.class
+SHA1-Digest: hhGg7SBa8xhnaIZ5KKSxN4OkOoc=
+
+Name: ij/plugin/frame/Channels.class
+SHA1-Digest: xodSG5oJYf4P5ntw12SQqrxg3mU=
+
+Name: ij/plugin/SubstackMaker.class
+SHA1-Digest: MfDaXOgekAQGStFWl7gcSxzI6Vc=
+
+Name: ij/plugin/RoiReader.class
+SHA1-Digest: 0yk0vlcJdCPGfFfaGLXXhh18+kc=
+
+Name: ij/io/RoiEncoder.class
+SHA1-Digest: dlOTtsC0tR3LP2mf8ksDSF8n+/Y=
+
+Name: ij/ImageJApplet.class
+SHA1-Digest: F0pw/42H8ij/z2d8YoRlHcltW4g=
+
+Name: ij/plugin/LutLoader.class
+SHA1-Digest: 3GGiE/ukMTpPXwGS2BOgtiwpQis=
+
+Name: ij/plugin/SimpleCommands.class
+SHA1-Digest: DjH243Mzpxi0vmd0HXQF0bQ3O9U=
+
+Name: ij/plugin/Resizer.class
+SHA1-Digest: 73U+beTJd4xsWeh2SNjsYgwFBuY=
+
+Name: ij/plugin/CommandFinder.class
+SHA1-Digest: OZGR2gXobpBc99/SJywy9ge78Yo=
+
+Name: ij/gui/Plot.class
+SHA1-Digest: qlUyF/SFtNw7eUZ9awyaysvS4SU=
+
+Name: ij/plugin/Timer2.class
+SHA1-Digest: 10f4q3rlijW0sIT5s6JU6n06Q44=
+
+Name: ij/io/ImportDialog.class
+SHA1-Digest: q/WrlOMUBP6nFoeU8dgoKi4CUIg=
+
+Name: ij/plugin/Commands.class
+SHA1-Digest: 2n4m0+62IEiLzscmVMtZ97zOSlE=
+
+Name: ij/plugin/Converter.class
+SHA1-Digest: B7CTacSdlqPMe69Rct7OUlVio00=
+
+Name: ij/plugin/ControlPanel.class
+SHA1-Digest: vQFXf89MpCUQVYVzh4D9mFcqdAw=
+
+Name: ij/plugin/TreePanel$2.class
+SHA1-Digest: zZoyem5PesQSSrJWm1dVR3VWxoE=
+
+Name: ij/gui/ProgressBar.class
+SHA1-Digest: nHEeOEdN0MCCbkZQCML4aSt38CM=
+
+Name: ij/gui/MessageDialog.class
+SHA1-Digest: 8a84+Wxwx+AzXTmBrNr3ZQ8Te+w=
+
+Name: macros/Search.txt
+SHA1-Digest: 5xxdsvjoqRXrsCRJYZ7cVpxjuWw=
+
+Name: ij/gui/ColorChooser.class
+SHA1-Digest: Qf3Lod6LTMjckndnoAeHDXPN430=
+
+Name: ij/plugin/frame/ContrastPlot.class
+SHA1-Digest: QOGqaYOKaLQzXgRNdUEtky0Cneg=
+
+Name: ij/plugin/filter/Info.class
+SHA1-Digest: u2a24Gfgj3+UX9h+YHKzQLBN3xw=
+
+Name: ij/plugin/TextFileReader.class
+SHA1-Digest: BtmpDkkWn5COpJ8GQEln6ViNvdM=
+
+Name: ij/plugin/ImageJ_Updater.class
+SHA1-Digest: VXjlbeHZlJGG4fLU9z+FcrfAels=
+
+Name: ij/plugin/filter/RankFilters.class
+SHA1-Digest: LtwH6iJeVrkT9Q4svEBMXzVHIsY=
+
+Name: ij/plugin/filter/Calibrator.class
+SHA1-Digest: K7OlLOSIUtB7UhBZ8ZKOqJwuDkU=
+
+Name: ij/macro/Interpreter.class
+SHA1-Digest: yUQyZxlCZccoH9wpa9JJNPfCkXM=
+
+Name: ij/plugin/RGBStackConverter.class
+SHA1-Digest: +DlhpY6c4cgKnW6m5guouQqpa3Q=
+
+Name: ij/text/TextCanvas.class
+SHA1-Digest: IJUsCExDYevYBTw8mqsJcoAb7E8=
+
+Name: ij/process/PolygonFiller.class
+SHA1-Digest: 47TNPeqx/y5OxYoFlB0SPA9gOXI=
+
+Name: ij/plugin/frame/LineWidthAdjuster.class
+SHA1-Digest: 5+Wq5aRjjhzR0oLhmX7qkzlokmM=
+
+Name: ij/plugin/filter/Shadows.class
+SHA1-Digest: 6ZVIOLzYePP00P0/8X68L07gPNk=
+
+Name: ij/plugin/DicomDictionary.class
+SHA1-Digest: zqXZVg0hdyUMzlvVZiTKdHDRtcc=
+
+Name: ij/io/FileOpener.class
+SHA1-Digest: hovWo3YL93jePNXj+uY2CuGGpio=
+
+Name: ij/plugin/ColorPanel.class
+SHA1-Digest: fG9rlcAZHFXJkBI8Mb7wKMgB2xo=
+
+Name: ij/process/FloatProcessor.class
+SHA1-Digest: 0o5YsBRaVBd1iNtJqH3aqS3KBsU=
+
+Name: ij/gui/ShapeRoi.class
+SHA1-Digest: C3zJvfKkQjB2b73akQh7gghvJWE=
+
+Name: ij/process/StackStatistics.class
+SHA1-Digest: 0cgzK+kFUUidWtVoEJ+RDZMy5CQ=
+
+Name: ij/plugin/filter/Filler.class
+SHA1-Digest: bqSVSWnYN3eJN3oqao51Eb15yqY=
+
+Name: macros/TimeStamp.ijm
+SHA1-Digest: 3DZRb9Eprw9XFSui8qp2aFJyKm4=
+
+Name: ij/plugin/frame/TrimmedLabel.class
+SHA1-Digest: nu1w5EKs6VXTBcyK3JDV6S+VIRo=
+
+Name: ij/process/Cube.class
+SHA1-Digest: vBNvjX6OTNd03b4/40rly1AV1KU=
+
+Name: ij/IJ$ExceptionHandler.class
+SHA1-Digest: 8sMtN7hBpWIlE/IV5TaIOgB/U3c=
+
+Name: macros/RotateSelection.txt
+SHA1-Digest: iezPX/lhemFTcqfUuOvbv4UuCAA=
+
+Name: ij/process/ImageConverter.class
+SHA1-Digest: 205qWo2J4mmX53VnvgIitBdT00o=
+
+Name: ij/gui/MultiLineLabel.class
+SHA1-Digest: OW6+bUTTzrrmRVHZS9HWJ9rLkVQ=
+
+Name: ij/macro/ExtensionDescriptor.class
+SHA1-Digest: mvF4YypfzMi7tBhKgBgb7pzJSsg=
+
+Name: ij/process/StackConverter.class
+SHA1-Digest: KuoSHboT0inWDxg69//o5bntdKI=
+
+Name: ij/plugin/filter/Binary.class
+SHA1-Digest: cULeFt0WwRBVSbyI+/jUe28iTCc=
+
+Name: ij/plugin/frame/Fonts.class
+SHA1-Digest: Tvzf0HuR3SSEtXproAQb4GURWKg=
+
+Name: ij/plugin/FFTMath.class
+SHA1-Digest: 3tPd2A38PA/dI2kjlHc6yPwcoDc=
+
+Name: ij/gui/TrimmedButton.class
+SHA1-Digest: 4sZrnXJQZzU7bnTulhNHk8rKzKM=
+
+Name: ij/process/ShortBlitter.class
+SHA1-Digest: RxEhYt+4dhZAiVjigRLq4WDkdDs=
+
+Name: ij/plugin/JpegWriter.class
+SHA1-Digest: kRFTVR0GDJ0ijz3QeaAwr/oDX/E=
+
+Name: ij/plugin/Projector.class
+SHA1-Digest: W/cbqxWdPJUbFdLy70EaKgOylhY=
+
+Name: ij/gui/ProfilePlot.class
+SHA1-Digest: VkmfZFmfOysDQDSKTo9y7qdrKVM=
+
+Name: ij/plugin/RGBStackMerge.class
+SHA1-Digest: +URu/TAn+0Zjgm04lqeZTJ6+TPc=
+
+Name: ij/plugin/Histogram.class
+SHA1-Digest: Qb31F7b/aqZ7RzEbgFtrJ+jlIkY=
+
+Name: ij/plugin/BMPDecoder.class
+SHA1-Digest: 7iNHGaWnRijjDIMzav+8CbW+0Ao=
+
+Name: ij/plugin/filter/SetScaleDialog.class
+SHA1-Digest: hg5QzY419l1YlIdM2N+wXtMi1ug=
+
+Name: ij/plugin/filter/GaussianBlur$1.class
+SHA1-Digest: aX0Wv+HE1BPyYG1kgmQFKWRmZiI=
+
+Name: ij/process/TypeConverter.class
+SHA1-Digest: NYzcJjm1iZhqCpRjTtZ/BaDaqO4=
+
+Name: ij/io/RandomAccessStream.class
+SHA1-Digest: UBvRxtohF0ufE3ZnJPJPcSMgx+w=
+
+Name: ij/process/ShortProcessor.class
+SHA1-Digest: KiPerY+OjmIE/keQJefksxdHV6M=
+
+Name: ij/plugin/filter/Benchmark.class
+SHA1-Digest: /RRtUBQtmRUUC0nxVIT0OdMsmsQ=
+
+Name: ij/macro/FunctionFinder.class
+SHA1-Digest: zlP4a8hKJ9zUW7sai9mMCFVIvJw=
+
+Name: about.jpg
+SHA1-Digest: EQxIDr+wwHdzqrvjjTQZ5/Td8+s=
+
+Name: ij/process/ByteStatistics.class
+SHA1-Digest: pAAGo26eDb6XLcaT04R8/L7yv+g=
+
+Name: ij/plugin/ZProjector.class
+SHA1-Digest: UcSswNRZgeNzr2ep8f/NbbesC1A=
+
+Name: ij/gui/NonBlockingGenericDialog.class
+SHA1-Digest: OOGEtF4JREvj9A3isE6LUGmt5Cs=
+
+Name: ij/plugin/frame/ThresholdAdjuster.class
+SHA1-Digest: ltRllARlliImoG2tt4qUlNpnZu0=
+
+Name: ij/gui/HTMLDialog.class
+SHA1-Digest: oi2Su5k65u8P9uvjVCwQN5kU3OY=
+
+Name: ij/plugin/filter/Rotator.class
+SHA1-Digest: fT9iK6HV6+5Rjz2vpWmwEsEtFj4=
+
+Name: ij/gui/PolygonRoi.class
+SHA1-Digest: M24hSTkRhtXBrsQKcYPxjMgs81w=
+
+Name: ij/gui/Overlay.class
+SHA1-Digest: ta7JfucCQrUp4ALJtbH+4h0pgf0=
+
+Name: ij/gui/ImageWindow.class
+SHA1-Digest: 442s7DooCr9pcW/umzcpRlN01gQ=
+
+Name: ij/plugin/TextWriter.class
+SHA1-Digest: woCU2l4qcuFIwTU7X1Ax0mtz03Y=
+
+Name: ij/plugin/Raw.class
+SHA1-Digest: Ln766qC3sVjnsKz7F3Nx3cCMvrY=
+
+Name: ij/plugin/ArrowToolOptions.class
+SHA1-Digest: 7q7A/rYcag3Ymxa5hB9JLYZN6eU=
+
+Name: ij/plugin/frame/PlugInFrame.class
+SHA1-Digest: 5QkGa+i7UOmBOtbXk9JUbR1Ps5U=
+
+Name: ij/process/DownsizeTable.class
+SHA1-Digest: isjQKant8+6UfE5JZ3KQr0mFxIc=
+
+Name: ij/plugin/CommandFinder$LevenshteinPair.class
+SHA1-Digest: RUJmvJoJcxT8MgDAXnxDIlcwIT8=
+
+Name: ij/plugin/Scaler.class
+SHA1-Digest: Eg8LOgSzm8hgmchQpKKPQLZ+F4U=
+
+Name: ij/plugin/GelAnalyzer.class
+SHA1-Digest: QQYZ4K7HqkInmrliBSVg5S4RWns=
+
+Name: macros/HyperStackMaker.txt
+SHA1-Digest: f5hp1UzOnMuAdwT74RnVJu1HxN8=
+
+Name: ij/io/SaveDialog.class
+SHA1-Digest: sce4bKzx07XTLBB3Lyog00G/Llg=
+
+Name: ij/io/FileInfo.class
+SHA1-Digest: jee3wDDpY+E7hAyYgQB/pHRlTxM=
+
+Name: ij/plugin/BrowserLauncher.class
+SHA1-Digest: 71uTTQBXVLgHPhwKFljp1l/JbNU=
+
+Name: ij/process/FHT.class
+SHA1-Digest: YVlkNKyhO5Mig8adnP6L+3nddas=
+
+Name: ij/plugin/RectToolOptions.class
+SHA1-Digest: A0wkMW0o7TFitH6T7/vq4ENAa20=
+
+Name: ij/text/TextPanel.class
+SHA1-Digest: 75Sdo4bAitor4QmGw/I3EWSeUjE=
+
+Name: ij/IJEventListener.class
+SHA1-Digest: IU990rZeWum5BN44taGpCdsdL5k=
+
+Name: ij/plugin/ThreadLister.class
+SHA1-Digest: XW8tcNL1qmJDDkkOlTfTl2VdSKY=
+
+Name: ij/io/DirectoryChooser.class
+SHA1-Digest: iFHZArEYPacv9xCwoYZVuinZmvs=
+
+Name: ij/plugin/filter/FFTCustomFilter.class
+SHA1-Digest: aE9Q6/+6VZzhATeCzlR+MTY1KV0=
+
+Name: ij/plugin/Animator.class
+SHA1-Digest: HkN8Tc+dRDpPHseHZVvPp9h//qU=
+
+Name: ij/CompositeImage.class
+SHA1-Digest: l4qZXDGmorR+H3y01e7MJ/nXflc=
+
+Name: ij/gui/ImageLayout.class
+SHA1-Digest: FAO99monz5nIl70o32M4ovkkEQo=
+
+Name: ij/plugin/Clipboard.class
+SHA1-Digest: O9k9wwpR6qZudS95qL91JbQoCws=
+
+Name: ij/WindowManager.class
+SHA1-Digest: /eNYL8A7WYOWaXXMiB2wMoppNr0=
+
+Name: ij/plugin/filter/LineGraphAnalyzer.class
+SHA1-Digest: qWCv8kIaYskNYXmzoBHG/nzbuLs=
+
+Name: ij/plugin/filter/Analyzer.class
+SHA1-Digest: 5Zv5MrO58tQi6F+lIId+MeapZJ4=
+
+Name: ij/plugin/frame/ThresholdPlot.class
+SHA1-Digest: 8oTTXBj5yy+W6n5g+yjagWtUMwY=
+
+Name: ij/measure/Measurements.class
+SHA1-Digest: sdgPH48mEubD2auKinD9yxImD0g=
+
+Name: ij/plugin/Straightener.class
+SHA1-Digest: tJlNJHLWdMOAfBSCQ+A684H0I/0=
+
+Name: ij/io/OpenDialog.class
+SHA1-Digest: +16cUCWnuAzHm2dsbXgzb0FjuvU=
+
+Name: ij/plugin/filter/RGBStackSplitter.class
+SHA1-Digest: X7QtBIIMq4E7Hykc4sUh0dGWgAU=
+
+Name: ij/Macro.class
+SHA1-Digest: b3Z9708zWw+/klOrAgb+8nqQngE=
+
+Name: ij/plugin/WindowOrganizer.class
+SHA1-Digest: LSzeF5bu9YK1D273VxknH9ezjzo=
+
+Name: ij/Menus.class
+SHA1-Digest: BrQAytEdXLge+A23eNCMmUAZXIQ=
+
+Name: ij/plugin/BatchProcesser.class
+SHA1-Digest: R66IMXkfeNdKBwKn+LUHVsb62fc=
+
+Name: ij/plugin/JavaProperties.class
+SHA1-Digest: ZJGQRoTxiVCFfMBo1Omw1CGhA1w=
+
+Name: ij/gui/ScrollbarWithLabel$Icon.class
+SHA1-Digest: DfJinxpnNL+6VHcdCKOscxrAoJc=
+
+Name: ij/gui/GUI.class
+SHA1-Digest: j6LFp9AOWGvraXDKIcOEqYhQGAQ=
+
+Name: ij/plugin/HyperStackConverter.class
+SHA1-Digest: WhPkpMO5i1epsTRpubkP5FF6evw=
+
+Name: ij/plugin/StackReducer.class
+SHA1-Digest: rH/FJI5kOO2o1G0qKHNoij2iH9E=
+
+Name: ij/io/ImageWriter.class
+SHA1-Digest: ZuKP8yQdDpm2BWEXyph+QedNkUE=
+
+Name: ij/plugin/ChannelSplitter.class
+SHA1-Digest: KJROPcIKmZ/3guDh9WH7ggs2Y30=
+
+Name: ij/plugin/filter/PlugInFilterRunner.class
+SHA1-Digest: NyJU1ez+EcE5CNS8dGNVksMOC+A=
+
+Name: ij/plugin/NextImageOpener.class
+SHA1-Digest: 4BE4wrIPyuAYljBDqp2ddESwuMQ=
+
+Name: ij/process/MedianCut.class
+SHA1-Digest: ZfA6NQs9I74F4cd8zycyYW7ZWjw=
+
+Name: ij/plugin/frame/ColorThresholder.class
+SHA1-Digest: sgq9C+eP9ZZlily3BXD/uXwGBH8=
+
+Name: ij/io/Opener$1.class
+SHA1-Digest: LS7qhAHCYw53H6vgwzKu+V2J+Iw=
+
+Name: ij/plugin/DICOM.class
+SHA1-Digest: ahkbwFoDZ0JH/lpOlMxRTmpJyjg=
+
+Name: ij/plugin/GroupedZProjector.class
+SHA1-Digest: sFdB5k783TPq/tMMZfP6lJjKA24=
+
+Name: ij/plugin/OverlayCommands.class
+SHA1-Digest: KVkrUvVa5/vjPOx2fOkZiFqzQik=
+
+Name: ij/plugin/filter/MaximumFinder.class
+SHA1-Digest: z1EjMWYERurZNL2PsD3ebm8LmMI=
+
+Name: ij/macro/MacroExtension.class
+SHA1-Digest: L0ST5opkE1IvZfRfpMZu495sACM=
+
+Name: ij/plugin/ScaleBar.class
+SHA1-Digest: igZaRdaGu0CBdvsy+csZ+r3BZHw=
+
+Name: ij/plugin/filter/CalibrationBar$LiveDialog.class
+SHA1-Digest: E7aYdQ0Rv7dtAfD8oM0XQ/+axhQ=
+
+Name: ij/CommandListener.class
+SHA1-Digest: JEvFDE2W7u+p5lHIimT4pnaRq4k=
+
+Name: ij/plugin/frame/ColorThresholder$BandPlot.class
+SHA1-Digest: KMaDObQ55NgCwnh43INQ2pWZXn8=
+
+Name: ij/macro/ReturnException.class
+SHA1-Digest: HT6bo869DRSkYyc1ntgPcfan+f0=
+
+Name: ij/macro/Symbol.class
+SHA1-Digest: ftYhPdU6jb4JPpiB9txfyASnJ2E=
+
+Name: ij/process/AutoThresholder.class
+SHA1-Digest: HDiawcrHAvqDMRunDbG/iin7xHo=
+
+Name: ij/plugin/ZProjector$StandardDeviation.class
+SHA1-Digest: pUz7oY+EzrkXNQIX4MFOPbx7/Pg=
+
+Name: ij/plugin/ProxySettings.class
+SHA1-Digest: zuf8me5KamhkMJPehYqtgFJ6ReQ=
+
+Name: ij/io/PluginInstaller.class
+SHA1-Digest: W9U980bKcw5GcrMU3/AMhLrFnzk=
+
+Name: ij/plugin/Plots.class
+SHA1-Digest: cEpwE0PHc98LvlkfkUUgNG879qE=
+
+Name: ij/plugin/Distribution.class
+SHA1-Digest: /cc6lIdcPymIK/HfrFhASo003vc=
+
+Name: ij/plugin/CompositeConverter.class
+SHA1-Digest: 4WNLzVQfgHqrfonnt3gAxd09O3E=
+
+Name: ij/plugin/StackEditor.class
+SHA1-Digest: 3hQ6o5LXVd/n6WpE/lhMeKPE8SA=
+
+Name: ij/plugin/CommandFinder$1.class
+SHA1-Digest: PkEmsejqJOUGxu766ufYnUx2ckw=
+
+Name: ij/gui/TextRoi.class
+SHA1-Digest: HGsk0Ce/7Zbfg471wpobl3+hNqw=
+
+Name: ij/SocketListener.class
+SHA1-Digest: C49yNF6lIBHMdBKVF4u7wHpRcvA=
+
+Name: ij/plugin/Orthogonal_Views.class
+SHA1-Digest: /0Lmi+kCCnd7zX5QQyuQiUlvYfo=
+
+Name: ij/plugin/filter/AVI_Writer$RaOutputStream.class
+SHA1-Digest: tQ/wUevkiwP/S8zyWf/Jw+ONzxM=
+
+Name: macros/StartupMacros.txt
+SHA1-Digest: FPLzPBh3HjNVev4NKo47LKcCdyw=
+
+Name: ij/plugin/FITS_Writer.class
+SHA1-Digest: of7mXskjLw8eaNaj7eReLnDryRE=
+
+Name: ij/process/ImageProcessor.class
+SHA1-Digest: vZUFpP6NAmKhhOuS9vzn3F+lcUA=
+
+Name: ij/process/ByteProcessor.class
+SHA1-Digest: Bx3smfU6hfT4gTs7K4Vo3zimJGw=
+
+Name: ij/plugin/Concatenator.class
+SHA1-Digest: yAKwT8tr0556fRDp7SBxB9ogvAE=
+
+Name: ij/process/StackProcessor.class
+SHA1-Digest: W5nF9BK0TA7OF5dzFikHg/sJJ0k=
+
+Name: ij/plugin/WandToolOptions.class
+SHA1-Digest: Y96U3Bt4ghH10NwtZ0uDHBs0MeA=
+
+Name: ij/measure/CurveFitter.class
+SHA1-Digest: Ghr2YTy7kn3zAxTkRcL1t2T4E6E=
+
+Name: ij/io/PluginClassLoader.class
+SHA1-Digest: JghJO0cv3mT+w93Zujx5kGOMTt4=
+
+Name: ij/plugin/MontageMaker.class
+SHA1-Digest: g4/1ln72dTBsX+c/32SDs+/7WNs=
+
+Name: ij/plugin/HyperStackReducer.class
+SHA1-Digest: qwLvskHaWF50YKJAjGCICXTywaw=
+
+Name: ij/gui/SaveChangesDialog.class
+SHA1-Digest: UCFNA6H5InvjpQXF0q91KzHsCac=
+
+Name: ij/plugin/TreePanel$1.class
+SHA1-Digest: bPReLwJffmu2JnjvA4U+APumtes=
+
+Name: macros/EnlargeSelection.txt
+SHA1-Digest: wmZX420u2VTdJT7UJQsHRFrH8L0=
+
+Name: ij/plugin/NewPlugin.class
+SHA1-Digest: QbMuPEgIBuE+B26iCB8RVfhaNvQ=
+
+Name: ij/plugin/PGM_Reader.class
+SHA1-Digest: O0IPbAJDiU5NUnQLX9StpIuD9lk=
+
+Name: ij/plugin/PNM_Writer.class
+SHA1-Digest: r+4OkBKwmogcJitApDD6jDVnV/M=
+
+Name: ij/io/ImageReader.class
+SHA1-Digest: wU+F7XGtVxozDTRTyf1XQiUXF+M=
+

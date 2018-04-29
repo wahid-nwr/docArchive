@@ -1,0 +1,44 @@
+#{extends 'main.html' /}
+
+<div class="page-header top">
+#{if geounion?.id}
+    <h1>Edit Union</h1>
+#{/if}
+#{else}
+    <h1>New Union</h1>
+#{/else}
+</div>
+
+
+#{form @submitMasterProfile(), class:'form-horizontal filter'}
+	#{if geounion?.id}
+    <input type="hidden" name="geounion.id" value="${geounion.id}" />
+    #{/if}
+	#{input 'geodivision.id' , type:'select', items:geodivisions,labelProperty:'name' }
+		#{option}Any#{/option}
+	#{/input} 
+	#{input 'geodistrict.id' , type:'select', items:geodistricts,labelProperty:'name'} 
+		#{option}Any#{/option}
+	#{/input}
+	#{input 'geounion.geoupazilla.id' , type:'select', items:geoupazillas,labelProperty:'name' } 
+    	#{option}Any#{/option}
+	#{/input}	
+    #{input 'beneficiaryMasterProfile.beneficiaryId' /}
+    #{input 'beneficiaryMasterProfile.villageName' /}
+	#{input 'beneficiaryMasterProfile.beneficiaryName' /}
+	#{input 'beneficiaryMasterProfile.previousProfession' /}
+	#{input 'beneficiaryMasterProfile.beneficiaryAge' /}
+	#{input 'beneficiaryMasterProfile.fatherOrHusbandName' /}
+	#{input 'beneficiaryMasterProfile.geoupazilla.id' , type:'select', items:geoupazillas,labelProperty:'name' } 
+    	#{option}Any#{/option}
+	#{/input}	
+	#{input 'beneficiaryMasterProfile.maritalStatus' , type:'select', items:geoupazillas,labelProperty:'name' } 
+    	#{option}Any#{/option}
+	#{/input}	
+	#{input 'beneficiaryMasterProfile.beneficiaryStatus' , type:'select', items:geoupazillas,labelProperty:'name' } 
+    	#{option}Any#{/option}
+	#{/input}	
+    #{submit /}
+#{/form}
+
+#{cascade/}

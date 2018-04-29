@@ -1,0 +1,77 @@
+#{include 'head.html' /}
+
+<body>
+<div class="row"><!--row-->
+             <div id="heder">
+                <div class="logo_heder">
+                  	<a href="#"><img src="/public/images/logo.png" class="imgs" alt="image"></a>
+                </div>
+				<div class="t_decoration"><h6>Intelligent Dairy Farm Management System</h6></div>
+              </div>
+         </div>
+	<div class="container"> 
+	         <div class="content_wrapper"> 
+	           <div id="page-wrapper"> 
+				 <div class="row">
+				   <div class="col-lg-4">
+					 </div>
+						<div class="col-lg-4"> 
+	
+			#{form @authenticate(), class:'well'} 
+			
+			<legend>&{'secure.title'}</legend>
+			
+			#{if flash.error}
+			<div class="alert alert-error">&{flash.error}</div>
+			#{/if} #{if flash.success}
+			<div class="alert alert-info">&{flash.success}</div>
+			#{/if}
+			
+			<div class="fields">
+				<div class="control-group">
+					<label class="control-label" for="secure_username">&{'secure.username'}</label>
+					<div class="controls">
+						<input class="form-control" id="secure_username" name="username" type="text" value="${flash.username}">
+						<span class="help-block"></span>
+					</div>
+				</div>
+							
+				<div class="control-group">
+					<label class="control-label" for="secure_password">&{'secure.password'}</label>
+					<div class="controls">
+						<input class="form-control" id="secure_password" name="password" type="password" value="">
+						<span class="help-block"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-actions">
+				<div class="row">
+					<div class="span1">
+						<input type="submit" class="btn btn-primary" id="signin" value="&{'secure.signin'}" />
+					</div>
+					<div class="span2">
+						<div class="control-group">
+							<div class="controls">
+								<label class="checkbox">
+				                <input accept="" id="remember" name="remember" type="checkbox" value="true" ${flash.remember ? 'checked="true" ' : ''}>&{'secure.remember'}</label>
+								<span class="help-block"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p id="signin-field">
+				
+			</p>
+			#{/form}
+			
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	
+</body>
+</html>

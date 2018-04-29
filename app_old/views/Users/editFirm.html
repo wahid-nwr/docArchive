@@ -1,0 +1,28 @@
+#{extends 'main.html' /}
+
+<div class="page-header top">
+#{if firmFacility?.id}
+    <h1>Edit Firm</h1>
+#{/if}
+#{else}
+    <h1>New Firm</h1>
+#{/else}
+</div>
+
+#{form @submitfirm(), class:'form-horizontal'}
+
+	#{if firmFacility?.id}
+    <input type="hidden" name="firmFacility.id" value="${firmFacility.id}" />
+    #{/if}
+    #{input 'firmFacility.name' /}
+    #{input 'firmFacility.displayName'/}
+   
+    #{input 'firmFacility.manager.id', type:'select', items:users, labelProperty:'name' /}
+	
+    
+    #{submit /}
+#{/form}
+
+#{set 'moreScripts'}
+	#{script 'mpower-geolocation.js' /}	
+#{/set}

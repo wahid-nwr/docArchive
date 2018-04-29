@@ -1,0 +1,37 @@
+#{extends 'main.html' /}
+#{set title:'Roles' /}
+
+<div class="page-header top">
+	<h1>${title}</h1>
+</div>
+
+#{if flash.success}
+    #{alert flash.success/}
+#{/if}
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>&{'role.id'}</th>
+			<th>&{'role.name'}</th>
+			<th>Actions</th>
+		</tr>
+	<thead>
+	<tbody>
+	#{list items:roles, as:'role'}
+		<tr>
+			<td>${role.id}</td>
+			<td>${role.name}</td>
+			<td>
+            	<a class="btn btn-mini" href="@{Users.roleEdit(role.id)}"><i class="icon-edit"></i> Edit</a>
+				<a class="btn btn-mini btn-danger delete" data-url="@{Users.roleDelete(role.id)}" href="#deleteModal"><i class="icon-remove icon-white"></i> Delete</a>
+			</td>
+		</tr>
+	#{/list}
+	#{else}
+		<tr>
+			<td colspan="3">No Role Available</td>
+		</tr>
+	#{/else}
+	<tbody>
+</table>

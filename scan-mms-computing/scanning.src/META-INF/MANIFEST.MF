@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+
+Name: scanning$2.class
+SHA1-Digest: FECGjpp020hvnP/uccoQNeZ4Z7c=
+
+Name: scanning$ImagePanel$4.class
+SHA1-Digest: TzrcyzC0mxifevrcPW39ZyB3v2Q=
+
+Name: .project
+SHA1-Digest: Ldm+iudiE87eBuktpC0nykdPFR0=
+
+Name: scanning$ImagePanel$2.class
+SHA1-Digest: Nb9j0WAbbjFS0xtbA4MQAHThfcQ=
+
+Name: ClipedPanel.class
+SHA1-Digest: LyZU3Dj265zQyVlzwO2Q/ehanLY=
+
+Name: scanning$ImagePanel$1.class
+SHA1-Digest: utzsxqSeHPDQ0UiKjw0ZCGPzFNc=
+
+Name: scanning$ClipMover.class
+SHA1-Digest: FRnW+ggEupU51lpoJwFoMmY5EsM=
+
+Name: scanning.class
+SHA1-Digest: LDg4tIrVcXCpWDjZ5qRzKAASucg=
+
+Name: scanning$1.class
+SHA1-Digest: fcrC082MBpZow9u0M0IXi/rTips=
+
+Name: scanning$ImagePanel$5.class
+SHA1-Digest: NszoMWMwvApb6M+Yzj/kBDvgk0A=
+
+Name: .classpath
+SHA1-Digest: Z9uSF5agR/NKsaqWf37fO8dqXYk=
+
+Name: scanning$ImagePanel.class
+SHA1-Digest: xTpOZSGfiHtSOjsYNtayvFRDWtE=
+
+Name: scanning$ImagePanel$3.class
+SHA1-Digest: Dvl0ECKtHF/qbZ1zPrGg11affG4=
+

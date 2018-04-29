@@ -1,0 +1,96 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: mXmEnvHXUuO1OEB3L3hLdCAm7H8up
+ faJkYbnSMBFoI0=
+SHA-256-Digest-Manifest: ywS3GhHGKJ/d7s7bvElHaeBVfShbWGUR5SnJmADlrkI=
+Created-By: 1.8.0_20 (Oracle Corporation)
+
+Name: leadtools/sane/SaneConstraint.class
+SHA-256-Digest: pcaJfiqzXeIqIVJ14Nl7jQ4kg6ZcDu81twVxsXDldVI=
+
+Name: leadtools/sane/SaneUnit.class
+SHA-256-Digest: RL4MbPqt7vxe2vozguBX81yaWehAC88qLoTVsuZ/J34=
+
+Name: leadtools/sane/ISaneAuthorizationCallback.class
+SHA-256-Digest: i04UHEixbKJf1v9EzMke0YUcGh+OilXBM3RcaOuqo5k=
+
+Name: leadtools/sane/SaneConstraintType.class
+SHA-256-Digest: T/x6JOGMb+yzn+f+d8KBLXnfunOj8LIHCxCOb6HlDWg=
+
+Name: leadtools/sane/NetworkSaneSession.class
+SHA-256-Digest: /sI25IYBHJthu3teEdKQMzkdLP5BraDGjj5p+uAeElE=
+
+Name: leadtools/sane/SaneOptionActions.class
+SHA-256-Digest: HYyu5B1LS3LbwWt6WZzP8t9u5f5jn6QrcjpK5K8RZ5M=
+
+Name: leadtools/sane/NetworkSaneDevice$1.class
+SHA-256-Digest: wY80IJNmJqwJDIzYwYoeSMMOYD26qMSjbI4HAA6jAyE=
+
+Name: leadtools/sane/ltsane.class
+SHA-256-Digest: i+X2AdH7KfEsun38yUE+hQQR1CwIS6HgSJe8G6itP90=
+
+Name: leadtools/sane/NetworkStream$1.class
+SHA-256-Digest: DTCdrXMz4yIhTwR3LGYKz40sOmGnqZF2gxE0XOerKxc=
+
+Name: leadtools/sane/SaneUtils.class
+SHA-256-Digest: HNYZRZWtTNHfDf4DbpbDGVYc8fcpk/IFiiWsOUxP4yE=
+
+Name: leadtools/sane/SaneConstants.class
+SHA-256-Digest: mZl07JImn7bYD7Fb+IlAFYrLWk44NWbM43+gAiceHsQ=
+
+Name: leadtools/sane/SaneValueType.class
+SHA-256-Digest: UMNPPV4pUgrUuaAPWMKbO816xCQiBSn958T1V0LiK1U=
+
+Name: leadtools/sane/SaneRpcCode.class
+SHA-256-Digest: SLXo+wLZTy1d2l4AK/zzk0GqVX41uKxmaU9WlG31PnQ=
+
+Name: leadtools/sane/NetworkSaneDevice.class
+SHA-256-Digest: RmkduMWlNMUuYzxSvmBaRhqNg2V6nwyPNuGull5m+Kc=
+
+Name: leadtools/sane/SaneRangeConstraint.class
+SHA-256-Digest: yVhG/djgfDNNQkl8F7F4sS4+EpGxRt0HqufcEYP6zPM=
+
+Name: leadtools/sane/NetworkSaneDevice$ControlOptionDataResponse.class
+SHA-256-Digest: 39DnCaCBcEvNNu4GtjLX7jswS19syaq8gFDlELkXNQ0=
+
+Name: leadtools/sane/SaneSession.class
+SHA-256-Digest: M8tMA6oCJJ/dXLs9/4m2auxfevLe75KvlxlUkSLTpvc=
+
+Name: leadtools/sane/SaneStatus.class
+SHA-256-Digest: ce2Rfr0C4l6lKz8oIjZR/AdV7/RthsTQO298g0+uY78=
+
+Name: leadtools/sane/SaneFrame.class
+SHA-256-Digest: 9P5bXxKHclhnP8/1IR6YCTVfA34R0ntQADVc3B7xV4U=
+
+Name: leadtools/sane/AuthorizationInfo.class
+SHA-256-Digest: 0QMUviySFt6iLTOyr7XkfANqWUPWlsA631L4mRdy1SY=
+
+Name: leadtools/sane/SaneOptionDescriptor.class
+SHA-256-Digest: aDzQy008Y5XeAI7VXPRyqC20z7q8wyBCjw3Jd1houeU=
+
+Name: leadtools/sane/SaneFactory.class
+SHA-256-Digest: Mb1tY1eebMUyUNG9ksGt7JhusjTiJB9Wdq/l3ViNvug=
+
+Name: leadtools/sane/DeviceInfo.class
+SHA-256-Digest: Eaal7ZCPxZdBQ3CQGyPC5yMeGSVAoXRVrDBaTgt3C+0=
+
+Name: leadtools/sane/SaneParameters.class
+SHA-256-Digest: wfkuDv9N9dZ2KxZNEiHsc+S5g5x/CuCDmQ3J715chUY=
+
+Name: leadtools/sane/SaneDevice.class
+SHA-256-Digest: 97zxY6a0Adjdh7gA2MEBrPzTuFB1R4i2pbLP7o3vKnI=
+
+Name: leadtools/sane/NativeSaneDevice.class
+SHA-256-Digest: mU4bHMa5/KGneZo2hg0ZJ/xQOlbg/tsjnW24jdN8yX8=
+
+Name: leadtools/sane/NetworkStream.class
+SHA-256-Digest: srbGsg+e0Akpn9jDESGpJHhuKYDUuvpkjQRxyor+wu4=
+
+Name: leadtools/sane/SaneStringListConstraint.class
+SHA-256-Digest: XPH8viQnSnh32JdPTkW5jrN6ZLEyjDepAfqMIlpmuwk=
+
+Name: leadtools/sane/NativeSaneSession.class
+SHA-256-Digest: GcHZkh+Hw2ZrlFCVjMUOTTsg+58/zLd70BEgGE0Unio=
+
+Name: leadtools/sane/SaneWordListConstraint.class
+SHA-256-Digest: k2OSH2f5tCdBCSaK/kYPnSRMOJWUdFe2k6+MR6eGg/k=
+

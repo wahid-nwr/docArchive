@@ -1,0 +1,327 @@
+#{extends 'main.html' /}
+<!-- page content -->
+<!-- prettify -->
+    <link href="../../../public/style/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../../../public/style/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../../../public/style/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../../../public/style/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    
+    <!-- bootstrap-progressbar -->
+    <link href="../../../public/style/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- jVectorMap -->
+    <link href="../../../public/style/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../public/style/jquery.typeahead.min.css">
+    
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Form Elements</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Create Id Map <small>Account No & Customer Map</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    
+						
+					
+                    <form action="@{CustomerManagementController.submitAccountIdMap()}" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+					#{if flash.error}
+						#{alert flash.error/}
+					#{/if}
+					#{if accountIdMap?.id}
+					<input type="hidden" name="accountIdMap.id" value="${accountIdMap.id}" />
+					#{/if}					
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Account No<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="accountIdMap.accountNo" value="${accountIdMap?.accountNo}" id="accountNo" required="required" class="form-control col-md-7 col-xs-12">                          
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Client Type<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="radio" name="accountIdMap.clienttype" value="customer" id="clienttype">Customer </input>
+                          <input type="radio" name="accountIdMap.clienttype" value="group" id="clienttype">Group </input>                  
+                        </div>
+                      </div>
+                                            
+                      <div class="form-group">						  
+							<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Files</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="typeahead__container" style="z-index: 1041; position: relative;">
+								<div class="typeahead__field">
+
+									<span class="typeahead__query">
+										<span class="typeahead__cancel-button"></span>
+										<input class="js-typeahead-user_v1 form-control" name="user_v1[query]" placeholder="Search Customer or group" required="true" autocomplete="off" type="search">
+									</span>
+									<span class="typeahead__button">
+										<button type="submit">
+											<i class="typeahead__search-icon"></i>
+										</button>
+									</span>
+								</div>								
+						</div>
+                      </div>
+                      </div>
+
+                      <div class="form-group">						  
+							<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Files</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+							<input type="text" readonly="true" value="" name="accountIdMap.customerGroup" id="customerGroup"/>
+							<input type="hidden" value="" name="accountIdMap.customerGroupId" id="customerGroupId"/>
+						</div>
+                      </div>
+                      
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<!-- FastClick -->
+    <script src="../../../public/style/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../../public/style/vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../../../public/style/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../../../public/style/vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../../public/script/moment/moment.min.js"></script>
+    <script src="../../../public/script/datepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="../../../public/style/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../../../public/style/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../../../public/style/vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="../../../public/style/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="../../../public/style/vendors/switchery/dist/switchery.min.js"></script>
+    
+    <script src="../../../public/style/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="../../../public/style/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="../../../public/style/vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="../../../public/style/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="../../../public/style/vendors/starrr/dist/starrr.js"></script>
+    <script src="../../../public/script/jquery.typeahead.min.js"></script>
+    <script src="../../../public/script/autocomplete.js"></script>
+    
+    <style>
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+  .ui-autocomplete-loading {
+    background: white url("//code.jquery.com/images/ui-anim_basic_16x16.gif") right center no-repeat;
+  }
+  </style>  
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    function log( message ) {
+      $( "<div>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).scrollTop( 0 );
+    }
+ 
+    $( "#birds" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax( {
+          url: "./getId",
+          dataType: "jsonp",
+          data: {
+            term: request.term
+          },
+          success: function( data ) {
+            response( data );
+          }
+        } );
+      },
+      minLength: 2,
+      select: function( event, ui ) {
+        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+      }
+    } );
+  } );
+  </script>
+  
+  
+	<script type="text/javascript">
+      $(document).ready(function() {
+        $(".select2_multiple").select2({
+          maximumSelectionLength: 40,
+          placeholder: "With Max Selection limit 40",
+          allowClear: true
+        });        
+      });
+      
+      
+      
+	$.typeahead({
+    input: '.js-typeahead-user_v1',
+    minLength: 1,
+    order: "asc",
+    dynamic: true,
+    delay: 500,
+    backdrop: {
+        "background-color": "#fff"
+    },
+    template: function (query, item) {
+ 
+        var color = "#777";
+        if (item.status === "owner") {
+            color = "#ff1493";
+        }
+ 
+        return '<span class="row">' +
+            '<span class="avatar">' +
+                '<img src="{{id}}">' +
+            "</span>" +
+            '<span class="username">{{name}} <small style="color: ' + color + ';">({{status}})</small></span>' +
+            '<span class="id">({{id}})</span>' +
+        "</span>"
+    },
+    emptyTemplate: "no result for {{query}}",
+    source: {
+        user: {
+            display: "name",
+            //href: "https://www.github.com/{{name|slugify}}",
+            data: [{
+				/*
+                "id": 415849,
+                "name": "an inserted user that is not inside the database",
+                "avatar": "https://avatars3.githubusercontent.com/u/415849",
+                "status":  "contributor"
+                */
+            }],
+            ajax: function (query) {
+                return {
+                    type: "GET",
+                    url: "./getId",
+                    path: "data.user",
+                    data: {
+                        q: "{{query}}",
+                        type:$("input[name='accountIdMap\.clienttype']:checked").val()
+                    },
+                    callback: {
+                        done: function (data) {
+                            for (var i = 0; i < data.data.user.length; i++) {
+                                if (data.data.user[i].name === 'running-coder') {
+                                    data.data.user[i].status = 'owner';
+                                } else {
+                                    data.data.user[i].status = 'contributor';
+                                }
+                            }
+                            return data;
+                        }
+                    }
+                }
+            }
+ 
+        }
+        /*,
+        project: {
+            display: "project",
+            href: function (item) {
+                return '/' + item.project.replace(/\s+/g, '').toLowerCase() + '/documentation/'
+            },
+            ajax: [{
+                type: "GET",
+                url: "./getId",
+                data: {
+                    q: "{{query}}"
+                }
+            }, "data.project"],
+            template: '<span>' +
+                '<span class="project-logo">' +
+                    '<img src="{{image}}">' +
+                '</span>' +
+                '<span class="project-information">' +
+                    '<span class="project">{{project}} <small>{{version}}</small></span>' +
+                    '<ul>' +
+                        '<li>{{demo}} Demos</li>' +
+                        '<li>{{option}}+ Options</li>' +
+                        '<li>{{callback}}+ Callbacks</li>' +
+                    '</ul>' +
+                '</span>' +
+            '</span>'
+        }*/
+    },
+    callback: {
+        onClick: function (node, a, item, event) {
+ 
+            // You can do a simple window.location of the item.href
+            //alert(JSON.stringify(item));
+            //alert(node);
+            //alert(a);
+            //alert(item.name);
+            $('#customerGroup').val(item.name);
+            $('#customerGroupId').val(item.id);
+            $('.typeahead__container').attr("class","typeahead__container");
+            event.preventDefault();
+ 
+        },
+        onSendRequest: function (node, query) {
+            console.log('request is sent')
+        },
+        onReceiveRequest: function (node, query) {
+            console.log('request is received')
+        }
+    },
+    debug: true
+});
+    </script>

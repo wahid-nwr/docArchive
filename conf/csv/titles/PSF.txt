@@ -1,0 +1,10 @@
+date=Interview_Date
+sector=User_Sector
+received=Received
+interviewer=User
+UpdateStatusforPSF=Visit_Status_PSF
+Didyouhavemensesinthelast30days=Means_Last30_days
+Whatwasthedateofyourlastmonstrualperiodforpsf=LMP_PSF
+Didwomenprovideconsenttoconducturinetest=URT_Consent_PSF
+Whatwastheresultofpregnancytest=Test_Result_PSF
+FormStatus=Form_Status

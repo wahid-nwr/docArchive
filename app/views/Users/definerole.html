@@ -1,0 +1,73 @@
+#{extends 'main.html' /}
+
+<section id="feature2" >
+        <div class="container">	
+			<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs"><!--tab-->
+				<ul id="myTabs" class="nav nav-tabs" role="tablist">
+				<li role="presentation">
+				<a href="@{Users.userlist()}">View User</a></li>
+				<li role="presentation">
+				<a href="@{Users.usercreate()}">Create User</a></li>				
+				<li class="active" role="presentation">
+				<a href="@{Users.definerole()}">Define Roles</a></li>				
+				<li class="" role="presentation">
+				<a href="@{Users.fieldofficerlist()}">Field Officer List</a></li>				
+				</ul>
+				<div id="myTabContent" class="tab-content">			
+				</div>
+				
+<div id="define" class="tab-pane fade active in" aria-labelledby="home-tab" role="tabpanel">
+
+<div class="col-lg-12" >
+				  <div class="panel panel-default">
+				 <div class="panel-heading">
+						List of Users					  </div>
+				<div class="panel-body">
+					<div class="row">			 
+					</div>
+                                <div class="box-body table-responsive">
+                                    <table id="example2" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+											   <th></th>
+												#{list items:roles, as:'role'}
+												<th>${role.name}</th>
+												 #{/list}
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                #{list items:acos, as:'aco'}
+												<tr>
+													<td>${aco.name}</td>
+													#{list items:roles, as:'role'}
+													<td><input data-role="${role.id}" data-aco="${aco.id}" type="checkbox" #{if aco.roles.contains(role)}checked="checked"#{/if} #{if role.id == 1}disabled="disabled"#{/if}></td>
+													#{/list}
+												</tr>
+												#{/list}
+                                            </tr>
+                                    </table>
+                                </div>
+								</div>
+								</div><!-- /.box-body -->
+                            </div>
+		</div>
+
+			</div><!--/tab-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+	
+<script type="text/javascript">
+$(function(){
+    $('#example2').on('click', 'input[type=checkbox]', function(e){
+        $.ajax('@@{Users.updatePermission()}', {
+        	type: 'POST',
+        	data: {
+        		acoId: $(this).data('aco'),
+        		roleId: $(this).data('role'),
+        		state: $(this).is(':checked')
+        	}
+        });
+    });
+});
+</script>

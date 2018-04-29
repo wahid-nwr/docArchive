@@ -1,0 +1,156 @@
+package controllers;
+
+import java.text.DateFormatSymbols;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
+
+import javax.validation.Valid;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import controllers.deadbolt.Deadbolt;
+import controllers.deadbolt.ExternalRestrictions;
+import models.BeneficiaryProfile;
+import models.GEODistrict;
+import models.IGAmonitoringSubFormTwo;
+import models.Role;
+import models.WealthInformation;
+import play.Logger;
+import play.data.validation.Validation;
+import play.mvc.With;
+//import utils.DropDownValues;
+
+@With(Deadbolt.class)
+public class IGA extends Controller{
+	
+	
+	//public static List<String> PROFIT = Arrays.asList("Profitable", "Stable", "Loss");
+	
+	
+	/**
+	 * IGA Monitoring Form
+	 */
+	@ExternalRestrictions("IGA Monitoring Form")
+    public static void monitoringForm(){
+		List<models.IGAnames> igaNames=models.IGAnames.findAll();
+		//DropDownValues dropdowns=new DropDownValues();
+		List<GEODistrict> geodistricts = GEODistrict.findAll();
+		List<models.BeneficiaryProfile> beneficiaryProfiles=models.BeneficiaryProfile.findAll();
+		Logger.info(igaNames.size() +"   "+ igaNames.get(0).name);
+		render(igaNames,geodistricts,beneficiaryProfiles);
+    }
+	
+	@ExternalRestrictions("IGA Monitoring Form")
+    public static void edit(Long id){
+		models.IGAmonitoringMainForm igamainform= models.IGAmonitoringMainForm.findById(id);
+		models.IGAmonitoringSubFormTwo igasubform=models.IGAmonitoringSubFormTwo.findById(id);
+		List<models.IGAnames> igaNames=models.IGAnames.findAll();
+		List<GEODistrict> geodistricts = GEODistrict.findAll();
+		List<models.BeneficiaryProfile> beneficiaryProfiles=models.BeneficiaryProfile.findAll();
+		render("@monitoringForm",igamainform,igasubform,geodistricts,beneficiaryProfiles);
+    }
+	
+	@ExternalRestrictions("IGA Monitoring Form")
+    public static void submit(@Valid models.IGAmonitoringMainForm igamainform, models.IGAmonitoringSubFormTwo igasubform){
+		igamainform.submissionDate=Calendar.getInstance().getTime();
+		igamainform.beneficiaryProfile=models.BeneficiaryProfile.find("beneficiaryId= "+igamainform.beneficiaryProfile.beneficiaryId).first();
+
+		Logger.info(igamainform.beneficiaryProfile.id  +" IGA");
+		/*if(Validation.hasErrors()) {
+			Logger.info("Error!!  "+ Validation.errors().toString());
+        	render("@register", workregister);
+        }*/
+		igamainform.save();
+		String[] name=request.params.getAll("igasubform.name.id");
+		String[] presentInvestmentInTK=request.params.getAll("igasubform.presentInvestmentInTK");
+		String[] IncomeOfLastMonthInTK=request.params.getAll("igasubform.IncomeOfLastMonthInTK");
+		String[] operationalCostOfLastMonth=request.params.getAll("igasubform.operationalCostOfLastMonth");
+		String[] profit= request.params.getAll("igasubform.profit");
+		String[] businessCycle=request.params.getAll("igasubform.businessCycle");
+		String[] selfLabourCost=request.params.getAll("igasubform.selfLabourCost");
+		String[] profitStatus=request.params.getAll("igasubform.profitStatus");
+		String[] marketDemand=request.params.getAll("igasubform.marketDemand");
+		String[] businessOperationCapacity=request.params.getAll("igasubform.businessOperationCapacity");
+		String[] viabilityOfBusiness=request.params.getAll("igasubform.viabilityOfBusiness");
+		
+		//Logger.info("Error!!  "+ name[0] +"    "+ presentInvestmentInTK[0] +"   ");
+		for(int i=0;i<name.length;i++)
+		{
+			models.IGAmonitoringSubFormTwo subForm=new IGAmonitoringSubFormTwo();
+			subForm.name= models.IGAnames.findById(Long.parseLong(name[i]));
+			subForm.presentInvestmentInTK= presentInvestmentInTK[i];
+			subForm.IncomeOfLastMonthInTK= IncomeOfLastMonthInTK[i];
+			subForm.operationalCostOfLastMonth=operationalCostOfLastMonth[i];
+			subForm.profit=profit[i];
+			subForm.businessCycle=businessCycle[i];
+			subForm.selfLabourCost=selfLabourCost[i];
+			subForm.profitStatus=profitStatus[i];
+			subForm.marketDemand=marketDemand[i];;
+			subForm.businessOperationCapacity=businessOperationCapacity[i];
+			subForm.viabilityOfBusiness=viabilityOfBusiness[i];
+			subForm.mainForm=igamainform;
+			subForm.save();
+		}
+		showData();
+    }
+	
+	@ExternalRestrictions("IGA Monitoring Form")
+    public static void showData(){
+		JsonArray JSON_TABLE_DATA = new JsonArray();
+    	List<models.IGAmonitoringMainForm> igamainform = models.IGAmonitoringMainForm.findAll();
+    	
+    	DateFormatSymbols numTomonth=new DateFormatSymbols();
+		for(int i=0; i< igamainform.size();i++)
+		{
+			 	JsonObject g5= new JsonObject();
+				g5.addProperty("DataID", igamainform.get(i).id);
+				g5.addProperty("Beneficiary Name", igamainform.get(i).beneficiaryProfile.beneficiaryName);
+				g5.addProperty("Beneficiary Id", igamainform.get(i).beneficiaryProfile.beneficiaryId);
+				g5.addProperty("Details", "<a class='btn btn-mini btn-info' href='/IGA/edit?id=" + igamainform.get(i).id +"'><i class='glyphicon glyphicon-edit'></i>" + "Edit" + "</a>" + "<a class='btn btn-mini btn-danger delete' data-url='/IGA/delete?id=" + igamainform.get(i).id +"' href='#deleteModal' ><i class='glyphicon glyphicon-remove'></i>" + "Delete" + "</a>");
+				JSON_TABLE_DATA.add(g5);
+		}
+		String header="IGA Monitoring Form List";
+		render(JSON_TABLE_DATA,header);
+    }
+	
+	@ExternalRestrictions("IGA Monitoring Form")
+    public static String delete(Long id){
+		Boolean code = false;
+    	String msg ="User can not be deleted";
+    	Logger.info("Deleted start!!!!" +id);
+    	if(request.isAjax()) {
+    		
+	    	notFoundIfNull(id, "id not provided");
+	    	models.IGAmonitoringMainForm mainform = models.IGAmonitoringMainForm.findById(id);
+	    	notFoundIfNull(mainform, "user not found");
+	    	try{
+	    		List<models.IGAmonitoringSubFormTwo> subforms=models.IGAmonitoringSubFormTwo.find("mainForm_1="+mainform.id).fetch();
+	    		for(models.IGAmonitoringSubFormTwo subform :subforms)
+	    			subform.delete();
+	    		mainform.delete();
+	    		code = true;
+	    		msg = "User deleted successfully";
+	    		Logger.info("Deleted!!!!");
+	    	}
+	    	catch(Exception e){
+	    		
+	    		Logger.info("Not possible" + 1000);
+	    		code=false;
+	    		
+	    	}
+    	}
+    	if(code){
+    		response.status=200;
+    		return msg;
+    		
+    	}
+    	else{
+    		
+    		response.status=303;
+    		return msg;
+    		
+    	}
+    }
+}

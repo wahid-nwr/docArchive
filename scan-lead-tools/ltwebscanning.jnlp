@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<jnlp spec="1.0+" href="ltwebscanning.jnlp">    
+		<information>        
+			<title>LEADTOOLS Scanning Application</title>        
+			<vendor>LEAD Technologies Inc.</vendor>                
+			<description>Sane Scanning Application</description>    
+		</information>    
+		<security>        
+			<all-permissions/>    
+		</security>    
+		<resources>        
+			<j2se version="1.7+" />        
+			<jar href="lib/leadtools.sane.host.jar" main="true" />
+			<jar href="lib/leadtools.jar"/>
+			<jar href="lib/leadtools.codecs.jar"/>
+			<jar href="lib/leadtools.imageprocessing.core.jar"/>
+			<jar href="lib/leadtools.sane.jar"/>
+			<jar href="lib/leadtools.sane.server.jar"/>
+			<jar href="lib/jackson/jackson-core-2.6.4.jar"/>
+			<jar href="lib/jackson/jackson-databind-2.6.4.jar"/>
+			<jar href="lib/jackson/jackson-annotations-2.6.0.jar"/>			
+		</resources>    
+		<extension name="javahelp" href="javahelp.jnlp"/>
+		<application-desc main-class="leadtools.sane.host.HostApplication" />
+	</jnlp>

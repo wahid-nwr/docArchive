@@ -1,0 +1,55 @@
+package models;
+
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import net.sf.oval.constraint.Length;
+
+import play.data.validation.Required;
+import play.data.validation.Unique;
+import play.db.jpa.Model;
+
+@Entity
+public class BeneficiaryProfile extends Model {
+	@Required
+	@ManyToOne
+	public BeneficiaryMasterProfile beneficiaryMasterProfile;
+	public int series;
+	public String quarter;
+	public int status;
+	public GEODistrict district;
+	public GEOUpazilla upazilla;
+	public GEOUnion unionparishad;
+	public GEOWard wardno;
+	
+	
+	@Unique
+	@Length(min=12, max=12)
+	public String beneficiaryId;
+	
+	@Required
+	public String beneficiaryName;
+	
+	public String gaurdianName;
+	
+	public String houseOrArea;
+	
+	public String village;
+	
+	public String nationalId;
+	
+	public String religion;
+	public String clan;
+	
+	public String headOfFamily;
+	
+	public String profilePicture;
+	
+	@Length(min=11, max=11)
+	public String mobileNumber;
+	public String ownerOfMobile;
+	public String bankAccountNo;
+	public String nameOfBank;
+	public String nameOfBranch;
+	public String longitude;
+	public String lattitude;
+}

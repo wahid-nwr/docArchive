@@ -1,0 +1,26 @@
+#Role
+#
+Role(admin):
+    name:       "Admin"
+
+Role(FirmManager):
+    name:       "FirmManager"
+    
+Role(Consultant):
+    name:       "Consultant"
+
+Role(Veterinary Clinic):
+    name:       "Veterinary Clinic"
+
+Role(Farm Attendant):
+    name:       "Farm Attendant"
+
+#User
+#
+UserModel(root):
+    name:           "admin"
+    displayName:    "Admin"
+    email:          "admin@mpower-health.com"
+    password:       "admin"
+    role:           [admin]
+

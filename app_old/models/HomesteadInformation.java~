@@ -1,0 +1,35 @@
+package models;
+
+import javax.persistence.Entity;
+import net.sf.oval.constraint.Length;
+
+import play.data.validation.Required;
+import play.data.validation.Unique;
+import play.db.jpa.Model;
+import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
+import play.data.validation.Required;
+import java.util.List;
+import org.hibernate.annotations.Cascade;
+import javax.persistence.CascadeType;
+
+
+@Entity
+public class HomesteadInformation extends Model {
+	@Required
+	@ManyToOne
+	public BeneficiaryProfile beneficiaryProfile;
+	public String doesHaveHomeLand;
+	public int amountOfLand;
+	public String doesHaveCultivateLand;
+	public int amountOfCultivateLand;
+	public String typeOfHomeLand;
+	public String typeOfHomeRoof;
+	public String typeOfHomeFloor;
+	public String typeOfHomeWall;
+	public String incomeSource;
+	public int monthlyIncome;
+	public int avgTotIncome;
+	@ManyToMany(cascade = {CascadeType.ALL})
+	public List<IncomeGeneratingActivity> listOfIncomeGeneratingActivity;
+}

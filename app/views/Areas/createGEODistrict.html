@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+
+<div class="page-header top">
+#{if geodistrict?.id}
+    <h1>Edit District</h1>
+#{/if}
+#{else}
+    <h1>New District</h1>
+#{/else}
+</div>
+
+
+#{form @submitGEODistrict(), class:'form-horizontal'}
+	#{if geodistrict?.id}
+    <input type="hidden" name="geodistrict.id" value="${geodistrict.id}" />
+    #{/if}
+
+	#{input 'geodistrict.geodivision.id' , type:'select', items:geodivisions,labelProperty:'name'}
+		#{option} Any#{/option}
+   	#{/input}
+    #{input 'geodistrict.name' /}
+    #{input 'geodistrict.nameBn' /}
+	#{input 'geodistrict.code' /}
+	#{input 'geodistrict.codeBn' /}
+    #{submit /}
+#{/form}

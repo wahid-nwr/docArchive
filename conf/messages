@@ -1,0 +1,403 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+application.name = mDairyPro
+
+form.cId = ID
+form.name = Name
+form.shortName = Short Name
+form.validity = Validity
+form.type = Type
+form.version = Version
+form.xml = XML
+form.json = JSON
+geoDistrict.id = 
+
+
+# Report Generation
+report.startDate = From Date
+report.district = District
+report.union = Union
+report.user = User
+report.count = Count
+report.toDate = To Date 
+report.upaZilla = Upazilla
+report.PSU = PSU
+report.from = From
+
+#Logic
+logic.status.id = Status
+logic.outcome.id =  OLd Outcome
+logic.destination.id = Form
+logic.event.id = Event
+logic.duration = Day(s)
+logic.userRole = Role
+logic.userRole.id = Role
+logic.round = Round
+logic.week = Week
+logic.day = Day
+logic.currentRoundPlus = Round:Current Round+ 
+logic.weekOfRound = Week
+logic.dayOfWeek = Day
+logic.formOutcome.id = Outcome
+
+
+
+
+
+
+formStatus.cId = ID
+formStatus.name = Name
+
+validation.unique = ID in use
+
+secure.title = Login
+
+MUnion.MUnion=Union
+union.unions = Available
+user.unions = Assigned
+
+#Users
+user.name = ID
+user.displayName = Display Name
+user.email = Email
+user.password = Password
+user.confirmPassword = Confirm Password
+user.role.id = Role
+user.sector.id = Assigned Sectors
+user.parentUser.id = Mobilizer
+user.fs.id = FS
+user.ac.id = AC
+user.tli.id = TLI
+user.tlPin.id = TL Pin
+user.batch.id = Batch
+user.acAreas = Assigned AC Areas
+user.tlPins = Assigned TL Pins
+tlPin.tlPins = Available TL Pins
+user.sectors = Assigned Sectors
+user.parentUser = Parent User
+
+
+#UserModel
+usermodel.name = ID
+usermodel.displayName = Display Name
+usermodel.email = Email
+usermodel.password = Password
+usermodel.confirmPassword = Confirm Password
+usermodel.role.id = Role
+
+usermodel.district = District
+usermodel.upazilla = Upazilla
+usermodel.geounion.id = Union
+
+
+area.area = Area
+tlPin.tlPin = TLPin
+sector.sector = Sector
+
+role.id = #
+role.name = Role Name
+userRole.name = Role Name
+
+mUnion.cId=ID
+mUnion.name =Name
+
+#Union
+geoUnion.geoUnionId = Union ID
+geoUnion.name = Union Name
+
+#Geo
+geoDivision.geoDivisionId = ID
+geoDivision.name = Name
+geoDistrict.name = Name
+geoDistrict.geoDistrictId = ID
+geoDistrict.geoDivision.id = Division 
+geoUpazilla.name = Name
+geoUpazilla.geoUpazillaId = ID
+geoUpazilla.geoDistrict.id = District 
+geoUnion.name = Name
+#geoUnion.geoUnionId = ID
+geoUnion.geoUpazilla.id = Upazilla 
+geoUnion.geoDistrict.id = District
+geoUnion.geoDivision.id = Division
+geoMauza.name = Name
+geoMauza.geoMauzaId = ID
+geoMauza.geoUnions.id = Union
+
+geoMauza.geoDivision.id = Division
+geoMauza.geoDistrict.id = District
+geoMauza.geoUpazilla.id = Upazilla
+
+geoVillage.geoDivision.id = Division
+geoVillage.geoDistrict.id = District
+geoVillage.geoUpazilla.id = Upazilla
+geoVillage.geoUnions.id = Union
+
+geoPSU.geoDivision.id = Division
+geoPSU.geoDistrict.id = District
+geoPSU.geoUpazilla.id = Upazilla
+geoPSU.geoUnions.id =  Union
+geoPSU.geoMauzas.id = Mauza
+
+geoPSU.geoVillage.id = Village
+ 
+
+
+#geoMauza.geoUnion = Union
+geoVillage.name = Name
+geoVillage.geoVillageId = ID
+geoVillage.geoMauzas.id = Mauza
+geoPSU.name = Name
+geoPSU.geoPSUId = ID
+geoPSU.geoVillages.id = Village 
+#TL Pin
+tlPin.tlPinId = TL Pin ID
+tlPin.acArea.id = AC Area ID
+
+#Sector
+sector.name = Name
+sector.tlPin.id = TL Pin
+sector.sectorId = Sector ID
+
+#Mauza
+mauza.name = Mauza
+mauza.sector.id = Sector ID
+
+#mobile message
+division = Bangle Devision
+
+form_id = Form
+
+#Outcome
+outcome.outcomeName = Name
+outcome.logicOperator =  Operation Type
+condition.logicOperator = Operation Type
+unitcondition.qId = Question
+unitcondition.qType = Type
+unitcondition.answerComparator = Comparator 
+unitcondition.checkAnswerList = Check Answer
+
+district.id = District
+upazilla.id = Upazilla
+union.id = Union 
+geopsu.id = PSU
+user.id = User
+forms.id = Form
+user.mobileNumber = Mobile Number
+
+
+beneficiaryProfile.series = Series
+beneficiaryProfile.quarter = Quarter
+beneficiaryProfile.status = Status
+beneficiaryProfile.district = District
+beneficiaryProfile.upazilla = Upazilla
+beneficiaryProfile.unionparishad = Union
+beneficiaryProfile.wardno = Ward No
+beneficiaryProfile.beneficiaryId = Benficiary Id
+beneficiaryProfile.beneficiaryName = Beneficiary Name
+beneficiaryProfile.gaurdianName = Husband/Father Name
+beneficiaryProfile.houseOrArea = House/Area
+beneficiaryProfile.village = Village
+beneficiaryProfile.nationalId = National ID
+beneficiaryProfile.religion = Religion
+beneficiaryProfile.headOfFamily = Head Of Family
+beneficiaryProfile.profilePicture = Profile Picture
+
+beneficiaryProfile.mobileNumber = Mobile no
+beneficiaryProfile.ownerOfMobile = Owner of mobile
+beneficiaryProfile.clan = গোষ্ঠী
+beneficiaryProfile.bankAccountNo = Bank Account No (ESCROW)
+beneficiaryProfile.nameOfBank = Name of the Bank
+beneficiaryProfile.nameOfBranch = Name of the Branch
+beneficiaryProfile.longitude = Longitude
+beneficiaryProfile.lattitude = Latitude
+
+
+maritalStatus.maritalStatus = Marital Status
+maritalStatus.age = Age of beneficiary :
+maritalStatus.isLiterate = Literate?
+maritalStatus.classLevel = If yes, studied till which class
+maritalStatus.isMainEarner = 4.1. Are you the main earner of the family?
+
+familyMemberDetails.numberOfFamilyMember = No of member of family :
+familyMemberDetails.numberOfBoy = No of boy/boys :
+familyMemberDetails.numberOfGirl = No of girl/girls :
+
+
+homesteadInformation.doesHaveHomeLand = 8.1.Do you have a homeland?
+homesteadInformation.amountOfLand = If yes, amount of homeland
+homesteadInformation.doesHaveCultivateLand = 8.2.Do you have a cultivable land?
+homesteadInformation.amountOfCultivateLand = If yes, amount of Cultivable land
+homesteadInformation.doesHaveHomeLand = 9.1.Who does the house belong to
+homesteadInformation.typeOfHomeLand = 9.2. Type of land on which the house stands
+homesteadInformation.typeOfHomeRoof = 9.3. Roof/ Shed of the house
+homesteadInformation.typeOfHomeFloor = 9.4. Floor of the house 
+homesteadInformation.typeOfHomeWall = 9.5. Walls of the house
+homesteadInformation.monthlyIncome = 10.1.Monthly income
+homesteadInformation.incomeSource = 10.2. Income Source
+homesteadInformation.avgTotIncome = 11.1. Average total income of other members of the family
+
+
+wealthInformation.doesHaveTree = 13.1.Do you own trees?
+wealthInformation.numberOfTrees = If yes, then how many?
+wealthInformation.doesHaveAnimals = 14.1. Do you own domestic animals?
+wealthInformation.numberOfCowBuffelo = If yes, Cow/Buffalo?
+wealthInformation.numberOfGoatSheep = Goat/Sheep?
+wealthInformation.numberOfDuckChicken = Duck/Chicken/Pigeon?
+wealthInformation.foodTakenEachDay = 15.1. How much food do you eat every day?
+wealthInformation.doesHaveWealth = 16.1. Do you own wealth/resources at home?
+wealthInformation.numberOfTvRadio = Number of TV/Radio :
+wealthInformation.numberOfMobile = Number of Mobile(s) :
+wealthInformation.numberOfCycleVan = Number of Cycle/Van(s) :
+wealthInformation.numberOfSewingMachine = Number of Sewing Matchine(s) :
+wealthInformation.numberOfBed = Number of Bed :
+wealthInformation.numberOfTableChair = Number of Table/Chair:
+wealthInformation.numberOfShowCase = Number of Almirah/Show-case(s):
+wealthInformation.others = Others :
+
+
+sicknessInformation.fallenSickLast4Months = 17.1. How often have you fallen sick in the last 4 months?
+sicknessInformation.madecationSource = 18.1. From where did you take medication at the time of sickness?
+sicknessInformation.drinkingSource = 19.1. What is the source of drinking
+sicknessInformation.latrineType = 20.1. What is the latrine system at home?
+sicknessInformation.doesUseCinderSoapAfterLatrine = 21.1. Do you use soap/ cinder (ash) after latrine?
+sicknessInformation.doesUseCinderSoapAfterTakingFood = 21.2. Do you use soap/ cinder (ash) before taking food?
+sicknessInformation.haveTakenLoan = 22.1. Did you take any loan?
+sicknessInformation.loanAmount = If yes, then what is the amount
+sicknessInformation.owingAmount = Owning amount(Amount left for payment):
+sicknessInformation.reasonOfLoan = 22.2. Reason for taking loan:
+sicknessInformation.sourceOfLoan = 22.3. Source of loan:
+sicknessInformation.doesPayInstallmentTimely = 23.1. Do you pay your installments at time?
+sicknessInformation.amountPerInstallment = If yes, How much amount do you pay per installment?
+sicknessInformation.durationOfInstallment = Duration of payment of each installment
+sicknessInformation.doesHaveSavings = 24.1. Do you have a personal savings? (Except ROSCA)
+sicknessInformation.savingsAmount = Amount of personal savings (If any):
+
+roscaRelatedInformation.receivedRosca = 25.1. Did you receive?
+roscaRelatedInformation.numberOfTimeReceived = 25.2. How many times?
+roscaRelatedInformation.amountReceived = 25.3. Amount received per installment?
+roscaRelatedInformation.depositPerInstallment = 25.4. Amount deposited per installment?
+roscaRelatedInformation.durationPerInstallment = 25.5. Duration of per installment for Amount deposit?
+roscaRelatedInformation.specialRemarks = Special Remarks (if any)
+
+roscaRelatedInformation.suggenstionLivelihood = Did you ever need any suggestions from any organization for livelihood development?
+roscaRelatedInformation.trainingName = Name
+roscaRelatedInformation.trainingOthers = Others
+roscaRelatedInformation.didSufferViolence = Did you/your family member experience any kind of violence in the last 4 months?
+roscaRelatedInformation.memberSufferedViolence = If yes, then who experienced the violence?
+roscaRelatedInformation.typeOfViolence = Type of violence:
+roscaRelatedInformation.violenceOthers = Others
+
+
+lawRelatedActivity.takenLawHelp = Did you have to take the help of law in the last 4 months?
+lawRelatedActivity.lawOrganization = If Yes, then which law organization?
+lawRelatedActivity.didTakePartInSocialSecurity = Did you participate in any Social Security Programme other than SWAPNO?
+lawRelatedActivity.socialSecurityProgram = If Yes, then which programme?
+lawRelatedActivity.doesHaveControlOnIncomeSavings = Do you have control over your own income and savings?
+lawRelatedActivity.doesHaveControlOnAssets = Do you have control over your own assets?
+lawRelatedActivity.doesHaveControlOnHouseIncomeFood = Do you have control over your house income and food?
+lawRelatedActivity.doesHaveControlOnHouseAssets = Do you have control over your house assets?
+lawRelatedActivity.familyDecisionMaker = Who takes the decisions of family?
+lawRelatedActivity.nameOfCollector = Name of the Collector
+
+
+
+
+
+#SWAPNO
+igamainform.geodistrict= District
+igamainform.geoupazilla= Upazilla
+igamainform.geounion=Union
+
+iga.InvestmentOfIGA= Investment Of IGA
+iga.Price= Price
+iga.WithdrawalMoneyFromESCROWSavings= Withdrawal Money From ESCROW Savings
+iga.PreviousInvestment=Previous Investment
+iga.InvestmentFromWithdrawalAmount=Investment From Withdrawal Amount
+iga.TotalActualInvestment=Total Actual Investment
+
+#Form 2 Table
+iga.IGANames =IGA Names
+iga.PresentInvestmentInTK  =Present Investment In TK
+iga.IncomeOfLastMonthInTaka =Income Of Last Month In Taka
+iga.OperationalCostOfLastMonth  Operational Cost Of Last Month
+iga.Profit =Profit
+iga.BusinessCycle=Business Cycle
+iga.selfLabourCost=Self Labour Cost
+iga.ProfitStatus=Profit Status
+iga.MarketDemand=Market Demand
+iga.BusinessOperationCapacity= Business Operation Capacity
+iga.ViabilityOfBusiness=Viability Of Business
+
+#Form 3
+iga.DifferentHeadOfSavingsAndInvestment=Different Head Of Savings And Investment
+iga.Taka=Taka
+iga.mandatorySavingsInBank= Mandatory Savings In Bank  
+iga.otherSavingsInBank= Other Savings In Bank
+iga.savingsInCooperativeSociety= Savings In Co-operative Society
+iga.savingsInCash= Savings In Cash
+iga.totalInvetmentInDifferentIGA= Total Invetment In Different IGA
+#Form 4
+iga.Head=Head
+iga.Taka=Taka
+iga.foodCost= Food Cost
+iga.clothingCost= Clothing Cost
+iga.houseMaintenanceCost= House Maintenance Cost
+iga.healthAndHygenicCost= Health And Hygenic Cost
+iga.education= Education
+iga.reinvestmentInIGA= Reinvestment In IGA
+iga.savings= Savings
+iga.assetPurchase= Asset Purchase
+iga.cashInHand= Cash In Hand
+iga.others= Others
+
+
+#Work Registration
+workregister.geodistrict= District
+workregister.geoupazilla=Upazilla
+workregister.geounion=Union
+
+#incident
+incident.incidentDate= Incident Date
+incident.incidentTime= Incident Time
+incident.incidentType.id= Incident Type
+incident.incidentDescription= Incident Description
+incident.actionTaken= Action Taken
+incident.victimName= Victim Name
+incident.geoDistrict= District
+incident.geoUpazilla= Upazilla
+incident.geoUnion= Union
+incident.assignedPersonForFollowUp.id=Assigned Person For Followup
+incident.incidentStatus= IncidentStatus
+incident.attachment= Attachment
+assignwork.geodistrict= District
+assignwork.geoupazilla=Upazilla
+assignwork.geounion=Union
+assignwork.geoward=Ward No.
+
+
+
+district.id = District
+upazilla.id = Upazilla
+unionparishad.id = Union
+
+beneficiaryMasterProfile.beneficiaryId = BeneficiaryId
+beneficiaryMasterProfile.beneficiaryName = Name Of Benficiary
+beneficiaryMasterProfile.beneficiaryAge = Age of Beneficiary
+beneficiaryMasterProfile.fatherOrHusbandName = Husband or Father Name
+beneficiaryMasterProfile.previousProfession = Previous Profession
+beneficiaryMasterProfile.villageName = Village Name
+beneficiaryMasterProfile.wardCode = Ward
+beneficiaryMasterProfile.geodistrict.id = District
+beneficiaryMasterProfile.geoupazilla.id = Upazilla
+beneficiaryMasterProfile.geounion.id = Union
+
+
+beneficiaryMasterProfile.maritalStatus = Marital Status
+beneficiaryMasterProfile.beneficiaryStatus = Beneficiary Status
+
+geodistrict.id = District
+geoupazilla.id = Upazilla
+geounion.id = Union
+identifiedTrade.geodistrict = District

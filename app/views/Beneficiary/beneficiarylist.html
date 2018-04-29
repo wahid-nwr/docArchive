@@ -1,0 +1,159 @@
+#{extends 'main.html' /}
+
+    <section id="feature2" >
+        <div class="container">	
+			<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs"><!--tab-->
+				
+				<div id="myTabContent" class="tab-content">			
+				</div>
+				
+<div id="view" class="tab-pane fade active in" aria-labelledby="home-tab" role="tabpanel">
+		<div class="row">
+				 <div class="col-lg-12" >
+				  <div class="panel panel-default">
+				 <div class="panel-heading">
+						<b>Beneficiary Status Form</b></div>
+				<div class="panel-body">
+					
+					<div class="row">
+						<form id="beneficiarySeriesData" method="POST" class="form-horizontal" action="./beneficiarylist" enctype="multipart/form-data"> 					 
+						<div class="filter">
+									<div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'district.id' , type:'select', items:geodistricts,labelProperty:'name'} 
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'upazilla.id' , type:'select', items:geoupazillas,labelProperty:'name' } 
+											#{option}Any#{/option}
+										#{/input}									
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'unionparishad.id' , type:'select', items:geounions,labelProperty:'name'}
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										#{input 'Series' , type:'select', labelProperty:'name'} 											
+												<option>Select a series</option>
+												
+												<option #{if seriesToSearch==1} selected#{/if} value="1">1</option>
+												<option #{if seriesToSearch==2} selected#{/if} value="2">2</option>												
+												<option #{if seriesToSearch==3} selected#{/if} value="3">3</option>
+												<option #{if seriesToSearch==4} selected#{/if} value="4">4</option>
+												<option #{if seriesToSearch==5} selected#{/if} value="5">5</option>
+												<option #{if seriesToSearch==6} selected#{/if} value="6">6</option>
+										#{/input}
+									 </div>
+									 </div>
+									 </form>
+									 </div>
+                                <div class="box-body table-responsive">
+                                    <table id="example2" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+											    <th>Name</th>
+                                                <th>Fathers/Husband</th>
+                                                <th>National Id No</th>
+                                                <th>Age</th>
+                                                <th>Literacy</th>
+                                                <th>Religion</th>
+												<th>Marital Status</th>
+												<th>House/Area</th>
+												<th>Village</th>
+												<th>Mobile No:</th>
+												<th>Edit</th>
+												<th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+											#{list items:beneficiaryProfileList, as:'beneficiaryProfile'}
+                                            <tr>
+                                                <td>${beneficiaryProfile.beneficiaryName}</td>
+                                                <td>${beneficiaryProfile.gaurdianName}</td>
+                                                <td>${beneficiaryProfile.nationalId}</td>
+                                                <td>${beneficiaryProfile.nationalId}</td>
+                                                <td>${beneficiaryProfile.nationalId}</td>
+												<td>${beneficiaryProfile.religion}</td>
+												<td>${beneficiaryProfile.nationalId}</td>
+												<td>${beneficiaryProfile.houseOrArea}</td>
+												<td>${beneficiaryProfile.village}</td>
+												<td>${beneficiaryProfile.mobileNumber}</td>
+												<td>  <a class="btn btn-mini btn-warning" href="/beneficiary/profile?id=${beneficiaryProfile.id}"> <i class="fa fa-pencil-square-o"></i></a></td>
+                                                <td>
+												<a class="btn btn-mini btn-danger delete_user" id = "91" ><i class="fa fa-trash-o"></i></a>		
+												</td>
+                                               </tr>
+                                               #{/list}											   
+                                    </table></div>
+								</div>
+								</div><!-- /.box-body -->
+								<!--
+								<div class="row">
+							<div class="col-lg-7">
+							<div id="example1_info" class="dataTables_info">Showing 1 to 10 of 57 entries</div>
+							</div>
+								<div class="col-lg-5">
+									<div class="dataTables_paginate paging_bootstrap">
+										<ul class="pagination">
+										<li class="prev disabled">
+										<a href="#">← Previous</a>										</li>
+										<li class="active">
+										<a href="#">1</a>										</li>
+										<li>
+										<a href="#">2</a>										</li>
+										<li>
+										<a href="#">3</a>										</li>
+										<li>
+										<a href="#">4</a>										</li>
+										<li>
+										<a href="#">5</a>										</li>
+										<li class="next">
+										<a href="#">Next → </a>										</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							-->
+                            </div>
+				 
+				 
+          </div>
+		</div>
+
+			</div><!--/tab-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+#{cascade/}	
+<script type="text/javascript">
+	$('#Series').on('change', function(){
+	var sel = $(this).find(':selected');
+	//window.location = './ben?id='+sel.val();
+	$('#beneficiarySeriesData').submit();
+	/*
+	var union = $("#beneficiaryProfile\\.unionparishad");
+	if(union!=null && union!='null' && union!='undefined')
+	{
+		union.val(sel.val());
+	}
+	var oldItems = $(this);
+	if(sel.val()){
+		$.post('@@{Beneficiary.loadBeneficiary}', {id:sel.val()}, function(data){
+			$('.filter select:eq(3)').find('option:not(:first)').remove().end().append(data);
+		});
+	}	
+	else{
+		$('.filter select:eq(2)').find('option:not(:first)').remove();
+	}
+	*/
+});
+
+</script>

@@ -1,0 +1,42 @@
+#{extends 'main.html' /}
+#{set title:'Users' /}
+
+<div class="page-header top">
+	<h1>${title}</h1>
+</div>
+
+#{if flash.success}
+    #{alert flash.success/}
+#{/if}
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>&{'user.name'}</th>
+			<th>&{'user.displayName'}</th>
+			<th>&{'user.role.id'}</th>
+			<th>Actions</th>
+		</tr>
+	<thead>
+	<tbody>
+	#{list items:users, as:'user'}
+		<tr>
+			<td>${user.name}</td>
+			<td>${user.displayName}</td>
+			<td>${user.role.name}</td>
+			<td>	
+				#{deadbolt.externalizedRestriction externalRestrictions:['Edit User']}
+            	<a class="btn btn-mini" href="@{Users.details(user.id)}">Details</a>
+				<a class="btn btn-mini" href="@{Users.edit(user.id)}"><i class="icon-edit"></i> Edit</a>
+				<a class="btn btn-mini btn-danger delete" data-url="@{Users.delete(user.id)}" href="#deleteModal"><i class="icon-remove icon-white"></i> Delete</a>
+				#{/deadbolt.externalizedRestriction}
+			</td>
+		</tr>
+	#{/list}
+	#{else}
+		<tr>
+			<td colspan="8">No User Available</td>
+		</tr>
+	#{/else}
+	<tbody>
+</table>

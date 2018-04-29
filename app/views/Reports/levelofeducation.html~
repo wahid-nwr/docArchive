@@ -1,0 +1,98 @@
+#{extends 'main.html' /}
+
+
+<!--/#main-slider-->
+<section id="feature2" >
+    <div class="container">
+       <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    </div><!--/.container-->
+</section><!--/#bottom-->
+
+
+<script>
+//$(function () {
+
+$(document).ready(function() {  
+   var data = ${JSON_SUBARRAY.raw()};
+   //alert(data);
+   var chart = {
+       plotBackgroundColor: null,
+       plotBorderWidth: null,
+       plotShadow: false
+   };
+   var title = {
+      text: 'Marital Status of Beneficiary'   
+   };      
+   var tooltip = {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+   };
+   var plotOptions = {
+      pie: {
+         allowPointSelect: true,
+         cursor: 'pointer',
+         dataLabels: {
+            enabled: false           
+         },
+         showInLegend: true
+      }
+   };
+   var series= [{
+      type: 'pie',
+      name: 'Marital Status',
+      data: data/*[
+         ['Firefox',   45.0],
+         ['IE',       26.8],
+         { name: 'Chrome', y: 12.8, sliced: true, selected: true},
+         ['Safari',    8.5],
+         ['Opera',     6.2],
+         ['Others',   0.7]
+      ]*/
+   }];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;     
+   json.tooltip = tooltip;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   //$('#container').highcharts(json);  
+
+
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Stacked bar chart'
+        },
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total fruit consumption'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: 'John',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: 'Jane',
+            data: [2, 2, 3, 2, 1]
+        }, {
+            name: 'Joe',
+            data: [3, 4, 4, 2, 5]
+        }]
+    });
+});	
+
+</script>

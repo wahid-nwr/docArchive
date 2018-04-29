@@ -1,0 +1,42 @@
+#{extends 'main.html' /}
+#{set title:'Firms' /}
+
+<div class="page-header top">
+	<h1>${title}</h1>
+</div>
+
+#{if flash.success}
+    #{alert flash.success/}
+#{/if}
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>&{'firmFacility.name'}</th>
+			<th>&{'firmFacility.displayName'}</th>
+			<th>&{'firmFacility.manager.id'}</th>
+			<th>Actions</th>
+		</tr>
+	<thead>
+	<tbody>
+	#{list items:firmFacilitys, as:'firmFacility'}
+		<tr>
+			<td>${firmFacility.name}</td>
+			<td>${firmFacility.displayName}</td>
+			<td>${firmFacility.manager?.name}</td>
+			<td>	
+				#{deadbolt.externalizedRestriction externalRestrictions:['Edit FirmFacility']}
+            	<a class="btn btn-mini" href="@{Users.farmDetails(firmFacility.id)}">Details</a>
+				<a class="btn btn-mini" href="@{Users.editFirm(firmFacility.id)}"><i class="icon-edit"></i> Edit</a>
+				<a class="btn btn-mini btn-danger delete" data-url="@{Users.deleteFirm(firmFacility.id)}" href="#deleteModal"><i class="icon-remove icon-white"></i> Delete</a>
+				#{/deadbolt.externalizedRestriction}
+			</td>
+		</tr>
+	#{/list}
+	#{else}
+		<tr>
+			<td colspan="8">No Firm Available</td>
+		</tr>
+	#{/else}
+	<tbody>
+</table>

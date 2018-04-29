@@ -1,0 +1,596 @@
+#{extends 'main.html' /}
+<!-- page content -->
+<link href="../../../public/style/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../../../public/style/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../../../public/style/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../../../public/style/vendors/starrr/dist/starrr.css" rel="stylesheet">
+
+ <!-- bootstrap-progressbar -->
+    <link href="../../../public/style/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- jVectorMap -->
+    <link href="../../../public/style/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+    
+    <link href="../../../public/style/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../public/style/jquery.typeahead.min.css">
+<!-- Select2 -->
+<script src="../../../public/style/vendors/select2/dist/js/select2.full.min.js"></script>
+
+
+<style>
+.wrapper         {width:98%;height:60%;margin:0 auto;background:#CCC}
+.h_iframe        {position:relative;}
+.h_iframe .ratio {display:block;width:100%;height:auto;}
+.h_iframe iframe {position:absolute;top:60px;left:0;width:100%; height:100%;}
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+</style>
+        <div class="right_col" role="main">			
+			<div class="wrapper">
+				<div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Form Elements</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>File Upload <small>Add Documents to Archive</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form method="POST" action="@{DocumentArchiveController.submitScanDesc()}" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+					  <input type="hidden" name="docdesclevel" id="docdesclevel" value="${scanUpload?.listOfDocDescType?.size()}"/>
+					  #{if scanUpload?.id}
+					<input type="hidden" name="scanUpload.id" value="${scanUpload.id}" />
+					#{/if}		
+					  <div class="form-group">						  
+							<label class="control-label col-md-3 col-sm-3 col-xs-12">Search Accounts</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="typeahead__container" style="z-index: 1041; position: relative;">
+								<div class="typeahead__field">
+
+									<span class="typeahead__query">
+										<span class="typeahead__cancel-button"></span>
+										<input class="js-typeahead-user_v1 form-control" name="user_v1[query]" placeholder="Search Customer or group" autocomplete="off" type="search">
+									</span>
+									<span class="typeahead__button">
+										<button onclick="event.preventDefault(); search();">
+											<i class="typeahead__search-icon"></i>
+										</button>
+									</span>
+								</div>								
+						</div>
+                      </div>
+                      </div>
+                      
+                      <div class="form-group">						  
+							<label class="control-label col-md-3 col-sm-3 col-xs-12">Account Name</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+							<input class="form-control col-md-7 col-xs-12" type="text" readonly="true" value="" name="accountIdMap.customerGroup" id="customerGroup"/>
+							<input type="hidden" value="${scanUpload?.id}" required="true" name="accountIdMap.customerGroupId" id="customerGroupId"/>
+						</div>
+                      </div>
+                       	
+					  <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Customer Id :</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="customerId" value="${scanUpload?.customerId}" onkeyup="fillId('customerId')" id="customerId" class="form-control col-md-7 col-xs-12">                          
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Group Id :</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="accountId" value="${(scanUpload?.accountId)?scanUpload?.accountId:(scanUpload?.groupId)?scanUpload?.groupId:""}" id="accountId" class="form-control col-md-7 col-xs-12">                          
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Account No :<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="agreementId" value="${scanUpload?.agreementId}" id="agreementId" required="required" class="form-control col-md-7 col-xs-12">                          
+                        </div>
+                      </div>
+                      <div class="docdesclevel">
+						  
+					%{
+						if(scanUpload!=null && scanUpload.listOfDocDescType!=null && scanUpload.listOfDocDescType.size()>0)
+						{
+							for(int k = 0;scanUpload.listOfDocDescType!=null && k< scanUpload.listOfDocDescType.size(); k++)
+							{
+								
+								docDescTypeList = docDescTypeListMap.get(""+(k+1));
+								%}
+                      
+								  <div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">Document Category Level ${k+1} :</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+									  <select name="docDescTypelevel_${k+1}" id="${k==0?"parent":""}" class="select2_single form-control doclevel" tabindex="-1" required="required">
+										<option value=""></option>
+										%{
+											for(int j = 0;docDescTypeList!=null && j< docDescTypeList.size(); j++)
+											{
+												%}
+												<option ${(scanUpload?.listOfDocDescType?.get(k).id==docDescTypeList?.get(j).id)?"selected":""} value="${docDescTypeList.get(j).id}">${docDescTypeList.get(j).name}</option>
+												%{
+											}							
+										%}
+										
+									  </select>
+									</div>
+								  </div>
+								  %{
+							}
+						}
+						else
+						{
+							docDescTypeList = docDescTypeListMap.get(""+1);
+						%}
+                      
+					  <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Document Category Level 1 :</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="docDescTypelevel_1" id="parent" class="select2_single form-control doclevel" tabindex="-1" required="required">
+                            <option value=""></option>
+                            %{
+								for(int j = 0;docDescTypeList!=null && j< docDescTypeList.size(); j++)
+								{
+									%}<option value="${docDescTypeList.get(j).id}">${docDescTypeList.get(j).name}</option>%{
+								}							
+							%}
+                            
+                          </select>
+                        </div>
+                      </div>
+                      %{
+						}
+					  %}
+                      <!--</div>-->
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+				<div class="h_iframe">
+				<!-- a transparent image is preferable -->
+				<object data="${location}" type="application/pdf" width="100%" height="100%">
+				<p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+				</object>
+				
+				</div>		
+			</div>
+		</div>			
+		<!-- FastClick -->
+    <script src="../../../public/style/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../../public/style/vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../../../public/style/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../../../public/style/vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../../public/script/moment/moment.min.js"></script>
+    <script src="../../../public/script/datepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="../../../public/style/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../../../public/style/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../../../public/style/vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="../../../public/style/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="../../../public/style/vendors/switchery/dist/switchery.min.js"></script>
+    
+    <script src="../../../public/style/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="../../../public/style/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="../../../public/style/vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="../../../public/style/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="../../../public/style/vendors/starrr/dist/starrr.js"></script>
+    
+    <script src="../../../public/script/jquery.typeahead.min.js"></script>
+    <script src="../../../public/script/autocomplete.js"></script>
+    <script id="loader" src="../../../public/script/script.js" type="text/javascript"></script>
+    <div class="modal"><!-- Place at bottom of page --></div>
+<script type="text/javascript">
+	
+    $(".select2_single").select2({
+		placeholder: "Select a Document Category",
+		allowClear: true
+	});
+	
+	$(document).on('change','select.doclevel',function(){
+	//$('.doclevel').on('change',function () {
+		var index = $(this).index() ;
+		var sel = $(this).find(':selected');
+		index = index+1;
+		var slideIndex = $(this).closest('.doclevel').index('.doclevel');
+		index = slideIndex+1;
+		$('#docdesclevel').val(index);
+		$('.docdesclevel').find('.form-group:gt('+(index-1)+')').remove();
+		console.log("slideIndex::"+slideIndex);
+	console.log( $(this).index() );
+	//$('.select2_single').on('change', function(){
+	//$('.select2_single').click(function() {
+	  
+		//alert("checked");
+		$.post('@@{DocumentArchiveController.getDocDescCategory}', {id:sel.val()}, function(data){
+			if(data!=null && data.length>0)
+			{
+				if(data=='Agreement')
+				{
+					$('#agreementId').attr("required",true);
+				}
+				else if(data=='Account')
+				{
+					$('#accountId').attr("required",true);
+				}
+				else
+				{
+					$('#customerId').attr("required",true);
+					$('#agreementId').attr("required",false);
+					$('#accountId').attr("required",false);
+				}
+			}
+		});
+		$.post('@@{DocumentArchiveController.getDocDescByLevelList}', {id:sel.val()}, function(data){
+			if(data!=null && data.length>0)
+			{
+				add(index);
+				$('.docdesclevel select:eq('+(index)+')').find('option:not(:first)').remove().end().append(data);
+				$('.docdesclevel').find('.form-group:eq('+index+')').css("display","block");
+				$('.select2_single').select2({
+					placeholder: "Select a Document Category",
+					allowClear: true
+				});
+			}
+			//$('.docdesclevel').find('option:not(:first)').remove().end().append(data);
+		});
+	  
+	});
+	function add(index)
+	{
+		var html = '<div class="form-group" style="display:none">'+
+					'	<label class="control-label col-md-3 col-sm-3 col-xs-12">Document Category Level '+(index+1)+' :</label>'+
+					'   <div class="col-md-6 col-sm-6 col-xs-12">'+
+					'	   <select name="docDescTypelevel_'+(index+1)+'" id="docDescTypelevel_'+(index+1)+'" class="select2_single form-control doclevel" required="required" tabindex="-1">'+
+					'	      <option value=""></option>'+
+					'      </select>'+
+					'   </div>'+
+					'</div>';
+		$('.docdesclevel').append(html);	
+	}
+</script>
+
+<script>
+  $( function() {
+    function log( message ) {
+      $( "<div>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).scrollTop( 0 );
+    }
+ 
+    $( "#birds" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax( {
+          url: "./getId",
+          dataType: "jsonp",
+          data: {
+            term: request.term
+          },
+          success: function( data ) {
+            response( data );
+          }
+        } );
+      },
+      minLength: 2,
+      select: function( event, ui ) {
+        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+      }
+    } );
+  } );
+  </script>
+  
+  
+	<script type="text/javascript">
+		
+	var box1, box2, box3, box4; 
+		$body = $("body");
+
+      $(document).ready(function() {
+        $(".select2_multiple").select2({
+          maximumSelectionLength: 40,
+          placeholder: "With Max Selection limit 40",
+          allowClear: true
+        });        
+      });
+      
+      
+      
+	var typeahead = $.typeahead({
+    input: '.js-typeahead-user_v1',
+    minLength: 1,
+    order: "asc",
+    dynamic: true,
+    delay: 500,
+    backdrop: {
+        "background-color": "#fff"
+    },
+    template: function (query, item) {
+ 
+        var color = "#777";
+        if (item.status === "owner") {
+            color = "#ff1493";
+        }
+		var result = '';
+        result = '<span class="row">';
+        result +='<span class="avatar">' +
+                '<img src="{{id}}">' +
+            "</span>" +
+            '<span class="username">{{name}},</span>' +
+            '<span class="id">AccountNo:{{accountNo}},</span>';
+        if(item.customerId!=null && item.customerId.length>0)
+        {
+			result += '<small style="color: ' + color + ';">CustomerID:{{customerId}}</span>';
+		}
+		else if(item.groupId!=null && item.groupId.length>0)
+		{
+			result += '<small style="color: ' + color + ';">GroupID:{{groupId}}</span>';
+		}
+        result += "</span>";
+        return result;
+    },
+    emptyTemplate: "no result for {{query}}",
+    source: {
+        user: {
+            display: ["name","accountNo","customerId","groupId"],
+            //href: "https://www.github.com/{{name|slugify}}",
+            data: [{
+				/*
+                "id": 415849,
+                "name": "an inserted user that is not inside the database",
+                "avatar": "https://avatars3.githubusercontent.com/u/415849",
+                "status":  "contributor"
+                */
+            }],
+            ajax: function (query) {
+				console.log('query::'+query);
+				return ajaxRequest(query,this.data);
+				/*
+				//$body.addClass("loading");
+				box3 = new ajaxLoader($body, {classOveride: 'blue-loader', bgColor: '#000'});
+                return {
+                    type: "GET",
+                    url: "@@{CustomerManagementController.getMappedId}",
+                    path: "data.user",
+                    data: {
+                        q: "{{query}}",
+                        type:$("input[name='accountIdMap\.clienttype']:checked").val()
+                    },
+                    callback: {
+                        done: function (data) {
+                            for (var i = 0; i < data.data.user.length; i++) {
+                                if (data.data.user[i].name === 'running-coder') {
+                                    data.data.user[i].status = 'owner';
+                                } else {
+                                    data.data.user[i].status = 'contributor';
+                                }
+                            }
+                            if (box3) box3.remove();
+                            return data;
+                        }
+                    }
+                }
+                */
+            }
+ 
+        }
+        /*,
+        project: {
+            display: "project",
+            href: function (item) {
+                return '/' + item.project.replace(/\s+/g, '').toLowerCase() + '/documentation/'
+            },
+            ajax: [{
+                type: "GET",
+                url: "./getId",
+                data: {
+                    q: "{{query}}"
+                }
+            }, "data.project"],
+            template: '<span>' +
+                '<span class="project-logo">' +
+                    '<img src="{{image}}">' +
+                '</span>' +
+                '<span class="project-information">' +
+                    '<span class="project">{{project}} <small>{{version}}</small></span>' +
+                    '<ul>' +
+                        '<li>{{demo}} Demos</li>' +
+                        '<li>{{option}}+ Options</li>' +
+                        '<li>{{callback}}+ Callbacks</li>' +
+                    '</ul>' +
+                '</span>' +
+            '</span>'
+        }*/
+    },
+    callback: {
+        onClick: function (node, a, item, event) {
+ 
+            // You can do a simple window.location of the item.href
+            //alert(JSON.stringify(item));
+            //alert(node);
+            //alert(a);
+            //alert(item.name);
+            $('#customerGroup').val(item.name);
+            $('#customerGroupId').val(item.id);
+            $('#customerId').val(item.customerId);
+            $('#accountId').val(item.groupId);
+            $('#agreementId').val(item.accountNo);            
+            $('.typeahead__container').attr("class","typeahead__container");
+            event.preventDefault();	
+        },
+        onSendRequest: function (node, query) {
+            console.log('request is sent')
+        },
+        onReceiveRequest: function (node, query) {
+            console.log('request is received')
+        }
+    },
+    debug: true
+});
+function search()
+{
+	//console.log(typeahead);
+	//$(".typeahead").eq(0).val("1").trigger("input");
+	/*
+	theVal = $('.typeahead').val();
+	$(".typeahead").typeahead('val', '')
+	$(".typeahead").focus().typeahead('val',theVal).focus();
+	*/
+	//$(".typeahead").typeahead('lookup').focus();
+	//$('.js-typeahead-user_v1').focus();
+	//typeahead.autocomplete("search",'11');
+	//$(".typeahead").lookup();
+	//$(".typeahead").eq(0).trigger("keyup");
+	//var $myinput = $('.js-typeahead-user_v1');
+	//$myinput.data('typeahead')._showDropdown()
+	$('.js-typeahead-user_v1').trigger('input.typeahead');
+	//ajaxRequest(1,typeahead.source.group.data);
+}
+function ajaxRequest(query,data)
+{	
+	//console.log(data);
+	//$body.addClass("loading");
+	box3 = new ajaxLoader($body, {classOveride: 'blue-loader', bgColor: '#000'});
+	return {
+		type: "GET",
+		url: "@@{CustomerManagementController.getMappedId}",
+		path: "data.user",
+		data: {
+			q: query,
+			type:$("input[name='accountIdMap\.clienttype']:checked").val()
+		},
+		callback: {
+			done: function (data) {
+				for (var i = 0; i < data.data.user.length; i++) {
+					if (data.data.user[i].name === 'running-coder') {
+						//data.data.user[i].status = 'owner';
+					} else {
+						//data.data.user[i].status = 'contributor';
+					}
+				}
+				if (box3) box3.remove();
+				return data;
+			}
+		}
+	}            
+}
+    </script>
+    
+    <script>
+/*		
+$(document).ready(function() {
+	var box1, box2, box3, box4; 
+	
+	$(".box-1").live('click', function(){	
+		box1 = new ajaxLoader(this);
+	});
+	
+	$(".box-2").live('click', function(){	
+		box2 = new ajaxLoader(this, {classOveride: 'blue-loader'});
+	});
+	
+	$(".box-3").live('click', function(){	
+		box3 = new ajaxLoader(this, {classOveride: 'blue-loader', bgColor: '#000'});
+	});
+	
+	$(".box-4").live('click', function(){	
+		box4 = new ajaxLoader(this, {classOveride: 'blue-loader', bgColor: '#000', opacity: '0.3'});
+	});
+	
+	$(".btn").live('click', function(){	
+		if (box1) box1.remove();
+		if (box2) box2.remove();
+		if (box3) box3.remove();
+		if (box4) box4.remove();
+	});
+	
+});
+*/
+</script>
+

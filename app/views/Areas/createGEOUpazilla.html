@@ -1,0 +1,33 @@
+#{extends 'main.html' /}
+
+<div class="page-header top">
+#{if geoupazilla?.id}
+    <h1>Edit Upazilla</h1>
+#{/if}
+#{else}
+    <h1>New Upazilla</h1>
+#{/else}
+</div>
+
+
+#{form @submitGEOUpazilla(), class:'form-horizontal filter'}
+	
+	#{if geoupazilla?.id}
+    <input type="hidden" name="geoupazilla.id" value="${geoupazilla.id}" />
+    #{/if}
+	
+	#{input 'geodivision.id' , type:'select', items:geodivisions,labelProperty:'name' }
+		#{option}Any#{/option}
+	#{/input} 
+	#{input 'geoupazilla.geodistrict.id' , type:'select', items:geodistricts,labelProperty:'name' } 
+		#{option}Any#{/option}
+	#{/input} 	
+
+	#{input 'geoupazilla.name' /}
+    #{input 'geoupazilla.nameBn' /}
+	#{input 'geoupazilla.code' /}
+	#{input 'geoupazilla.codeBn' /}
+    #{submit /}
+#{/form}
+
+#{cascade/}

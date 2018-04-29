@@ -1,0 +1,394 @@
+#{extends 'main.html' /}
+<section id="feature2" >
+	<div class="container">		
+		<div id="rootwizard">
+			<div class="navbar2">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul id="tabbar">
+							<li style="visibility:hidden"><a href="">Form 1</a></li>
+							<li><a href="@{Beneficiary.basicprofile()}">Form 1</a></li>
+							<li><a href="@{Beneficiary.tab2()}">Form 2</a></li>
+							<li><a href="#tab3" data-toggle="tab">Form 3</a></li>
+							<li><a href="@{Beneficiary.tab4()}">Form 4</a></li>
+							<li><a href="@{Beneficiary.tab5()}">Form 5</a></li>
+							<li><a href="@{Beneficiary.tab6()}">Form 6</a></li>
+							<li><a href="@{Beneficiary.tab7()}">Form 7</a></li>
+							<li><a href="@{Beneficiary.tab8()}">Form 8</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="bar" class="progress progress-striped active">
+			  <div class="bar"></div>
+			</div>
+			
+			<div class="tab-content">	
+				<div class="tab-pane" id="tab3"><!--tab3-->
+					 <div class="col-lg-12">
+		    <div class="panel panel-default">
+				 <div class="panel-heading">
+						Woman Beneficiary Profile	  </div>
+				<form method="POST" class="form-horizontal" action="./addmemberdetails">
+					<input type="hidden" name="beneficiaryProfile" value="${beneficiaryProfile?.id}"/>
+					<input  type="hidden" name="familyMemberDetails.id" value="${familyMemberDetails?.id}"/>
+					<input type="hidden" name="index" id="index" value="${familyMemberDetails?.listOfHousehold?familyMemberDetails.listOfHousehold.size():1}"/>
+				<div class="panel-body">
+				
+				<p>FAMILY MEMBERS :</p>
+				<div class="line"></div>
+				<div class="col-lg-4">
+				    <div class="form-group">
+						 #{input 'familyMemberDetails.numberOfFamilyMember' , type:'select', labelProperty:'name'} 											
+							%{												
+								for(int i=0;i<10;i++)
+								{
+									%}
+									<option value="${i}" #{if familyMemberDetails?.numberOfFamilyMember==(i)} selected#{/if}>${i}</option>
+									%{
+								}
+							%}
+						#{/input}
+				    </div>
+				</div>
+				<div class="col-lg-4">
+				    <div class="form-group">
+						 #{input 'familyMemberDetails.numberOfBoy' , type:'select', labelProperty:'name'} 											
+							%{												
+								for(int i=0;i<10;i++)
+								{
+									%}
+									<option value="${i}" #{if familyMemberDetails?.numberOfBoy==(i)} selected#{/if}>${i}</option>
+									%{
+								}
+							%}
+						#{/input}
+				    </div>
+				</div>
+				<div class="col-lg-4">
+				    <div class="form-group">
+						 #{input 'familyMemberDetails.numberOfGirl' , type:'select', labelProperty:'name'} 											
+							%{												
+								for(int i=0;i<10;i++)
+								{
+									%}
+									<option value="${i}" #{if familyMemberDetails?.numberOfGirl==(i)} selected#{/if}>${i}</option>
+									%{
+								}
+							%}
+						#{/input}
+				    </div>
+				</div>
+             <p>HOUSEHOLD INFORMATION :</p>
+				<div class="line"></div>
+
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr >
+						<th class="text-center">
+							#						
+							</th>
+						<th class="text-center">
+							Name						
+							</th>
+						<th class="text-center">
+							Age						
+							</th>
+						<th class="text-center">
+							Gender						
+							</th>
+						<th class="text-center">
+							Level of Education						
+							</th>
+						<th class="text-center">
+							Marital Status						
+							</th>
+						<th class="text-center">
+							Does he/she go to School?						
+							</th>
+						<th class="text-center">
+							Does he/she get anyScholarship?					
+								</th>
+						<th class="text-center">
+							Profession						
+							</th>
+						<th class="text-center">
+							is he/she an erning member						
+							</th>
+						<th class="text-center">
+							is he/she disabled						
+							</th>
+						<th class="text-center">
+							If Disabled, then specify:						
+							</th>
+						<th class="text-center">
+							Relation with beneficiary					
+								</th>
+						<th class="text-center">
+							Special Comments
+							</th>
+					</tr>
+				</thead>
+				<tbody>
+					%{
+					if(familyMemberDetails==null || familyMemberDetails.listOfHousehold==null)
+					{
+					%}
+					<tr id='addr0'>
+						<td>1</td>
+						<td>
+						<input type="text" name='name0'  placeholder='Name' class="form-control"/>					
+							</td>
+						<td>
+						<input type="text" name='age0' placeholder='Age' class="form-control"/>					
+							</td>
+						<td>
+						<!--<input type="text" name='gender0' placeholder='Mobile' class="form-control"/>						-->
+						<select name='gender0' class="form-control">
+							 <option value="Male">Male</option>
+							 <option value="Female">Female</option>
+							 <option value="Other">Other</option>
+						 </select>
+						</td>
+						<td>
+						<input type="text" name='eduLevel0' placeholder='Level' class="form-control"/>					
+							</td>
+						<td>
+						<select name='maritalStatus0' class="form-control">
+							 <option value="Single">Single</option>
+							 <option value="Married">Married</option>
+							 <option value="Unmarried">Unmarried</option>
+							 <option value="Divorced">Divorced</option>
+							 <option value="Widowed/Widower">Widowed/Widower</option>
+						 </select>
+						<!--<input type="text" name='maritalStatus0' placeholder='Mobile' class="form-control"/>-->
+							</td>
+						<td>
+						<!--<input type="text" name='isSchoolGoing0' placeholder='Mobile' class="form-control"/>					-->
+						<select name='isSchoolGoing0' class="form-control">
+							 <option value="Yes">Yes</option>
+							 <option value="No">No</option>
+						 </select>
+							</td>
+						<td>
+							<select name='haveScholarship0' class="form-control">
+							 <option value="Yes">Yes</option>
+							 <option value="No">No</option>
+						 </select>
+						<!--<input type="checkbox" name="haveScholarship0" value=""></td>-->
+						<td>
+						<input type="text" name='profession0' placeholder='Profession' class="form-control"/>					
+							</td>
+						<td>
+							<select name='isEarningMember0' class="form-control">
+							 <option value="Yes">Yes</option>
+							 <option value="No">No</option>
+						 </select>
+						<!--<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>					-->
+							</td>
+						<td>
+							<select name='isDisabled0' id='isDisabled0' class="form-control">
+							 <option value="Yes">Yes</option>
+							 <option value="No">No</option>
+						 </select>
+						 <!--<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>					-->
+							</td>
+						<td>
+						<input type="text" name='disabilityDesc0' id='disabilityDesc0' placeholder='Disability' class="form-control depends-on-isDisabled0"/>					
+							</td>
+						<td>
+						<input type="text" name='relationshipBen0' placeholder='Relationship' class="form-control"/>					
+							</td>
+						<td>
+						<input type="text" name='specialComment0' placeholder='Comment' class="form-control"/>					
+							</td>
+					</tr>
+                    <tr id='addr1'></tr>
+					%{
+					}
+					else
+					{
+						int index = 1;
+					%}
+					#{list items:familyMemberDetails.listOfHousehold, as:'householdInformation'}
+						
+					<tr id='addr${index-1}'>
+						<td>${index}</td>						
+						<td>
+						<input type="text" name='name${index-1}'  placeholder='Name' class="form-control" value="${householdInformation.name}"/>					
+							</td>
+						<td>
+						<input type="text" name='age${index-1}' placeholder='Age' class="form-control" value="${householdInformation.name}"/>					
+							</td>
+						<td>
+						<!--<input type="text" name='gender0' placeholder='Mobile' class="form-control"/>						-->
+						<select name='gender${index-1}' class="form-control">
+							 <option value="Male" #{if householdInformation?.gender.equals("Male")} selected#{/if}>Male</option>
+							 <option value="Female" #{if householdInformation?.gender.equals("Female")} selected#{/if}>Female</option>
+							 <option value="Other"  #{if householdInformation?.gender.equals("Other")} selected#{/if}>Other</option>
+						 </select>
+						</td>
+						<td>
+						<input type="text" name='eduLevel${index-1}' placeholder='Level' class="form-control" value="${householdInformation.eduLevel}"/>					
+							</td>
+						<td>
+						<select name='maritalStatus${index-1}' class="form-control">
+							 <option value="Single" #{if householdInformation?.maritalStatus.equals("Single")} selected#{/if}>Single</option>
+							 <option value="Married" #{if householdInformation?.maritalStatus.equals("Married")} selected#{/if}>Married</option>
+							 <option value="Unmarried" #{if householdInformation?.maritalStatus.equals("Unmarried")} selected#{/if}>Unmarried</option>
+							 <option value="Divorced" #{if householdInformation?.maritalStatus.equals("Divorced")} selected#{/if}>Divorced</option>
+							 <option value="Widowed/Widower" #{if householdInformation?.maritalStatus.equals("Widowed/Widower")} selected#{/if}>Widowed/Widower</option>
+						 </select>
+						<!--<input type="text" name='maritalStatus0' placeholder='Mobile' class="form-control"/>-->
+							</td>
+						<td>
+						<!--<input type="text" name='isSchoolGoing0' placeholder='Mobile' class="form-control"/>					-->
+						<select name='isSchoolGoing${index-1}' class="form-control">
+							 <option value="Yes" #{if householdInformation?.isSchoolGoing.equals("Yes")} selected#{/if}>Yes</option>
+							 <option value="No" #{if householdInformation?.isSchoolGoing.equals("No")} selected#{/if}>No</option>
+						 </select>
+							</td>
+						<td>
+							<select name='haveScholarship${index-1}' class="form-control">
+							 <option value="Yes" #{if householdInformation?.haveScholarship.equals("Yes")} selected#{/if}>Yes</option>
+							 <option value="No" #{if householdInformation?.haveScholarship.equals("No")} selected#{/if}>No</option>
+						 </select>
+						<!--<input type="checkbox" name="haveScholarship0" value=""></td>-->
+						<td>
+						<input type="text" name='profession${index-1}' placeholder='Profession' class="form-control" value="${householdInformation.profession}"/>					
+							</td>
+						<td>
+							<select name='isEarningMember${index-1}' class="form-control">
+							 <option value="Yes" #{if householdInformation?.isEarningMember.equals("Yes")} selected#{/if}>Yes</option>
+							 <option value="No" #{if householdInformation?.isEarningMember.equals("No")} selected#{/if}>No</option>
+						 </select>
+						<!--<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>					-->
+							</td>
+						<td>
+							<select name='isDisabled${index-1}' id='isDisabled${index-1}' class="form-control">
+							 <option value="Yes" #{if householdInformation?.isDisabled.equals("Yes")} selected#{/if}>Yes</option>
+							 <option value="No" #{if householdInformation?.isDisabled.equals("No")} selected#{/if}>No</option>
+						 </select>
+						 <!--<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>					-->
+							</td>
+						<td>
+						<input type="text" name='disabilityDesc${index-1}' id='disabilityDesc${index-1}' placeholder='Disability' class="form-control depends-on-isDisabled${index-1}" value="${householdInformation.disabilityDesc}"
+						#{if householdInformation?.isDisabled.equals("No")} disabled#{/if}/>					
+							</td>
+						<td>
+						<input type="text" name='relationshipBen${index-1}' placeholder='Relationship' class="form-control" value="${householdInformation.relationshipBen}"/>					
+							</td>
+						<td>
+						<input type="text" name='specialComment${index-1}' placeholder='Comment' class="form-control" value="${householdInformation.specialComment}"/>					
+							</td>
+					</tr>
+					%{
+						index++;
+					%}
+					#{/list}
+					<tr id='addr${index-1}'></tr>
+					%{
+					}
+					%}
+					
+					
+				</tbody>
+			</table>
+
+	<a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>				</div>
+				</div>
+				</div>
+				</div><!--/tab3-->
+					</form>
+					<ul class="pager wizard">
+						<li class="previous first" style="display:none;"><a href="#">First</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
+						<li class="next last" style="display:none;"><a href="#">Last</a></li>
+						<li class="next"><a href="#">Next</a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>	
+	</div><!--/.container-->
+</section><!--/#feature-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		var i=parseInt($('#index').val());		
+		for(var j = 0;j<i;j++)
+		{
+			$('#disabilityDesc'+j).dependsOn('#isDisabled'+j, ['Yes']);
+		}
+		$("#input-24").fileinput({
+			initialPreview: [
+				'<img src="../../../public/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+				'<img src="../../../public/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+			],
+			overwriteInitial: false,
+			maxFileSize: 100,
+			initialCaption: "The Moon and the Earth"
+		});
+		
+		$("#add_row").click(function(){
+			//$('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+			$('#addr'+i).html('<td>'+(i+1)+'</td><td><input type="text" name=\'name'+i+'\'  placeholder=\'Name\' class="form-control"/></td>'+
+			'<td><input type="text" name=\'age'+i+'\' placeholder=\'Age\' class="form-control"/></td>'+
+			'<td><select name=\'gender'+i+'\' class="form-control"><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other</option> </select></td>'+
+			'<td><input type="text" name=\'eduLevel'+i+'\' placeholder=\'Level\' class="form-control"/></td>'+
+			'<td><select name=\'maritalStatus'+i+'\' class="form-control"><option value="Single">Single</option><option value="Married">Married</option><option value="Unmarried">Unmarried</option><option value="Divorced">Divorced</option><option value="Widowed/Widower">Widowed/Widower</option></select></td>'+
+			'<td><select name=\'isSchoolGoing'+i+'\' class="form-control"><option value="Yes">Yes</option><option value="No">No</option></td>'+
+			'<td><select name=\'haveScholarship'+i+'\' class="form-control"><option value="Yes">Yes</option><option value="No">No</option></select></td>'+
+			'<td><input type="text" name=\'profession'+i+'\' placeholder=\'Profession\' class="form-control"/></td>'+
+			'<td><select name=\'isEarningMember'+i+'\' class="form-control"><option value="Yes">Yes</option><option value="No">No</option></select></td>'+
+			'<td><select name=\'isDisabled'+i+'\' id=\'isDisabled'+i+'\' class="form-control"><option value="Yes">Yes</option><option value="No">No</option></select></td>'+
+			'<td><input type="text" name=\'disabilityDesc'+i+'\' id=\'disabilityDesc'+i+'\' placeholder=\'Disability\' class="form-control depends-on-isDisabled'+i+'"/></td>'+
+			'<td><input type="text" name=\'relationshipBen'+i+'\' placeholder=\'Relationship\' class="form-control"/></td>'+
+			'<td><input type="text" name=\'specialComment'+i+'\' placeholder=\'Comment\' class="form-control"/></td>');
+
+			$('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+			$('#disabilityDesc'+i).dependsOn('#isDisabled'+i, ['Yes']);
+			i++; 
+			$('#index').val(i);
+		});
+		$("#delete_row").click(function(){
+			if(i>1){
+				$("#addr"+(i-1)).html('');
+				i--;
+				$('#index').val(i);
+			}
+		});
+	    $('#rootwizard').bootstrapWizard({
+			onNext: function(tab, navigation, index) {
+				if(index==2) {
+					// Make sure we entered the name
+					if(!$('#name').val()) {
+						alert('You must enter your name');
+						$('#name').focus();
+						return false;
+					}
+				}
+				$('.form-horizontal').submit();
+				// Set the name for the next tab
+				$('#tab9').html('Hello, ' + $('#name').val());
+				
+			}
+		});
+		
+		$('#rootwizard').bootstrapWizard('show', 0);
+		var navigation = $('.navbar2');
+		var $total = navigation.find('li').length-1;
+		var $current = 3;
+		var $percent = ($current/$total) * 100;
+		$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		//$( ".previous" ).removeClass( "disabled" );
+		$( ".next" ).removeClass( "disabled" );
+	
+		$('ul#tabbar li a').click(function(event){
+			//$(this).next('div').slideToggle(200);
+			//alert('eee');
+			event.preventDefault();
+		});
+	});
+	
+</script>

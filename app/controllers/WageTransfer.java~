@@ -1,0 +1,126 @@
+package controllers;
+
+import models.GEODistrict;
+import models.GEOUpazilla;
+import models.GEOUnion;
+import models.BeneficiaryMasterProfile;
+import models.WageTransferMaster;
+import models.WageTransferDetail;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+
+import play.Logger;
+import play.mvc.With;
+import controllers.deadbolt.Deadbolt;
+import controllers.deadbolt.ExternalRestrictions;
+
+@With(Deadbolt.class)
+public class WageTransfer extends Controller {
+	@ExternalRestrictions("Wage Transfer")
+	public static void wagetransfermasterrole() {
+		String wardCode = "", totalDays = "", fromDate ="",toDate="", paymentDate ="";
+		int cash = 0, savings = 0;
+		List<String> wards = new ArrayList<String>();
+		List<BeneficiaryMasterProfile> beneficiaryMasterProfileList = null;//BeneficiaryMasterProfile.findAll();
+		GEODistrict geodistrict = null;
+		GEOUpazilla geoupazilla = null;
+		GEOUnion geounion = null;
+		
+		List<GEOUpazilla> geoupazillas = null;
+		List<GEOUnion> geounions = null;
+		
+		//String districtId = request.params.get("district.id");
+		//String upazillaId = request.params.get("upazilla.id");
+		String unionId = request.params.get("geounion.id");
+		fromDate = request.params.get("fromDate");
+		toDate = request.params.get("toDate");
+		paymentDate = request.params.get("paymentDate");
+		wardCode = request.params.get("wardCode");
+		System.out.println("wardCode::"+wardCode);
+		totalDays = request.params.get("totalDays");
+		if(totalDays!=null && !totalDays.equals("null") && totalDays.length()>0)
+		{
+			cash = 150 * (Integer.parseInt(totalDays));
+			savings = 50 * (Integer.parseInt(totalDays));
+		}
+		if(wardCode!=null && !wardCode.equals("null") && wardCode.length()>0)
+		{
+			String[] s = wardCode.split(",");
+			for(int i = 0; i<s.length ; i++)
+			{
+				wards.add(s[i]);
+			}
+		}	
+		if(unionId!=null && !unionId.equals("null") && unionId.length()>0)
+		{
+			geounion = GEOUnion.findById(Long.parseLong(unionId));
+			geoupazilla = geounion.geoupazilla;//GEOUpazilla.findById(geounion.geoupazilla.id);
+			geodistrict = geoupazilla.geodistrict;//GEODistrict.findById(geoupazilla.geodistrict.id);
+			geoupazillas = GEOUpazilla.find("geodistrict=?",geodistrict).fetch();
+			geounions = GEOUnion.find("geoupazilla=?",geoupazilla).fetch();
+			beneficiaryMasterProfileList = BeneficiaryMasterProfile.find("beneficiaryStatus = 1 and geounion = ? and wardCode IN (:wards)",geounion).setParameter("wards",wards).fetch();
+		}		
+		List<GEODistrict> geodistricts = GEODistrict.findAll();
+		render(beneficiaryMasterProfileList,geodistricts,geoupazillas,geounions,geodistrict,
+geoupazilla,geounion,totalDays,cash,savings,wardCode,fromDate,toDate,paymentDate);
+	}
+
+	@ExternalRestrictions("Add Wage Transfer")
+	public static void addwagetransfermasterrole() {
+		WageTransferMaster wageTransferMaster = null;
+		WageTransferDetail wageTransferDetail = null;
+		String wardCode = "", totalDays = "", fromDate ="",toDate="", paymentDate ="",
+		index = "",noofworkingdays = "", cashStr = "",savingsStr = "",status = "", remarks = "";
+		int cash = 0, savings = 0, indx = 0;
+		BeneficiaryMasterProfile beneficiaryMasterProfile = null;//BeneficiaryMasterProfile.findAll();
+		GEODistrict geodistrict = null;
+		GEOUpazilla geoupazilla = null;
+		GEOUnion geounion = null;
+		
+		List<GEOUpazilla> geoupazillas = null;
+		List<GEOUnion> geounions = null;
+		
+		//String districtId = request.params.get("district.id");
+		//String upazillaId = request.params.get("upazilla.id");
+		index = request.params.get("index");
+		if(index!=null && !index.equals("null") && index.length()>0)
+		{
+			indx = Integer.parseInt(index);
+		}
+
+		String unionId = request.params.get("geounion.id");
+		fromDate = request.params.get("fromDate");
+		toDate = request.params.get("toDate");
+		paymentDate = request.params.get("paymentDate");
+		wardCode = request.params.get("wardCode");
+		System.out.println("wardCode::"+wardCode);
+		totalDays = request.params.get("totalDays");
+
+		if(unionId!=null && !unionId.equals("null") && unionId.length()>0)
+		{
+			geounion = GEOUnion.findById(Long.parseLong(unionId));
+			geoupazilla = geounion.geoupazilla;//GEOUpazilla.findById(geounion.geoupazilla.id);
+			geodistrict = geoupazilla.geodistrict;//GEODistrict.findById(geoupazilla.geodistrict.id);			
+		}		
+		wageTransferMaster = new WageTransferMaster();
+		wageTransferMaster.geounion = geounion;
+		wageTransferMaster.geoupazilla = geoupazilla;
+		wageTransferMaster.geodistrict = geodistrict;
+		DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd"); 
+		try {
+
+			Date startDate = (Date)formatter.parse(fromDate); 
+			System.out.println(startDate);
+			System.out.println(formatter.format(startDate));
+
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}		
+		
+	}
+}
+

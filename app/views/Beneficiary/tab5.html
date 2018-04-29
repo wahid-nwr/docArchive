@@ -1,0 +1,272 @@
+#{extends 'main.html' /}
+%{
+	boolean disabled = false;
+	String isDisabled = "";
+%}
+<section id="feature2" >
+	<div class="container">		
+		<div id="rootwizard">
+			<div class="navbar2">
+				<div class="navbar-inner">
+					<div class="container">
+							<ul id="tabbar">
+							<li style="visibility:hidden"><a href="">Form 1</a></li>
+							<li><a href="@{Beneficiary.basicprofile()}">Form 1</a></li>
+							<li><a href="@{Beneficiary.tab2()}">Form 2</a></li>
+							<li><a href="@{Beneficiary.tab3()}">Form 3</a></li>
+							<li><a href="@{Beneficiary.tab4()}">Form 4</a></li>
+							<li><a href="#tab5" data-toggle="tab">Form 5</a></li>
+							<li><a href="@{Beneficiary.tab6()}">Form 6</a></li>
+							<li><a href="@{Beneficiary.tab7()}">Form 7</a></li>
+							<li><a href="@{Beneficiary.tab8()}">Form 8</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+						
+			<div id="bar" class="progress progress-striped active">
+			  <div class="bar"></div>
+			</div>
+
+			<div class="tab-content">	
+				<div class="tab-pane" id="tab5"><!--tab5-->
+					<div class="col-lg-12">
+		            <div class="panel panel-default">
+						 <div class="panel-heading">
+								 Woman Beneficiary Profile 
+						 </div>
+						 <form method="POST" class="form-horizontal" action="./addanimaldetails">
+							 <input type="hidden" name="beneficiaryProfile" value="${beneficiaryProfile?.id}"/>
+							 <input  type="hidden" name="wealthInformation.id" value="${wealthInformation?.id}"/>
+							 <input type="hidden" name="index" id="index" value="1"/>
+							<div class="panel-body">
+							  <p>13. TREES :</p>
+				                 <div class="line"></div>
+								 <div class="row">
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	#{input 'wealthInformation.doesHaveTree' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if wealthInformation?.doesHaveTree.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if wealthInformation?.doesHaveTree.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(wealthInformation?.doesHaveTree.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+							        	 #{input 'wealthInformation.numberOfTrees',disabled:''+isDisabled, class:'form-control depends-on-wealthInformation.doesHaveTree' /} 
+								    </div>
+				                 </div>
+								 </div>
+
+								  <p>DOMESTIC ANIMALS:</p>
+								   <div class="line"></div>
+								   	<div class="row">
+								  <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.doesHaveAnimals' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if wealthInformation?.doesHaveAnimals.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if wealthInformation?.doesHaveAnimals.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(wealthInformation?.doesHaveTree.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+							        	 #{input 'wealthInformation.numberOfCowBuffelo',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveAnimals' /} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfGoatSheep',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveAnimals' /} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfDuckChicken',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveAnimals' /} 
+								    </div>
+				                 </div>
+								 </div>
+								  <p>AMOUNT OF FOOD INTAKE:</p>
+								   <div class="line"></div>
+								    <div class="row">
+								   <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.foodTakenEachDay' , type:'select', labelProperty:'name'}
+											 <option value="More than sufficient" #{if wealthInformation?.foodTakenEachDay.equals("More than sufficient")} selected#{/if}>More than sufficient</option>
+											 <option value="Sufficient" #{if wealthInformation?.foodTakenEachDay.equals("Sufficient")} selected#{/if}>Sufficient</option>
+											 <option value="Sometimes scarcity occurs" #{if wealthInformation?.foodTakenEachDay.equals("Sometimes scarcity occurs")} selected#{/if}>Sometimes scarcity occurs</option>
+											 <option value="Always scarcity occurs" #{if wealthInformation?.foodTakenEachDay.equals("Always scarcity occurs")} selected#{/if}>Always scarcity occurs</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 </div>
+								 <p>WEALTH :</p>
+								   <div class="line"></div>
+								   <div class="row">
+									<div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.doesHaveWealth' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if wealthInformation?.doesHaveWealth.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if wealthInformation?.doesHaveWealth.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(wealthInformation?.doesHaveWealth.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+							        	 #{input 'wealthInformation.numberOfTvRadio',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfMobile',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfCycleVan',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+				                 </div>
+				                 <div class="row">
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfSewingMachine',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfBed',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	 #{input 'wealthInformation.numberOfTableChair',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+							        	#{input 'wealthInformation.numberOfShowCase',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+								    </div>
+				                 </div>
+				                 </div>
+				                 <div class="row">
+								 <div class="col-lg-3">
+								   <div class="form-group">  
+                                        #{input 'wealthInformation.others',disabled:''+isDisabled,class:'form-control depends-on-wealthInformation.doesHaveWealth'/} 
+                                    </div>
+									</div>
+								   </div>
+								   </div>
+								   </div>
+						     </div>
+						     </form>
+				</div><!--/tab5-->
+<ul class="pager wizard">
+						<li class="previous first" style="display:none;"><a href="#">First</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
+						<li class="next last" style="display:none;"><a href="#">Last</a></li>
+						<li class="next"><a href="#">Next</a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>	
+	</div><!--/.container-->
+</section><!--/#feature-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#wealthInformation_numberOfTrees').dependsOn('#wealthInformation\\.doesHaveTree', ['Yes']);
+		
+		$('#wealthInformation_numberOfCowBuffelo').dependsOn('#wealthInformation\\.doesHaveAnimals', ['Yes']);
+		$('#wealthInformation_numberOfGoatSheep').dependsOn('#wealthInformation\\.doesHaveAnimals', ['Yes']);
+		$('#wealthInformation_numberOfDuckChicken').dependsOn('#wealthInformation\\.doesHaveAnimals', ['Yes']);
+		
+		$('#wealthInformation_numberOfTvRadio').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_numberOfMobile').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_numberOfCycleVan').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_numberOfSewingMachine').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_numberOfBed').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_numberOfTableChair').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_numberOfShowCase').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		$('#wealthInformation_others').dependsOn('#wealthInformation\\.doesHaveWealth', ['Yes']);
+		var i=1;		
+		$("#input-24").fileinput({
+			initialPreview: [
+				'<img src="../../../public/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+				'<img src="../../../public/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+			],
+			overwriteInitial: false,
+			maxFileSize: 100,
+			initialCaption: "The Moon and the Earth"
+		});
+		
+		$("#add_row").click(function(){
+			$('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+
+			$('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+			i++; 
+		});
+		$("#delete_row").click(function(){
+			if(i>1){
+				$("#addr"+(i-1)).html('');
+				i--;
+			}
+		});
+	    $('#rootwizard').bootstrapWizard({
+			onNext: function(tab, navigation, index) {
+				if(index==2) {
+					// Make sure we entered the name
+					if(!$('#name').val()) {
+						alert('You must enter your name');
+						$('#name').focus();
+						return false;
+					}
+				}
+				$('.form-horizontal').submit();
+				// Set the name for the next tab
+				$('#tab9').html('Hello, ' + $('#name').val());
+				
+			}
+		});
+		
+		$('#rootwizard').bootstrapWizard('show', 0);
+		var navigation = $('.navbar2');
+		var $total = navigation.find('li').length-1;
+		var $current = 5;
+		var $percent = ($current/$total) * 100;
+		$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		//$( ".previous" ).removeClass( "disabled" );
+		$( ".next" ).removeClass( "disabled" );
+	});
+</script>

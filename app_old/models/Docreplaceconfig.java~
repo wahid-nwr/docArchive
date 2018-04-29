@@ -1,0 +1,25 @@
+package models;
+
+import javax.persistence.Entity;
+import net.sf.oval.constraint.Length;
+
+import play.data.validation.Unique;
+import play.db.jpa.Model;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import play.data.validation.Required;
+import java.util.Calendar;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import javax.persistence.Basic;
+import org.hibernate.annotations.Cascade;
+import javax.persistence.CascadeType;
+
+@Entity
+public class Docreplaceconfig extends Model {
+	public String docname = null;
+	public DocumentSet documentSet;
+	ArrayList<String> replaceList = new ArrayList<String>();
+	//public List<String> replaceList = new ArrayList<String>();
+}

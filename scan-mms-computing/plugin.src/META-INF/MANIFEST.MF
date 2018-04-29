@@ -1,0 +1,1063 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0 (Sun Microsystems Inc.)
+
+Name: sun/plugin/viewer/frame/IExplorerEmbeddedFrame$2.class
+SHA1-Digest: pgijc6tYgmJ58DvZU8jPEnOfej4=
+
+Name: sun/plugin/util/PluginSysUtil$DummyDialog.class
+SHA1-Digest: qtTfRnLRScBpYIcKO2WY3JP0NtI=
+
+Name: sun/plugin/dom/html/HTMLScriptElement.class
+SHA1-Digest: EZDBew08FytICW1RinKMsvo+9PA=
+
+Name: sun/plugin/resources/Activator_it.class
+SHA1-Digest: 3PF0X3Y1wQpIaxqo3z06KjwjuHc=
+
+Name: sun/plugin/AppletViewer$2.class
+SHA1-Digest: NanKariSwe7DdOg1c3B4QPUkFWk=
+
+Name: sun/plugin/security/JDK11ClassFileTransformer$Broken11Transforme
+ r_1.class
+SHA1-Digest: 5u00AAKvpLCsdHh2WGSJ5l3Snm8=
+
+Name: sun/plugin/com/DispatchImpl$2.class
+SHA1-Digest: IdemVSs830XKxzQDy6DiKdMoses=
+
+Name: sun/plugin/dom/core/Comment.class
+SHA1-Digest: ZCTxbxakDVfrh1HmVVaTnYge9us=
+
+Name: sun/plugin/com/DispatchClient.class
+SHA1-Digest: BS3YnKT7/myvPbWheEjiFsEe6vY=
+
+Name: sun/plugin/perf/PluginRollup$Event.class
+SHA1-Digest: pzKkPKx7fu+W/Sgza8s8GhxP7SI=
+
+Name: sun/plugin/dom/html/HTMLTableRowElement.class
+SHA1-Digest: Pc/wG7zQYzEclGa6fsslyKetTfM=
+
+Name: sun/plugin/viewer/context/DefaultPluginAppletContext$1.class
+SHA1-Digest: Gm58oYGYiiLn9/p8uNfQUi+i644=
+
+Name: sun/plugin/javascript/navig/Window.class
+SHA1-Digest: ujtebewtwl/q83Z86rCNFqJ0NEY=
+
+Name: sun/plugin/com/PropertyGetDispatcher.class
+SHA1-Digest: k+5bl24hwNygcufGBYOuVr8Vi2o=
+
+Name: sun/plugin/javascript/navig/JSObjectFactory.class
+SHA1-Digest: CPGJOmuIrvBO7WVxEzVQzUG7iB8=
+
+Name: sun/plugin/dom/exception/InvalidAccessException.class
+SHA1-Digest: kYS7IqtVJHN0r/d8crAe51mfYhE=
+
+Name: sun/plugin/dom/html/ns4/HTMLImageCollection.class
+SHA1-Digest: vlfGr/4Wooq3CpFpeT5HjNWHcVY=
+
+Name: sun/plugin/com/AmbientProperty.class
+SHA1-Digest: T+9cN3N6ye9SLCRCLhMYjt6nd74=
+
+Name: sun/plugin/viewer/context/AppletAudioClip.class
+SHA1-Digest: ybWCR2YeSiSmOHkoncQPSvzZlqU=
+
+Name: netscape/javascript/JSObject.class
+SHA1-Digest: 4SBZpKzn/F9FTzyXF0/L+yDfKHU=
+
+Name: sun/plugin/services/AxBridgeBrowserService.class
+SHA1-Digest: R5G/PDwAL12k+R7Xf1AWx3Am/rQ=
+
+Name: sun/plugin/extension/ExtensionInstallationImpl.class
+SHA1-Digest: 02qq27YTcKCbDRf08YSmNlU6Two=
+
+Name: sun/plugin/util/GrayBoxPanel.class
+SHA1-Digest: juPNHcWshLdVuUPU3gW5jzjm+Sc=
+
+Name: sun/plugin/dom/DOMServiceProvider.class
+SHA1-Digest: 2ASKPWzz6s8rz2YIdLNZj4ln2oA=
+
+Name: sun/plugin/util/ProgressMonitor.class
+SHA1-Digest: r1lYCQvdpQHVYZ+mB7ncDS/FjfE=
+
+Name: sun/plugin/util/PluginSysUtil$SysExecutionThread.class
+SHA1-Digest: yRzd1z1ET7iiPW0REIzpzyrU2QE=
+
+Name: sun/plugin/security/Broken11ClassFixer.class
+SHA1-Digest: pVZDpoB9jeF5Oo5keoFxxT73j/w=
+
+Name: sun/plugin/net/proxy/PluginProxyServiceProvider.class
+SHA1-Digest: WwdQTeffnT6tEMN2+TIdZrttmWA=
+
+Name: sun/plugin/JavaRunTime.class
+SHA1-Digest: pS/7bOGggI0fNKA9CpiBJUVgY6o=
+
+Name: sun/plugin/dom/css/CSSConstants.class
+SHA1-Digest: XPXagjHrUSAUW6SrP000EU7Ku3U=
+
+Name: sun/plugin/viewer/frame/IExplorerEmbeddedFrame$4.class
+SHA1-Digest: nu6h4K+hc9rZ9fRPjccpW2U/0io=
+
+Name: sun/plugin/cache/OldCacheEntry.class
+SHA1-Digest: 44CEVHoBY2Jtxl1M7thC8H66nE4=
+
+Name: sun/plugin/util/PluginSysUtil$AppContextCreatorThread.class
+SHA1-Digest: vZH8Msx/QLDgP0nJ+vxRC2U2Rlc=
+
+Name: sun/plugin/security/ActivatorSecurityManager.class
+SHA1-Digest: 5FamHCG5g5d5nu1iwQqYxP3pt5A=
+
+Name: netscape/security/Privilege.class
+SHA1-Digest: 1ewrEBAvns/zTQM0uCyhRjns6jg=
+
+Name: sun/plugin/dom/html/HTMLCollection.class
+SHA1-Digest: rCGsXmhvdKzkmj41bYIK181M0DQ=
+
+Name: sun/plugin/security/PluginClassLoader.class
+SHA1-Digest: NTy4hCiNLwMdWeaHvYvAZFAJvM8=
+
+Name: sun/plugin/cache/CacheUpdateHelper.class
+SHA1-Digest: SuZNFnytLv0c7GVqW3ykS+AmDJU=
+
+Name: sun/plugin/dom/html/ns4/HTMLAppletCollection.class
+SHA1-Digest: nLq/3JG0DnKYEFJmLnB/IaSzv6s=
+
+Name: sun/plugin/viewer/frame/WNetscapeEmbeddedFrame$2.class
+SHA1-Digest: NhSyDAoSc8bUEfStuH04J1i+z68=
+
+Name: sun/plugin/dom/html/HTMLHeadElement.class
+SHA1-Digest: ve3qYX2w1kmGOz+8qvIa5SslbdI=
+
+Name: sun/plugin/viewer/AppletPanelCache.class
+SHA1-Digest: G7C8+phspsQz2U+fRIkmhfj3GAA=
+
+Name: sun/plugin/services/WPlatformService.class
+SHA1-Digest: axySOQOlSEQkGfePFBNhpYTR6Ag=
+
+Name: sun/plugin/viewer/context/AppletAudioClip$1.class
+SHA1-Digest: SGM+RmWXXLrLtI5KFK8uE9w/MPM=
+
+Name: sun/plugin/security/JDK11ClassFileTransformer$1.class
+SHA1-Digest: /7hcxRjCo5WGhz9FSI9qzA6PP6Q=
+
+Name: sun/plugin/ClassLoaderInfo.class
+SHA1-Digest: KnjM6jTkS9y0VsKFbiARKz09PSY=
+
+Name: sun/plugin/util/graybox_error.gif
+SHA1-Digest: TtZ6xGtb5mgyZM9fOAuBf1CGF8M=
+
+Name: netscape/security/PrivilegeTable.class
+SHA1-Digest: f+df9iyVnvis8ADiGE6Ry//fsDg=
+
+Name: sun/plugin/com/event/COMEventHandler.class
+SHA1-Digest: kta+zqAA3HyBBxEHB58n/2J/8EA=
+
+Name: sun/plugin/com/event/COMEventListener.class
+SHA1-Digest: ecGvTepT4AlHSG44of06DtCk6So=
+
+Name: sun/plugin/dom/html/HTMLAnchorElement.class
+SHA1-Digest: 5VZDXUe/LEefpUYc//7O0TnOGwE=
+
+Name: sun/plugin/dom/html/HTMLImageElement.class
+SHA1-Digest: euJrE+dbjjB0rZFi+HN1rijbTwY=
+
+Name: sun/plugin/javascript/navig/History.class
+SHA1-Digest: XzJSBrjRv8Hf0nGCgLJMhY7wZR8=
+
+Name: sun/plugin/javascript/navig4/LayerArray.class
+SHA1-Digest: tyAmexkKhpCod0Uce9oufXvkdd8=
+
+Name: sun/plugin/dom/html/HTMLLegendElement.class
+SHA1-Digest: 5V80zNjgJZDCp1FhALYGIoy63B8=
+
+Name: sun/plugin/JavaRunTime$2.class
+SHA1-Digest: I9ZxAmw9wbQWO2iBvenaV1ogalM=
+
+Name: sun/plugin/security/PluginClassLoader$1.class
+SHA1-Digest: efxyXfhv2aeHzgxeMMIayz1PntU=
+
+Name: sun/plugin/ClassLoaderInfo$1.class
+SHA1-Digest: YRWF6HwdsF+2V5px7+uzCHVtlCA=
+
+Name: sun/plugin/com/ParameterListCorrelator.class
+SHA1-Digest: YN/tUaBIDcupxnSPIJiPTGuM4UY=
+
+Name: sun/plugin/javascript/navig4/UIBar.class
+SHA1-Digest: irUxfpi/lFUcbh3GzZfKbKTQ4mc=
+
+Name: sun/plugin/cache/OldCacheEntry$1.class
+SHA1-Digest: P+O0g9qdZQV+sON20D/TzB+GgCU=
+
+Name: sun/plugin/liveconnect/SecureInvocation$1.class
+SHA1-Digest: 7yKy+YYLR6na+fT+EO78h0UVpqY=
+
+Name: sun/plugin/dom/html/HTMLBaseFontElement.class
+SHA1-Digest: FbvdI5aZEIfseFJ1SKvflhKR5kY=
+
+Name: sun/plugin/extension/ExtensionUtils$1.class
+SHA1-Digest: UuBSNMffqOu/gxWPuE5ApcPQxkw=
+
+Name: sun/plugin/net/protocol/jar/CachedJarURLConnection$1.class
+SHA1-Digest: BggbFqHeEK7yuBboxMheVwqasPs=
+
+Name: sun/plugin/dom/html/HTMLTextAreaElement.class
+SHA1-Digest: sUhO7V3wgWB+ww9iPnzl2KZmFyU=
+
+Name: sun/plugin/dom/html/HTMLModElement.class
+SHA1-Digest: HEO2U6mTtDvAhnuzBIiklUrWYYs=
+
+Name: sun/plugin/util/Trace.class
+SHA1-Digest: v8OHRypZVbDses5j/AcUtY24oYY=
+
+Name: sun/plugin/javascript/JSObject.class
+SHA1-Digest: ib2/URx+MV4yUrD/V6WMv123kG8=
+
+Name: sun/plugin/dom/css/CSSFontFaceRule.class
+SHA1-Digest: w+P931fJqOqkfyM7UyXIf8LXlhM=
+
+Name: sun/plugin/com/Dispatch.class
+SHA1-Digest: 90IwIoX6j/9VubwPR45zcdw05Qs=
+
+Name: sun/plugin/com/Packager.class
+SHA1-Digest: J88Dlp0na4vZ3pEsO/WJoVZeM4M=
+
+Name: sun/plugin/dom/core/CharacterData.class
+SHA1-Digest: YK101j/jfs90BQqZuon+EX3y6OU=
+
+Name: sun/plugin/javascript/navig4/JSObjectFactory.class
+SHA1-Digest: j0nDGEBvLXwda2oWEjo5dZuazsU=
+
+Name: sun/plugin/dom/html/HTMLUListElement.class
+SHA1-Digest: Rzj835sXq2dA/9jjlSM80zYTYTo=
+
+Name: sun/plugin/viewer/context/AppletAudioClipFactory$1.class
+SHA1-Digest: 0hBR/Dj7JqM8QWctfCSGVQtiNCU=
+
+Name: sun/plugin/dom/stylesheets/StyleSheetList.class
+SHA1-Digest: jjISieuG0wtZihL9N7/mIfGpr/0=
+
+Name: sun/plugin/viewer/context/PluginAppletContext.class
+SHA1-Digest: J1uvDPbJYyNhyXSKz/d9mSYYyTw=
+
+Name: sun/plugin/security/StripClassFile$ConstantPool.class
+SHA1-Digest: 2oKskdBhJJOvBUUYYLD9h7lHFbo=
+
+Name: sun/plugin/javascript/navig/Array.class
+SHA1-Digest: ZKH3+TPRiJXcZGInFMq35CH28no=
+
+Name: sun/plugin/dom/html/HTMLTitleElement.class
+SHA1-Digest: 8KUFG+Xhjaed6FZCGCZTBpsyEKM=
+
+Name: sun/plugin/services/WIExplorerBrowserService$1.class
+SHA1-Digest: 75uaKnk33oDb4niI1hMHga+qc0Q=
+
+Name: sun/plugin/security/StripClassFile$ByteStream.class
+SHA1-Digest: FF6qyEqRH9keJcJaxTxUPHNQfHk=
+
+Name: sun/plugin/dom/css/CSSPrimitiveValue.class
+SHA1-Digest: Ha7Doovij059h9c2ONjYhG2zcGM=
+
+Name: sun/plugin/ClassLoaderInfo$LoaderReference.class
+SHA1-Digest: 9ZkVBp1J2kHPwMCZl6z8shg/YRg=
+
+Name: sun/plugin/dom/html/HTMLMapElement.class
+SHA1-Digest: pA6pe9Y7OZEPFlxIAjIiQ8uwabk=
+
+Name: sun/plugin/dom/html/HTMLOListElement.class
+SHA1-Digest: 05ttSOM1jFdmET1ondiZXj4p2EY=
+
+Name: sun/plugin/dom/html/HTMLElement.class
+SHA1-Digest: yQcNfR7rhpJSRkK5SRt/YTbYqD8=
+
+Name: sun/plugin/dom/html/ns4/HTMLAnchorCollection.class
+SHA1-Digest: iN12YrO5iD/FfE8bFUZo+SXpWfI=
+
+Name: sun/plugin/liveconnect/ReplaceMethod.class
+SHA1-Digest: gWnERwQ2djxrDVZvaR07GUa9kPA=
+
+Name: sun/plugin/dom/html/HTMLObjectElement.class
+SHA1-Digest: Mafl+IpNAwPn8Bhz+opxGgEvdIk=
+
+Name: sun/plugin/viewer/IExplorerAppletStatusListener.class
+SHA1-Digest: +X8ZApYlLEdLx+d7JWlSv7PvMxk=
+
+Name: sun/plugin/dom/html/HTMLHtmlElement.class
+SHA1-Digest: X8cRjPs/JIeAvKP1M6RKRgJHPk8=
+
+Name: sun/plugin/javascript/navig/FrameArray.class
+SHA1-Digest: greVuc6utnfHqkkAwlJbedYwQ3E=
+
+Name: sun/plugin/dom/html/ns4/HTMLFormCollection.class
+SHA1-Digest: eMiqjm4UDmk83fru+TOVkSBfw08=
+
+Name: sun/plugin/extension/ExtensionUtils.class
+SHA1-Digest: SDLuGfSK+P2yqTztbLtE+fTuOKI=
+
+Name: sun/plugin/dom/exception/HierarchyRequestException.class
+SHA1-Digest: UwVe+utpVC3iTp/KWo9DhGdCdVI=
+
+Name: sun/plugin/viewer/IExplorerAppletStatusListener$1.class
+SHA1-Digest: 2JVJ1Q8/R4N67yPlaw32BXoVIpI=
+
+Name: sun/plugin/viewer/context/AxBridgeAppletContext.class
+SHA1-Digest: C5v97I+VK8Q/4FoKAYq2OJ3C6zM=
+
+Name: sun/plugin/resources/Activator_de.class
+SHA1-Digest: wkpCFl0OvYysrB1vsQXal0a/zZk=
+
+Name: sun/plugin/util/GrayBoxPainter$1.class
+SHA1-Digest: I+pikg8WVezkRr7FxIVRWyS8EFE=
+
+Name: sun/plugin/viewer/context/IExplorerAppletContext.class
+SHA1-Digest: r/xCnbakgasfseNrK7vdNF+Yc/w=
+
+Name: sun/plugin/viewer/AxBridgeObject.class
+SHA1-Digest: 7yPL4BHq2n0HNyi6GTFEayuZefY=
+
+Name: sun/plugin/dom/DOMObjectFactory.class
+SHA1-Digest: aD7ukXYTRJWrq77SvsIV/2atpX4=
+
+Name: sun/plugin/com/DispatchImpl$4.class
+SHA1-Digest: X+woVVaRxlVpB/LiBDK5iwK1DdI=
+
+Name: sun/plugin/viewer/AxBridgeObject$1.class
+SHA1-Digest: PKotaoeKjLKG6FyNU58I2aDcd4w=
+
+Name: sun/plugin/util/PluginSysUtil$2.class
+SHA1-Digest: IMy1tOg1ZQmVl2DcjRuXDnQgVpI=
+
+Name: sun/plugin/viewer/frame/IExplorerEmbeddedFrame$3.class
+SHA1-Digest: Wv1Gl1raqTsS4OWlUU1tkSYKQvQ=
+
+Name: sun/plugin/liveconnect/PrivilegedGetFieldAction.class
+SHA1-Digest: hAFaUteryRwgIJG4i63U1LceXJg=
+
+Name: sun/plugin/dom/css/ViewCSS.class
+SHA1-Digest: wSFb/rUsHpf9xWg4+Mh4qkWxD4g=
+
+Name: sun/plugin/util/PluginSysUtil$DummyDialog$1.class
+SHA1-Digest: FSVot+nq07Yz1CZFjd0VR8kt9Q8=
+
+Name: sun/plugin/util/JavaCupLogo-161.png
+SHA1-Digest: 1UBobb+HW6fcY9lTQN/smRI8RBo=
+
+Name: sun/plugin/javascript/navig5/SecurityContext.class
+SHA1-Digest: EvL2IJX0qRfHsF+PTYBNxWPCZGU=
+
+Name: sun/plugin/perf/PluginRollup$EventSet.class
+SHA1-Digest: Ic44PMYvVdwTm5HLXzLV3frzigg=
+
+Name: netscape/security/PrivilegeManager.class
+SHA1-Digest: GKccg90c+QMlm8f8CDZebWX6J8o=
+
+Name: sun/plugin/liveconnect/LiveConnect.class
+SHA1-Digest: eeFyhDDXB7HWGqszBRF/GiXZjD4=
+
+Name: sun/plugin/PluginURLJarFileCallBack.class
+SHA1-Digest: 13CmV/cMY5sHeOts+0Y3Sk/zEL0=
+
+Name: sun/plugin/resources/Activator_ko.class
+SHA1-Digest: ayjECByMiEdbRYEutAli5LF0XuE=
+
+Name: sun/plugin/com/NullString.class
+SHA1-Digest: aZgmijCpxOerH9B5qwlQBdsxC1A=
+
+Name: sun/plugin/dom/exception/PluginNotSupportedException.class
+SHA1-Digest: xV1v7fpuO/UAz1l0HLTRiH4a0QA=
+
+Name: sun/plugin/dom/DOMAccessor.class
+SHA1-Digest: IsEfgEJP1PUu/fqEZoCHi5iFbbU=
+
+Name: sun/plugin/javascript/JSClassLoader.class
+SHA1-Digest: euXnF6FFySu8HLyx1vkLvA6pS4g=
+
+Name: sun/plugin/viewer/frame/AxBridgeEmbeddedFrame.class
+SHA1-Digest: 0TYJlFV1NvxepLkUnoUNKYuIWYg=
+
+Name: sun/plugin/util/AnimationPanel.class
+SHA1-Digest: T7qcvB8hcy6V10PmC5736jZAdbE=
+
+Name: sun/plugin/com/DispatchImpl$5.class
+SHA1-Digest: iPdIlca+Z8Ksm+i3Au6Qp0F+Gzk=
+
+Name: sun/plugin/BeansApplet.class
+SHA1-Digest: Xtj1yuUsOt7lAt3X8zsTq/tDzzM=
+
+Name: sun/plugin/dom/css/CSSStyleRule.class
+SHA1-Digest: t49I1oui9NziWyluLKwYWe7p+nk=
+
+Name: sun/plugin/javascript/navig/Element.class
+SHA1-Digest: 1gUp4nKHnSfpOwuDpW+jvjp6UGU=
+
+Name: sun/plugin/net/cookie/Netscape4CookieHandler.class
+SHA1-Digest: L6S5Lrff4ERvsiPe/s7My4EjSfg=
+
+Name: sun/plugin/com/BeanDispatchImpl.class
+SHA1-Digest: cWq8sgiERreNlJw3LqxowwmgmQA=
+
+Name: sun/plugin/viewer/AxBridgeContext.class
+SHA1-Digest: kbnXOlb7IMfwK4yGlN5+nyTXZOE=
+
+Name: sun/plugin/dom/core/Node.class
+SHA1-Digest: 6EP5cVfW2NOVVPARrHi5HNx7HEw=
+
+Name: sun/plugin/dom/html/HTMLHRElement.class
+SHA1-Digest: pfsih3rd+que9OmSQ/vGyatLoW0=
+
+Name: sun/plugin/viewer/context/DefaultPluginAppletContext.class
+SHA1-Digest: +CsOWDCOhIgTD3xD5Go1GvJPSLs=
+
+Name: sun/plugin/services/WNetscape6BrowserAuthenticator.class
+SHA1-Digest: nkJ1Iu/VcfnmYNbo2rnxbk5hi8k=
+
+Name: sun/plugin/liveconnect/SecureInvocation$4.class
+SHA1-Digest: 4IpNq6frBrXomWEYhxgwiuaIXBU=
+
+Name: sun/plugin/dom/html/HTMLLinkElement.class
+SHA1-Digest: vBen2VCYX5oT1wTP9GAo2XllDEg=
+
+Name: sun/plugin/dom/html/HTMLTableColElement.class
+SHA1-Digest: DQkRvjk4F7Tau7Ipm9kTXbYyM+c=
+
+Name: sun/plugin/liveconnect/SecureInvocation$3.class
+SHA1-Digest: IPxUQSUVEa9JuFCUxo2wwaNWwLU=
+
+Name: sun/plugin/util/java-watermark.gif
+SHA1-Digest: /R2S8H73POd2stD6pYXnh/tAPB0=
+
+Name: sun/plugin/WJcovUtil.class
+SHA1-Digest: OB5gNG4+q5m1Uv/nH39WWPtKCTI=
+
+Name: sun/plugin/viewer/context/WNetscape6AppletContext.class
+SHA1-Digest: eXWeSl7dVZMRqx6+GDZfxL+jIYk=
+
+Name: sun/plugin/util/PluginSysUtil.class
+SHA1-Digest: yFvKAguBGQfx0z8HHZflqq9kaxo=
+
+Name: sun/plugin/javascript/navig4/Window.class
+SHA1-Digest: VLEJZCi+oMKsu3v/xBTeNzcfcyo=
+
+Name: netscape/security/UserDialogHelper.class
+SHA1-Digest: iR7cjt7wFsdN8ht78JVwwivoue8=
+
+Name: sun/plugin/dom/exception/InvalidStateException.class
+SHA1-Digest: usslzfxfZZV3PHWVX+u+Ona731M=
+
+Name: sun/plugin/viewer/context/NetscapeAppletContext.class
+SHA1-Digest: 2kcAp/9R7HRfnpTW2eUnl2EMUgM=
+
+Name: sun/plugin/dom/core/Attr.class
+SHA1-Digest: VKIBhMWqL7vP3OzFPxEY2+BX4FU=
+
+Name: sun/plugin/dom/html/HTMLAreaElement.class
+SHA1-Digest: XW2kCZZPTvz1OgoodhmUM9UXD4U=
+
+Name: sun/plugin/liveconnect/JavaScriptPermission.class
+SHA1-Digest: 7oC1dmoWNCDFzONEUxBDAOgd1Is=
+
+Name: sun/plugin/com/Dispatcher.class
+SHA1-Digest: nwYpbmE9Fb679vMMXBhwKfJG6aY=
+
+Name: sun/plugin/AppletViewer.class
+SHA1-Digest: GemtokJTu9pDFe/C/CVXfTT4Lto=
+
+Name: sun/plugin/dom/html/HTMLOptGroupElement.class
+SHA1-Digest: EOp3I8Ldkpi2TWYDVXPjWLoJ77E=
+
+Name: sun/plugin/net/proxy/WNetscape6BrowserProxyHandler.class
+SHA1-Digest: 2U/tPTg0wKD07H3lWe/c4G7cios=
+
+Name: sun/plugin/dom/exception/BrowserNotSupportedException.class
+SHA1-Digest: jPMLtDbJyMlxWCRi6pgHko5jVdI=
+
+Name: sun/plugin/security/JDK11ClassFileTransformer.class
+SHA1-Digest: Xju+bbLSIBDVY8ZkKENXq1YDxS0=
+
+Name: sun/plugin/dom/core/Text.class
+SHA1-Digest: voamqW2C+dJLPJCtFRfDbr2MWgA=
+
+Name: sun/plugin/dom/html/HTMLLabelElement.class
+SHA1-Digest: SJ9UidHP3I36UraBcPC87Rt8IVk=
+
+Name: sun/plugin/dom/html/HTMLDocument.class
+SHA1-Digest: UnlmTgGmR2CNP29NqUgn08kYS+k=
+
+Name: netscape/javascript/JSUtil.class
+SHA1-Digest: U45VmxPRjeOe45XOW28FtskWzt4=
+
+Name: sun/plugin/dom/html/HTMLMenuElement.class
+SHA1-Digest: RlfPJMIzABapa+T5KVpJxNgPocc=
+
+Name: sun/plugin/net/protocol/jar/CachedJarURLConnection.class
+SHA1-Digest: VFsSAVUW7/1hfSsKqI3lHsiq3MA=
+
+Name: sun/plugin/viewer/frame/IExplorerEmbeddedFrame.class
+SHA1-Digest: 0uKv+C+u+s0gz1Rm+DjTirPa7zc=
+
+Name: sun/plugin/viewer/WNetscapePluginObject.class
+SHA1-Digest: 6MvcUVZsObyJdj6ahZ9+eoenCWs=
+
+Name: sun/plugin/com/NameIDMap.class
+SHA1-Digest: 9LEDa5syMcVlGDlDakRd/1sgCuU=
+
+Name: sun/plugin/javascript/navig/Document.class
+SHA1-Digest: lKx2CDvOF1tKZ8wVUBZYZ1XJL9U=
+
+Name: sun/plugin/dom/html/HTMLConstants.class
+SHA1-Digest: +iAMY7rksoBWli10xSakp1flSeE=
+
+Name: sun/plugin/dom/html/HTMLStyleElement.class
+SHA1-Digest: 7XwdVE5Pm4GzO7J7VtjplB5GXZU=
+
+Name: sun/plugin/resources/Activator.class
+SHA1-Digest: nvLFOAQUrPaRQpZ1oxvmf3uCVdQ=
+
+Name: sun/plugin/dom/css/CSSPageRule.class
+SHA1-Digest: WPRVY/DGl5t9/jMas7RCglXSVFQ=
+
+Name: sun/plugin/util/TraceFilter.class
+SHA1-Digest: lioEq7KVX83pRWkCJsknKrPX2Mg=
+
+Name: sun/plugin/javascript/navig/FormArray.class
+SHA1-Digest: Uh6IGsA13cP/nJuY9WqzrMqmeAI=
+
+Name: sun/plugin/dom/html/HTMLBodyElement.class
+SHA1-Digest: JbzRQgRJmh/xkx972w26vqoPVOs=
+
+Name: sun/plugin/javascript/navig/URL.class
+SHA1-Digest: ZTbDLyjYwT8GWjhDFYqnEpcstM4=
+
+Name: sun/plugin/javascript/ReflectUtil.class
+SHA1-Digest: cXIugWooys6DVG7EDD6uealCjsc=
+
+Name: sun/plugin/viewer/WNetscapePluginObject$1.class
+SHA1-Digest: JnAbaNeBfz/uju/XJaVS81zVQFA=
+
+Name: sun/plugin/services/WNetscape6BrowserService.class
+SHA1-Digest: ZGC4JnGn934zlnEhi6Zpl/IVxXY=
+
+Name: sun/plugin/dom/html/HTMLOptionElement.class
+SHA1-Digest: k9eLJhaCCG5KkNCgUDKXmOEBDSQ=
+
+Name: sun/plugin/com/DispatchImpl$3.class
+SHA1-Digest: mW0OzrYBqLXLuTHCja3P4Soudp8=
+
+Name: sun/plugin/BeansViewer.class
+SHA1-Digest: RoC8+T9wgJvEM7g2fpWdqgPqapc=
+
+Name: sun/plugin/JavaRunTime$1.class
+SHA1-Digest: xVAwgKT70sQqV1GnXKxD0ot65M8=
+
+Name: sun/plugin/dom/core/DocumentFragment.class
+SHA1-Digest: W+YI99HUIRdDVwuOIi7mv1SudHY=
+
+Name: sun/plugin/com/Utils.class
+SHA1-Digest: jMdYJDeTRp3apV9GjT7W4FgRNZw=
+
+Name: sun/plugin/extension/ExtensionInstaller.class
+SHA1-Digest: VC+IiAht7bBH92hJbI+7tVWhmlo=
+
+Name: sun/plugin/dom/views/AbstractView.class
+SHA1-Digest: 9tX7juUsUADex42ZBpEaJqTX7VA=
+
+Name: sun/plugin/liveconnect/SecureInvocation$5.class
+SHA1-Digest: otYNQSbg7yjzQFqHBsSQAaxcszM=
+
+Name: sun/plugin/PluginURLJarFileCallBack$1.class
+SHA1-Digest: cIgEJT0vFaBip/tK7R3na8BAJhs=
+
+Name: sun/plugin/AppletViewer$GrayBoxListener.class
+SHA1-Digest: Ge9TBPD0zPlPn+pvlk+o4MZMJ6I=
+
+Name: netscape/security/ParameterizedTarget.class
+SHA1-Digest: y81FmiexQh8FlPgSyQKUtLvntao=
+
+Name: sun/plugin/net/proxy/PluginAutoProxyHandler.class
+SHA1-Digest: YsRmr+3dYWZeKkLF2B+WyQRv7aQ=
+
+Name: sun/plugin/extension/JavaExtensionInstaller.class
+SHA1-Digest: WwgOi9qpcSCFdSqmbF4wexi8qpY=
+
+Name: sun/plugin/extension/RawExtensionInstaller.class
+SHA1-Digest: eicflcB4bA4DgI6uOHRqU+Y43qc=
+
+Name: sun/plugin/liveconnect/SecureInvocation$2.class
+SHA1-Digest: lH1lgZCT4r2+tN1vpvYiPcChjac=
+
+Name: sun/plugin/javascript/navig/ImageArray.class
+SHA1-Digest: MbTYmDDFOyIGuUsE89OhV9RK2MA=
+
+Name: sun/plugin/viewer/frame/WNetscapeEmbeddedFrame.class
+SHA1-Digest: b92bMSJdKA2T1tmr7EOoXsa7yRA=
+
+Name: sun/plugin/viewer/context/PluginAudioClip.class
+SHA1-Digest: 8ZuIDue2twUH0C+e5cia3QuSJko=
+
+Name: sun/plugin/services/PlatformService.class
+SHA1-Digest: gmbvxF51RAsp5RrO8cgl97FJymk=
+
+Name: sun/plugin/dom/css/CSSUnknownRule.class
+SHA1-Digest: unRHJygfEi2HgqRHs1jX3e2QSA0=
+
+Name: sun/plugin/dom/html/HTMLDirectoryElement.class
+SHA1-Digest: fVThKSgzv2Z6phoPc2YdB9BWxUc=
+
+Name: sun/plugin/com/WrapperJSObject.class
+SHA1-Digest: lbIrhLnNtYf5NYlxMR/7jZa9Cqg=
+
+Name: sun/plugin/com/MethodDispatcher.class
+SHA1-Digest: 0Sypd/r3XORApUAIYG/bRYhXzVc=
+
+Name: netscape/security/Principal.class
+SHA1-Digest: QhpxdbPuC4f5sigV9h9I2TwAMcg=
+
+Name: sun/plugin/dom/html/HTMLFieldSetElement.class
+SHA1-Digest: 0PH2Ty0cM3J8wMSZ/V+0t7+PZIQ=
+
+Name: sun/plugin/liveconnect/JavaScriptProtectionDomain.class
+SHA1-Digest: Syb8f4/zFPim90UDyPa3puX0Z3M=
+
+Name: sun/plugin/dom/html/HTMLParamElement.class
+SHA1-Digest: 1PRS9DLB8yXAJGTaeSV265CQrrQ=
+
+Name: sun/plugin/dom/stylesheets/SSLConstants.class
+SHA1-Digest: cVQx3FEEQvHWrLjqe37gHAWuv1U=
+
+Name: sun/plugin/util/PluginSysUtil$1.class
+SHA1-Digest: c4RYbCLiU69IX7iFRlu/aOFJWu0=
+
+Name: sun/plugin/javascript/navig4/Navigator.class
+SHA1-Digest: LzTiJxVDegXlJvJtDIJdSdhfrww=
+
+Name: sun/plugin/javascript/navig4/Document.class
+SHA1-Digest: aQlev2gVpRm2jAiGFHfXKblKeXw=
+
+Name: sun/plugin/dom/html/HTMLIsIndexElement.class
+SHA1-Digest: u+JS/WdzMIv0ptub42pWGwlvzzw=
+
+Name: sun/plugin/resources/Activator_sv.class
+SHA1-Digest: XIeGvNJ9UWPbOTM+Adb2SHHxKng=
+
+Name: sun/plugin/security/ActivatorSecurityManager$CheckPrint_1_2.clas
+ s
+SHA1-Digest: m3J0WRHpSCw79UMlioLCqhFIPIQ=
+
+Name: sun/plugin/cache/JarCacheVersionException.class
+SHA1-Digest: 1lPrRwGmkNxzEpGFUAeqByo2z84=
+
+Name: sun/plugin/extension/NativeExtensionInstaller.class
+SHA1-Digest: mlEvFuRrZ4zVrUEzVjvyES4IA7g=
+
+Name: sun/plugin/cache/FileVersion.class
+SHA1-Digest: RB5S66Yz3Klyg3BVGqnW5JDr/Zg=
+
+Name: sun/plugin/javascript/navig/Image.class
+SHA1-Digest: 5ipp/JpiHfZHvCU6BE+MArISJxA=
+
+Name: sun/plugin/com/TypeMap.class
+SHA1-Digest: 5dZSGaeTolnFOiqpTtYsUH5N0KE=
+
+Name: sun/plugin/javascript/navig5/SecurityContext$PrivilegedBlockActi
+ on.class
+SHA1-Digest: 4O/kbf0sPUVFoRuYJkip86Cc5wo=
+
+Name: sun/plugin/resources/ResourceHandler.class
+SHA1-Digest: MHqxSXhlc/eYYBai7eVNCmjpAto=
+
+Name: sun/plugin/util/UserProfile.class
+SHA1-Digest: qpxmkWGiuHyJTgYMuXNvhTvf0VY=
+
+Name: netscape/security/ForbiddenTargetException.class
+SHA1-Digest: hW/9QkeIAMnB8yhiK24GQA+7TFQ=
+
+Name: sun/plugin/liveconnect/OriginNotAllowedException.class
+SHA1-Digest: HfAtKVC6Ikyp96yaTrpdJDJ0VqM=
+
+Name: sun/plugin/dom/css/CSSValueList.class
+SHA1-Digest: VeeTmA3bij72OKrIUWn1tKkb3eA=
+
+Name: sun/plugin/javascript/navig/OptionArray.class
+SHA1-Digest: 1zKyGdApXr40Xugo6d2nAmV8Okk=
+
+Name: sun/plugin/viewer/IExplorerPluginObject.class
+SHA1-Digest: m8ffyjWhqeTr0w6WE/khMsU/lsM=
+
+Name: sun/plugin/viewer/AxBridgeObject$2.class
+SHA1-Digest: tibByqSe7KEwG00XbAL34AbpDSU=
+
+Name: sun/plugin/liveconnect/SecurityContextHelper.class
+SHA1-Digest: HUQBVfEchVwUguzHipzV02lxz6k=
+
+Name: sun/plugin/javascript/JSInvoke.class
+SHA1-Digest: r0tgQqcWEtiK/ANy4PBcduwKs9w=
+
+Name: sun/plugin/javascript/JSClassLoader$1.class
+SHA1-Digest: x65rxL7nH3ewGDTaFEhNPXyGdgE=
+
+Name: sun/plugin/resources/Activator_es.class
+SHA1-Digest: 4CLgZ1Jb2AQV4SuB1Gou0ue15/A=
+
+Name: sun/plugin/javascript/navig5/JSObject.class
+SHA1-Digest: P0jqQr8WFQmEqkU8nDl9PUV2/EI=
+
+Name: sun/plugin/util/PluginConsoleController.class
+SHA1-Digest: ObiLxXFYHULK+AtTjju46vRif70=
+
+Name: sun/plugin/dom/css/CSSCharsetRule.class
+SHA1-Digest: 4DmrgHdi4qQtwX0mDauVxzoctM4=
+
+Name: sun/plugin/extension/ExtensionInstallationImpl$1.class
+SHA1-Digest: gBLiuUvIVKbFlR6lqrvoprPAdLU=
+
+Name: sun/plugin/net/cookie/WNetscape6CookieHandler.class
+SHA1-Digest: 7oGqbM/26FGuO8cE902N9ZS0evo=
+
+Name: sun/plugin/dom/css/CSSMediaRule.class
+SHA1-Digest: ftbmLEQrfzkuHhwB7iNdyqyN6w8=
+
+Name: sun/plugin/util/GrayBoxPainter.class
+SHA1-Digest: scHx9qAsoknFUfQKZUbd2la5gMo=
+
+Name: sun/plugin/javascript/navig/Navigator.class
+SHA1-Digest: wWKOD4+/+Tk59gi7Ze4oi2RgtPA=
+
+Name: netscape/security/Target.class
+SHA1-Digest: U5WE8CIr7q4EPZqQFssnb5DgdkE=
+
+Name: sun/plugin/javascript/navig/Anchor.class
+SHA1-Digest: TtkQU6j9yKck7Rti64O+WUbDjhM=
+
+Name: sun/plugin/liveconnect/PrivilegedConstructObjectAction.class
+SHA1-Digest: 9rt/b4pDeYlz+xgEHvnA1jb1zj8=
+
+Name: sun/plugin/dom/css/CSSRule.class
+SHA1-Digest: TI9I3LVFF0gZidk6f9Y56ZIvezM=
+
+Name: sun/plugin/dom/css/Rect.class
+SHA1-Digest: QYCZp/oKm3O1cPscaOWMneP/+RM=
+
+Name: sun/plugin/javascript/navig/JSObject.class
+SHA1-Digest: Uz9btA6AdWQemV0L+wgKrZ6JsUU=
+
+Name: sun/plugin/dom/html/ns4/NS4DOMObject.class
+SHA1-Digest: OwBMW5TSo0IaYZ3W009+alAseQA=
+
+Name: sun/plugin/util/EventMulticaster.class
+SHA1-Digest: MeOlAz9bIfgtBwYgz+cZYqp6OFo=
+
+Name: sun/plugin/com/TypeConverter.class
+SHA1-Digest: JpXnR5HRmOOtEeZCml174Ll0niQ=
+
+Name: sun/plugin/dom/html/HTMLDListElement.class
+SHA1-Digest: 85oMU/RFS3r8qS794rWuh6Orals=
+
+Name: sun/plugin/AppletStatusListener.class
+SHA1-Digest: llZvkR1DKHH9gB6IO/T2beuUc1k=
+
+Name: sun/plugin/com/DispatchImpl$1.class
+SHA1-Digest: UZIWgJBjGJgXW+XkmxyWn4HvE9w=
+
+Name: sun/plugin/javascript/navig4/Layer.class
+SHA1-Digest: UR9kWHN8iynUap2mfNJd49R6K3s=
+
+Name: sun/plugin/javascript/navig/JSType.class
+SHA1-Digest: JlFotPJ0jlsG0ybrUKSUoDT2kVw=
+
+Name: sun/plugin/services/WNetscape6BrowserService$1.class
+SHA1-Digest: 5irX7BtylPfS61pxjK0Mj6VXtas=
+
+Name: sun/plugin/perf/PluginRollup.class
+SHA1-Digest: Om/DJM3j0dUSM/OloA+tK60QygI=
+
+Name: sun/plugin/viewer/context/AppletImageFactory.class
+SHA1-Digest: CpMRVS60UG60lKrdfMan/g5udAM=
+
+Name: sun/plugin/dom/DOMService.class
+SHA1-Digest: N8gRgjKz8uEDPT0QqaAHE324DKA=
+
+Name: sun/plugin/viewer/WNetscapePluginObject$Initer.class
+SHA1-Digest: nnoPqfbYXldJ6C/7wlnDL31bKPs=
+
+Name: sun/plugin/resources/Activator_zh_HK.class
+SHA1-Digest: +vR5yZta7uL6HT5TtG7PJQvx4QI=
+
+Name: sun/plugin/dom/html/HTMLQuoteElement.class
+SHA1-Digest: X9tTG45qXRU4oQsFPEzNUKn4VcE=
+
+Name: sun/plugin/dom/exception/WrongDocumentException.class
+SHA1-Digest: GSOxYCO5E3IM6WUzkm07gdJbf2o=
+
+Name: sun/plugin/dom/html/HTMLLIElement.class
+SHA1-Digest: 7xijgvs3nGqYuRyb/9ikXFLJn8w=
+
+Name: sun/plugin/dom/html/HTMLTableCellElement.class
+SHA1-Digest: rXX5h5tDAJYr4biZT1FGLm5lmfI=
+
+Name: sun/plugin/dom/html/HTMLInputElement.class
+SHA1-Digest: YuTEnVwiBc7Qv3B/HDGLfkH9Yas=
+
+Name: sun/plugin/dom/html/HTMLParagraphElement.class
+SHA1-Digest: hFah1JLeWUUad3hvsANEdI6/J2o=
+
+Name: netscape/javascript/JSException.class
+SHA1-Digest: 15tUI6KX5i06k09Gj6GcL+KoYfI=
+
+Name: sun/plugin/javascript/navig/AnchorArray.class
+SHA1-Digest: 76yCDmIGXDRPFrCD4hyaX4q3fqc=
+
+Name: sun/plugin/dom/html/HTMLPreElement.class
+SHA1-Digest: foZ9nrYy7qn8hKpTI4a8JRjep4k=
+
+Name: sun/plugin/dom/html/HTMLTableCaptionElement.class
+SHA1-Digest: BDpueSYkJnzSqaFUXehpwjR1aZ4=
+
+Name: sun/plugin/util/PluginSysUtil$1AWTInvocationLock.class
+SHA1-Digest: xDIDXAA/rnNdcy4Hz6hTU2Ki2NA=
+
+Name: sun/plugin/javascript/JSContext.class
+SHA1-Digest: cKKV3PfXc5SWSgqt4Qq5R4811P0=
+
+Name: sun/plugin/net/protocol/jar/Handler.class
+SHA1-Digest: /oT8L/7UT7/6XIApWj9N26ipWtI=
+
+Name: sun/plugin/services/BrowserService.class
+SHA1-Digest: vF9Eh18wMFqQg6pJuwZD3FlxI50=
+
+Name: sun/plugin/javascript/navig/Location.class
+SHA1-Digest: IPUWfLb2aPcVqYajr+uHEt+iSOo=
+
+Name: sun/plugin/dom/html/HTMLAppletElement.class
+SHA1-Digest: T1ebNt9+b6QR6NZBB3uZ02g6L7Y=
+
+Name: sun/plugin/liveconnect/SecureInvocation$6.class
+SHA1-Digest: tmf87rKog0zldFGbAa+MC6ctZqc=
+
+Name: sun/plugin/cache/JarCacheUtil.class
+SHA1-Digest: N32kekQdrwN1c+cEezWNeuEp/VQ=
+
+Name: sun/plugin/dom/html/HTMLSelectElement.class
+SHA1-Digest: Kfv/EwI/ZOVjY5S7Ga3ee0/9Vz0=
+
+Name: sun/plugin/viewer/context/PluginBeansContext.class
+SHA1-Digest: ZLV0GUG+jRr0x7jpLv1sRw9aCwg=
+
+Name: sun/plugin/javascript/navig/LinkArray.class
+SHA1-Digest: EfavNL2t9IpsK6CirEWK88qAnWc=
+
+Name: sun/plugin/viewer/frame/WNetscapeEmbeddedFrame$1.class
+SHA1-Digest: nrKvxSAu//UAsQnxlrPv+svrGmY=
+
+Name: sun/plugin/dom/html/HTMLTableSectionElement.class
+SHA1-Digest: olNt1IV8H6jNgK43a2sAiTF78EU=
+
+Name: sun/plugin/viewer/IExplorerPluginObject$Initer.class
+SHA1-Digest: l4HNT/M63JyD2xVJphLnu0YMkU4=
+
+Name: sun/plugin/dom/html/HTMLBaseElement.class
+SHA1-Digest: TtLQ13qds5U5CR4b4ccBc8YOi5w=
+
+Name: sun/plugin/dom/css/CSSImportRule.class
+SHA1-Digest: OkmONvHvwxpL1sYPB8scODQ20UA=
+
+Name: sun/plugin/util/PluginConfig.class
+SHA1-Digest: wA9dPK9YpUEabiZRjhkCsn12kiA=
+
+Name: sun/plugin/javascript/navig/Link.class
+SHA1-Digest: seJbzYYD0NQdfHXEFrkqfyZMQ3M=
+
+Name: sun/plugin/dom/html/HTMLDivElement.class
+SHA1-Digest: 01suPXMFA1SCjOv2AwTr19p5PCY=
+
+Name: sun/plugin/dom/css/RGBColor.class
+SHA1-Digest: aAxDF6TdtcK+a6Hc4xFwF1Q0d+c=
+
+Name: sun/plugin/com/JavaClass$1.class
+SHA1-Digest: 2AXShkWJEOxz/A7DH9ULrAxBrwo=
+
+Name: sun/plugin/javascript/navig/Form.class
+SHA1-Digest: Z1DNbceOBdzdS5+YO6j0XYazC/A=
+
+Name: sun/plugin/dom/css/CSSStyleDeclaration.class
+SHA1-Digest: 0S7EXaQBV4YxCN0XqWIqhkgL9k0=
+
+Name: sun/plugin/com/PropertySetDispatcher.class
+SHA1-Digest: RhuVa2vzix0NCQbz5cZz3VuznbE=
+
+Name: sun/plugin/dom/html/HTMLFrameElement.class
+SHA1-Digest: 3qUeG1Wd+HI3Pgxb4OESeJtna8w=
+
+Name: sun/plugin/services/WNetscape4BrowserService.class
+SHA1-Digest: jiZ5IzL37zL3HO1fBpTZk7+9X6M=
+
+Name: sun/plugin/viewer/context/AppletAudioClipFactory.class
+SHA1-Digest: aL0lBOD195vk+AQWPQcsuuuS5a0=
+
+Name: sun/plugin/dom/core/Document.class
+SHA1-Digest: X7kSouWRky7Puim97UaDsEU8crY=
+
+Name: sun/plugin/net/proxy/PluginProxyInfo.class
+SHA1-Digest: 3LD/Sow87bRcjbjg8irCx5yc+DA=
+
+Name: sun/plugin/dom/DOMObjectHelper.class
+SHA1-Digest: EEEMc8w/q43iJ1FNPm6WjJ+5GZc=
+
+Name: sun/plugin/javascript/navig/ElementArray.class
+SHA1-Digest: lIa1KWNcGw8200E90oyj4ye9kxk=
+
+Name: sun/plugin/javascript/ocx/JSObject.class
+SHA1-Digest: JcQMKLFb5s2K8+lLEfcx1lnVMj8=
+
+Name: sun/plugin/dom/html/HTMLFormElement.class
+SHA1-Digest: c18eFba/MZvk1zZNbniQy1hhwCM=
+
+Name: sun/plugin/liveconnect/SecureInvocation.class
+SHA1-Digest: rH0liMyHWSpGi2sWkuFap75GCHY=
+
+Name: sun/plugin/AppletObjectInputStream.class
+SHA1-Digest: lC8n7IEu6MJiGoXyAVxWv/NxLgo=
+
+Name: sun/plugin/viewer/LifeCycleManager.class
+SHA1-Digest: B1lHsfb6EOdPVFsm5qIiTf+02Mw=
+
+Name: sun/plugin/viewer/context/DefaultPluginAppletContext$2.class
+SHA1-Digest: yze7TTtmccX/3OXHk7rmPBKGhcE=
+
+Name: sun/plugin/viewer/context/AppletImageFactory$1.class
+SHA1-Digest: 64I6G4f96R1pMLNhSph9ytsNclk=
+
+Name: sun/plugin/liveconnect/PrivilegedCallMethodAction.class
+SHA1-Digest: Xf4JcA+MyT93kDqBwMfnLFkzkMI=
+
+Name: sun/plugin/AppletViewer$1.class
+SHA1-Digest: 9s7GPO/yYHC0o+HnufAA7Lvkzpw=
+
+Name: sun/plugin/dom/html/HTMLHeadingElement.class
+SHA1-Digest: 0APDLlhZDcwQHT+PE3GdgKVOIh8=
+
+Name: sun/plugin/viewer/WNetscapePluginContext.class
+SHA1-Digest: ZwERT+Zy5OjqLGc6lZVDxEmsxYM=
+
+Name: sun/plugin/com/event/ListenerProxy.class
+SHA1-Digest: +mZYdtOkBOpnFHQAc5imnxgBnOk=
+
+Name: sun/plugin/viewer/frame/IExplorerEmbeddedFrame$1.class
+SHA1-Digest: KADIpeoc6f7HeEbS6duH0qkBoPo=
+
+Name: sun/plugin/dom/html/HTMLBRElement.class
+SHA1-Digest: YqW0sAY8zdN/TTFF6QHPZlNu+Eg=
+
+Name: sun/plugin/dom/html/HTMLButtonElement.class
+SHA1-Digest: fDNKu+vEP8kBzQc1CKAa4nKwvGQ=
+
+Name: sun/plugin/resources/Activator_zh_TW.class
+SHA1-Digest: eP5caOZ+uR9s6DYvKDoQkf20qy8=
+
+Name: sun/plugin/dom/css/CSSStyleSheet.class
+SHA1-Digest: wa8AXfzqb/xVkI4Exsg/TBIantE=
+
+Name: sun/plugin/security/JDK11ClassFileTransformer$Broken11Transforme
+ r_0.class
+SHA1-Digest: LVi823S66AvTYx4A209/hxgpf54=
+
+Name: sun/plugin/dom/exception/NoModificationAllowedException.class
+SHA1-Digest: Hux9S4XqvCoJjaAs94FPf2lNuxQ=
+
+Name: sun/plugin/javascript/navig4/Link.class
+SHA1-Digest: p4XKpK22RpjEXF1IUkFWANDxovM=
+
+Name: sun/plugin/dom/html/HTMLFontElement.class
+SHA1-Digest: swfk3GOKg8dcBS9MMY2RPMniZK8=
+
+Name: sun/plugin/com/BeanCustomizer.class
+SHA1-Digest: BXUa0/5fxMK7aPLr8EWNo8KERgk=
+
+Name: sun/plugin/liveconnect/PrivilegedSetFieldAction.class
+SHA1-Digest: Dg4rm7Gi5dOBJhO67Kf9qBIuLjk=
+
+Name: sun/plugin/dom/core/Element.class
+SHA1-Digest: Tu7C3WyXnSCZSGNhps9ARdkR/vA=
+
+Name: sun/plugin/com/BeanClass.class
+SHA1-Digest: /sNX9fgqhiQs28AifXubRQPXwzU=
+
+Name: sun/plugin/javascript/navig/Option.class
+SHA1-Digest: gxLp7slJ1y0xE8wjcJmBNtVRm5Q=
+
+Name: sun/plugin/dom/css/CSSValue.class
+SHA1-Digest: yKSomo3GynJ3xLJD7kgrv1sfew4=
+
+Name: sun/plugin/AppletViewer$3.class
+SHA1-Digest: XFB9TO6DsIQ6WgO6cUC9DSjsSfU=
+
+Name: sun/plugin/viewer/IExplorerPluginContext.class
+SHA1-Digest: jRuBgMuWdXDmbcZo9U6rBnWQ5zE=
+
+Name: sun/plugin/services/WIExplorerBrowserService.class
+SHA1-Digest: hbORmYb+mrgcTJ2IPrfKYKQKsWQ=
+
+Name: sun/plugin/resources/Activator_ja.class
+SHA1-Digest: G9QKuFEw1aQ8P/GtYBTRk5yBl8E=
+
+Name: sun/plugin/AppletViewer$AppletEventListener.class
+SHA1-Digest: WHJMlJ9qSFKSPtvDSgJJN1c+ctM=
+
+Name: sun/plugin/com/Packager$1.class
+SHA1-Digest: UU1I8GxEdQ9lQmPWNC8L8b+eGxE=
+
+Name: sun/plugin/dom/html/HTMLMetaElement.class
+SHA1-Digest: WonYvt4A7BJiFvx0tb/f62/CFRs=
+
+Name: sun/plugin/com/DispatchImpl.class
+SHA1-Digest: 1DSoeTxCCLydRSe+aIeAaoUkKTY=
+
+Name: sun/plugin/dom/html/HTMLTableElement.class
+SHA1-Digest: nYyIJ/NlxmSKbXx+SsbUzeKiEHw=
+
+Name: sun/plugin/javascript/navig4/Anchor.class
+SHA1-Digest: 5jdFKQlpFbjGlKm8AohU7KzE9gc=
+
+Name: sun/plugin/security/StripClassFile.class
+SHA1-Digest: KqDCZSQypGM5uEcgn3hwMXMtQ3s=
+
+Name: sun/plugin/dom/html/HTMLFrameSetElement.class
+SHA1-Digest: M2sTI65mQB5BEpcqE+TdGicNBsw=
+
+Name: sun/plugin/dom/DOMObjectTypeHelper.class
+SHA1-Digest: LJZPdBLNNwdAeKLOz7UVyMa7HKk=
+
+Name: sun/plugin/dom/stylesheets/StyleSheet.class
+SHA1-Digest: oDDPbxS3nu2wYPv5NAlui/FRDMA=
+
+Name: sun/plugin/dom/html/HTMLIFrameElement.class
+SHA1-Digest: zM4FL4bEenhv7p22DwKOvGh0kCU=
+
+Name: sun/plugin/dom/DOMImplementation.class
+SHA1-Digest: xGfUUnZ+fD6kt69PkVfOSxx+/jU=
+
+Name: sun/plugin/resources/Activator_fr.class
+SHA1-Digest: KI7AMfcbF7GEGClJ1Dgm61LhrZs=
+
+Name: sun/plugin/com/JavaClass.class
+SHA1-Digest: 1Jm211Mik/90h+508V/jgVg8VGw=
+
+Name: sun/plugin/services/AxBridgeBrowserService$1.class
+SHA1-Digest: TfqAu0YZPjLse26yK67edtoDho0=
+
+Name: sun/plugin/dom/stylesheets/MediaList.class
+SHA1-Digest: OQqI0mt/1yURQZ8jxXXfHM5NOCg=
+
+Name: sun/plugin/javascript/navig/JSObjectResolver.class
+SHA1-Digest: SHSeWypFnHlac7zvXAcAf953/+M=
+
+Name: sun/plugin/resources/Activator_zh_CN.class
+SHA1-Digest: VucFR4BdTMhfv+OLZtuAyZJAZ48=
+
+Name: sun/plugin/dom/DOMObject.class
+SHA1-Digest: ZVXQWPmF8JCgyGRjlqDToTK610c=
+
+Name: sun/plugin/dom/css/CSSRuleList.class
+SHA1-Digest: w+yWNc0cTCZo43o7nxRKX7tfgbI=
+
+Name: netscape/security/UserTarget.class
+SHA1-Digest: cYqg+er62aNdwIkmHNt8n38bRJs=
+
+Name: sun/plugin/dom/html/common/HTMLCollection.class
+SHA1-Digest: TainKoJUSQL/drp5AwZ63dwUwwI=
+

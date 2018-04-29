@@ -1,0 +1,14 @@
+date=Interview_Date
+sector=User_Sector
+received=Received
+interviewer=User
+UpdateStatusforNBNF=Update_Status_NBNF
+IstheBabyalive=Mother_Alive
+Isthemotheralive=Baby_Alive
+DateofOutCome=Date_Outcome
+timeofOutCome=Time_Outcome
+AMorPM=AM_PM
+WhatarethethreeprimaryreasonsyoudidnotsendbirthnotificationSMS=Reasons_No_SMS
+otherreasons=Other_Reason
+DidyouhealthworkerremindyouaboutsendingbirthNotification=HW_Reminded
+FormStatus=Form_Status

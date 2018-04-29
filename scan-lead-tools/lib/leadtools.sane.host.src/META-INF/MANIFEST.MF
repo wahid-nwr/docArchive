@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: leadtools.jar leadtools.codecs.jar leadtools.imageprocessi
+ ng.core.jar leadtools.sane.jar leadtools.sane.server.jar jackson/jack
+ son-annotations-2.6.0.jar jackson/jackson-core-2.6.4.jar jackson/jack
+ son-databind-2.6.4.jar
+Main-Class: leadtools.sane.host.HostApplication
+

@@ -1,0 +1,46 @@
+package models;
+
+import javax.persistence.Entity;
+import net.sf.oval.constraint.Length;
+
+import play.data.validation.Required;
+import play.data.validation.Unique;
+import play.db.jpa.Model;
+import javax.persistence.ManyToOne;
+
+import javax.persistence.ManyToMany;
+import play.data.validation.Required;
+import java.util.List;
+import org.hibernate.annotations.Cascade;
+import javax.persistence.CascadeType;
+
+
+@Entity
+public class ROSCARelatedInformation extends Model {
+	@Required
+	@ManyToOne
+	public BeneficiaryProfile beneficiaryProfile;
+	public String receivedRosca;
+	public int numberOfTimeReceived;
+	public int amountReceived;	
+	public int depositPerInstallment;
+	public int durationPerInstallment;
+	public String specialRemarks;
+	
+	public String suggenstionLivelihood;
+	public String trainingName;
+	public String trainingOthers;
+	
+	public String didSufferViolence;
+	public String memberSufferedViolence;
+	public String typeOfViolence;
+	public String violenceOthers;
+	public int durationOfInstallment;
+	public String doesHaveSavings;
+	public int savingsAmount;
+	
+	@ManyToMany(cascade = {CascadeType.ALL})
+	public List<SkillsTrainingInformation> listOfSkillsTrainingInformation;
+	@ManyToMany(cascade = {CascadeType.ALL})
+	public List<LivelihoodTrainingInformation> listOfLivelihoodTrainingInformation;
+}

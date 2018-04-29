@@ -1,0 +1,447 @@
+#{extends 'main.html' /}
+%{
+	boolean disabled = false;
+	String isDisabled = "";
+%}
+<section id="feature2" >
+	<div class="container">		
+		<div id="rootwizard">
+			<div class="navbar2">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul id="tabbar">
+							<li style="visibility:hidden"><a href="">Form 1</a></li>
+							<li><a href="@{Beneficiary.basicprofile()}">Form 1</a></li>
+							<li><a href="@{Beneficiary.tab2()}">Form 2</a></li>
+							<li><a href="@{Beneficiary.tab3()}">Form 3</a></li>
+							<li><a href="@{Beneficiary.tab4()}">Form 4</a></li>
+							<li><a href="@{Beneficiary.tab5()}">Form 5</a></li>
+							<li><a href="@{Beneficiary.tab6()}">Form 6</a></li>
+							<li><a href="#tab7" data-toggle="tab">Form 7</a></li>
+							<li><a href="@{Beneficiary.tab8()}">Form 8</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="bar" class="progress progress-striped active">
+			  <div class="bar"></div>
+			</div>
+			
+
+			<div class="tab-content">	
+				<div class="tab-pane" id="tab7"><!--tab7-->
+					<div class="col-lg-12">
+		    <div class="panel panel-default">
+				 <div class="panel-heading">
+						 Woman Beneficiary Profile </div>
+						<form method="POST" class="form-horizontal" action="./addroscaInfo">
+						<input type="hidden" name="beneficiaryProfile" value="${beneficiaryProfile?.id}"/>
+						<input  type="hidden" name="roscaRelatedInformation.id" value="${roscaRelatedInformation?.id}"/>
+   					    <input type="hidden" name="skillindex" id="skillindex" value="${roscaRelatedInformation?.listOfSkillsTrainingInformation?roscaRelatedInformation.listOfSkillsTrainingInformation.size():1}"/>
+   					    <input type="hidden" name="livelihoodindex" id="livelihoodindex" value="${roscaRelatedInformation?.listOfLivelihoodTrainingInformation?roscaRelatedInformation.listOfLivelihoodTrainingInformation.size():1}"/>
+				<div class="panel-body">
+				<p>ROSCA Related INFORMATION :</p>
+				<div class="line"></div>
+				<div class="row">
+				<div class="col-lg-3">
+				    <div class="form-group">
+						 #{input 'roscaRelatedInformation.receivedRosca' , type:'select', labelProperty:'name'} 											
+							<option value="Yes" #{if roscaRelatedInformation?.receivedRosca.equals("Yes")} selected#{/if}>Yes</option>
+							<option value="No" #{if roscaRelatedInformation?.receivedRosca.equals("No")} selected#{/if}>No</option>
+						#{/input}
+				    </div>
+				</div>
+				<div class="col-lg-3">
+				    <div class="form-group">
+										%{											
+											if(roscaRelatedInformation?.receivedRosca.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+						 #{input 'roscaRelatedInformation.numberOfTimeReceived',disabled:''+isDisabled,class:'form-control depends-on-roscaRelatedInformation.receivedRosca'/} 
+				    </div>
+				</div>
+				<div class="col-lg-3">
+					 <div class="form-group">  
+						 
+                                   #{input 'roscaRelatedInformation.amountReceived',disabled:''+isDisabled,class:'form-control depends-on-roscaRelatedInformation.receivedRosca'/} 
+                      </div>
+				</div>
+				<div class="col-lg-3">
+					 <div class="form-group">  
+                         #{input 'roscaRelatedInformation.depositPerInstallment',disabled:''+isDisabled,class:'form-control depends-on-roscaRelatedInformation.receivedRosca'/} 
+                     </div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+				    <div class="form-group">
+						 #{input 'roscaRelatedInformation.durationPerInstallment' ,disabled:''+isDisabled, type:'select', labelProperty:'name',class:'form-control depends-on-roscaRelatedInformation.receivedRosca'}
+							%{												
+								for(int i=0;i<12;i++)
+								{
+									%}
+									<option value="${i+1}">${i+1}</option>
+									%{
+								}
+							%}
+						#{/input}
+				    </div>
+				</div>
+				</div>
+             <p>26. SKILLS DEVELOPMENT/ VOCATIONAL TRAINING :</p>
+				<div class="line"></div>
+			<table class="table table-bordered table-hover" id="tab_logic_skills">
+				<thead>
+					<tr >
+						
+						<th class="text-center">
+							Sequence
+							</th>
+						<th class="text-center">
+							Name of training						
+							</th>
+						<th class="text-center">
+							<table id="t_header" width="100%">
+								<tr><td colspan="2" align="center">Duration Of Traning</td></tr>
+								<tr>
+									<td width="50%">Month</td>
+									<td width="50%">Year</td>
+								</tr>
+							</table>						
+							</th>
+						<th class="text-center">
+							Training Duration					
+							</th>
+						<th class="text-center">
+							training providing organization					
+							</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					%{
+					if(roscaRelatedInformation==null || roscaRelatedInformation.listOfSkillsTrainingInformation==null)
+					{
+					%}
+					<tr id='skills_addr0'>
+						<td>1</td>
+						<td><input type="text" name='name0'  placeholder='Name' class="form-control"/></td>
+						<td>
+							<table id="t_header" width="100%">
+								<tr>
+									<td width="50%"><input type="text" name='month0' placeholder='Duration Month' class="form-control"/></td>
+									<td width="50%"><input type="text" name='year0' placeholder='Duration Year' class="form-control"/></td>
+								</tr>
+							</table>							
+						</td>
+						<td><input type="text" name='duration0' placeholder='Duration' class="form-control"/></td>
+						<td><input type="text" name='organization0' placeholder='Organization' class="form-control"/></td>					
+					</tr>
+                    <tr id='skills_addr1'></tr>
+					%{
+					}
+					else
+					{
+						int index = 1;
+					%}
+					#{list items:roscaRelatedInformation.listOfSkillsTrainingInformation, as:'skillsTrainingInformation'}
+					<tr id='skills_addr${index-1}'>
+						<td>${index}</td>	
+						<td><input type="text" name='name${index-1}'  placeholder='Name' class="form-control" value="${skillsTrainingInformation.nameOfTraining}"/></td>
+						<td>
+							<table width="100%" id="t_header">
+								<tr>
+									<td width="50%"><input type="text" name='month${index-1}' placeholder='Duration Month' class="form-control" value="${skillsTrainingInformation.durationMonth}"/></td>
+									<td width="50%"><input type="text" name='year${index-1}' placeholder='Duration Year' class="form-control" value="${skillsTrainingInformation.durationYear}"/></td>
+								</tr>
+							</table>					
+						</td>
+						<td><input type="text" name='duration${index-1}' placeholder='Duration' class="form-control" value="${skillsTrainingInformation.trainingDuration}"/></td>
+						<td><input type="text" name='organization${index-1}' placeholder='Organization' class="form-control" value="${skillsTrainingInformation.providingOrganization}"/></td>					
+					</tr>
+                    
+					%{
+						index++;
+					%}
+					#{/list}
+					<tr id='skills_addr${index-1}'></tr>
+					%{
+					}
+					%}
+					
+				</tbody>
+			</table>
+
+	<a id="add_row_skills" class="btn btn-default pull-left">Add Row</a><a id='delete_row_skills' class="pull-right btn btn-default">Delete Row</a>	
+	</br></br>			
+	        <div class="row">
+	           <div class="col-lg-6">
+				 <div class="form-group">  
+                                #{input 'roscaRelatedInformation.specialRemarks' /} 
+                   </div>
+				</div>
+				</div>
+				 <p>27. LIVELIHOOD DEVELOPMENT :</p>
+				<div class="line"></div>
+                                     
+									<div class="col-lg-3">
+								    <div class="form-group">
+										 #{input 'roscaRelatedInformation.suggenstionLivelihood' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if roscaRelatedInformation?.suggenstionLivelihood.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if roscaRelatedInformation?.suggenstionLivelihood.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(roscaRelatedInformation?.suggenstionLivelihood.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+										 #{input 'roscaRelatedInformation.trainingName' ,disabled:''+isDisabled, type:'select', labelProperty:'name',class:'form-control depends-on-roscaRelatedInformation.suggenstionLivelihood'} 											
+											<option value="Training" #{if roscaRelatedInformation?.trainingName.equals("Training")} selected#{/if}>Training</option>
+											<option value="Fund Capital" #{if roscaRelatedInformation?.trainingName.equals("Fund Capital")} selected#{/if}>Fund Capital</option>
+											<option value="Instruments" #{if roscaRelatedInformation?.trainingName.equals("Instruments")} selected#{/if}>Instruments</option>
+											<option value="Machinaries" #{if roscaRelatedInformation?.trainingName.equals("Machinaries")} selected#{/if}>Machinaries</option>
+											<option value="Insecticides" #{if roscaRelatedInformation?.trainingName.equals("Insecticides")} selected#{/if}>Insecticides</option>
+											<option value="Treatment for animals/birds" #{if roscaRelatedInformation?.trainingName.equals("Treatment for animals/birds")} selected#{/if}>Treatment for animals/birds</option>
+											<option value="Suggestions regarding agriculture" #{if roscaRelatedInformation?.trainingName.equals("Suggestions regarding agriculture")} selected#{/if}>Suggestions regarding agriculture</option>
+											<option value="Others" #{if roscaRelatedInformation?.trainingName.equals("Others")} selected#{/if}>Others</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								   <div class="form-group">  
+                                        #{input 'roscaRelatedInformation.trainingOthers',disabled:''+isDisabled, class:'form-control depends-on-roscaRelatedInformation.suggenstionLivelihood'/} 
+                                    </div>
+									</div>
+									</br></br></br></br></br></br></br>
+									<p>28. GOVERNMENT HELP FOR LIVELIHOOD TRAINING :</p>
+				<div class="line"></div>
+			<table class="table table-bordered table-hover" id="tab_logic_gov_helf">
+				<thead>
+					<tr >
+						<th class="text-center">
+							Sequence
+							</th>
+						<th class="text-center">
+							What kind of help?						
+							</th>
+						<th class="text-center">
+							Organization providing help						
+							</th>
+						<th class="text-center">
+							Time of recieving					
+							</th>
+					</tr>
+				</thead>
+				<tbody>
+					%{
+					if(roscaRelatedInformation==null || roscaRelatedInformation.listOfLivelihoodTrainingInformation==null)
+					{
+					%}
+					<tr id='gov_helf_addr0'>
+						<td>1</td>
+						<td><input type="text" name='type0'  placeholder='Help Type' class="form-control"/></td>
+						<td><input type="text" name='orgProvidedHelp0' placeholder='Organization help' class="form-control"/></td>
+						<td><input type="text" name='recievingTime0' placeholder='Recieving Time' class="form-control"/></td>
+					</tr>
+                    <tr id='gov_helf_addr1'></tr>
+					%{
+					}
+					else
+					{
+						int i_index = 1;
+					%}
+					#{list items:roscaRelatedInformation.listOfLivelihoodTrainingInformation, as:'livelihoodTrainingInformation'}
+					<tr id='gov_helf_addr${i_index-1}'>
+						<td>${i_index}</td>
+						<td><input type="text" name='type${i_index-1}'  placeholder='Help Type' class="form-control" value="${livelihoodTrainingInformation.typeOfTraining}"/></td>
+						<td><input type="text" name='orgProvidedHelp${i_index-1}' placeholder='Organization help' class="form-control" value="${livelihoodTrainingInformation.helpProvidingOrg}"/></td>
+						<td><input type="text" name='recievingTime${i_index-1}' placeholder='Recieving Time' class="form-control" value="${livelihoodTrainingInformation.receivingTime}"/></td>
+					</tr>
+					%{
+						i_index++;
+					%}
+					#{/list}
+					<tr id='gov_helf_addr${i_index-1}'></tr>
+					%{
+					}
+					%}					
+					
+				</tbody>
+			</table>
+
+	<a id="add_row_gov_helf" class="btn btn-default pull-left">Add Row</a><a id='delete_row_gov_helf' class="pull-right btn btn-default">Delete Row</a>
+	</br></br>
+	 <p>29. GOVERNMENT HELP FOR LIVELIHOOD TRAINING :</p>
+				<div class="line"></div>
+                                     
+									<div class="col-lg-3">
+								    <div class="form-group">
+										 #{input 'roscaRelatedInformation.didSufferViolence' , type:'select', labelProperty:'name'} 											
+											<option value="Yes" #{if roscaRelatedInformation?.didSufferViolence.equals("Yes")} selected#{/if}>Yes</option>
+											<option value="No" #{if roscaRelatedInformation?.didSufferViolence.equals("No")} selected#{/if}>No</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										%{											
+											if(roscaRelatedInformation?.didSufferViolence.equals("No"))
+											{
+												disabled = true;
+												isDisabled = "true";
+											}
+											else
+											{
+												isDisabled = "false";
+											}
+										%}
+										 #{input 'roscaRelatedInformation.memberSufferedViolence',disabled:''+isDisabled,class:'form-control depends-on-roscaRelatedInformation.didSufferViolence'/} 
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								    <div class="form-group">
+										 #{input 'roscaRelatedInformation.typeOfViolence' ,disabled:''+isDisabled, type:'select', labelProperty:'name',class:'form-control depends-on-roscaRelatedInformation.didSufferViolence'}
+											<option value="Sexual Harassment" #{if roscaRelatedInformation?.typeOfViolence.equals("Sexual Harassment")} selected#{/if}>Sexual Harassment</option>
+											<option value="Land related Dispute" #{if roscaRelatedInformation?.typeOfViolence.equals("Land related Dispute")} selected#{/if}>Land related Dispute</option>
+											<option value="Physical Harassment" #{if roscaRelatedInformation?.typeOfViolence.equals("Physical Harassment")} selected#{/if}>Physical Harassment</option>
+											<option value="Others" #{if roscaRelatedInformation?.typeOfViolence.equals("Others")} selected#{/if}>Others</option>
+										#{/input}
+								    </div>
+				                 </div>
+								 <div class="col-lg-3">
+								   <div class="form-group">  
+                                        #{input 'roscaRelatedInformation.violenceOthers',disabled:''+isDisabled,class:'form-control depends-on-roscaRelatedInformation.didSufferViolence'/}
+                                    </div>
+									</div>
+									</div>
+				               </div>
+				               </form>
+				       </div>
+				</div><!--/tab7-->
+<ul class="pager wizard">
+						<li class="previous first" style="display:none;"><a href="#">First</a></li>
+						<li class="previous"><a href="#">Previous</a></li>
+						<li class="next last" style="display:none;"><a href="#">Last</a></li>
+						<li class="next"><a href="#">Next</a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>	
+	</div><!--/.container-->
+</section><!--/#feature-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#roscaRelatedInformation_numberOfTimeReceived').dependsOn('#roscaRelatedInformation\\.receivedRosca', ['Yes']);
+		$('#roscaRelatedInformation_amountReceived').dependsOn('#roscaRelatedInformation\\.receivedRosca', ['Yes']);
+		$('#roscaRelatedInformation_depositPerInstallment').dependsOn('#roscaRelatedInformation\\.receivedRosca', ['Yes']);
+		$('#roscaRelatedInformation\\.durationPerInstallment').dependsOn('#roscaRelatedInformation\\.receivedRosca', ['Yes']);
+		
+		$('#roscaRelatedInformation\\.trainingName').dependsOn('#roscaRelatedInformation\\.suggenstionLivelihood', ['Yes']);
+		$('#roscaRelatedInformation_trainingOthers').dependsOn('#roscaRelatedInformation\\.suggenstionLivelihood', ['Yes']);
+		
+		$('#roscaRelatedInformation_memberSufferedViolence').dependsOn('#roscaRelatedInformation\\.didSufferViolence', ['Yes']);
+		$('#roscaRelatedInformation\\.typeOfViolence').dependsOn('#roscaRelatedInformation\\.didSufferViolence', ['Yes']);
+		$('#roscaRelatedInformation_violenceOthers').dependsOn('#roscaRelatedInformation\\.didSufferViolence', ['Yes']);
+		
+		var gov_helf_i = parseInt($('#livelihoodindex').val());		;		
+		var skills_i = parseInt($('#skillindex').val());		; 
+		$("#input-24").fileinput({
+			initialPreview: [
+				'<img src="../../../public/images/moon.jpg" class="file-preview-image" alt="The Moon" title="The Moon">',
+				'<img src="../../../public/images/earth.jpg" class="file-preview-image" alt="The Earth" title="The Earth">'
+			],
+			overwriteInitial: false,
+			maxFileSize: 100,
+			initialCaption: "The Moon and the Earth"
+		});
+		$("#add_row_skills").click(function(){
+			//$('#skills_addr'+skills_i).html("<td>"+ (skills_i+1) +"</td><td><input name='name"+skills_i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+skills_i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+skills_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+			$('#skills_addr'+skills_i).html("<td>"+(skills_i+1)+'</td>'+
+			'<td><input type="text" name=\'name'+skills_i+'\'  placeholder=\'Name\' class="form-control"/></td>'+
+			'<td><table width="100%" id="t_header"><tr>'+
+			'<td width="50%"><input type="text" name=\'month'+skills_i+'\' placeholder=\'Duration Month\' class="form-control"/></td>'+
+			'<td width="50%"><input type="text" name=\'year'+skills_i+'\' placeholder=\'Duration Year\' class="form-control"/></td>'+
+			'</tr></table></td>'+
+			'<td><input type="text" name=\'duration'+skills_i+'\' placeholder=\'Duration\' class="form-control"/></td>'+
+			'<td><input type="text" name=\'organization'+skills_i+'\' placeholder=\'Organization\' class="form-control"/></td>');
+			//$('#tab_logic_skills').append('<tr id="skills_addr'+(skills_i+1)+'"></tr>');
+			$('#tab_logic_skills > tbody').append('<tr id="skills_addr'+(skills_i+1)+'"></tr>');
+			skills_i++; 
+			$('#skillindex').val(skills_i);
+		});
+		$("#delete_row_skills").click(function(){
+			if(skills_i>1){
+				$("#skills_addr"+(skills_i-1)).html('');
+				skills_i--;
+				$('#skillindex').val(skills_i);
+			}
+		});
+		$("#add_row_gov_helf").click(function(){
+			//alert('gov_helf_i::'+gov_helf_i);
+			//$('#gov_helf_addr'+gov_helf_i).html("<td>"+ (gov_helf_i+1) +"</td><td><input name='name"+gov_helf_i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+gov_helf_i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+gov_helf_i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+			$('#gov_helf_addr'+gov_helf_i).html('<td>'+ (gov_helf_i+1) +'</td>'+
+			'<td><input type="text" name=\'type'+gov_helf_i+'\'  placeholder=\'Help Type\' class="form-control"/></td>'+
+			'<td><input type="text" name=\'orgProvidedHelp'+gov_helf_i+'\' placeholder=\'Organization help\' class="form-control"/></td>'+
+			'<td><input type="text" name=\'recievingTime'+gov_helf_i+'\' placeholder=\'Recieving Time\' class="form-control"/></td>');
+			$('#tab_logic_gov_helf').append('<tr id="gov_helf_addr'+(gov_helf_i+1)+'"></tr>');
+			gov_helf_i++; 
+			$('#livelihoodindex').val(gov_helf_i);
+		});
+		$("#delete_row_gov_helf").click(function(){
+			if(gov_helf_i>1){
+				$("#gov_helf_addr"+(gov_helf_i-1)).html('');
+				gov_helf_i--;
+				$('#livelihoodindex').val(gov_helf_i);
+			}
+		});
+	    $('#rootwizard').bootstrapWizard({
+			onNext: function(tab, navigation, index) {
+				if(index==2) {
+					// Make sure we entered the name
+					if(!$('#name').val()) {
+						alert('You must enter your name');
+						$('#name').focus();
+						return false;
+					}
+				}
+				$('.form-horizontal').submit();
+				// Set the name for the next tab
+				$('#tab9').html('Hello, ' + $('#name').val());
+				
+			}
+		});
+		
+		$('#rootwizard').bootstrapWizard('show', 0);
+		var navigation = $('.navbar2');
+		var $total = navigation.find('li').length-1;
+		var $current = 7;
+		var $percent = ($current/$total) * 100;
+		$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		//$( ".previous" ).removeClass( "disabled" );
+		$( ".next" ).removeClass( "disabled" );
+		
+		$('ul#tabbar li a').click(function(event){
+			//$(this).next('div').slideToggle(200);
+			//alert('eee');
+			event.preventDefault();
+		});
+	});
+</script>

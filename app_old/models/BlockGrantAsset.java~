@@ -1,0 +1,36 @@
+package models;
+
+import javax.persistence.Entity;
+import net.sf.oval.constraint.Length;
+
+import play.data.validation.Required;
+import play.data.validation.Unique;
+import play.db.jpa.Model;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import play.data.validation.Required;
+import models.IGAnames;
+import models.BeneficiaryMasterProfile;
+import models.GEODistrict;
+import models.GEOUpazilla;
+import models.GEOUnion;
+
+import java.util.List;
+import org.hibernate.annotations.Cascade;
+import javax.persistence.CascadeType;
+
+
+@Entity
+public class BlockGrantAsset extends Model {
+	@Required
+	@ManyToOne
+	public GEODistrict geodistrict;
+	@Required
+	@ManyToOne
+	public GEOUpazilla geoupazilla;
+	@Required
+	@ManyToOne
+	public GEOUnion geounion;
+	@OneToMany(cascade = {CascadeType.ALL},orphanRemoval=true)
+	public List<BlockGrantAssetDetail> listOfBlockGrantAssetDetail;
+}

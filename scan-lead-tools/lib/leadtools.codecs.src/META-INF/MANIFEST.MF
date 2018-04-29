@@ -1,0 +1,630 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Copyright: 1991-2016 LEAD Technologies, Inc.
+File-Description: Codecs
+Product-Version: 19.0.0.0
+Trademark: LEADTOOLS is a trademark of LEAD Technologies, Inc.
+Product-Name: LEADTOOLS for Java
+File-Version: 19.0.0.0
+Created-By: 1.7.0_67-b01 (Oracle Corporation)
+
+Name: leadtools/codecs/CodecsTransformMarkerAction.class
+SHA-256-Digest: HSbGxkJiIv65N2GV4pnzUhZOmtdIcxpSJzkp8lXeG00=
+
+Name: leadtools/codecs/CodecsStreamer.class
+SHA-256-Digest: TjMF3/NuhYk3s6j81ClPAwrwOyeFbjPWGx0j3Xm0F6M=
+
+Name: leadtools/codecs/CodecsJbigOptions.class
+SHA-256-Digest: eaPZX5uU/xbr3BkBX5+SjF+CMm2vxYHmuF4kBx4txbk=
+
+Name: leadtools/codecs/CodecsPageEventCommand.class
+SHA-256-Digest: sgm7o14G0AgFQK3RWhrZE1Jp7SmCjpFbV1rE1OiMOAg=
+
+Name: leadtools/codecs/CodecsJpeg2000LoadOptions.class
+SHA-256-Digest: fj8yuAVISZa8VWNtaZivJPMOx85lum80qHpqpPui3C4=
+
+Name: leadtools/codecs/CodecsLoadByteOrder.class
+SHA-256-Digest: DxN1icQEmbwu8G+FOkP9niMRMH9ov2srRfLiJmajREs=
+
+Name: leadtools/codecs/CodecsLoadAsyncCompletedListener.class
+SHA-256-Digest: ISmSxOGVAHedq7pO09UlFKvVanaDuQfrfRzyRg8rR5U=
+
+Name: leadtools/codecs/CodecsLoadSvgAsyncCompletedEvent.class
+SHA-256-Digest: JWlk6vDsJVjjGIoDaNq0W4UOF41POyuEzZYgAbMc1r8=
+
+Name: leadtools/codecs/CodecsOptions.class
+SHA-256-Digest: IOZ3zMuhK/vSocznP/ZrI2SS2RHIF3ebZKuP7o5F0VU=
+
+Name: leadtools/codecs/CodecsAnzView.class
+SHA-256-Digest: y+VP3PqJdd4lU7TUPAf+1+paEfpKxafxgtK4Ao/JQpc=
+
+Name: leadtools/codecs/CodecsTiffImageInfo.class
+SHA-256-Digest: 4/HHKgZWGVl5jS1iBEQgaCcfCLEpSFNo1xcy57GB+k8=
+
+Name: leadtools/codecs/CodecsWmfLoadOptions.class
+SHA-256-Digest: rbhwYPyeDbR14QixC/+nz4APIeS4cwPqu05rRhM7npc=
+
+Name: leadtools/codecs/CodecsVectorImageInfo.class
+SHA-256-Digest: wZtKWGhzVaJDCTf8iT+1TtZjNT2G3TATYHTRIS/LS8Y=
+
+Name: leadtools/codecs/CodecsPngSaveOptions.class
+SHA-256-Digest: Wzv/tK7bTPyiC+vDfIrXhtKcvcFBNG8V3KzQCELlCS8=
+
+Name: leadtools/codecs/CodecsJbig2SaveOptions.class
+SHA-256-Digest: krD9NdTgn41/+k+qqviLRLc3Cr42Bc+RAM7WGWmJ7sc=
+
+Name: leadtools/codecs/CodecsVectorOptions.class
+SHA-256-Digest: z042LmXylmnDuh+OM9ID0PPKx9podl+OVanrDYFz0pw=
+
+Name: leadtools/codecs/CodecsVectorUnit.class
+SHA-256-Digest: YkH6AK9BgHbpTjRJmfn2718KginsQjkv6N95nlDySEs=
+
+Name: leadtools/codecs/FILEVFFOPTIONS.class
+SHA-256-Digest: zOxkqerwBK6jAoM1EbauTX7AK94uRF95OSddgfRmE8E=
+
+Name: leadtools/codecs/FILERTFOPTIONS.class
+SHA-256-Digest: 8lG4iDkdS0axQ16LH3RsRTk8Gx+HfhIgVWnqor0JW6g=
+
+Name: leadtools/codecs/CodecsLoadInformationListener.class
+SHA-256-Digest: bneXeXdf43If2ElktFc+KWuHmqJ8t6fl194ga1WAaNs=
+
+Name: leadtools/codecs/RasterCodecs.class
+SHA-256-Digest: QuW1jIYWhYCDYUjaJQsd5/Fspg7uBfQYykG7UaODFMQ=
+
+Name: leadtools/codecs/CodecsFpxLoadOptions.class
+SHA-256-Digest: bu5mgb+qlbFcjlK4txeFtDc7NlDBKSLrhbbs8+e5LUs=
+
+Name: leadtools/codecs/CodecsSaveImageEvent.class
+SHA-256-Digest: x7GXEJEDunLMHY6mSG0MyuaT29lcqDyLmsoruswvPIA=
+
+Name: leadtools/codecs/THREADHEADER.class
+SHA-256-Digest: i8QgfpPKK5xMWEY8K+HDLmqlQNcaTU7Hqttobr0O23I=
+
+Name: leadtools/codecs/CodecsFpxOptions.class
+SHA-256-Digest: GLFvJdiFd+Bv37wywShpZWwDA0ggexY+oZmQRZlGbJA=
+
+Name: leadtools/codecs/CodecsPhotoInterpolation.class
+SHA-256-Digest: Uk2dxs+JWPpWcpDEwoTrb3UJIgjgU1YSmNmHhqUdlaw=
+
+Name: leadtools/codecs/FILEPSTOPTIONS.class
+SHA-256-Digest: DZOxeNDBzZS5v/aIq8MMDOsalkr8nU9Z1eBA/8646Ug=
+
+Name: leadtools/codecs/FILEXLSOPTIONS.class
+SHA-256-Digest: Cia8pCkjKVCdAfTVi+bqy6Z35z7EwXtKdqBwPtNizBY=
+
+Name: leadtools/codecs/CodecsGifOptions.class
+SHA-256-Digest: 29JAwivIPURJiDWfdBXA00twBw+EosqXN3TJyt3ZDEw=
+
+Name: leadtools/codecs/CodecsDocumentImageInfo.class
+SHA-256-Digest: S7odg7Jqb3g55ciItmJkiSi7100QxeqmqRW1+CkwzXM=
+
+Name: leadtools/codecs/CodecsCodecInformation.class
+SHA-256-Digest: xZvjtZMDPJ0334AALMeFE+dQpewSTOYqSQL25ISjO8I=
+
+Name: leadtools/codecs/CodecsLoadSvgOptions.class
+SHA-256-Digest: 9W/2XPybfyxubqAOtA0o8KTBj6PctVLUtexr8LMu2Yw=
+
+Name: leadtools/codecs/FILECOMMENTSTRINGS.class
+SHA-256-Digest: i6ELnXRt411OZkXXlnFZteoMOieYY8Ou0edPIUD/fSw=
+
+Name: leadtools/codecs/CodecsRedirectReadListener.class
+SHA-256-Digest: 7Or5Su+/gkBIw2UppgfvVVNG8Q4Qpo0G3XpSIX8kKmU=
+
+Name: leadtools/codecs/CodecsPsdImageInfo.class
+SHA-256-Digest: Fv8Xtqk748m+04/OncaHB2Qu3JMFB/sbDrJzwjVx1EQ=
+
+Name: leadtools/codecs/CodecsLoadOptions.class
+SHA-256-Digest: hEkZYgdtr0tRQ6/qFFkp4qwiFeFl78xAPlFNaMMshac=
+
+Name: leadtools/codecs/DIMENSION.class
+SHA-256-Digest: EePAwVt6lIhM9N+Dngy73NUyGfBz5KBJ9KGLkUKoYXY=
+
+Name: leadtools/codecs/CodecsRtfOptions.class
+SHA-256-Digest: D3UN0akd79tAIbt+Bcitjyx60e7RMHAjXMHf+HvbnZc=
+
+Name: leadtools/codecs/CodecsAbcOptions.class
+SHA-256-Digest: L0FJgGoDB/DKV1GzED62tOwsSHGXNTQ95EuSU0YSxS8=
+
+Name: leadtools/codecs/CodecsRawOptions.class
+SHA-256-Digest: uojo5baeXnZsblJJrxXB7ckor39hdQYyCzfYTqHVhC4=
+
+Name: leadtools/codecs/SAVEFILEOPTION.class
+SHA-256-Digest: yAmNFyPGfck8D8NCuc3CA+7Qr20zOKHto/HFYhvlKLY=
+
+Name: leadtools/codecs/CodecsDecompressDataFlags.class
+SHA-256-Digest: fAyVCMrs45vszjgJOSNIfOOhpVFO4OiMeUT9nP7OfqY=
+
+Name: leadtools/codecs/CodecsOverlayCallbackMode.class
+SHA-256-Digest: SrNS8gWMmZ8X4jBsBleWGqlr5Vov5CLDWeKn2KvQEGQ=
+
+Name: leadtools/codecs/CodecsFaxImageInfo.class
+SHA-256-Digest: SBGSTNgqQ3QLZfZD5Pcj4mbMpfI5cFCZGwUmAvgLEPg=
+
+Name: leadtools/codecs/FILEPDFSAVEOPTIONS.class
+SHA-256-Digest: B+fWJK2s8dkvURMwj7KW1pWOjarOXtG19zCqTvuc5Is=
+
+Name: leadtools/codecs/CodecsDocLoadOptions.class
+SHA-256-Digest: Nd5b2xXd4YEkRzsujkCQn1omXa8Dogx9mOAmUiqvb1w=
+
+Name: leadtools/codecs/RasterCodecs$FeedCallbackThunk.class
+SHA-256-Digest: pKJ3MDWt4sgKdL5KeJzu7+A5qYixrgx+Nx1zrrFEANI=
+
+Name: leadtools/codecs/LEADFILETAG.class
+SHA-256-Digest: FWEbvzFiT5qQ62mq7obgKKINQJzDHW9TA7Z6h83PLX8=
+
+Name: leadtools/codecs/CodecsRedirectCloseEvent.class
+SHA-256-Digest: FBGu5MyAUNgMkyYYD2yNry1tal+oYlpXKqFnLLuRjlc=
+
+Name: leadtools/codecs/CodecsSavePageMode.class
+SHA-256-Digest: rFxW0GdcxG+GBSjWANaNWTIjsVkndSUlsJsybtPEdc8=
+
+Name: leadtools/codecs/RasterCodecs$CodecsAsyncWorker.class
+SHA-256-Digest: WLjgL1XBAXeUTnl5RA4wzHYCbKgTYzDi4YjctoWd0z0=
+
+Name: leadtools/codecs/CodecsAbcSaveOptions.class
+SHA-256-Digest: 6NpYXXndd3gXmSFvCbZkKI/C+d4NJTqJzbH1yXXj+1Q=
+
+Name: leadtools/codecs/RasterCodecs$AsyncOperationData.class
+SHA-256-Digest: GxDi8aB3UruSS3MChQAW7r2VgKtc/rsE0X1h/8TZmvQ=
+
+Name: leadtools/codecs/CodecsTiffOptions.class
+SHA-256-Digest: gxUeUyFOTHgkRagHhBIANcd4/Otto1bYwa1xzf+Y7Go=
+
+Name: leadtools/codecs/CodecsJpeg2000Options.class
+SHA-256-Digest: 6Ele7nT9PoERXwjmGOPF3bXpDxjGmdHXXbWKch/Es/c=
+
+Name: leadtools/codecs/CodecsEcwSaveOptions.class
+SHA-256-Digest: 0T0ZNxUz8Tfq/QtCIv7ZaJ3rtzKFREN6H+Dr+Rt5VUM=
+
+Name: leadtools/codecs/CodecsRedirectCloseListener.class
+SHA-256-Digest: zKxv1n6hPyuBvMruKS0KV4YLbLpmeitYc4zx4kZcNpc=
+
+Name: leadtools/codecs/RasterCodecs$1.class
+SHA-256-Digest: sYItB3HDoTv/0YRl5pvA5BkKH9F3upQgcwrCJ9Y1Pfs=
+
+Name: leadtools/codecs/CodecsPngLoadOptions.class
+SHA-256-Digest: /Y58K8iQTswljBqGrva3rL8WuNojOPW5nk9XMEYJUWQ=
+
+Name: leadtools/codecs/CodecsTiffLoadOptions.class
+SHA-256-Digest: 1cPWgEpTQGGwFrFVou5CiyEP2sJPjF3JQR78/BQ2bEs=
+
+Name: leadtools/codecs/CodecsPngOptions.class
+SHA-256-Digest: lMLiJBoZww62ZRch0m76SQQ1dx4+EG9yaOtAjoRirm8=
+
+Name: leadtools/codecs/LOADFILEOPTION$ELO_FLAGS.class
+SHA-256-Digest: yulaBg6toBAaCBk8GF1Isu7JvB8fKEUhPnnQw8Xh/I0=
+
+Name: leadtools/codecs/CodecsSaveOptions.class
+SHA-256-Digest: DqmZAZP654KIXnEGEAcFBHAYBNHYJOVmj+556weuPOw=
+
+Name: leadtools/codecs/CodecsJpeg2000ProgressionsOrder.class
+SHA-256-Digest: CxNMFccyn23Gf2OdG0ZBMCrRa9RlDGVzcm12opZkQHw=
+
+Name: leadtools/codecs/CodecsPstImageInfo.class
+SHA-256-Digest: P3pFMWYeSlxg6xkYch5NGXmUPzRvoAqY1a+r6p6fedA=
+
+Name: leadtools/codecs/CodecsPstOptions.class
+SHA-256-Digest: WymEQl0MBwENQF5VJQF7oLXdJ1fhXG0rXoesjR0wyaY=
+
+Name: leadtools/codecs/Tools.class
+SHA-256-Digest: 52D6W3V1F/Bp1mBf7dhH1KD9dJ/hFa99Z5lN9siZXXE=
+
+Name: leadtools/codecs/LOADFILEOPTION.class
+SHA-256-Digest: T9g9cFruoMQk9TgTCLid0iRJoJTFUMUuHUPf2s/B1Lk=
+
+Name: leadtools/codecs/FILEJBIG2OPTIONS.class
+SHA-256-Digest: RvLlSa498ulX8/4DTIRP091ak4dx1Y/0AMwZJuQs33Y=
+
+Name: leadtools/codecs/CodecsLoadImageEvent.class
+SHA-256-Digest: OlroS8R8tvw3ZRSJa8yUqqjOyjvZCuaJQQnuWZynnHo=
+
+Name: leadtools/codecs/SaveParams.class
+SHA-256-Digest: WACJhjkRtQMzzJGKniqcyzq267IxZ5XgVAfn4Nm+c2Y=
+
+Name: leadtools/codecs/VECTOROPTIONS.class
+SHA-256-Digest: 7HWSHuJkVQ5hl1IAK1c1VwnDnX8URXw8PNVxvFOhdYg=
+
+Name: leadtools/codecs/CodecsVffLoadOptions.class
+SHA-256-Digest: hTX16Mt098y9Una+HNGPFKqIsetywhMiDugDEC+h/0g=
+
+Name: leadtools/codecs/CodecsPdfTextEncoding.class
+SHA-256-Digest: eYkvfNrmgUeHcGECOJ5kd9oe7cmWOHs+sTLm6RnLFCs=
+
+Name: leadtools/codecs/CodecsRasterPdfInfo.class
+SHA-256-Digest: CPYlI1ZBt+93pe0vwm2cdgwYKoUQYBSvwO93nV+zrQU=
+
+Name: leadtools/codecs/CodecsImageInfo.class
+SHA-256-Digest: 5ViIS7TxCnyc4ZiYo00yCa3SW/VC+5B5UWxhCu+QE24=
+
+Name: leadtools/codecs/CodecsLoadInformationEvent$1.class
+SHA-256-Digest: uU83L0oe6ib7/ySNq1e/86eIsD9mkJBLupo0i6vMxHo=
+
+Name: leadtools/codecs/CodecsRedirectOpenEvent.class
+SHA-256-Digest: qEubFb9Ziv4tIx7TGOcjjtYcAGlwklDf+2uLIpz4cU4=
+
+Name: leadtools/codecs/CodecsGetInformationAsyncCompletedListener.clas
+ s
+SHA-256-Digest: c08VuyOgvSmRDfepZq9AyU2/oTxVGbfy1ocJBbXi6lM=
+
+Name: leadtools/codecs/CodecsPlanarConfiguration.class
+SHA-256-Digest: 1qC6J48RyX4IrjHE+xgpIiYLPgTfId/0s5cp7Gyx1wo=
+
+Name: leadtools/codecs/FILEANZOPTIONS.class
+SHA-256-Digest: 6yr+PjpGePoY12IVm+1zLWq0zBBTa6Ae/f8k3+mtoBE=
+
+Name: leadtools/codecs/CodecsRedirectSeekListener.class
+SHA-256-Digest: m4MQ4fUjYnoFhvtQmNN+DU0yHb0DMC5a61OhfDZojjE=
+
+Name: leadtools/codecs/CodecsOptionsSerializer.class
+SHA-256-Digest: ePxT8mdA1/4xZKO2VGHnQpgN1b59Na4Bg4bFX3GQB6I=
+
+Name: leadtools/codecs/FILEPTKOPTIONS.class
+SHA-256-Digest: 5BeF6m5KDd36i11/OzZAlNWlNkHGoj22z2VJ8gfXSL8=
+
+Name: leadtools/codecs/CodecsGifLoadOptions.class
+SHA-256-Digest: YRyWNq6hS7iCd/U+D+RA0xSmhWCfsnaSvGGn6XrEwOI=
+
+Name: leadtools/codecs/CodecsXpsOptions.class
+SHA-256-Digest: 1c+ipv7K46tAQf069HhmHPyM3uq+KKwuqNnt9Y9VELc=
+
+Name: leadtools/codecs/CodecsVffView.class
+SHA-256-Digest: uIFSUjFBqfRrAwOWrfbGw0aT369vCseNmwsC6DdwOfE=
+
+Name: leadtools/codecs/CodecsThumbnailOptions$1.class
+SHA-256-Digest: NhOEiv2mV+NTP57zgoBScQu+3grgauL+g0VlrzZfAco=
+
+Name: leadtools/codecs/L2DOPTIONS.class
+SHA-256-Digest: INMzO0GyNoj/Gprh8qUZDo5SuCvQL77voCPZR01p0Cc=
+
+Name: leadtools/codecs/CodecsPstLoadOptions.class
+SHA-256-Digest: c5rLI+aYiaOu89Bjdo9CCa4dc7BSAvU/6FTYjEsyZzo=
+
+Name: leadtools/codecs/CodecsJbig2LoadOptions.class
+SHA-256-Digest: 4lY52zWC0O1HOO6C4+0df2kL/dqHbP6BKfO11oDDwqs=
+
+Name: leadtools/codecs/CodecsAbcLoadOptions.class
+SHA-256-Digest: t4pvxK8gPCA6jgbNSCexqwnr7A6DDRh461psLYXmYxc=
+
+Name: leadtools/codecs/CodecsSaveImageListener.class
+SHA-256-Digest: ZeoDT56Swgv8SizKfaPHEmPhcl2xFJ+lAJG/Q9ILWU0=
+
+Name: leadtools/codecs/CodecsPtokaOptions.class
+SHA-256-Digest: lvaF5yXHjvXBUlZUoGsxXdgaPkxtnbqCEK6CPwbDFDQ=
+
+Name: leadtools/codecs/CodecsRasterizeDocumentLoadOptions.class
+SHA-256-Digest: 412wPGPf4mm7cgeY+ZQkCWrXcURywUypnZDCOcopwiA=
+
+Name: leadtools/codecs/VEC2DOPTIONS.class
+SHA-256-Digest: kSs1fjFnJR8UnAzGTZhlOiIzDIgICLbzHnv1Z4J6Ysk=
+
+Name: leadtools/codecs/CodecsGeoKeyFoundListener.class
+SHA-256-Digest: HLyZJQpW/cvhKwRaJWNEg24dS+WqxlH6EY79h3FoUDo=
+
+Name: leadtools/codecs/FILETXTOPTIONS.class
+SHA-256-Digest: ULiUZHy7v/r91GiInBmlCs+wXyScgpP2iVEu/1pc2KA=
+
+Name: leadtools/codecs/CodecsGifImageInfo.class
+SHA-256-Digest: ji06ZoI1Lxed410fzkm/T6vjdOEDwnpiyXJpIZeQGVo=
+
+Name: leadtools/codecs/CodecsTransformFlags.class
+SHA-256-Digest: DuR1Ky8gjd+VQrsdgAwqx9UENPtcRdkg98grbxupKtU=
+
+Name: leadtools/codecs/CodecsEnumTagsEvent.class
+SHA-256-Digest: Mrqy4M7ZcNkGWDa+hn7D+9Oeow7+53weNqzB+Obtci0=
+
+Name: leadtools/codecs/CodecsPcdOptions.class
+SHA-256-Digest: tzMa0copbRKmXQICffPU2DwmUyoaWfcOnMxeL3MQ2EM=
+
+Name: leadtools/codecs/CodecsRedirectOpenListener.class
+SHA-256-Digest: iTjUykeDFdwFqIhCJtiTX0Msf4VwFL4mG+uFA1Qf9eM=
+
+Name: leadtools/codecs/CodecsRawSaveOptions.class
+SHA-256-Digest: lDmmRY98de7hDVyfvoD5DJDaORapaTSzbRHrwXoDL0Y=
+
+Name: leadtools/codecs/CodecsRasterizeDocumentUnit.class
+SHA-256-Digest: 6UwMNtzo7kkPPe6/oBSaXPyjaQV4BcCbTD3MhpMbTi8=
+
+Name: leadtools/codecs/CodecsAsyncCompletedEvent.class
+SHA-256-Digest: XEcExoP3crfn7iIw01bovRDa5daUcDnqolGVpZvaBEA=
+
+Name: leadtools/codecs/CodecsRtfLoadOptions.class
+SHA-256-Digest: DAAbALOx0/YqDJ4UWSao8bLqR+4v1c2rhxF579tQIiM=
+
+Name: leadtools/codecs/CodecsAnzLoadOptions.class
+SHA-256-Digest: mAs/sWmHQ8I9hpKqRdmSwnyJ0+Iyp6lU3qRJ58I+Q1Q=
+
+Name: leadtools/codecs/FILEPLTOPTIONS.class
+SHA-256-Digest: GqGX6MyDaThMtztGOM8qLfdymckCdADVCrCra8hvB9U=
+
+Name: leadtools/codecs/RASTERIZEDOC_SIZEMODE.class
+SHA-256-Digest: 8O7u193FDq7bYS6KHGgrNNXnKW/JrBvCsLifmfEcZUE=
+
+Name: leadtools/codecs/CodecsEcwOptions.class
+SHA-256-Digest: VK/chVRqeK9ve3Q9I2KxkFthSe+Co8o1h6m6tNbgi2Y=
+
+Name: leadtools/codecs/CodecsJpeg2000CompressionControl.class
+SHA-256-Digest: 2Tr7hOGn4r/bi+6Bg2RebwfDZxv8anf/GrN8zAgQboI=
+
+Name: leadtools/codecs/FileTools.class
+SHA-256-Digest: WSuMPoSpfDZl/5eWEMn2T2pkz2be8V6TMucO/5XlzS8=
+
+Name: leadtools/codecs/CodecsPcdLoadOptions.class
+SHA-256-Digest: W6S+MLFIkdd508mS9trZlauj1yRW6u2gobtq4qx3NDI=
+
+Name: leadtools/codecs/CodecsLoadAsyncCompletedEvent.class
+SHA-256-Digest: od4BbeqY+PV7FumrtQt1UOfduOcd8VfRBq7hHV+/6V4=
+
+Name: leadtools/codecs/CodecsJbigLoadOptions.class
+SHA-256-Digest: VqIwYDMgdTDrlnIo+hZq+mKJHoetTNTFM/Xzs8tglsM=
+
+Name: leadtools/codecs/RasterCodecs$AsyncOperationData$OperationType.c
+ lass
+SHA-256-Digest: g7KCLoi3qVBy3cMqf6ygi4s5pv/UzPBK9K5n036bm9I=
+
+Name: leadtools/codecs/CodecsPstLoadOptions$PST_FLAGS.class
+SHA-256-Digest: 255qfAOzqqSacgEaeaKeHRBRqvYxLTcNsn5hUCLm8Xo=
+
+Name: leadtools/codecs/CodecsXlsLoadOptions.class
+SHA-256-Digest: c5himtQlJPl7irY00VedBlzMgo/OEhikW0+2ntjb1xw=
+
+Name: leadtools/codecs/CodecsStartDecompressDataType.class
+SHA-256-Digest: ulgRbWEYxs67JrSige7gou2ncfnQwrGgsxzjZ8UfHyc=
+
+Name: leadtools/codecs/CodecsRedirectWriteListener.class
+SHA-256-Digest: DB//rvZ26ckqejqkI3s8WA3E7vlTLCvukvHRZnJivrk=
+
+Name: leadtools/codecs/CodecsCmpQualityFactorPredefined.class
+SHA-256-Digest: K+0iAtoMZQGg+kDXJPnQOiNZodkLZgd1ljnr08h7HUA=
+
+Name: leadtools/codecs/RASTERIZEDOC_UNIT.class
+SHA-256-Digest: 6ZUAx4Uye/aq0c0Tg7gb+Kp1e1cI7zUeDw1bpl41rGI=
+
+Name: leadtools/codecs/FILEJ2KOPTIONS.class
+SHA-256-Digest: O5JlylsxoFQf4THrJO2ac1i207Bv0hbK3U3/IYCnAOY=
+
+Name: leadtools/codecs/CodecsOptions$1.class
+SHA-256-Digest: 2rbmPenQpUrfvco5MSyKnpeHjKX2BzTRr2H/Dqyre+Q=
+
+Name: leadtools/codecs/CodecsTiffPhotometricInterpretation.class
+SHA-256-Digest: DT9KkVUhRk+szm+nNRLjAGbNMvEHZD0eN16VXqmHQ20=
+
+Name: leadtools/codecs/CodecsTransformMarkerListener.class
+SHA-256-Digest: udvCNxxvGUN/4j9i6g90bzljMhR5JRKF1OlCMb//sF8=
+
+Name: leadtools/codecs/CodecsJpegImageInfo.class
+SHA-256-Digest: IIIsi5BDa5Du9ec1BzRZBhFbSmnEz3BK1MZlrTpE4dM=
+
+Name: leadtools/codecs/CodecsExtensionList.class
+SHA-256-Digest: H7kMEHX3f3MEw+vOLhHmpC3kX2AAqwdrZMvCKkaZnG0=
+
+Name: leadtools/codecs/CodecsLoadImageListener.class
+SHA-256-Digest: IO11H1ZLktKOwH87hpLjpHKLZ3br35w6Iu2JV/Px/14=
+
+Name: leadtools/codecs/CodecsAbcQualityFactor.class
+SHA-256-Digest: jDiQNRWHX9a0jd4u7B3sZJq9qqSq6wHLQa/nKqqWa/0=
+
+Name: leadtools/codecs/CodecsPdfOptions.class
+SHA-256-Digest: PKK4lGq11vWN00vCbT83bQoPmctJzsiuAPmmnABZwHM=
+
+Name: leadtools/codecs/CodecsLoadSvgAsyncCompletedListener.class
+SHA-256-Digest: RP9xlXWZIFTepx/evmRC36RHPolwMNnVoxVaWwlhYcE=
+
+Name: leadtools/codecs/FILEDOCOPTIONS.class
+SHA-256-Digest: bN4q+ydKa+KGcNnXCkTULM/Uxk2tk3ddhN2eozfoehk=
+
+Name: leadtools/codecs/CodecsEnumGeoKeysEvent.class
+SHA-256-Digest: hR1Dwb8RvvxORcqVuSftMvl8NpPXoZ9UudkfxU7LkQI=
+
+Name: leadtools/codecs/CodecsOverlayData.class
+SHA-256-Digest: 70YjC9f6q2TLuMC1e3er8VFimEdfaNsMtZrgNbcceYk=
+
+Name: leadtools/codecs/FILEINFO.class
+SHA-256-Digest: IeS+29jpNX5KKTJ9OlkYp10V3iqYJVWYjCVKWcLQL/Y=
+
+Name: leadtools/codecs/CodecsCompressDataListener.class
+SHA-256-Digest: OR+Bvr6vPfd04EknHKyQok45ZM+5STIFtCegyKGqp74=
+
+Name: leadtools/codecs/CodecsGifSaveOptions.class
+SHA-256-Digest: q7W0KomuZW36yCfWys6qWt7e4A6EYO6OKQKkkSDCZ/w=
+
+Name: leadtools/codecs/CodecsTiffSaveOptions.class
+SHA-256-Digest: 3A9d91rWYqZ3BT6w2Iog83fN4tjIouuUEsqeUmVXhgU=
+
+Name: leadtools/codecs/CodecsTxtOptions.class
+SHA-256-Digest: 6srEe8zcu7OFgK3jClPY4HA16L/C3LSIsTgZOgyLd28=
+
+Name: leadtools/codecs/DefineConstants.class
+SHA-256-Digest: YJATKtSx1/qXEHdbUqbwqxZAB18CuP94gKmhp0cssko=
+
+Name: leadtools/codecs/CodecsJpegOptions.class
+SHA-256-Digest: DAhY2np8zgTxIkj1mZLXJg3bPb0hgH/kwqJdPbdfu7U=
+
+Name: leadtools/codecs/CodecsRasterizeDocumentSizeMode.class
+SHA-256-Digest: A/4nYtfYyrdoxn95eaWAH+FFh+gugqC07Wc70qXoxmU=
+
+Name: leadtools/codecs/CodecsRasterizeDocumentOptions.class
+SHA-256-Digest: j7dxYxe4dRbmmD/xU3yfsVDxkhqAzBmRzcxjF9hAUGM=
+
+Name: leadtools/codecs/CodecsVectorLoadOptions.class
+SHA-256-Digest: YGfGdnx2yKOYpkhpt+nXWVOdObcOBWHW8Br9Z688J9Y=
+
+Name: leadtools/codecs/CodecsEpsOptions.class
+SHA-256-Digest: qh4KCWIKZECherVUDnwGRRciyqstBz+/fQ34U4RrZVo=
+
+Name: leadtools/codecs/ltfil.class
+SHA-256-Digest: OqEaO8TJci5IHW5kbupvY6M4RxDrk5XuV+c1NB5TF40=
+
+Name: leadtools/codecs/RasterCodecs$DecompressData.class
+SHA-256-Digest: 6HqRQMWLicCuAq5tZLyveoLxPfogRx8Z4vPqHFQrlPc=
+
+Name: leadtools/codecs/CodecsJpegLoadOptions.class
+SHA-256-Digest: TxbKKRY7U6Lkihd2NlJ9G4rlsSzOTgutn/0Xg/8oTVw=
+
+Name: leadtools/codecs/LoadParams.class
+SHA-256-Digest: aO0rMor1yn6VVDn7fwhwGO25r/+ng3ew3qth0bMLP4E=
+
+Name: leadtools/codecs/CodecsXlsOptions.class
+SHA-256-Digest: Tgru2GxUh7fB7HQRtgYluBFEkWf3CVRgBR/Oi2+vYCY=
+
+Name: leadtools/codecs/THREADDATA.class
+SHA-256-Digest: UDypsYorc3fHWKYP3uEfBJiLDuWbE31hHKjg/X2AaaU=
+
+Name: leadtools/codecs/CodecsOptionsSerializer$ParseResult.class
+SHA-256-Digest: WaZOqymGShoOUiR+Hn0V8TUW9FmJqOW8oTuMJHnQPn0=
+
+Name: leadtools/codecs/CodecsJbig2Options.class
+SHA-256-Digest: OpSwiYjAmSw2obG+LmvBaM2cnupAqvQvULdWshIfFeU=
+
+Name: leadtools/codecs/LOADINFO.class
+SHA-256-Digest: NcScST0IXgarB0K+2hQmfxs/hUZdvUaqRmcL4wiDIko=
+
+Name: leadtools/codecs/CodecsXpsSaveOptions.class
+SHA-256-Digest: xL4RcP1iVcs3zjYLOSSkY951EHEl2XQXJSmBYMJognU=
+
+Name: leadtools/codecs/CodecsOverlayListener.class
+SHA-256-Digest: tz3ljqP/lh1fanz1XGSLEvV/7BXXuk8jFnQO/pGoRvg=
+
+Name: leadtools/codecs/CodecsRedirectReadEvent.class
+SHA-256-Digest: JarCAysxT1Wov5q13LcwuC+Fbk3XhKHMuXrtZyvlldU=
+
+Name: leadtools/codecs/CodecsCompression.class
+SHA-256-Digest: t2sylHmho9d0lht191/K7vAF1hawVEn+nzcMVFAmReo=
+
+Name: leadtools/codecs/CodecsVectorViewMode.class
+SHA-256-Digest: uFdynMq2f2VEo7fYfL+9jqV1LmO/JaHO4gobginmUc8=
+
+Name: leadtools/codecs/FILETIFOPTIONS.class
+SHA-256-Digest: bhg/ezdlK5c1zM9R4ibz6ppf8SKC719FxP4Gevxy/w8=
+
+Name: leadtools/codecs/CodecsPtokaLoadOptions.class
+SHA-256-Digest: V6nNwTH/jEU9ozVvqGvZYlnCLzpObCguZ4NxdvJTOQU=
+
+Name: leadtools/codecs/CodecsJpeg2000RegionOfInterest.class
+SHA-256-Digest: jxk3YyyU5qr2hXUx/Hpu2ajLZUNX3F1+64jlxJNHNIU=
+
+Name: leadtools/codecs/CodecsVffOptions.class
+SHA-256-Digest: ReAM/36XRNnbwkshDruDGhpeWQxm7vpYfbGwCyzS63w=
+
+Name: leadtools/codecs/CodecsSavePageListener.class
+SHA-256-Digest: q7vZp5Dz1a/IiAFovHEIaN/wK0L+ASNxfaAMcAebG0I=
+
+Name: leadtools/codecs/CodecsRedirectWriteEvent.class
+SHA-256-Digest: KX5vkWneM9MNfLSMTcoqK1gzhzd8y6aKGKRr5i62jFc=
+
+Name: leadtools/codecs/CodecsLoadImageFlags.class
+SHA-256-Digest: 9RQ0zUT0IIER/csCztVIt8NKie3Kvz2mRM51yCFWaR8=
+
+Name: leadtools/codecs/RASTERPDFVERSION.class
+SHA-256-Digest: qflOS3Er12ev6mFKRE8a631yIGxCJHQUl15x/kW3gnw=
+
+Name: leadtools/codecs/CodecsDocOptions.class
+SHA-256-Digest: dAV3e3LG3g9E82AvjxxHANyy1C+KBvg8QTej7484El8=
+
+Name: leadtools/codecs/CodecsWmfOptions.class
+SHA-256-Digest: whD2BZ7iM5OdHIRFysIa841VBD0j3So65veIVb+qs2A=
+
+Name: leadtools/codecs/CodecsPdfSaveOptions.class
+SHA-256-Digest: l+9FU1tunVo5crrODKNf9Msn8YWO2X8am+fbqG0g76g=
+
+Name: leadtools/codecs/CodecsRedirectSeekEvent.class
+SHA-256-Digest: vVnYheYPLFyda0mEd3Ap8gkNKVDo6GHAMIpcV4tyWUY=
+
+Name: leadtools/codecs/CodecsCodecInformation$1.class
+SHA-256-Digest: Wq0BeNcyIHBWlnHZFHa5FSa2GxH+Ec29J3KKw5xiBtQ=
+
+Name: leadtools/codecs/CodecsEcwLoadOptions.class
+SHA-256-Digest: aZz9kTR7KxK8NOYvHIyeBfBQUS+7l4oXXVhWVnel9EM=
+
+Name: leadtools/codecs/CodecsJpeg2000SaveOptions.class
+SHA-256-Digest: sNmgIOHWXosCPajbfJWcRKwC0QT2TRvRT2PeYfb0Qi4=
+
+Name: leadtools/codecs/CodecsPageEvent.class
+SHA-256-Digest: pl6bT5zA6JEEoXGhE7V8cqHYBgdAmaiiyPhu2LkfgRo=
+
+Name: leadtools/codecs/CodecsRasterPdfVersion.class
+SHA-256-Digest: CCv9f5Gn38tOEBZB/zhol6VbIErqQSLuRDoTB25mWYA=
+
+Name: leadtools/codecs/CodecsExtensionListFlags.class
+SHA-256-Digest: ix9nXdUXcU8UBUALbhewY4+0/Q5eIbliKkXBAumDNO8=
+
+Name: leadtools/codecs/CodecsEpsLoadOptions.class
+SHA-256-Digest: ctXgzLGGNPp2Y8bUIsumeCFuyPPj5cXlSISKoNVunF0=
+
+Name: leadtools/codecs/CodecsPageEventState.class
+SHA-256-Digest: s0d62tNegD/LlXeXVsmOtT6r9JfVfguCUSKcGWVHxew=
+
+Name: leadtools/codecs/CodecsXpsLoadOptions.class
+SHA-256-Digest: tLzVqSnhvn6lqus0CwWtf60Hx5nmGh2TuSETlEclCbA=
+
+Name: leadtools/codecs/PRIVATETAG.class
+SHA-256-Digest: 7EQf+yQPdIiWV4aVIZ8QBnAU6qnXE+cJqnXtEKVdCD8=
+
+Name: leadtools/codecs/FILEXPSOPTIONS.class
+SHA-256-Digest: QYdv1U7OjXldhrMhaaWV2uXlB2PS+Nm049f8WjSfNds=
+
+Name: leadtools/codecs/CodecsExtension.class
+SHA-256-Digest: EAdEX2wT1qhE0w2p5eWcveP3Y/GSF3CRmRxFDqWJs0M=
+
+Name: leadtools/codecs/CodecsJpegSaveOptions.class
+SHA-256-Digest: E73b2vBc66NrQYTpzyUbcRftxg6irAM0Mr8m+/jc0KA=
+
+Name: leadtools/codecs/LEADFILECOMMENT.class
+SHA-256-Digest: aclLdbDAyxJ1VAb5POzmrAUfgdmzHN/mnILcjoggOH8=
+
+Name: leadtools/codecs/FILEPDFOPTIONS.class
+SHA-256-Digest: XV2BK4ej9+TmBw3BWfmrvdc0t7hqMd6VnnacOmNrKSg=
+
+Name: leadtools/codecs/CodecsJpeg2000PrecinctSize.class
+SHA-256-Digest: YD5k4Odnf/ENz2oxLRD5TBy9Sq9c9GQYj7jrb269siM=
+
+Name: leadtools/codecs/CodBlockStyle.class
+SHA-256-Digest: yh49Lh4LYIqXEjzkuiGMhLeI3Aa+GoCSmAo29j+ucTg=
+
+Name: leadtools/codecs/CodecsCodecLoadMode.class
+SHA-256-Digest: ozPZXLIZCernEh9qWJ1aA7qH+vxZEoFWiNk0D1n6Sbc=
+
+Name: leadtools/codecs/CodecsPdfLoadOptions.class
+SHA-256-Digest: A1kM4f9H1zpwo9kpE4HlIjk8i6wyjDcAS3P5O2jG1x8=
+
+Name: leadtools/codecs/CodecsColorSpaceType.class
+SHA-256-Digest: ++RbAS25HJQ1QOZVe7MdoVji6TnJm8TDhWGa8Its2Ho=
+
+Name: leadtools/codecs/CodecsLoadInformationEvent.class
+SHA-256-Digest: V50PMdzkX9TM4N8eDfKz3bhyyz6zfXvS7GGGUIGxmGs=
+
+Name: leadtools/codecs/RASTERIZEDOCOPTIONS.class
+SHA-256-Digest: uHOWTL2GcZiT0izL782JjN0k2o1Q7gi2nGJ5UOYbaCM=
+
+Name: leadtools/codecs/LOADSVGOPTIONS.class
+SHA-256-Digest: yDvHLbdAx1rGF92o/+lIBe5iZ9QDl41VTcIWzbYTbZ0=
+
+Name: leadtools/codecs/CodecsLoadPageListener.class
+SHA-256-Digest: v3nJb04Q0ceUGu9LVqHScKxcisUOdeRAt33yTOQA9mQ=
+
+Name: leadtools/codecs/CodecsTagFoundListener.class
+SHA-256-Digest: q9pXvak/cOHzTYkENzdjX4phZdk90V6JcSj7abzOenY=
+
+Name: leadtools/codecs/CodecsPdfSaveOptions$1.class
+SHA-256-Digest: /vyWZop69Xt/SE1lT8rDBoJWwPeU83oSBObdqrhYmEE=
+
+Name: leadtools/codecs/CodecsTxtLoadOptions.class
+SHA-256-Digest: 8MiWwm4R/RXwHndiZVBoPfp0mqDLHB9vZrRMX5uzVnY=
+
+Name: leadtools/codecs/CodecsStartDecompressOptions.class
+SHA-256-Digest: +9vKmIxC8AUK+qC2zm4Nin8CKj1AB0Egxp/a15sx1Mw=
+
+Name: leadtools/codecs/THREADLOADSETTINGS.class
+SHA-256-Digest: RURYJk9w+jOLNPrIF5Yc3kmjYiGsIWp8H/KRjHubEXs=
+
+Name: leadtools/codecs/CodecsThumbnailOptions.class
+SHA-256-Digest: ok/yCPdziRIGIFw+v8Oghn1i4ufT7ggOLyjETvRcqhU=
+
+Name: leadtools/codecs/CodecsGetInformationAsyncCompletedEvent.class
+SHA-256-Digest: Q3LgVojZP1u+KhnH4vPk23qAtKSINZQcGwhlbGhDcJk=
+
+Name: leadtools/codecs/CodecsAnzOptions.class
+SHA-256-Digest: TvuTPl37CHjb7fO51HQZwfRtV9GnF1LJ33UgLx+qRjs=
+
+Name: leadtools/codecs/RasterMemoryRedirectIO.class
+SHA-256-Digest: aAoRMf04wwGu2mnxxmXxsMer271YkhQXH0npY4zGvdM=
+

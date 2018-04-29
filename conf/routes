@@ -1,0 +1,103 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+GET     /admin     Application.redirect(url:'/admin/index.html') 
+# Home page
+GET     /                               		Application.index
+
+
+#Forms
+GET		/form/list								Forms.list
+GET		/form/new                          		Forms.create
+POST	/form/new								Forms.submit
+GET		/form/edit/{id}							Forms.edit
+POST	/form/edit/{id}							Forms.submit
+GET		/form/view/{id}							Forms.details
+GET		/form/view/{id}/statuses				Forms.statuses
+POST	/form/view/{id}/statuses             	Forms.addStatus
+GET		/form/view/{id}/logics					Forms.logics
+POST	/form/view/{id}/logics					Forms.addLogic
+GET     /form/listdata                          Forms.listData
+
+# Users
+GET		/user/list								Users.list
+GET		/user/view/{id}							Users.details
+GET		/user/new								Users.create
+GET		/user/edit/{id}							Users.edit
+POST	/user/edit/{id}							Users.submit
+GET		/role/list								Users.roleList
+GET		/role/new								Users.roleCreate
+POST	/role/edit/{id}							Users.roleSubmit
+GET		/role/edit/{id}							Users.roleEdit
+POST	/ajax/user/tlpin/assign					Users.assignTLPin
+POST	/ajax/permission						Users.updatePermission
+
+# Android Interface XML
+#GET    /formList/?							    Mobile.listAsXml
+GET     /m/formList/?							Mobile.listAsXml
+*		/m/submission/?							Mobile.submit
+GET     /m/formXml/{<[0-9]+>id}/?				Mobile.viewAsXml
+GET 	/m/getschedule/?						Mobile.schudeleGeneration(format:'json')
+#GET     /m/getdatatomakecsv/?                  Mobile.jsonForParavat(format:'json')
+GET     /m/gettempcattle/?                  	Mobile.tempCattleList(format:'json')
+GET     /m/getmaxcattle/?                  	Mobile.getMaxIdForReg(format:'json')
+
+#APIs
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+#Application Notification
+GET		/m/notification						    Notifications.getNotification(format:'json')
+POST    /s/alert							    Notifications.mPostAlert(format:'json')
+GET		/m/login								Users.mLogin
+GET     /m/report?                              Notifications.jsonForParavat(format:'json')
+# Area 
+
+
+
+#Report Generation
+#POST    /report/fieldstatus					ReportGeneration.fieldstatus
+GET      /fieldstatus							ReportGeneration.unicefFieldStatus
+GET      /fieldstatus/filter				    ReportGeneration.unicefFilteredFieldStatus
+GET		 /report/dataset						ReportGeneration.sendData        
+
+
+# LMS-2 System monitoring 
+GET      /generalview				            LivestockMonitoring.generalView
+GET      /generalsearch         		        LivestockMonitoring.generalViewSearch
+POST     /savemedecine							LivestockMonitoring.addMedicine
+POST     /prescription  						CattleRegistrations.addPrescriptionDetail
+POST     /prescriptionDelete  					LivestockMonitoring.deletePrescriptionDetail
+POST     /prescriptionbyveterian  				LivestockMonitoring.addPrescriptionByVeterian
+
+POST     /followupadvice						LivestockMonitoring.followUpAdvice
+GET      /addcomment/{id}&{comment}				LivestockMonitoring.addComment
+POST      /addGeneralAdvice/{cattleId}&{comment}				CattleRegistrations.addGeneralAdvice
+
+#PrescriptionApproval Section
+
+GET      /approvebysupervisor/{id}				PrescriptionApproval.approvePrescriptionBySupervisor
+GET      /rejectedbysupervisor/{id}&{comment}	PrescriptionApproval.rejectPrescription
+
+#Basic profile
+GET     /beneficiary/loadProfile				Beneficiary.loadMasterprofile
+GET     /beneficiary/profile					Beneficiary.basicprofile
+POST	/beneficiary/profile					Beneficiary.addbasicprofile
+POST	/beneficiary/addmaritalstatus			Beneficiary.addmaritalstatus
+POST	/beneficiary/addmemberdetails			Beneficiary.addmemberdetails
+
+POST	/beneficiary/addhouseholddetails			Beneficiary.addhouseholddetails
+POST	/beneficiary/addanimaldetails			Beneficiary.addanimaldetails
+POST	/beneficiary/addsicknessdetails			Beneficiary.addsicknessdetails
+POST	/beneficiary/addroscaInfo			Beneficiary.addroscaInfo
+POST	/beneficiary/adddisputedetails			Beneficiary.adddisputedetails
+
+
+
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET     /uploads/                               staticDir:uploads
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

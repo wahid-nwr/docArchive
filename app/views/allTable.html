@@ -1,0 +1,32 @@
+
+<!--COMMON  SHOW DATA -->
+<!-- Just send data in json with this name 'JSON_TABLE_DATA'-->
+<section id="feature2" >
+	<div class="container">	
+<div class="col-md-12">
+	<h4>${header}</h4>
+	<div class="col-md-12" style="padding-top: 40px">
+		<div class="table-responsive">
+			<table id="example" class="display"></table>
+		</div>
+	</div>
+</div>
+
+</div>
+</section>
+
+
+<script>
+	$(document).ready(function() {
+		var dataJson = null;
+		dataJson = ${JSON_TABLE_DATA.raw()};
+		//mpower_Json_to_table(dataJson);
+		if (dataJson.length != 0) {
+			mpower_Json_to_table(dataJson, 0); //mpower_Json_to_table.js calling for table creation.
+		}
+	});
+</script>
+
+
+<script src="../../../public/script/mPower.json.to.table.js"></script>
+<script src="../../../public/script/mpower_delete.js"></script>

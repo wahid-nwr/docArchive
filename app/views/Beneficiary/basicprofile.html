@@ -1,0 +1,335 @@
+#{extends 'main.html' /}
+<section id="feature2" >
+        <div class="container">
+		
+			<div id="rootwizard">
+	<div class="navbar2">
+	  <div class="navbar-inner">
+	    <div class="container">
+	<ul id="tabbar" style="visibility:hidden">
+		<li style="visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>	
+		<li><a href="#tab1" data-toggle="tab">Form 1</a></li>
+		<li><a href="@{Beneficiary.tab2()}">Form 2</a></li>
+		<li><a href="@{Beneficiary.tab3()}">Form 3</a></li>
+		<li><a href="@{Beneficiary.tab4()}">Form 4</a></li>
+		<li><a href="@{Beneficiary.tab5()}">Form 5</a></li>
+		<li><a href="@{Beneficiary.tab6()}">Form 6</a></li>
+		<li><a href="@{Beneficiary.tab7()}">Form 7</a></li>
+		<li><a href="@{Beneficiary.tab8()}">Form 8</a></li>
+		<!--
+		<li><a href="@{Beneficiary.tab9()}">Form 9</a></li>							
+		<li><a href="@{Beneficiary.tab10()}">Form 10</a></li>
+		-->
+	</ul>
+	 </div>
+	  </div>
+	</div>
+	
+	<div id="bar" class="progress progress-striped active">
+	  <div class="bar"></div>
+	</div>
+	
+	<div class="tab-content">
+	    <div class="tab-pane" id="tab1"><!--tab1-->
+		   <div class="col-lg-12">
+		    <div class="panel panel-default">
+				 <div class="panel-heading">Woman Beneficiary Profile</div>
+				<div class="panel-body">
+					<div class="filter">
+						<div class="row">
+									<div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'district.id' , type:'select', items:geodistricts,labelProperty:'name'} 
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'upazilla.id' , type:'select', items:geoupazillas,labelProperty:'name' } 
+											#{option}Any#{/option}
+										#{/input}									
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'unionparishad.id' , type:'select', items:geounions,labelProperty:'name'}
+											#{option}Any#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 <div class="col-lg-3">
+									 <div class="form-group">
+										 #{input 'beneficiaryMasterProfile.id' , type:'select', items:beneficiaryMasterProfileList,labelProperty:'beneficiaryName'}
+										 #{option}Select One#{/option}
+										#{/input}
+									 </div>
+									 </div>
+									 </div>
+									 </div>
+		    <div class="col-lg-4">
+	             <form method="POST" id="basicProfile" class="form-horizontal" action="./profile" enctype="multipart/form-data"> 					 
+					 <input type="hidden" name="beneficiaryProfile.id" value="${beneficiaryProfile?.id}"/>
+					 <input type="hidden" name="beneficiaryProfile.beneficiaryMasterProfile.id" value="${beneficiaryMasterProfile?.id}"/>
+					
+					 <input type="hidden" id="beneficiaryProfile.series" name="beneficiaryProfile.series" value="${beneficiaryProfile?.series}"/>
+                                <fieldset> 
+									
+                                    <div class="form-group">  
+                                    <label class="control-label" for="input01">Ward No:</label>
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        
+                                        <input type="text" name="beneficiaryProfile.wardno" value="${beneficiaryMasterProfile?.wardCode}" readonly/>
+                                        </div>  
+                                    </div>  
+                                    <div class="form-group">  
+                                    <label class="control-label" for="input01">Village :</label>
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        <input type="text" name="beneficiaryProfile.village" value="${beneficiaryMasterProfile?.villageName}" readonly/>                                        
+                                        </div>  
+                                    </div>
+                                      <div class="form-group">  
+                                    <label class="control-label" for="input01">Beneficiary ID :</label> 
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        <input type="text" name="beneficiaryProfile.beneficiaryId" value="${beneficiaryMasterProfile?.beneficiaryId}" readonly/>
+                                        
+                                        </div>  
+                                    </div>
+									<div class="form-group">  
+                                    <label class="control-label" for="input01">Name of Beneficiary :</label>
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        <input type="text" name="beneficiaryProfile.beneficiaryName" value="${beneficiaryMasterProfile?.beneficiaryName}" readonly/>                                        
+                                        </div>  
+                                    </div>
+									<div class="form-group">  
+                                    <label class="control-label" for="input01">Father's/Husband Name :</label>
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        <input type="text" name="beneficiaryProfile.gaurdianName" value="${beneficiaryMasterProfile?.fatherOrHusbandName}" readonly/>                                      
+                                        </div>  
+                                    </div>
+									<div class="form-group">  
+                                    <!--<label class="control-label" for="input01">House/Area :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.houseOrArea'/}
+                                        </div>  
+                                    </div>
+									
+									<div class="form-group">  
+                                    <!--<label class="control-label" for="input01">National ID Card No :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.nationalId',required:'true'/}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Religion :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.mobileNumber' /}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Religion :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.ownerOfMobile' /}
+                                        </div>  
+                                    </div>
+									<div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Religion :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.religion' /}
+                                        </div>  
+                                    </div>
+                                    
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Religion :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.clan' /}
+                                        </div>  
+                                    </div>
+									<div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Head of Family :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.headOfFamily' /}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Head of Family :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.bankAccountNo', required:'true' /}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Head of Family :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.nameOfBank', required:'true'/}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Head of Family :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.nameOfBranch', required:'true'/}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Head of Family :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.longitude' /}
+                                        </div>  
+                                    </div>
+                                    <div class="form-group">  
+                                    <!--<label class="control-label" for="input01">Head of Family :</label>  -->
+                                        <div class="controls">  
+                                        <!--<input type="text" class="form-control" id="input01">  -->
+                                        #{input 'beneficiaryProfile.lattitude' /}
+                                        </div>  
+                                    </div>
+                                </fieldset>  
+                            
+						</div>	
+						 <div class="col-lg-6">
+						 
+						<p>Select Profile picture(Size up to 100 kilo bytes)</p>
+							<label class="control-label">Profile Picture</label>
+							<input id="input-24" name="beneficiaryProfilePicture" type="file" multiple>
+							
+						</div>
+						
+					   </div>
+					</div>
+				  </div>
+        </div><!--/tab1-->
+			
+				<ul class="pager wizard">
+					<li class="previous first" style="display:none;"><a href="#">First</a></li>
+					<li class="previous"><a href="#">Previous</a></li>
+					<li class="next last" style="display:none;"><a href="#">Last</a></li>
+					<li class="next">
+					<button type="submit" class="sub">Next</button>				
+					</li>
+				</ul>
+				</form>
+			</div>	
+		</div>	
+	</div><!--/.container-->
+</section><!--/#feature-->
+	
+<script type="text/javascript">
+	$(document).ready(function() {
+		var i=1;
+		
+		/*
+		$("#input-24").fileinput({
+			initialPreview: [
+				
+			],
+			showUpload: false,
+			//overwriteInitial: false,
+			maxFileSize: 100,
+			initialCaption: "Profile Picture"
+		});
+		*/
+		$("#add_row").click(function(){
+			$('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='checkbox' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+
+			$('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+			i++; 
+		});
+     $("#delete_row").click(function(){
+    	 if(i>1){
+			$("#addr"+(i-1)).html('');
+			i--;
+		 }
+	 });
+	 
+  	$('#rootwizard').bootstrapWizard({
+		onNext: function(tab, navigation, index) {
+			if(index==2) {
+				// Make sure we entered the name
+				if(!$('#name').val()) {
+					alert('You must enter your name');
+					$('#name').focus();
+					return false;
+				}
+			}
+			//$('.form-horizontal').submit();
+			// Set the name for the next tab
+			$('#tab9').html('Hello, ' + $('#name').val());
+			
+		},
+		onTabShow: function(tab, navigation, index) {
+			var $total = navigation.find('li').length;
+			var $current = index+1;
+			var $percent = ($current/$total) * 100;
+			$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		}
+	});
+	$( ".next" ).removeClass( "disabled" );
+	$( ".sub" ).removeClass( "disabled" );
+	//$('#rootwizard').bootstrapWizard('show', '#tab1');
+	
+	
+	$('ul#tabbar li a').click(function(event){
+		//$(this).next('div').slideToggle(200);
+		//alert('eee');
+		event.preventDefault();
+	});
+});
+
+$('#beneficiaryMasterProfile\\.id').on('change', function(){
+	var sel = $(this).find(':selected');
+	//$('#basicProfile').submit();
+	window.location = './loadProfile?id='+sel.val();
+	/*
+	var union = $("#beneficiaryProfile\\.unionparishad");
+	if(union!=null && union!='null' && union!='undefined')
+	{
+		union.val(sel.val());
+	}
+	var oldItems = $(this);
+	if(sel.val()){
+		$.post('@@{Beneficiary.loadBeneficiary}', {id:sel.val()}, function(data){
+			$('.filter select:eq(3)').find('option:not(:first)').remove().end().append(data);
+		});
+	}	
+	else{
+		$('.filter select:eq(2)').find('option:not(:first)').remove();
+	}
+	*/
+});
+
+$('.filter').on('change', 'select:eq(2)', function(){
+	var sel = $(this).find(':selected');
+	var union = $("#beneficiaryProfile\\.unionparishad");
+	if(union!=null && union!='null' && union!='undefined')
+	{
+		union.val(sel.val());
+	}
+	var oldItems = $(this);
+	if(sel.val()){
+		$.post('@@{Beneficiary.loadBeneficiary}', {id:sel.val()}, function(data){
+			$('.filter select:eq(3)').find('option:not(:first)').remove().end().append(data);
+		});
+	}	
+	else{
+		$('.filter select:eq(3)').find('option:not(:first)').remove();
+	}
+});
+</script>
+#{cascade/}	
+	
+	

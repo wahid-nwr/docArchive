@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+<!-- page content -->
+<link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+
+<!-- Select2 -->
+<script src="../../../public/style/vendors/select2/dist/js/select2.full.min.js"></script>
+<style>
+.wrapper         {width:98%;height:100%;margin:0 auto;background:#CCC}
+.h_iframe        {position:relative;}
+.h_iframe .ratio {display:block;width:100%;height:auto;}
+.h_iframe iframe {position:absolute;top:60px;left:0;width:100%; height:100%;}
+</style>
+        <div class="right_col" role="main">
+			<div class="wrapper">
+			<div class="h_iframe">
+				<!-- a transparent image is preferable -->
+				<img class="ratio" src="http://placehold.it/16x9"/>
+				<iframe src="@{DocumentArchiveController.webScanning()}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<p>Please scale the "result" window to notice the effect.</p>
+		</div>			
+<script type="text/javascript">
+
+    $(".select2_single").select2({
+		placeholder: "Select a state",
+		allowClear: true
+	});
+
+</script>

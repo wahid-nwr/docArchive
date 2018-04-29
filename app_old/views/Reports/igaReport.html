@@ -1,0 +1,68 @@
+#{extends 'main.html' /}
+
+
+<!--/#main-slider-->
+<section id="feature2" >
+    <div class="container">
+       <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    </div><!--/.container-->
+</section><!--/#bottom-->
+
+
+<script>
+//$(function () {
+$(document).ready(function() {
+var data= ${JSON_ARRAY.raw()};
+
+var catagories= ${JSON_X_AXIS.raw()};
+console.log(data +"   DATA");
+$('#container').highcharts({
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Asset of Each Beneficiary '
+    },
+    subtitle: {
+        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+    },
+    xAxis: {
+        type: 'category',
+        labels: {
+            rotation: -45,
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Taka'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: 'Beneficiary Asset: <b>{point.y:.1f} </b>'
+    },
+    series: data,
+        dataLabels: {
+            enabled: true,
+            rotation: -90,
+            color: '#FFFFFF',
+            align: 'right',
+            format: '{point.y:.1f}', // one decimal
+            y: 10, // 10 pixels down from the top
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    
+
+});
+});
+</script>

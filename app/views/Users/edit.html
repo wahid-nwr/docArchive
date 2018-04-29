@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+
+<div class="page-header top">
+#{if user?.id}
+    <h1>Edit User</h1>
+#{/if}
+#{else}
+    <h1>New User</h1>
+#{/else}
+</div>
+
+#{form @submit(), class:'form-horizontal'}
+
+	#{if usermodel?.id}
+    <input type="hidden" name="usermodel.id" value="${usermodel.id}" />
+    #{/if}
+    #{input 'usermodel.name' /}
+    #{input 'usermodel.displayName'/}
+    #{input 'usermodel.email', class:'required' /}
+    #{input 'usermodel.mobileNumber', class:'required' /}
+    #{input 'usermodel.password', type:'password' /}
+    #{input 'usermodel.confirmPassword', type:'password' /}
+
+    #{if currentUser != user}
+    #{input 'user.role.id', type:'select', items:roles, labelProperty:'name' /}
+    #{/if}
+    #{if sessUser!=null && (sessUser.role.name).equals("FirmManager")}
+	<input type="hidden" name="user.firmFacility.id" value="${firmFacilitys.get(0).id}" />
+	#{/if}
+    #{submit /}
+#{/form}
+
+#{set 'moreScripts'}
+	#{script 'mpower-geolocation.js' /}	
+#{/set}

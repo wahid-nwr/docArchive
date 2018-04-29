@@ -1,0 +1,358 @@
+package controllers;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.ArrayList;
+
+import controllers.deadbolt.Deadbolt;
+import controllers.deadbolt.ExternalRestrictions;
+import controllers.deadbolt.Unrestricted;
+
+
+import models.UserModel;
+import models.BeneficiaryProfile;
+import models.MaritalStatus;
+
+import models.FamilyMemberDetails;
+import models.HouseholdInformation;
+
+import models.HomesteadInformation;
+import models.IncomeGeneratingActivity;
+import models.SicknessInformation;
+import models.ROSCARelatedInformation;
+import models.LawRelatedActivity;
+import models.SkillsTrainingInformation;
+import models.LivelihoodTrainingInformation;
+import models.GEODistrict;
+import models.WealthInformation;
+import play.data.validation.Valid;
+import play.data.validation.Validation;
+import play.db.DB;
+import play.mvc.With;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import play.db.jpa.JPA;
+
+import java.io.File;
+import play.data.FileUpload;
+import java.util.Calendar;
+
+@With(Deadbolt.class)
+public class Beneficiary extends Controller {
+
+	@ExternalRestrictions("View User")
+    public static void beneficiarystatuslist() {
+		List<BeneficiaryProfile> beneficiaryProfileList = BeneficiaryProfile.findAll();
+		render(beneficiaryProfileList);
+    } 
+    
+    @ExternalRestrictions("View User")
+    public static void beneficiarylist() {
+		List<BeneficiaryProfile> beneficiaryProfileList = BeneficiaryProfile.findAll();
+		render(beneficiaryProfileList);
+    } 
+	
+	@ExternalRestrictions("View User")
+    public static void basicprofile() {
+		String id = request.params.get("id");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(id!=null && !id.equlas("null") && id.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(id));
+		}
+		List<GEODistrict> geodistricts = GEODistrict.findAll();
+		render(beneficiaryProfile,geodistricts);
+    }    
+    
+    public static void addbasicprofile(BeneficiaryProfile beneficiaryProfile) {
+		//BeneficiaryProfile beneficiaryProfile = null;
+		//List<User> users = User.find("id <> 1").fetch();
+		List<FileUpload> uploads = (List<FileUpload>) request.args.get("__UPLOADS");
+		String path = "/opt/" +  "uploads" + File.separator;
+		for(FileUpload file:uploads)
+		{
+			if(file!=null)
+			{
+				Calendar cal = Calendar.getInstance();
+				Long timeStamp = cal.getTimeInMillis();
+				File newfile = file.asFile(path + timeStamp +".jpg");
+				beneficiaryProfile.profilePicture = newfile.getPath();
+			}
+		}
+		System.out.println("uploads::"+uploads);
+        
+		beneficiaryProfile.save();
+		render("@tab2",beneficiaryProfile);
+    }    
+    @ExternalRestrictions("View User")
+    public static void tab2() {
+		render();
+    }    
+    public static void addmaritalstatus(MaritalStatus maritalStatus) {
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			maritalStatus.beneficiaryProfile = beneficiaryProfile;
+		}		
+		
+		maritalStatus.save();
+		render("@tab3",beneficiaryProfile);
+    }    
+    @ExternalRestrictions("View User")
+    public static void tab3() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void addmemberdetails(FamilyMemberDetails familyMemberDetails) {
+		String name = "", gender="",eduLevel="",maritalStatus="",isSchoolGoing="",haveScholarship="",profession="",isEarningMember="",isDisabled="";
+		String disabilityDesc="",relationshipBen="",specialComment="";
+		int age;
+		List<HouseholdInformation> listOfHousehold = new ArrayList<HouseholdInformation>();
+		HouseholdInformation householdInformation = null;
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			familyMemberDetails.beneficiaryProfile = beneficiaryProfile;
+		}		
+		String index = request.params.get("index");
+		int indx = 0;
+		if(index!=null && !index.equals("null") && index.length()>0)
+		{
+			indx = Integer.parseInt(index);
+		}
+		for(int i=0;i<indx;i++)
+		{
+			householdInformation = new HouseholdInformation();
+			name = request.params.get("name"+i);
+			householdInformation.name = name;
+			gender = request.params.get("gender"+i);
+			householdInformation.gender = gender;
+			eduLevel = request.params.get("eduLevel"+i);
+			householdInformation.eduLevel = eduLevel;
+			maritalStatus = request.params.get("maritalStatus"+i);
+			householdInformation.maritalStatus = maritalStatus;
+			isSchoolGoing = request.params.get("isSchoolGoing"+i);
+			householdInformation.isSchoolGoing = isSchoolGoing;
+			haveScholarship = request.params.get("haveScholarship"+i);
+			householdInformation.haveScholarship = haveScholarship;
+			profession = request.params.get("profession"+i);
+			householdInformation.profession = profession;
+			isEarningMember = request.params.get("isEarningMember"+i);
+			householdInformation.isEarningMember = isEarningMember;
+			isDisabled = request.params.get("isDisabled"+i);
+			householdInformation.isDisabled = isDisabled;
+			disabilityDesc = request.params.get("disabilityDesc"+i);
+			householdInformation.disabilityDesc = disabilityDesc;
+			relationshipBen = request.params.get("relationshipBen"+i);
+			householdInformation.relationshipBen = relationshipBen;
+			specialComment = request.params.get("specialComment"+i);
+			householdInformation.specialComment = specialComment;
+			listOfHousehold.add(householdInformation);
+		}
+		familyMemberDetails.listOfHousehold = listOfHousehold;
+		familyMemberDetails.save();
+		render("@tab4",beneficiaryProfile);
+    }
+    
+    @ExternalRestrictions("View User")
+    public static void addhouseholddetails(HomesteadInformation homesteadInformation) {
+		String name = "", capitalStr="", avgIncomeStr="", source="";
+		List<IncomeGeneratingActivity> listOfIncomeGeneratingActivity = new ArrayList<IncomeGeneratingActivity>();
+		IncomeGeneratingActivity incomeGeneratingActivity = null;
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			homesteadInformation.beneficiaryProfile = beneficiaryProfile;
+		}		
+		String index = request.params.get("index");
+		int indx = 0;
+		if(index!=null && !index.equals("null") && index.length()>0)
+		{
+			indx = Integer.parseInt(index);
+		}
+		for(int i=0;i<indx;i++)
+		{
+			incomeGeneratingActivity = new IncomeGeneratingActivity();
+			name = request.params.get("name"+i);
+			incomeGeneratingActivity.name = name;
+			
+			capitalStr = request.params.get("capital"+i);
+			if(capitalStr!=null && !capitalStr.equals("null") && capitalStr.length()>0)
+			{
+				incomeGeneratingActivity.capital = Integer.parseInt(capitalStr);
+			}			
+			
+			avgIncomeStr = request.params.get("avgIncome"+i);
+			if(avgIncomeStr!=null && !avgIncomeStr.equals("null") && avgIncomeStr.length()>0)
+			{
+				incomeGeneratingActivity.avgIncome = Integer.parseInt(avgIncomeStr);
+			}
+			
+			source = request.params.get("source"+i);
+			incomeGeneratingActivity.source = source;
+			listOfIncomeGeneratingActivity.add(incomeGeneratingActivity);
+		}
+		homesteadInformation.listOfIncomeGeneratingActivity = listOfIncomeGeneratingActivity;
+		homesteadInformation.save();
+		render("@tab5",beneficiaryProfile);
+    }
+    @ExternalRestrictions("View User")
+    public static void addanimaldetails(WealthInformation wealthInformation) {
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			wealthInformation.beneficiaryProfile = beneficiaryProfile;
+		}		
+		wealthInformation.save();
+		render("@tab6",beneficiaryProfile);
+    }
+    @ExternalRestrictions("View User")
+    public static void addsicknessdetails(SicknessInformation sicknessInformation) {
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			sicknessInformation.beneficiaryProfile = beneficiaryProfile;
+		}		
+		sicknessInformation.save();
+		render("@tab7",beneficiaryProfile);
+    }
+    @ExternalRestrictions("View User")
+    public static void addroscaInfo(ROSCARelatedInformation roscaRelatedInformation) {
+		String typeOfTraining;
+		String helpProvidingOrg;
+		String receivingTime;
+		
+		
+		
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		LivelihoodTrainingInformation livelihoodTrainingInformation = null;
+		SkillsTrainingInformation skillsTrainingInformation = null;
+		List<LivelihoodTrainingInformation> listOfLivelihoodTrainingInformation = new ArrayList<LivelihoodTrainingInformation>();
+		List<SkillsTrainingInformation> listOfSkillsTrainingInformation = new ArrayList<SkillsTrainingInformation>();
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			roscaRelatedInformation.beneficiaryProfile = beneficiaryProfile;
+		}		
+		
+		String livelihoodindex = request.params.get("livelihoodindex");
+		int livelihoodindx = 0;
+		if(livelihoodindex!=null && !livelihoodindex.equals("null") && livelihoodindex.length()>0)
+		{
+			livelihoodindx = Integer.parseInt(livelihoodindex);
+		}
+		for(int i=0;i<livelihoodindx;i++)
+		{
+			livelihoodTrainingInformation = new LivelihoodTrainingInformation();
+			
+			typeOfTraining = request.params.get("type"+i);
+			livelihoodTrainingInformation.typeOfTraining = typeOfTraining;			
+			
+			helpProvidingOrg = request.params.get("orgProvidedHelp"+i);
+			livelihoodTrainingInformation.helpProvidingOrg = helpProvidingOrg;
+			
+			receivingTime = request.params.get("recievingTime"+i);
+			livelihoodTrainingInformation.receivingTime = receivingTime;			
+			
+			listOfLivelihoodTrainingInformation.add(livelihoodTrainingInformation);
+		}	
+		
+		String nameOfTraining;
+		String durationMonthStr;
+		String durationYearStr;	
+		String trainingDuration;
+		String providingOrganization;
+		
+		String skillindex = request.params.get("skillindex");
+		int skillindx = 0;
+		if(skillindex!=null && !skillindex.equals("null") && skillindex.length()>0)
+		{
+			skillindx = Integer.parseInt(skillindex);
+		}
+		
+		for(int i=0;i<skillindx;i++)
+		{
+			skillsTrainingInformation = new SkillsTrainingInformation();
+			nameOfTraining = request.params.get("name"+i);
+			skillsTrainingInformation.nameOfTraining = nameOfTraining;			
+			
+			durationMonthStr = request.params.get("month"+i);
+			if(durationMonthStr!=null && !durationMonthStr.equals("null") && durationMonthStr.length()>0)
+			{
+				skillsTrainingInformation.durationMonth = Integer.parseInt(durationMonthStr);
+			}
+			
+			durationYearStr = request.params.get("year"+i);
+			if(durationYearStr!=null && !durationYearStr.equals("null") && durationYearStr.length()>0)
+			{
+				skillsTrainingInformation.durationYear = Integer.parseInt(durationYearStr);
+			}
+			
+			trainingDuration = request.params.get("duration"+i);
+			skillsTrainingInformation.trainingDuration = trainingDuration;
+			
+			providingOrganization = request.params.get("organization"+i);
+			skillsTrainingInformation.providingOrganization = providingOrganization;			
+			
+			listOfSkillsTrainingInformation.add(skillsTrainingInformation);
+		}
+		roscaRelatedInformation.listOfLivelihoodTrainingInformation = listOfLivelihoodTrainingInformation;
+		roscaRelatedInformation.listOfSkillsTrainingInformation = listOfSkillsTrainingInformation;
+		roscaRelatedInformation.save();
+		render("@tab8",beneficiaryProfile);
+    }
+    @ExternalRestrictions("View User")
+    public static void adddisputedetails(LawRelatedActivity lawRelatedActivity) {
+		String profileId = request.params.get("beneficiaryProfile");
+		BeneficiaryProfile beneficiaryProfile = null;
+		if(profileId!=null && !profileId.equals("null") && profileId.length()>0)
+		{
+			beneficiaryProfile = BeneficiaryProfile.findById(Long.parseLong(profileId));
+			lawRelatedActivity.beneficiaryProfile = beneficiaryProfile;
+		}		
+		lawRelatedActivity.save();
+		render("@basicprofile",beneficiaryProfile);
+    }
+    
+    @ExternalRestrictions("View User")
+    public static void tab4() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void tab5() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void tab6() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void tab7() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void tab8() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void tab9() {
+		render();
+    }
+    @ExternalRestrictions("View User")
+    public static void tab10() {
+		render();
+    }    
+}
