@@ -1,0 +1,11 @@
+<slave_config>
+  <slaveserver>
+    <name>My_carte_server</name>
+    <hostname>127.0.0.1</hostname>
+    <port>8081</port>
+    <master>N</master>
+    <username>cluster</username>
+    <password>012074</password>
+  </slaveserver>
+  <repository><name>kobocat</name><username>admin</username><password></password></repository>
+</slave_config>

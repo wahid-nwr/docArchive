@@ -792,7 +792,7 @@ public class DocumentArchiveController extends Controller{
 		//String documentsIdSet = request.params.get("documentSet.documents");
 		
 		String[] documentsIdSet = params.getAll("documentSet.documents");
-		System.out.println("documentsIdSet:::"+documentsIdSet);
+		System.out.println("documentsIdSet:::"+documentsIdSet.toString());
 		models.DocumentSet documentSet = new models.DocumentSet();		
 		if(documentSetId!=null && !documentSetId.equals("null") && documentSetId.length()>0)
 		{
@@ -806,21 +806,23 @@ public class DocumentArchiveController extends Controller{
 		
 		ResultSet resultSet;
 		java.sql.Connection conn = play.db.DB.getConnection();
-		try {
-			java.sql.Statement stmt = conn.createStatement();
+		if(documentSetId != null && !documentSetId.equals("null") && documentSetId.length() > 0) {
 			try {
-				stmt.execute(queryStr);
-				System.out.println("deleting elements::"+queryStr);
-			} finally {
-				stmt.close();
+				java.sql.Statement stmt = conn.createStatement();
+				try {
+					stmt.execute(queryStr);
+					System.out.println("deleting elements::"+queryStr);
+				} finally {
+					stmt.close();
+				}
 			}
-		}
-		catch(java.sql.SQLException sqle)
-		{
-			sqle.printStackTrace();
-		}
-		finally {
-			conn.close();
+			catch(java.sql.SQLException sqle)
+			{
+				sqle.printStackTrace();
+			}
+			finally {
+				conn.close();
+			}
 		}
 		for(int i = 0; documentsIdSet!=null && i<documentsIdSet.length;i++)
 		{
@@ -837,7 +839,7 @@ public class DocumentArchiveController extends Controller{
 			//documentSet.documents = documents;
 			documentSet.save();
 		}
-		List<models.DocumentSet> documentSetList = models.DocumentSet.find("order by id desc limit 1,10").fetch();
+		List<models.DocumentSet> documentSetList = models.DocumentSet.find("order by id desc").fetch();
 		render("@docsetlist",documentSetList);
 	}
 

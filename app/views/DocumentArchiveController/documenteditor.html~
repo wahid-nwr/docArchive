@@ -1,0 +1,96 @@
+#{extends 'main.html' /}
+<!-- page content -->
+<link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+
+<!-- Select2 -->
+<script src="../../../public/style/vendors/select2/dist/js/select2.full.min.js"></script>
+<style>
+.wrapper         {width:98%;height:60%;margin:0 auto;background:#CCC}
+.h_iframe        {position:relative;}
+.h_iframe .ratio {display:block;width:100%;height:auto;}
+.h_iframe iframe {position:absolute;top:60px;left:0;width:100%; height:100%;}
+</style>
+        <div class="right_col" role="main">
+			<div class="wrapper">
+			<div class="h_iframe">
+				<!-- a transparent image is preferable -->
+				<img class="ratio" src="http://placehold.it/16x9"/>
+				<!--
+				 curl --request POST   
+				 --url 'https://writer.zoho.com/writer/remotedoc.im?apikey=1ee6127ff93882de82599eacc2668023'  
+				 --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'   
+				 --form content=@/opt/docfiles/class-9-3rd-tutorial.docx   
+				 --form mode=normaledit   
+				 --form lang=en   
+				 --form 'saveurl=https://example.com/saveurl?key=value'   
+				 --form format=docx
+				-->
+				<form id="editorform" enctype="multipart/form-data" action="https://writer.zoho.com/writer/remotedoc.im?apikey=ea15c053ec3d77159b451f0d3cf589dc" method="POST" target="myIframe">
+					<!--<input type="hidden" name="apikey" value="ea15c053ec3d77159b451f0d3cf589dc"/>-->
+					<!--<input type="hidden" name="output" value="editor"/>-->
+					<input type="text" name="mode" value="normaledit"/>
+					<!--<input type="hidden" name="filename" value="${filename}"/>-->
+					<input type="text" name="content" value="${location}"><!--value="${filename}"/>-->
+					<input type="text" name="lang" value="en"/>
+					<input type="text" name="id" value="7216317000000012001"/>
+					<input type="text" name="format" value="docx"/>
+					<!--<input type="hidden" name="url" value="http://107.170.4.9/docfiles/files/${filename}"/>-->
+					<input type="text" name="saveurl" value="http://27.147.138.57/test.php"/>  						<input type="submit">
+				</form>
+				<iframe src="" name="myIframe" frameborder="0" allowfullscreen></iframe>				
+			</div>
+			<p>Please scale the "result" window to notice the effect.</p>
+		</div>			
+<script type="text/javascript">
+	
+    $(".select2_single").select2({
+		placeholder: "Select a state",
+		allowClear: true
+	});
+	document.getElementById("editorform").submit();
+	/*
+	curl --request POST   
+				 --url 'https://writer.zoho.com/writer/remotedoc.im?apikey=1ee6127ff93882de82599eacc2668023'  
+				 --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'   
+				 --form content=@/opt/docfiles/class-9-3rd-tutorial.docx   
+				 --form mode=normaledit   
+				 --form lang=en   
+				 --form 'saveurl=https://example.com/saveurl?key=value'   
+				 --form format=docx
+	*/
+	/*
+	$.post('https://writer.zoho.com/writer/remotedoc.im', 
+			{apikey:'1ee6127ff93882de82599eacc2668023', content:'${filename}', mode:'normaledit', lang:'en', saveurl:'http://27.147.138.57/test.php', format:'docx'}, function(data){
+			if(data!=null && data.length>0)
+			{
+				alert(data);
+			}
+			//$('.docdesclevel').find('option:not(:first)').remove().end().append(data);
+		});
+	*/
+	/*
+	$.ajax({
+          url: "https://writer.zoho.com/writer/remotedoc.im",
+          method: "POST",
+          //dataType: "jsonp",
+          contentType: 'multipart/form-data',
+          data: {
+            apikey:'1ee6127ff93882de82599eacc2668023', 
+            content:'${filename}', 
+            mode:'normaledit', 
+            lang:'en', 
+            saveurl:'http://27.147.138.57/test.php', 
+            format:'docx'
+          },
+          success: function( data ) {
+            response( data );
+          }
+        });
+      */
+</script>
